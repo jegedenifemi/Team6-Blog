@@ -10,7 +10,7 @@ git clone https://github.com/jegedenifemi/Team6-Blog.git
 Enter the project directory 
 
 ```
-cd JUSTPROJECTS
+cd Team6-Blog
 ```
 
 Create a virtual env
