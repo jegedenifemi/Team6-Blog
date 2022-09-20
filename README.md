@@ -55,7 +55,7 @@ python manage.py runserver
 ## To contribute :
 
 ### NOTE :
-
+# Please do not push your virtual environment folder, add the name to the .gitignore file
 # Don't push to the main branch
 - Create a branch and switch to it ` git checkout -b (branchname)` *Don't include brackets*
 - After finishing your tasks run 
