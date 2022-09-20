@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+</head>
+<body>
+    {% for post in posts %}
+        {% for tag in post.tags.all %}
+        tags: #{{tag}} <br>
+        {% endfor %}
+        title: {{post.title}} <br>, 
+        category: {{post.category}},<br> 
+        author: {{post.author.get_full_name}} <br>
+        {{post.description}}
+      <a href="  {% url 'post:post_detail' post.slug %}">{{post.title}}</a>
+     {% endfor %}
+</body>
+</html>

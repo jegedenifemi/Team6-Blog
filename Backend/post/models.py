@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from taggit.managers import TaggableManager
+from django.template.defaultfilters import slugify
+from random import randint
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length = 100)
@@ -16,13 +19,6 @@ class Category(models.Model):
     
 
 
-class Tag(models.Model):
-    name = models.CharField(max_length=100)
-
-
-    def __str__(self):
-        return self.name
-    
 
 class Profile(models.Model):
     pass
@@ -35,16 +31,28 @@ class Post(models.Model):
     )
     author = models.ForeignKey(User, on_delete = models.CASCADE)
     title = models.CharField(max_length=500)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, blank = True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     publish_on = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length=20, choices=choices, default= 'draft')
     contents = models.TextField()
+    description = models.TextField(blank = True)
     category = models.ForeignKey(Category, on_delete = models.CASCADE)
-    tags = models.ForeignKey(Tag, on_delete = models.CASCADE)
+    tags = TaggableManager()
 
     class Meta:
         ordering = ('-publish_on',)
+        
     def __str__(self):
         return self.title
+
+    
+    # whenever the post is edited the slug changes, this needs to be fixed
+    def save(self, *args, **kwargs):
+        if Post.objects.filter(title=self.title).exists():
+            extra = str(randint(1, 10000))
+            self.slug = slugify(self.title) + "-" + extra
+        else:
+            self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)

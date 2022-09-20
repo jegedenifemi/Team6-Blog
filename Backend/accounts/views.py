@@ -49,6 +49,3 @@ def _log_out(request):
     logout(request)
     return redirect('login')
 
-def index(request):
-
-    return render(request, 'accounts/index.html')
