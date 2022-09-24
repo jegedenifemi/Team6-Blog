@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #22443E;
 }
 
 .container {
@@ -80,8 +80,13 @@ p a{
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
+    cursor: pointer;
 }
 
+button:hover{
+    color: #d1ecd6;
+    transition: ease-in-out;
+}
 .content h5 {
     text-align: center;
     color: #22443E;
