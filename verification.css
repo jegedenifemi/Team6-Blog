@@ -21,11 +21,13 @@
     color:#22443E;
     padding-left: 65px;
      }
-    
+   
      .txt b{
-       color:linear-gradient(0deg, #2D2D2D, #2D2D2D);
+     color:rgba(45, 45, 45, 1);
     }
-
+.big p{
+  font-weight: 600;
+}
     .txt span{
         color:rgba(34, 68, 62, 1)
     }
@@ -36,7 +38,7 @@
       background-color: rgba(34, 68, 62, 1);
       color: rgba(246, 246, 246, 1);
       width: 30%;
-      padding: 10px;
+      padding: 22px;
       border-radius: 5px;
       border: none;
     }
@@ -45,5 +47,5 @@
     }
     footer{
       position: absolute;
-      bottom: 0;
-    }
+      bottom: 6px;
+    } 
