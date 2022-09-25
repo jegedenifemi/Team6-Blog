@@ -17,5 +17,6 @@
         {{post.description}}
       <a href="  {% url 'post:post_detail' post.slug %}">{{post.title}}</a>
      {% endfor %}
+     {{request.user}}
 </body>
 </html>
