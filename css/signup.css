@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-  /* height: 95vh; */
-}
-
 body {
   font-family: "Poppins", sans-serif;
   width: 100%;
@@ -36,7 +32,9 @@ main {
 }
 
 .left-div img {
-  width: 80%;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
   border-top-left-radius: 3%;
   border-bottom-left-radius: 3%;
 }
@@ -159,8 +157,9 @@ button {
   color: #22443e;
 }
 
-.bi-eye {
-  font-size: x-large;
+.terms {
+  text-decoration: none;
+  color: #22443e;
 }
 
 @media (min-width: 250px) and (max-width: 900px) {
