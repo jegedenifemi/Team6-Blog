@@ -294,7 +294,8 @@ footer {
   margin: 0 auto;
   padding: 1.5rem 0.5rem 1rem;
   position: absolute;
-  bottom: 0.7rem;
+  /* bottom: 0rem; */
+  top: 67%;
   left: 0;
   right: 0;
   border-radius: 0.17rem;
