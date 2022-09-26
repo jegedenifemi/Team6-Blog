@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
   ul {
     list-style: none;
   }
@@ -20,7 +21,12 @@
   .head{
     color:#22443E;
     padding-left: 65px;
+    font-family:  'Poppins', sans-serif;
      }
+     .txt{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+  }
    
      .txt b{
      color:rgba(45, 45, 45, 1);
@@ -33,6 +39,8 @@
     }
     .big{
       font-size: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
     }
     button{
       background-color: rgba(34, 68, 62, 1);
@@ -41,9 +49,12 @@
       padding: 22px;
       border-radius: 5px;
       border: none;
+      font-family:  'Poppins', sans-serif;
+      
     }
     .vsm span{
       color: rgba(34, 68, 62, 1);
+      font-family:  'Poppins', sans-serif;
     }
     footer{
       position: absolute;
