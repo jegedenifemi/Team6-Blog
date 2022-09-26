@@ -99,12 +99,10 @@ main {
 .input-flex div {
   width: 45%;
 }
-
 hr {
   margin: 0 0;
   margin-bottom: 40px;
 }
-
 .password-eye {
   display: flex;
   flex-direction: row;

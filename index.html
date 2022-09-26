@@ -4,7 +4,139 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Blogga</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="banner">
+        <div class="banner_wrapper">
+          <div class="banner_left">
+            <a href="signup.html">Have a story to share?</a>
+            <button onclick="window.location.href='https://www.google.com/';">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="banner_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="" id="" placeholder="Search" />
+          </div>
+        </div>
+
+        <div class="banner_socials">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+
+      <div class="nav_outer">
+        <img
+          src="https://cdn.dribbble.com/userupload/3158903/file/original-3f5abe8b99ff4ba4626ddf6660115182.jpg?compress=1&resize=752x"
+          alt="Blogga Logo"
+        />
+
+        <div class="nav_inner">
+          <div class="hamburger">
+            <span class="span1"></span><span class="span2"></span
+            ><span class="span3"></span>
+          </div>
+
+          <nav>
+            <ul>
+              <li><a href="#">FASHION</a></li>
+              <li><a href="#">ENTERTAINMENT</a></li>
+              <li><a href="#">TECHNOLOGY</a></li>
+              <li><a href="#">HEALTH</a></li>
+              <li><a href="#">POLITICS</a></li>
+              <li><a href="#">EDUCATION</a></li>
+              <li><a href="#">FOOD</a></li>
+              <li><a href="#">ART</a></li>
+              <li>
+                <a href="#"> MORE</a>&ThickSpace;<i
+                  class="fa-solid fa-caret-down"
+                ></i>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="nav_btns">
+            <button>Sign In</button>
+            <button class="subscribe">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <a href="./signup.html">Signup</a><br />
+      <a href="./verification.html">Verify Email</a><br />
+      <a href="./resetpass.html">Reset Password Email</a>
+    </main>
+
+    <section class="newsletter">
+      <h2>STAY UPDATED</h2>
+
+      <p>
+        Get the latest creative news from Blogga about Art , Fashion,
+        Entertainment and lots more.
+      </p>
+
+      <form action="#">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your Email Address"
+        />
+        <button type="submit" class="subscribe">Subscribe</button>
+      </form>
+    </section>
+    <footer>
+      <div class="footer_top">
+        <ul>
+          <li>ADVERTISE</li>
+          <li>WRITE FOR US</li>
+          <li>CATEGORIES</li>
+          <li>
+            <img src="" alt="" />
+          </li>
+          <li>ARCHIVES</li>
+          <li>TERMS OF SERVICE</li>
+          <li>PRIVACY</li>
+        </ul>
+      </div>
+
+      <div class="footer_middle">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>&ThinSpace; FACEBOOK </a
+        ><a href="#"><i class="fa-brands fa-twitter"></i>&ThinSpace; TWITTER</a
+        ><a href="#"
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace; LINKEDIN</a
+        ><a href="#"><i class="fa-brands fa-youtube"></i>&ThinSpace; YOUTUBE</a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace; INSTAGRAM</a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace; PINTEREST</a
+        >
+      </div>
+
+      <div class="footer_bottom">
+        <p>© 2022 The Blogga Team All Rights Reserved</p>
+        <a href="#">Site Map</a>
+      </div>
+    </footer>
+  </body>
 </html>

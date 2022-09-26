@@ -1,11 +1,205 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* border: 1px solid red; */
 }
 ul {
   list-style: none;
 }
-a {
+a,
+ul,
+button,
+li,
+p {
+  font-size: 14px;
   text-decoration: none;
+}
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.banner {
+  background-color: rgba(41, 82, 74, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 4rem;
+}
+.banner_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  justify-content: space-between;
+}
+.banner_left > a {
+  color: rgba(230, 230, 230, 1);
+  font-size: 14px;
+}
+.banner_left > button {
+  padding: 0.5rem 2.5rem;
+  border: 1px solid rgba(230, 230, 230, 1);
+  color: rgba(230, 230, 230, 1);
+  font-weight: 200;
+  font-size: 14px;
+  border-radius: 0.5rem;
+  background-color: inherit;
+  margin-left: 1.5rem;
+}
+.banner i {
+  color: rgba(230, 230, 230, 1);
+  font-size: large;
+}
+.banner_search {
+  border-bottom: 1px solid rgba(230, 230, 230, 1);
+  padding: 0 6rem 0.1rem 1rem;
+  margin-bottom: -0.7rem;
+}
+.banner_search > input {
+  background-color: inherit;
+  outline: none;
+  border: none;
+  margin-left: 0.7rem;
+}
+.banner_search > input::placeholder {
+  color: rgba(248, 248, 248, 0.82);
+  font-weight: 200;
+}
+.banner_socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav_outer {
+  background-color: white;
+  padding: 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(34, 68, 62, 0.555);
+  box-shadow: 0px 2px 12px rgba(82, 81, 81, 0.205);
+}
+.nav_outer > img {
+  width: 4rem;
+}
+.nav_inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.hamburger > .span1 {
+  width: 2.4rem;
+}
+.hamburger > .span2 {
+  width: 2rem;
+}
+.hamburger > .span3 {
+  width: 1.6rem;
+}
+.hamburger > .span1,
+.hamburger > .span2,
+.hamburger > .span3 {
+  background-color: rgba(45, 45, 45, 1);
+  border-radius: 1rem;
+  padding: 0.1rem;
+}
+.nav_inner > i {
+  color: black;
+}
+.nav_inner > nav > ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.nav_inner > nav > ul > li > a {
+  color: rgba(45, 45, 45, 1);
+  font-weight: 500;
+}
+button {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(230, 230, 230, 1);
+  color: rgba(230, 230, 230, 1);
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 0.5rem;
+  background-color: inherit;
+}
+.nav_btns > button:first-of-type {
+  border: 1px solid rgba(34, 68, 62, 1);
+  color: rgba(34, 68, 62, 1);
+}
+.subscribe {
+  background-color: rgba(34, 68, 62, 1);
+  margin-left: 0.5rem;
+}
+
+.newsletter {
+  padding-block: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.newsletter > h2 {
+  font-weight: 600;
+}
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.newsletter input {
+  border: 1px solid rgba(34, 68, 62, 1);
+  padding: 0.5rem;
+  width: 25%;
+  border-radius: 0.5rem;
+}
+.newsletter .subscribe {
+  padding-inline: 2rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgba(34, 68, 62, 1);
+  color: rgba(248, 248, 248, 1);
+}
+.footer_top > ul {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 2rem;
+  border-bottom: 1px solid rgba(248, 248, 248, 1);
+  padding-inline: 2rem;
+  padding-block: 2.5rem 1rem;
+  font-size: 13px;
+  margin: 0 auto;
+}
+.footer_middle {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding-block: 1rem 0.75rem;
+}
+.footer_middle > a,
+.footer_bottom > a {
+  color: rgba(248, 248, 248, 1);
+}
+.footer_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+  border-top: 1px solid rgba(248, 248, 248, 1);
+  padding-block: 1rem;
 }
