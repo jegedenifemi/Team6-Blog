@@ -1,6 +1,8 @@
-## This is a blog being built by Team 6 JustProjects
+# Blogga
+This is a blog being built by Team 6 JustProjects. [View Live Project Here](https://blogga-team6.netlify.app/).  
+[Figma Board Here](https://www.figma.com/file/55YRkKLgPcHzerXFOV8b7M/Multi-Author-Blog?node-id=494%3A3950)
 
-# Follow these commands to run the proect on your local machine :
+## Follow these commands to run the proect on your local machine :
 ## Feel free to create a README.md in all folders if you need to
 Clone the project 
 ```
