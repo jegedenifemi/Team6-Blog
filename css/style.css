@@ -93,15 +93,38 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.hamburger > .span1 {
+  width: 2.4rem;
+}
+.hamburger > .span2 {
+  width: 2rem;
+}
+.hamburger > .span3 {
+  width: 1.6rem;
+}
+.hamburger > .span1,
+.hamburger > .span2,
+.hamburger > .span3 {
+  background-color: rgba(45, 45, 45, 1);
+  border-radius: 1rem;
+  padding: 0.1rem;
+}
 .nav_inner > i {
   color: black;
 }
 .nav_inner > nav > ul {
-  color: rgba(45, 45, 45, 1);
-  font-weight: 600;
   display: flex;
   gap: 2rem;
   justify-content: space-between;
+}
+.nav_inner > nav > ul > li > a {
+  color: rgba(45, 45, 45, 1);
+  font-weight: 500;
 }
 button {
   padding: 0.5rem 1.5rem;
