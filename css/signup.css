@@ -3,12 +3,13 @@
 }
 
 html {
-  height: 100vh;
+  /* height: 95vh; */
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   width: 100%;
-  max-height: 100vh;
+  height: 100%;
   margin: 0;
   background-color: #ffffff;
   padding: 2%;
@@ -26,15 +27,18 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* margin: 3%; */
 }
 
 .left-div {
   flex-basis: 45%;
+  border-top-left-radius: 3%;
+  border-bottom-left-radius: 3%;
 }
 
 .left-div img {
   width: 80%;
+  border-top-left-radius: 3%;
+  border-bottom-left-radius: 3%;
 }
 
 .right-div {
@@ -42,13 +46,48 @@ main {
   padding: 5%;
   background-color: #ebecee;
   justify-content: center;
-  /* margin: 0 auto; */
   align-items: center;
+  border-top-right-radius: 3%;
+  border-bottom-right-radius: 3%;
+  position: relative;
+}
+
+.close {
+  color: #000009;
+  /* float: right; */
+  font-size: 48px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.text-center {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  /* line-height: 40px; */
+  /* identical to box height, or 143% */
+  letter-spacing: 0.5px;
+
+  /* Primary/Primary07 */
+
+  color: #22443e;
 }
 
 .right-div input {
   border: 0;
   background-color: #ebecee;
+}
+
+::placeholder {
+  /* opacity: 0.5; */
+  color: rgba(45, 45, 45, 0.5);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  /* line-height: 32px; */
 }
 
 .input-flex {
@@ -60,8 +99,10 @@ main {
 .input-flex div {
   width: 45%;
 }
-
-
+hr {
+  margin: 0 0;
+  margin-bottom: 40px;
+}
 .password-eye {
   display: flex;
   flex-direction: row;
@@ -79,6 +120,30 @@ button {
   border-radius: 8px;
 }
 
+.hr-or {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hr {
+  display: inline-block;
+  width: 30px;
+  align-content: center;
+  opacity: 1;
+  margin-bottom: 0;
+  font-weight: bolder;
+}
+
+.para-hr {
+  display: inline-block;
+  width: 60px;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .continue-button {
   background: #ffffff;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
@@ -94,9 +159,17 @@ button {
   color: #22443e;
 }
 
+.bi-eye {
+  font-size: x-large;
+}
+
 @media (min-width: 250px) and (max-width: 900px) {
-  main {
-    flex-direction: column;
-    justify-content: center;
+  .left-div {
+    display: none;
+  }
+
+  .right-div {
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 }
