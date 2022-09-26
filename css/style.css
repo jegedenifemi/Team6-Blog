@@ -20,6 +20,7 @@ p {
 }
 header {
   position: sticky;
+  z-index: 10000;
   top: 0;
   left: 0;
 }
@@ -56,11 +57,12 @@ header {
 }
 .banner_search {
   border-bottom: 1px solid rgba(230, 230, 230, 1);
-  padding: 0 6rem 0.1rem 1rem;
+  padding: 0 7rem 0.1rem 1rem;
   margin-bottom: -0.7rem;
 }
 .banner_search > input {
   background-color: inherit;
+  color: rgba(248, 248, 248, 1);
   outline: none;
   border: none;
   margin-left: 0.7rem;
@@ -126,7 +128,7 @@ header {
   color: rgba(45, 45, 45, 1);
   font-weight: 500;
 }
-button {
+.button {
   padding: 0.5rem 1.5rem;
   border: 1px solid rgba(230, 230, 230, 1);
   color: rgba(230, 230, 230, 1);
@@ -202,4 +204,128 @@ footer {
   gap: 3rem;
   border-top: 1px solid rgba(248, 248, 248, 1);
   padding-block: 1rem;
+}
+
+/* STYLING FOR MAIN CONTENT OF HOME PAGE */
+.hero {
+  padding: 1.5rem 4rem 6rem;
+  display: flex;
+  justify-content: space-between;
+}
+.hero_left {
+  flex-basis: 40%;
+}
+.hero_left_img {
+  width: 100%;
+  position: relative;
+}
+.hero_left_img > img {
+  width: 100%;
+}
+.hero_left_img > p {
+  background-color: rgba(34, 68, 62, 1);
+  color: rgba(248, 248, 248, 1);
+  width: fit-content;
+  font-size: 12px;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0.5rem;
+}
+.hero_left > h2 {
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 1.5rem;
+}
+.hero_left > p {
+  margin-block: 1.5rem;
+}
+.hero_author_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero_author_wrapper p,
+.card_info p {
+  font-size: 12px;
+}
+.hero_author_details {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.hero_author_details > img {
+  border-radius: 50%;
+  width: 17%;
+}
+.hero_author_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero_author_sm {
+  display: flex;
+  gap: 1rem;
+  min-width: max-content;
+}
+.hero_author_sm > i {
+  color: rgba(34, 68, 62, 1);
+}
+
+.hero_right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-basis: 50%;
+  column-gap: 2.5rem;
+  row-gap: 1rem;
+}
+.hero_right_card {
+  position: relative;
+}
+.hero_right_card img {
+  width: 100%;
+}
+.card_info_wrapper {
+  background-color: white;
+  box-shadow: 0px 2.7196781635284424px 2.7196781635284424px 0px
+    rgba(0, 0, 0, 0.25);
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem 0.5rem 1rem;
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0;
+  right: 0;
+  border-radius: 0.17rem;
+}
+.card_info {
+  position: relative;
+}
+.card_info .category_label {
+  background-color: rgba(231, 234, 84, 0.8);
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.189rem;
+  position: absolute;
+  width: max-content;
+  top: -2.7rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.technology {
+  background-color: rgba(39, 118, 234, 0.8) !important;
+}
+.health {
+  background-color: rgba(113, 212, 188, 0.8) !important;
+}
+.card_info h3 {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.card_info_bottom {
+  display: flex;
+  justify-content: space-between;
 }
