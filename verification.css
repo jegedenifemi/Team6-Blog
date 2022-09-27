@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
   ul {
     list-style: none;
   }
@@ -31,9 +31,9 @@
      .txt b{
      color:rgba(45, 45, 45, 1);
     }
-.big p{
+/* .big p{
   font-weight: 600;
-}
+} */
     .txt span{
         color:rgba(34, 68, 62, 1)
     }
@@ -59,4 +59,6 @@
     footer{
       position: absolute;
       bottom: 6px;
+      font-family:  'Poppins', sans-serif;
+      /* font-weight: 10; */
     } 
