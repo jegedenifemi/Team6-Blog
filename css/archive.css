@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.header1 {
+  background-color: #29524a;
+  color: white;
+  padding-block: 5px;
+}
+
+.header1 p {
+  padding-block: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  vertical-align: center;
+  color: white;
+}
+
+.header1 a {
+  color: #e6e6e6;
+  margin-inline: 2%;
+  vertical-align: middle;
+}
+
+.header1 button {
+  background-color: #29524a;
+  color: white;
+  border: 1px solid #e6e6e6;
+  width: 60%;
+  border-radius: 6px;
+}
+
+.search-icon {
+  position: relative;
+  right: -30px;
+}
+
+input[type="search"] {
+  background-color: #22443e;
+  width: 90%;
+  color: F8F8F8;
+  outline: none;
+  padding-block: 5px;
+  border: 0;
+  border-bottom: 2px solid white;
+}
+
+input[type="search"]:focus,
+input[type="search"]:active {
+  outline: none;
+}
+
+::placeholder {
+  color: F8F8F8;
+  position: relative;
+  right: -50px;
+}
+
+.header1 .socials {
+  width: 10%;
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+.header3 {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+.header3 div {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-block: 10px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+.header3 a,
+.header3 button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  vertical-align: middle;
+  font-weight: bolder;
+}
+
+.subscribe {
+  background-color: #29524a;
+}
+
+.date1 {
+  margin-left: 30%;
+}
+.date3 {
+  margin-right: 30%;
+}
+
+#date {
+  padding: 5px;
+  border-radius: 4px;
+  outline-color: black;
+  color: gray;
+}
