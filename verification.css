@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
   ul {
     list-style: none;
   }
@@ -28,12 +28,12 @@
       font-weight: 600;
   }
    
-     .txt b{
+     .txt p{
      color:rgba(45, 45, 45, 1);
     }
-.big p{
-  font-weight: 600;
-}
+/* .big p{
+  font-weight: 500;
+} */
     .txt span{
         color:rgba(34, 68, 62, 1)
     }
@@ -41,6 +41,7 @@
       font-size: 20px;
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
+      color:rgba(45, 45, 45, 1);
     }
     button{
       background-color: rgba(34, 68, 62, 1);
@@ -52,6 +53,14 @@
       font-family:  'Poppins', sans-serif;
       
     }
+    .small{
+      color:rgba(45, 45, 45, 1);
+      font-family:  'Poppins', sans-serif;
+    }
+    .vsm{
+      font-family:  'Poppins', sans-serif;
+      color:rgba(45, 45, 45, 1);
+    }
     .vsm span{
       color: rgba(34, 68, 62, 1);
       font-family:  'Poppins', sans-serif;
@@ -59,4 +68,6 @@
     footer{
       position: absolute;
       bottom: 6px;
+      font-family:  'Poppins', sans-serif;
+      /* font-weight: 10; */
     } 
