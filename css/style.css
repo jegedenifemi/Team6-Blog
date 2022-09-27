@@ -7,6 +7,11 @@
   font-family: "Poppins", sans-serif;
   /* border: 1px solid red; */
 }
+/* html,
+body {
+  position: relative;
+  height: 100%;
+} */
 body,
 a {
   color: rgba(45, 45, 45, 1);
@@ -195,7 +200,7 @@ header {
 }
 
 /* FOOTER */
-footer {
+.main_footer {
   background-color: rgba(34, 68, 62, 1);
   color: rgba(248, 248, 248, 1);
 }
@@ -330,7 +335,7 @@ footer {
 .card_info {
   position: relative;
 }
-.card_info .category_label {
+.category_label {
   padding: 0.5rem 0.6rem;
   border-radius: 0.189rem;
   position: absolute;
@@ -364,6 +369,101 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
+/* CAROUSEL SECTION (TRENDING) */
+/* .swiper {
+        width: 100%;
+        height: 34%;
+      } */
+.trending {
+  background: rgba(34, 68, 62, 1);
+  color: rgba(248, 248, 248, 1);
+  padding-block: 2rem 2.5rem;
+  padding-inline: 4rem;
+  display: flex;
+}
+.trending_head {
+  flex-basis: 20%;
+}
+.trending_head h3 {
+  font-weight: 500;
+}
+.trending_controls {
+  position: relative;
+}
+.swiper-pagination {
+  position: absolute;
+  bottom: 0;
+}
+.swiper-wrapper {
+  flex-basis: 80%;
+  padding-left: 1rem;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.trending_card_img {
+  width: 22.8rem;
+  height: 14.8rem;
+  position: relative;
+}
+.trending_card_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+}
+.trending_card_img > .category_label {
+  color: rgba(45, 45, 45, 1);
+  z-index: 50;
+  position: absolute;
+  top: unset;
+  bottom: 30rem;
+  height: fit-content;
+  /* left: 0;
+  right: 0;
+  margin: 0 auto; */
+}
+.trending_cards_txt {
+  width: 80%;
+  margin-right: auto;
+  padding-left: 1rem;
+}
+.trending_cards_txt h4 {
+  text-align: left;
+  margin-block: 1.5rem 1rem;
+  font-weight: 500;
+  font-size: 16px;
+}
+.trending_cards_txt_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.trending_cards_txt_bottom p {
+  font-size: 13px;
+}
+
+/* .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      } */
+/* CAROUSEL SECTION (TRENDING) */
 
 /* writers_latest_popular SECTION */
 .writers_latest_popular {

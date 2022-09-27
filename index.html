@@ -16,6 +16,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -90,10 +94,6 @@
     </header>
 
     <main>
-      <!-- <a href="./signup.html">Signup</a><br />
-      <a href="./verification.html">Verify Email</a><br />
-      <a href="./resetpass.html">Reset Password Email</a> -->
-
       <section class="hero">
         <div class="hero_left">
           <div class="hero_left_img">
@@ -193,7 +193,68 @@
         </div>
       </section>
 
-      <section class="trending"></section>
+      <!-- Swiper -->
+      <section class="swiper mySwiper trending">
+        <div class="trending_head">
+          <h3>TRENDING STORIES</h3>
+          <div class="trending_controls">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img src="./img/home page/koo koo fun.png" alt="Song Art" />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <h4>
+                  Major Lazer, Major League DJz, Tiwa Savage, DJ Maphorisa – Koo
+                  Koo Fun (Song)
+                </h4>
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By Amara</p>
+                  <p>September 23, 2022 12:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="./img/home page/burna boy.png"
+                  alt="Image of Burna Boy"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <h4>Burna Boy records half a Billion streams on Boomplay</h4>
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By Taofikat</p>
+                  <p>September 24, 2022 00:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+      </section>
 
       <section class="writers_latest_popular">
         <div class="writers">
@@ -419,6 +480,16 @@
         </div>
       </section>
 
+      <section>
+        <h1>links to other pages</h1>
+        <br />
+        <a href="./signup.html">Signup (login page is linked to this)</a><br />
+        <a href="./verification.html">Verify Email</a><br />
+        <a href="./resetpass.html">Reset Password Email</a><br />
+        <a href="./email.html">Check Email App</a><br />
+        <a href="./change-pass.html">Change Password</a>
+        <a href="./archive.html">Archive</a>
+      </section>
       <hr />
 
       <section class="newsletter">
@@ -441,7 +512,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="main_footer">
       <div class="footer_top">
         <ul>
           <li>ADVERTISE</li>
@@ -475,5 +546,11 @@
         <a href="#">Site Map</a>
       </div>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="./index.js"></script>
   </body>
 </html>
