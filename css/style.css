@@ -7,6 +7,11 @@
   font-family: "Poppins", sans-serif;
   /* border: 1px solid red; */
 }
+/* html,
+body {
+  position: relative;
+  height: 100%;
+} */
 body,
 a {
   color: rgba(45, 45, 45, 1);
@@ -102,24 +107,23 @@ header {
 .hamburger {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.1rem;
 }
 .hamburger > .span1 {
-  width: 1.741rem;
+  width: 1.7rem;
 }
 .hamburger > .span2 {
-  width: 1.506rem;
+  width: 1.5rem;
 }
 .hamburger > .span3 {
-  width: 1.272rem;
+  width: 1.3rem;
 }
 .hamburger > .span1,
 .hamburger > .span2,
 .hamburger > .span3 {
-  /* background-color: rgba(45, 45, 45, 0.877); */
-  border: 2px solid rgba(45, 45, 45, 0.877);
+  background-color: rgba(45, 45, 45, 0.877);
   border-radius: 1rem;
-  /* padding: 0.1rem; */
+  padding: 0.1rem;
 }
 .more {
   display: inline-flex;
@@ -375,7 +379,7 @@ header {
   background: rgba(34, 68, 62, 1);
   color: rgba(248, 248, 248, 1);
   padding-block: 2rem 2.5rem;
-  padding-left: 4rem;
+  padding-inline: 4rem;
   display: flex;
 }
 .trending_head {
@@ -398,7 +402,6 @@ header {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  width: fit-content;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -414,19 +417,10 @@ header {
   -webkit-align-items: center;
   align-items: center;
 }
-.trending_card {
-  width: fit-content;
-  padding: 0;
-}
 .trending_card_img {
-  width: 100%;
-  /* height: 14.8rem; */
-  /* width: 22.8rem;*/
+  width: 22.8rem;
   height: 14.8rem;
   position: relative;
-}
-.trending_card_img:nth-of-type(3) {
-  height: 320.41px;
 }
 .trending_card_img img {
   width: 100%;
@@ -435,11 +429,10 @@ header {
 }
 .trending_card_img > .category_label {
   color: rgba(45, 45, 45, 1);
-  font-weight: 500;
-  z-index: 20;
+  z-index: 50;
   position: absolute;
   top: unset;
-  bottom: -0.8rem;
+  bottom: 30rem;
   height: fit-content;
   /* left: 0;
   right: 0;
@@ -448,7 +441,7 @@ header {
 .trending_cards_txt {
   width: 80%;
   margin-right: auto;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 .trending_cards_txt h4 {
   text-align: left;
