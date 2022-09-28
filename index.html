@@ -4,11 +4,621 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Blogga</title>
+    <!-- <link
+      rel="shortcut icon"
+      href="./img/logo_resources/Favicon_White.png"
+      type="image/x-icon"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <a href="./signup.html">Signup</a><br />
-    <a href="./verification.html">Verify Email</a><br />
-    <a href="./resetpass.html">Reset Password Email</a>
+    <header>
+      <div class="banner">
+        <div class="banner_wrapper">
+          <div class="banner_left">
+            <a href="signup.html">Have a story to share?</a>
+            <button onclick="window.location.href='https://google.com';">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="banner_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="" id="" placeholder="Search" />
+          </div>
+        </div>
+
+        <div class="banner_socials">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+
+      <div class="nav_outer">
+        <!-- <img src="./img/logo_resources/Icon.png" alt="Blogga Logo" /> -->
+        <div class="nav_inner">
+          <div class="hamburger">
+            <span class="span1"></span><span class="span2"></span
+            ><span class="span3"></span>
+          </div>
+
+          <nav>
+            <ul>
+              <li><a href="#">FASHION</a></li>
+              <li><a href="#">ENTERTAINMENT</a></li>
+              <li><a href="#">TECHNOLOGY</a></li>
+              <li><a href="#">HEALTH</a></li>
+              <li><a href="#">POLITICS</a></li>
+              <li><a href="#">EDUCATION</a></li>
+              <li><a href="#">FOOD</a></li>
+              <li><a href="#">ART</a></li>
+              <li>
+                <a href="#" class="more">
+                  MORE
+                  <span class="dropdown_arrow"
+                    ><img
+                      src="./img/home_page/dropdown_arrow.png"
+                      alt="dropdown" /></span
+                ></a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="nav_btns">
+            <button
+              class="button"
+              onclick="window.location.href='./login.html';"
+            >
+              Sign In
+            </button>
+            <button class="subscribe button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero_left">
+          <div class="hero_left_img">
+            <img src="./img/home_page/constance_wu.png" alt="Constance wu" />
+            <p>TOP STORY</p>
+          </div>
+
+          <h2>
+            Constance Wu Says She Experienced 'Sexual Harassment and
+            Intimidation' by Fresh Off the Boat Producer
+          </h2>
+
+          <p>
+            Wu also clarified her 2019 tweet about the ABC show's renewal,
+            explaining, "I wanted to have a fresh slate where I didn’t have to
+            start a show with all these memories of abuse".....
+          </p>
+
+          <div class="hero_author_wrapper">
+            <div class="hero_author_details">
+              <img src="./img/home_page/author_hamzy.png" alt="Author Hamzy" />
+
+              <div class="hero_author_text">
+                <p>By Adedotun</p>
+                <p>13th August, 2022</p>
+              </div>
+            </div>
+
+            <div class="hero_author_sm">
+              <p>1123 Shares</p>
+              <i class="fa-brands fa-twitter"></i
+              ><i class="fa-brands fa-linkedin-in"></i
+              ><i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero_right">
+          <div class="hero_right_card">
+            <img src="./img/home_page/bad2me.png" alt="Song Art" />
+
+            <div class="card_info_wrapper">
+              <div class="card_info">
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+
+                <h3>Wizkid - Bad to Me (Song)</h3>
+
+                <div class="card_info_bottom">
+                  <p>By Hamzah</p>
+                  <p>September 24, 2022 9:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero_right_card">
+            <img src="./img/home_page/eggs.png" alt="Picture of eggs" />
+            <div class="card_info_wrapper">
+              <div class="card_info">
+                <p class="category_label technology">TECHNOLOGY</p>
+                <h3>How to un-boil an egg</h3>
+                <div class="card_info_bottom">
+                  <p>By Rachael</p>
+                  <p>September 23, 2022 14:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero_right_card">
+            <img src="./img/home_page/covid-19.png" alt="Vaccine Image" />
+            <div class="card_info_wrapper">
+              <div class="card_info">
+                <p class="category_label health">HEALTH</p>
+                <h3>Can I get COVID-19 if I’m fully vaccinated?</h3>
+                <div class="card_info_bottom">
+                  <p>By Hamzah</p>
+                  <p>September 24, 2022 9:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero_right_card">
+            <img src="./img/home_page/benin_head.png" alt="Benin Bronze Head" />
+            <div class="card_info_wrapper">
+              <div class="card_info">
+                <p class="category_label art">ART</p>
+                <h3>The Benin Bronze Head</h3>
+                <div class="card_info_bottom">
+                  <p>By nifemi.</p>
+                  <p>September 24, 2022 9:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Swiper -->
+      <section class="swiper mySwiper trending">
+        <div class="trending_head">
+          <h3>TRENDING STORIES</h3>
+          <div class="trending_controls">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img src="./img/home_page/koo_koo_fun.png" alt="Song Art" />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <h4>
+                  Major Lazer, Major League DJz, Tiwa Savage, DJ Maphorisa – Koo
+                  Koo Fun (Song)
+                </h4>
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By Amara</p>
+                  <p>September 23, 2022 12:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="./img/home_page/burna_boy.png"
+                  alt="Image of Burna Boy"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <h4>Burna Boy records half a Billion streams on Boomplay</h4>
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By Taofikat</p>
+                  <p>September 24, 2022 00:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="./img/home_page/Remmy-img.jpeg"
+                  alt="Image of Rema & interviewer"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <h4>The Moment Rema Rejected A Sex Offer On Live TV</h4>
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By John</p>
+                  <p>September 24, 2022 00:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="./img/home_page/burna_boy.png"
+                  alt="Image of Burna Boy"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <h4>Burna Boy records half a Billion streams on Boomplay</h4>
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By Taofikat</p>
+                  <p>September 24, 2022 00:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="./img/home_page/Remmy-img.jpeg"
+                  alt="Image of Rema & interviewer"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <h4>The Moment Rema Rejected A Sex Offer On Live TV</h4>
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By John</p>
+                  <p>September 24, 2022 00:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+      </section>
+
+      <section class="writers_latest_popular">
+        <div class="writers">
+          <div class="writers_latest_head">
+            <h2>WRITERS</h2>
+            <a>SEE ALL</a>
+          </div>
+
+          <div class="writers_content">
+            <div class="writers_cards">
+              <img src="./img/home_page/author_hamzy.png" alt="Author Hamzy" />
+
+              <div class="writers_cards_info">
+                <p>HAMZAH OPEMIPO</p>
+
+                <div class="writers_cards_sm">
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img src="./img/home_page/author_dotun.png" alt="author_dotun" />
+
+              <div class="writers_cards_info">
+                <p>ADEDOTUN SOLARIN</p>
+
+                <div class="writers_cards_sm">
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img
+                src="./img/home_page/author_nifemi.png"
+                alt="author_nifemi"
+              />
+
+              <div class="writers_cards_info">
+                <p>JEGEDE OLUWANIFEMI</p>
+
+                <div class="writers_cards_sm">
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img src="./img/home_page/author_rachy.png" alt="Author rachy" />
+
+              <div class="writers_cards_info">
+                <p>CHIKA RACHEAL EZEH</p>
+
+                <div class="writers_cards_sm">
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img
+                src="./img/home_page/author_taofikat.png"
+                alt="Author taofikat"
+              />
+
+              <div class="writers_cards_info">
+                <p>TAOFIKAT OYEDEPO</p>
+
+                <div class="writers_cards_sm">
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img src="./img/home_page/author_amara.png" alt="author_amara" />
+
+              <div class="writers_cards_info">
+                <p>AMARA PEACE ONWUNZO</p>
+
+                <div class="writers_cards_sm">
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="latest">
+          <div class="writers_latest_head">
+            <h2>LATEST</h2>
+            <a>SEE ALL</a>
+          </div>
+
+          <div class="latest_content">
+            <div class="latest_cards">
+              <img
+                src="./img/home_page/rings_of_power.png"
+                alt="Rings of power snapshot"
+              />
+
+              <div class="latest_cards_txt">
+                <h3>The Rings of Power recap: Not all who wander are lost</h3>
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Hamzah</p>
+                  <p>2 hours ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_cards">
+              <img
+                src="./img/home_page/2023_elections.png"
+                alt="Nigerian Flag"
+              />
+
+              <div class="latest_cards_txt">
+                <h3>How ‘ghosts’ may decide Nigeria’s 2023 elections</h3>
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Afariogun</p>
+                  <p>3 hours ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_cards">
+              <img
+                src="./img/home_page/house_of_the_dragon.png"
+                alt="house of the dragon snapshot"
+              />
+
+              <div class="latest_cards_txt">
+                <h3>House of the Dragon recap: Another bloody wedding</h3>
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Adedotun</p>
+                  <p>5 hours ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_cards">
+              <img src="./img/home_page/tobi_amusan.png" alt="Tobi Amusan" />
+
+              <div class="latest_cards_txt">
+                <h3>
+                  Homecoming dinner: World Champion Tobi Amusan excited by
+                  welcome, national award
+                </h3>
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Nino</p>
+                  <p>8 hours ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_cards">
+              <img src="./img/home_page/bandits_zamfara.png" alt="Zamfara" />
+
+              <div class="latest_cards_txt">
+                <h3>Bandits attack Zamfara mosque, gun down worshippers</h3>
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Afariogun</p>
+                  <p>12 hours ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popular">
+          <div class="writers_latest_head">
+            <h2>POPULAR</h2>
+            <a>SEE ALL</a>
+          </div>
+          <div class="popular_content">
+            <ul>
+              <li>
+                <p>
+                  I lost G-Wagon, Escalade, Bentley, others to floods – Lagos
+                  landlord
+                </p>
+                <p>Hamzah</p>
+              </li>
+              <li>
+                <p>
+                  Why Rich kids have higher chance at success in life than
+                  average kids
+                </p>
+                <p>Nino</p>
+              </li>
+              <li>
+                <p>Waterways authority to revive Lagos jetty, clear wrecks</p>
+                <p>Philip</p>
+              </li>
+              <li>
+                <p>BBN: Housemates inch closer to N100m prize</p>
+                <p>Rachael</p>
+              </li>
+              <li>
+                <p>Jazz legend, Pharoah Sanders, dies at 81</p>
+                <p>Taofikat</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h1>links to other pages</h1>
+        <br />
+        <a href="./signup.html">Signup (login page is linked to this)</a><br />
+        <a href="./verification.html">Verify Email</a><br />
+        <a href="./resetpass.html">Reset Password Email</a><br />
+        <a href="./email.html">Check Email App</a><br />
+        <a href="./change-pass.html">Change Password</a>
+        <a href="./archive.html">Archive</a>
+      </section>
+      <hr />
+
+      <section class="newsletter">
+        <h2>STAY UPDATED</h2>
+
+        <p>
+          Get the latest creative news from Blogga about Art , Fashion,
+          Entertainment and lots more.
+        </p>
+
+        <form action="#">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Address"
+          />
+          <button type="submit" class="subscribe button">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="main_footer">
+      <div class="footer_top">
+        <ul>
+          <li>ADVERTISE</li>
+          <li>WRITE FOR US</li>
+          <li>CATEGORIES</li>
+          <li>
+            <img
+              src="./img/home_page/author_nifemi.png"
+              alt="Blogga Icon"
+              style="width: 7rem"
+            />
+          </li>
+          <li>ARCHIVES</li>
+          <li>TERMS OF SERVICE</li>
+          <li>PRIVACY</li>
+        </ul>
+      </div>
+
+      <div class="footer_middle">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>&ThinSpace; FACEBOOK </a
+        ><a href="#"><i class="fa-brands fa-twitter"></i>&ThinSpace; TWITTER</a
+        ><a href="#"
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace; LINKEDIN</a
+        ><a href="#"><i class="fa-brands fa-youtube"></i>&ThinSpace; YOUTUBE</a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace; INSTAGRAM</a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace; PINTEREST</a
+        >
+      </div>
+
+      <div class="footer_bottom">
+        <p>© 2022 The Blogga Team All Rights Reserved</p>
+        <a href="#">Site Map</a>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="./index.js"></script>
   </body>
 </html>

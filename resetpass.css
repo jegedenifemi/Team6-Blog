@@ -35,7 +35,8 @@ main {
     padding-right: 25px;
     padding-top: 10px;
     
-    min-height: 80%;
+    min-height: 75%;
+    min-width: 39vw;
     
 }
 
@@ -81,11 +82,19 @@ p a{
     font-weight: 400;
     font-size: 18px;
     cursor: pointer;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    opacity: 1;
+    transition: 0.3s;
 }
 
-button:hover{
-    color: #d1ecd6;
+
+.btn:hover {
+    opacity: 0.9;
+    transition-delay: 120ms;
     transition: ease-in-out;
+    
+    
 }
 .content h5 {
     text-align: center;
@@ -94,7 +103,7 @@ button:hover{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 13px;
     line-height: 16px;
 }
 
@@ -108,3 +117,6 @@ footer {
     line-height: 16px;
     color: #2D2D2D;
 }
+
+
+

@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
   ul {
     list-style: none;
   }
@@ -20,30 +21,53 @@
   .head{
     color:#22443E;
     padding-left: 65px;
+    font-family:  'Poppins', sans-serif;
      }
-    
-     .txt b{
-       color:linear-gradient(0deg, #2D2D2D, #2D2D2D);
+     .txt{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+  }
+   
+     .txt p{
+     color:rgba(45, 45, 45, 1);
     }
-
+/* .big p{
+  font-weight: 500;
+} */
     .txt span{
         color:rgba(34, 68, 62, 1)
     }
     .big{
       font-size: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color:rgba(45, 45, 45, 1);
     }
     button{
       background-color: rgba(34, 68, 62, 1);
       color: rgba(246, 246, 246, 1);
       width: 30%;
-      padding: 10px;
+      padding: 22px;
       border-radius: 5px;
       border: none;
+      font-family:  'Poppins', sans-serif;
+      
+    }
+    .small{
+      color:rgba(45, 45, 45, 1);
+      font-family:  'Poppins', sans-serif;
+    }
+    .vsm{
+      font-family:  'Poppins', sans-serif;
+      color:rgba(45, 45, 45, 1);
     }
     .vsm span{
       color: rgba(34, 68, 62, 1);
+      font-family:  'Poppins', sans-serif;
     }
     footer{
       position: absolute;
-      bottom: 0;
-    }
+      bottom: 6px;
+      font-family:  'Poppins', sans-serif;
+      /* font-weight: 10; */
+    } 
