@@ -582,3 +582,79 @@ width: 250px;
   .footer_bottom a {
     font-size: 11px;
   }
+
+  @media only screen and (min-width: 300px) and (max-width: 600px) {
+    body {
+       
+       max-width: 80%;
+    }
+    .nav_outer {
+      display: none;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    .title h5 {
+        width: 254px;
+height: 22px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 15.875px;
+line-height: 22px;
+/* identical to box height, or 138% */
+
+
+
+color: #2D2D2D;
+margin-right: 4rem;
+margin-left: 2rem;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+        align-items: center;
+        justify-content: center;
+        width: 140vw;
+        margin:0 auto;
+    }
+    .content-header h2 {
+        width: 342px;
+height: 128px;
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 32px;
+/* or 178% */
+
+letter-spacing: 0.196296px;
+
+color: #2D2D2D;
+padding: 0;
+margin-right: 3rem;
+    }
+.content-post p {
+    width: 300px;
+}
+.tag {
+    width: 140vw;
+    margin: 0 auto;
+}
+.related-box {
+    display: flex;
+    flex-direction: column;
+}
+article {
+    width: 100vw;
+    margin: 0 auto;
+}
+
+  }
