@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.utils import timezone
 from taggit.managers import TaggableManager
 from django.template.defaultfilters import slugify
+from django.contrib.auth import get_user_model
 from random import randint
 # Create your models here.
 class Category(models.Model):
@@ -19,7 +20,7 @@ class Category(models.Model):
     
 
 
-
+User = get_user_model()
 class Profile(models.Model):
     pass
 
@@ -30,7 +31,7 @@ class Post(models.Model):
         ('published', 'Published')
     )
     author = models.ForeignKey(User, on_delete = models.CASCADE)
-    title = models.CharField(max_length=500)
+    title = models.CharField(max_length=500, unique = True)
     slug = models.SlugField(max_length=200, unique=True, blank = True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -49,10 +50,8 @@ class Post(models.Model):
 
     
     # whenever the post is edited the slug changes, this needs to be fixed
+    
     def save(self, *args, **kwargs):
-        if Post.objects.filter(title=self.title).exists():
-            extra = str(randint(1, 10000))
-            self.slug = slugify(self.title) + "-" + extra
-        else:
-            self.slug = slugify(self.title)
+        mySlug = str(self.category) + '//' + self.title
+        self.slug = slugify(mySlug)
         super(Post, self).save(*args, **kwargs)

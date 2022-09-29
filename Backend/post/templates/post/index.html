@@ -7,16 +7,18 @@
     <title>Blog</title>
 </head>
 <body>
+    <div>
     {% for post in posts %}
         {% for tag in post.tags.all %}
-        tags: #{{tag}} <br>
+        tags: #{{tag}} 
         {% endfor %}
         title: {{post.title}} <br>, 
         category: {{post.category}},<br> 
         author: {{post.author.get_full_name}} <br>
         {{post.description}}
-      <a href="  {% url 'post:post_detail' post.slug %}">{{post.title}}</a>
+      
      {% endfor %}
      {{request.user}}
+    </div> <br><br><br>
 </body>
 </html>

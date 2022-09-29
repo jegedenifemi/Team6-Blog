@@ -15,26 +15,29 @@ def index(request):
 
     
 def createPost(request):
-    form = PostForm
-    if request.method == 'POST':
-        form = PostForm(request.POST)
-        if form.is_valid():
-            # form = 
-            form.save()
-            # form.author = request.user
+    if request.user.is_authenticated:
+        form = PostForm
+        if request.method == 'POST':
+            form = PostForm(request.POST)
             
-            # return redirect('post:index')
-        else: 
-            form = PostForm
+            if form.is_valid():
+                myform = form.save(commit =False)
+                myform.author = request.user
+                myform.save()
+                return redirect('post:index')
+            else: 
+                form = PostForm
+    else:
+        return redirect('login')
     
     context = {'form': form}
 
     return render(request, 'post/create.html', context)
 
-def display_view(request, slug):
-    post = get_object_or_404(Post, slug=slug, status = 'published')
-    context = {
-        'post': post,
-    }
-    return render(request, 'post/detail.html', context)
+# def display_view(request, slug):
+#     post = get_object_or_404(Post, slug=slug, status = 'published')
+#     context = {
+#         'post': post,
+#     }
+#     return render(request, 'post/detail.html', context)
 

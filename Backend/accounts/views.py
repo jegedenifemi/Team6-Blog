@@ -25,7 +25,7 @@ def _sign_up(request):
                 form.save()
                 username = form.cleaned_data.get('username')
                 # This gets sent to the admin login page, debug later
-                # messages.success(request, "Account was created successfully for " + username)
+                messages.success(request, "Account was created successfully for " + username)
             
                 return redirect('login')
         context = {'form': form}
