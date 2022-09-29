@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogga</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,216 +17,150 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/archive.css" />
-    <title>Archive</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/archive.css" />
   </head>
   <body>
     <header>
-      <div class="row header1">
-        <div class="col-2 text-end align-text-bottom">
-          <p my-3>Have a story to share?</p>
-        </div>
-        <div class="col-2">
-          <button class="btn">Contact us</button>
-        </div>
-        <div class="col-5">
-          <i class="bi bi-search search-icon"></i>
-          <input type="search" name="search" id="search" placeholder="Search" />
-        </div>
-        <div class="col-2 socials">
-          <div class="row">
-            <div class="col">
-              <a href=""><img src="./img/facebook.png" alt="" /></a>
-            </div>
-            <div class="col">
-              <a href=""><img src="./img/twitter.png" alt="" /></a>
-            </div>
-            <div class="col">
-              <a href=""><img src="./img/instagram.png" alt="" /></a>
-            </div>
+      <div class="banner">
+        <div class="banner_wrapper">
+          <div class="banner_left">
+            <a href="signup.html">Have a story to share?</a>
+            <button onclick="window.location.href='https://www.google.com/';">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="banner_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="" id="" placeholder="Search" />
           </div>
         </div>
+
+        <div class="banner_socials">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
       </div>
-      <div class="row header2">
-        <div class="col">Logo</div>
-      </div>
-      <div class="row header3">
-        <div class="col">
-          <a href="">Fashion</a>
-        </div>
-        <div class="col">
-          <a href="">Entertainment</a>
-        </div>
-        <div class="col">
-          <a href="">Technology</a>
-        </div>
-        <div class="col">
-          <a href="">Health</a>
-        </div>
-        <div class="col">
-          <a href="">Politics</a>
-        </div>
-        <div class="col">
-          <a href="">Education</a>
-        </div>
-        <div class="col">
-          <a href="">Food</a>
-        </div>
-        <div class="col">
-          <a href="">Arts</a>
-        </div>
-        <div class="col dropdown">
-          <a
-            href=""
-            class="dropdown-toggle"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            >More</a
-          >
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <button class="btn btn-outline-success sign-in">Sign in</button>
-        </div>
-        <div class="col">
-          <button class="btn subscribe text-light">Subscribe</button>
+
+      <div class="nav_outer">
+        <img
+          src="https://cdn.dribbble.com/userupload/3158903/file/original-3f5abe8b99ff4ba4626ddf6660115182.jpg?compress=1&resize=752x"
+          alt="Blogga Logo"
+        />
+
+        <div class="nav_inner">
+          <div class="hamburger">
+            <span class="span1"></span><span class="span2"></span
+            ><span class="span3"></span>
+          </div>
+
+          <nav>
+            <ul>
+              <li><a href="#">FASHION</a></li>
+              <li><a href="#">ENTERTAINMENT</a></li>
+              <li><a href="#">TECHNOLOGY</a></li>
+              <li><a href="#">HEALTH</a></li>
+              <li><a href="#">POLITICS</a></li>
+              <li><a href="#">EDUCATION</a></li>
+              <li><a href="#">FOOD</a></li>
+              <li><a href="#">ART</a></li>
+              <li>
+                <a href="#"> MORE</a>&ThickSpace;<i
+                  class="fa-solid fa-caret-down"
+                ></i>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="nav_btns">
+            <button>Sign In</button>
+            <button class="subscribe">Subscribe</button>
+          </div>
         </div>
       </div>
     </header>
 
-    <main>
-      <div class="row writeup text-center">
+    <main class="my-5 mx-3">
+      <section class="">
         <div class="row">
-          <div class="col"><h2>ARCHIVES</h2></div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p>
-              Our digital archive gives you unprecedented access to previous
-              news and stories across different topics
-            </p>
-            <p>from 2002 till today</p>
+          <div class="row text-center justify-content-center">
+            <div class="col">
+              <img src="./img/blog1a.png" alt="" width="90%" />
+            </div>
+            <div class="col">
+              <img src="./img/blog1b.png" alt="" width="90%" />
+            </div>
+            <div class="col">
+              <img src="./img/blog1c.png" alt="" width="90%" />
+            </div>
+          </div>
+          <div
+            class="row mt-5 mx-4 fw-semibold justify-content-center blog-details"
+          >
+            <div class="col pl-10">
+              <p class="">Dubai Police extradite Hushpuppi,</p>
+              <p class="">Woodberry to USA</p>
+              <p>
+                By Racheal
+                <span class="fw-light span">July 02,2022 12:32</span>
+              </p>
+            </div>
+            <div class="col">
+              <p>Constance Woo Talks About Her Baby</p>
+              <p>Girl's 'Little Blue Butt': 'It's Very Special.</p>
+              <p>By Amara <span>September 23,2022 12:32</span></p>
+            </div>
+            <div class="col">
+              <p>Constance Woo Says She Attempted</p>
+              <p>Suicide after 'Fresh Off The Boat' Twitter</p>
+              <p>Drama: 'Almost Lost My Life'</p>
+              <p>By Amara <span>September 23,2022 12:32</span></p>
+            </div>
           </div>
         </div>
-        <div class="row date text-center">
-          <div class="col date1">
-            <h5>DATE</h5>
-          </div>
-          <div class="col date2">
-            <h5>MONTH</h5>
-          </div>
-          <div class="col date3">
-            <h5>YEAR</h5>
-          </div>
-        </div>
-        <br />
-        <div class="row calender text-center">
-          <div class="col date1">
-            <form action="">
-              <label for="date"></label>
-              <select name="date" id="date" class="box">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-              </select>
-            </form>
-          </div>
-          <div class="col">
-            <form action="">
-              <label for="date"></label>
-              <select name="date" id="date">
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-              </select>
-            </form>
-          </div>
-          <div class="col date3">
-            <form action="">
-              <label for="date"></label>
-              <select name="date" id="date">
-                <option value="2002">2002</option>
-                <option value="2003">2003</option>
-                <option value="2004">2004</option>
-                <option value="2005">2005</option>
-                <option value="2006">2006</option>
-                <option value="2007">2007</option>
-                <option value="2008">2008</option>
-                <option value="2009">2009</option>
-                <option value="2010">2010</option>
-                <option value="2011">2011</option>
-                <option value="2012">2012</option>
-                <option value="2013">2013</option>
-                <option value="2014">2014</option>
-                <option value="2015">2015</option>
-                <option value="2016">2016</option>
-                <option value="2017">2017</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-              </select>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="row blogs">
-        <div class="row">
-          <div class="col bg-primary">j</div>
-          <div class="col bg-black">h</div>
-          <div class="col bg-success">t</div>
-        </div>
-      </div>
+      </section>
     </main>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
+    <footer>
+      <div class="footer_top">
+        <ul>
+          <li>ADVERTISE</li>
+          <li>WRITE FOR US</li>
+          <li>CATEGORIES</li>
+          <li>
+            <img src="" alt="" />
+          </li>
+          <li>ARCHIVES</li>
+          <li>TERMS OF SERVICE</li>
+          <li>PRIVACY</li>
+        </ul>
+      </div>
+
+      <div class="footer_middle">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>&ThinSpace; FACEBOOK </a
+        ><a href="#"><i class="fa-brands fa-twitter"></i>&ThinSpace; TWITTER</a
+        ><a href="#"
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace; LINKEDIN</a
+        ><a href="#"><i class="fa-brands fa-youtube"></i>&ThinSpace; YOUTUBE</a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace; INSTAGRAM</a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace; PINTEREST</a
+        >
+      </div>
+
+      <div class="footer_bottom">
+        <p>© 2022 The Blogga Team All Rights Reserved</p>
+        <a href="#">Site Map</a>
+      </div>
+    </footer>
   </body>
 </html>
