@@ -138,6 +138,9 @@ header {
   gap: 2rem;
   justify-content: space-between;
 }
+.nav_inner > nav > img {
+  display: none;
+}
 .nav_inner > nav > ul > li > a {
   color: rgba(45, 45, 45, 1);
   font-weight: 500;
@@ -154,6 +157,9 @@ header {
 .nav_btns > button:first-of-type {
   border: 1px solid rgba(34, 68, 62, 1);
   color: rgba(34, 68, 62, 1);
+}
+.nav_inner > i {
+  display: none;
 }
 .subscribe {
   background-color: rgba(34, 68, 62, 1);
@@ -264,7 +270,7 @@ header {
   bottom: -0.2rem;
   left: 0.5rem;
 }
-.hero_left > h2 {
+.hero_left h2 {
   font-weight: 500;
   font-size: 24px;
   margin-top: 1.5rem;
@@ -615,7 +621,78 @@ header {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1024px) and (max-width: 1260px) {
+  .banner,
+  .nav_outer,
+  .hero,
+  .trending,
+  .writers_latest_popular {
+    padding-inline: 2rem;
+  }
+  .nav_inner > nav > ul {
+    gap: 1rem;
+  }
+
+  /* HERO SECTION */
+  .hero_right {
+    flex-basis: 52%;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+  }
+
+  .card_info_wrapper {
+    top: 65%;
+  }
+  .card_info_bottom p {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* HEADER */
+  .banner,
+  .nav_outer > img,
+  .nav_inner > nav > ul,
+  .nav_btns {
+    display: none;
+  }
+  .nav_outer {
+    background: rgb(34, 68, 62);
+    padding: 0rem 2rem 0rem;
+  }
+  .hamburger {
+    gap: 0.3rem;
+  }
+  .hamburger > .span1 {
+    width: 1.9rem;
+  }
+  .hamburger > .span2 {
+    width: 1.7rem;
+  }
+  .hamburger > .span3 {
+    width: 1.5rem;
+  }
+  .hamburger > .span1,
+  .hamburger > .span2,
+  .hamburger > .span3 {
+    background-color: rgba(248, 248, 248, 1);
+    border-radius: 1rem;
+    padding-top: 1px;
+  }
+  .nav_inner > nav {
+    display: flex;
+  }
+  .nav_inner > nav > img,
+  .nav_inner > i {
+    width: 3rem;
+    display: unset;
+  }
+  .nav_inner > i {
+    font-size: x-large;
+    color: rgba(248, 248, 248, 1);
+    width: fit-content;
+  }
+
+  /* HERO SECTION */
   .hero {
     padding: 2.5rem 2rem 6rem;
     flex-direction: column;
@@ -628,7 +705,7 @@ header {
     grid-template-columns: 1fr;
     flex-basis: unset;
     column-gap: unset;
-    row-gap: 6.5rem;
+    row-gap: 7rem;
   }
 
   .card_info_wrapper {
@@ -710,6 +787,9 @@ header {
     justify-content: space-between;
     gap: 1rem;
   }
+  .latest_cards_txt h3 {
+    font-size: 16px;
+  }
   .latest_cards img {
     order: 1;
   }
@@ -746,20 +826,18 @@ header {
   .footer_top > img {
     display: block;
     margin: 0 auto;
-    width: 10%;
+    width: 4rem;
   }
   .footer_top li:nth-child(4) {
     display: none;
   }
   .footer_top ul {
-    flex-wrap: wrap;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding-inline: 0rem;
     padding-block: 0rem 1.3rem;
   }
   .footer_top ul li {
-    flex-basis: 30%;
-    width: max-content;
     font-weight: 600;
     text-align: center;
   }
@@ -774,4 +852,80 @@ header {
     gap: 0.5rem;
     padding-bottom: 2rem;
   }
-} /* MEDIA QUERIES */
+}
+@media screen and (max-width: 535px) {
+  /* HEADER */
+  .nav_outer {
+    padding: 0rem 1rem 0rem;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    padding: 1.5rem 1rem 6rem;
+  }
+  .hero_left {
+    gap: 0;
+  }
+  .hero_left h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .hero_left > p {
+    margin-block: 1rem 0.5rem;
+    font-size: 13px;
+  }
+  .hero_author_sm {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .hero_right {
+    row-gap: 7rem;
+  }
+
+  .card_info_wrapper {
+    width: 92%;
+    top: 90%;
+  }
+
+  /* TRENDING */
+  .trending {
+    padding-inline: 1rem;
+  }
+
+  /* WRITERS, LATEST, POPULAR */
+  .writers_latest_popular {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1rem 3rem;
+  }
+  .latest_cards_txt h3 {
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .latest_cards {
+    gap: 0.5rem;
+  }
+  .latest_cards img {
+    width: 8rem;
+  }
+  .latest_cards_txt_bottom {
+    gap: 1rem;
+  }
+  .latest_cards_txt_bottom > P {
+    font-size: 11px;
+  }
+  /* NEWSLETTER */
+  .newsletter > p {
+    width: 90%;
+  }
+  /* FOOTER */
+  .footer_top > ul {
+    gap: 0.8rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer_middle {
+    gap: 1.8rem;
+  }
+}
+
+/* MEDIA QUERIES */
