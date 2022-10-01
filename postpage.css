@@ -382,7 +382,7 @@ color: #2D2D2D;
   
     
 }
-.comment-profile p {
+.p {
     margin-right: 12rem;
     font-family: 'Poppins';
 font-style: normal;
@@ -635,7 +635,7 @@ width: 250px;
     justify-content: space-between;
     align-content: space-evenly;
   }
-  @media screen and (max-width: 935px) {
+  @media screen and (max-width: 768px) {
     /* HEADER */
     main {
         
@@ -646,10 +646,11 @@ width: 250px;
         display: flex;
         flex-direction: column;
        
-       margin: 0 auto 4rem;
+       margin: 0 auto 3rem;
        width:100%;
-       padding: 4rem;
-       margin-bottom: 4rem;
+       padding: 1rem;
+       margin-top: 2rem;
+       
        
        
     }
@@ -683,20 +684,24 @@ color: #2D2D2D;
     }
     .title {
         width: 70%;
-        margin-left: 5rem;
+        margin-left: 1.6rem;
         margin-bottom: 3rem;
         height: 50px;
     }
    .title h5 {
-   margin-right: 10px;
-   color:#EB4F4F;
-   display: flex;
-   align-content: flex-start;
-   justify-content: flex-start;
-   margin: 0 auto;
+   margin-right: 3rem;
+   color:#2D2D2D;
+   
+   
+  
    }
+   
+   
+
+
+
    .content-header {
-    margin-top: -6rem;
+    margin-top: -4rem;
    }
    .tag {
     height: 1px;
@@ -735,13 +740,15 @@ article {
     display: flex;
     flex-direction: column;
     width: 400px;
+    margin-right: 4rem;
 }
 article h3 {
-    margin-left: -0.1rem;
+    margin-left: -2rem;
     color: red;
+    
 }
 .comment-box {
-    margin-left: -2rem;
+    margin-left: -3.3rem;
 }
 
 .comment-profile {
@@ -750,8 +757,9 @@ article h3 {
     justify-content: space-evenly;
     margin-left: 3rem;
 }
-.comment-profile p {
+.p {
     margin-left: 2rem;
+    margin-right: 3rem;
     font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
@@ -762,12 +770,26 @@ line-height: 11px;
 display: flex;
 align-items: center;
 letter-spacing: 0.111064px;
+vertical-align: auto;
 
 
 
 color: rgba(45, 45, 45, 0.7);
 
 
+}
+.comment-post p {
+  font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 28px;
+/* or 200% */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.111064px;
+
+color: rgba(45, 45, 45, 0.7);
 }
 .comment-response {
   display: flex;
@@ -776,6 +798,7 @@ color: rgba(45, 45, 45, 0.7);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-left: -4rem;
 }
 .related-box {
     display: flex;
@@ -850,8 +873,88 @@ color: #22443E;
 margin-bottom: 2rem;
 
 }
+.imag img {
+  margin-right: 2px;
+}
+
+.related {
+  margin-left: 2rem;
+}
+.tag1 {
+  margin-right: 1rem;
+}
+.tag1 h3 {
+  margin-left: 2rem;
+}
+.tag-box1 {
+  margin-left: 2rem;
+}
+.comment-response .fas{
+  color: rgba(45, 45, 45, 0.7);;
+  margin-right: 8px;
+ 
+ 
+  margin-top: 1rem;
+}
+
+.comment-details h5 {
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 14px;
+letter-spacing: 0.111064px;
+
+color: #2D2D2D;
+}
+
 
   }
+
+@media screen and (min-width: 768px) and (max-width: 1194px) {
+  .tag {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+.tag h3 {
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
+}
+.tag-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 15px;
+    margin-left: 15px;
+   
+
+}
+.tag-box a{
+    margin-right: 10px;
+    background-color: #E4E4E4;;
+    margin-top: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 25px;
+    /* identical to box height, or 206% */
+
+    display: flex;
+    align-items: center;
+
+    color: #2D2D2D;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    
+}
+}
   
   /* MEDIA QUERIES */
   
