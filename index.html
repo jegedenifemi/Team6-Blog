@@ -32,7 +32,7 @@
       <div class="banner">
         <div class="banner_wrapper">
           <div class="banner_left">
-            <a href="signup.html">Have a story to share?</a>
+            <p>Have a story to share?</p>
             <button onclick="window.location.href='https://google.com';">
               Contact Us
             </button>
@@ -45,14 +45,16 @@
         </div>
 
         <div class="banner_socials">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
 
       <div class="nav_outer">
-        <img src="./img/logo_resources/Favicon.png" alt="Blogga Logo" />
+        <a href="./index.html"
+          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo"
+        /></a>
 
         <div class="nav_inner">
           <div class="hamburger">
@@ -61,10 +63,15 @@
           </div>
 
           <nav>
+            <a href="./index.html"
+              ><img
+                src="./img/logo_resources/Favicon_White.png"
+                alt="Blogga Logo"
+            /></a>
             <ul>
-              <li><a href="#">FASHION</a></li>
-              <li><a href="#">ENTERTAINMENT</a></li>
-              <li><a href="#">TECHNOLOGY</a></li>
+              <li><a href="./fashion.html">FASHION</a></li>
+              <li><a href="./category-page.html">ENTERTAINMENT</a></li>
+              <li><a href="./technology.html">TECHNOLOGY</a></li>
               <li><a href="#">HEALTH</a></li>
               <li><a href="#">POLITICS</a></li>
               <li><a href="#">EDUCATION</a></li>
@@ -82,6 +89,8 @@
             </ul>
           </nav>
 
+          <i class="fa-solid fa-magnifying-glass"></i>
+
           <div class="nav_btns">
             <button
               class="button"
@@ -89,7 +98,12 @@
             >
               Sign In
             </button>
-            <button class="subscribe button">Subscribe</button>
+            <button
+              class="subscribe button"
+              onclick="window.location.href='#subscribe';"
+            >
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
@@ -103,10 +117,12 @@
             <p>TOP STORY</p>
           </div>
 
-          <h2>
-            Constance Wu Says She Experienced 'Sexual Harassment and
-            Intimidation' by Fresh Off the Boat Producer
-          </h2>
+          <a href="./postpage.html" class="post_title"
+            ><h2>
+              Constance Wu Says She Experienced 'Sexual Harassment and
+              Intimidation' by Fresh Off the Boat Producer
+            </h2></a
+          >
 
           <p>
             Wu also clarified her 2019 tweet about the ABC show's renewal,
@@ -141,7 +157,9 @@
               <div class="card_info">
                 <p class="category_label entertainment">ENTERTAINMENT</p>
 
-                <h3>Wizkid - Bad to Me (Song)</h3>
+                <a href="#" class="post_title"
+                  ><h3>Wizkid - Bad to Me (Song)</h3></a
+                >
 
                 <div class="card_info_bottom">
                   <p>By Hamzah</p>
@@ -156,7 +174,11 @@
             <div class="card_info_wrapper">
               <div class="card_info">
                 <p class="category_label technology">TECHNOLOGY</p>
-                <h3>How to un-boil an egg</h3>
+
+                <a href="#" class="post_title"
+                  ><h3>How to un-boil an egg</h3></a
+                >
+
                 <div class="card_info_bottom">
                   <p>By Rachael</p>
                   <p>September 23, 2022 14:32</p>
@@ -170,7 +192,11 @@
             <div class="card_info_wrapper">
               <div class="card_info">
                 <p class="category_label health">HEALTH</p>
-                <h3>Can I get COVID-19 if I’m fully vaccinated?</h3>
+
+                <a href="#" class="post_title"
+                  ><h3>Can I get COVID-19 if I’m fully vaccinated?</h3></a
+                >
+
                 <div class="card_info_bottom">
                   <p>By Hamzah</p>
                   <p>September 24, 2022 9:32</p>
@@ -184,7 +210,11 @@
             <div class="card_info_wrapper">
               <div class="card_info">
                 <p class="category_label art">ART</p>
-                <h3>The Benin Bronze Head</h3>
+
+                <a href="#" class="post_title"
+                  ><h3>The Benin Bronze Head</h3></a
+                >
+
                 <div class="card_info_bottom">
                   <p>By nifemi.</p>
                   <p>September 24, 2022 9:32</p>
@@ -226,10 +256,12 @@
               </div>
 
               <div class="trending_cards_txt">
-                <h4>
-                  Major Lazer, Major League DJz, Tiwa Savage, DJ Maphorisa – Koo
-                  Koo Fun (Song)
-                </h4>
+                <a href="#" class="post_title">
+                  <h4>
+                    Major Lazer, Major League DJz, Tiwa Savage, DJ Maphorisa –
+                    Koo Koo Fun (Song)
+                  </h4></a
+                >
 
                 <div class="trending_cards_txt_bottom">
                   <p>By Amara</p>
@@ -564,13 +596,13 @@
         <a href="./signup.html">Signup (login page is linked to this)</a><br />
         <a href="./verification.html">Verify Email</a><br />
         <a href="./resetpass.html">Reset Password Email</a><br />
-        <a href="./email.html">Check Email App</a><br />
-        <a href="./change-pass.html">Change Password</a>
+        <a href="./checkEmail.html">Check Email App</a><br />
+        <a href="./change-pass.html">Change Password</a><br />
         <a href="./archive.html">Archive</a>
       </section>
       <hr />
 
-      <section class="newsletter">
+      <section class="newsletter" id="subscribe">
         <h2>STAY UPDATED</h2>
 
         <p>
