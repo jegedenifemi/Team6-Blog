@@ -20,6 +20,8 @@ p {
   font-size: 14px;
   text-decoration: none;
 }
+
+/* header */
 header {
   position: sticky;
   z-index: 10000;
@@ -416,6 +418,7 @@ color: rgba(45, 45, 45, 0.7);
    
    
     margin-top: 0.8rem;
+    cursor: pointer;
 }
 
 
@@ -439,6 +442,7 @@ color: rgba(45, 45, 45, 0.7);
 .comment-reaction .fas {
     margin-right: 0.5rem;
     margin-left: 6px;
+    cursor: pointer;
 }
 .comment-reaction .fas:active {
    color: #EB4F4F;
@@ -463,13 +467,16 @@ color: rgba(45, 45, 45, 0.7);
 textarea {
     margin-left: 6px;
     border-radius: 10px;
+    font-size: 14px;
 }
 
 textarea::placeholder {
-    padding: 10px;
+    padding: 8px;
 }
 textarea:active {
    outline: none;
+   
+   
 
 }
 
@@ -916,6 +923,7 @@ color: #2D2D2D;
     display: flex;
     flex-direction: column;
     margin-left: 3rem;
+    width: 500px;
 }
 
 .tag h3 {
