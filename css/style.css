@@ -8,6 +8,10 @@
   /* border: 1px solid red; */
 }
 body,
+html {
+  scroll-behavior: smooth;
+}
+body,
 a {
   color: rgba(45, 45, 45, 1);
 }
@@ -41,9 +45,11 @@ header {
   gap: 6rem;
   justify-content: space-between;
 }
-.banner_left > a {
+.banner_left > p {
   color: rgba(230, 230, 230, 1);
   font-size: 14px;
+  display: inline;
+  font-weight: 500;
 }
 .banner_left > button {
   padding: 0.5rem 2.5rem;
@@ -90,7 +96,7 @@ header {
   border-bottom: 1px solid rgba(34, 68, 62, 0.555);
   box-shadow: 0px 2px 12px rgba(82, 81, 81, 0.205);
 }
-.nav_outer > img {
+.nav_outer > a > img {
   width: 4rem;
 }
 .nav_inner {
@@ -138,7 +144,7 @@ header {
   gap: 2rem;
   justify-content: space-between;
 }
-.nav_inner > nav > img {
+.nav_inner > nav > a > img {
   display: none;
 }
 .nav_inner > nav > ul > li > a {
@@ -154,12 +160,22 @@ header {
   border-radius: 0.5rem;
   background-color: inherit;
 }
-.nav_btns > button:first-of-type {
+.nav_btns > button {
+  cursor: pointer;
+}
+.nav_btns > button:first-of-type,
+.nav_btns > button:nth-of-type(2):hover {
   border: 1px solid rgba(34, 68, 62, 1);
   color: rgba(34, 68, 62, 1);
+  background-color: transparent;
 }
 .nav_inner > i {
   display: none;
+}
+.nav_btns > button:first-of-type:hover {
+  background-color: rgba(34, 68, 62, 1);
+  border-color: rgba(34, 68, 62, 1);
+  color: rgba(248, 248, 248, 1);
 }
 .subscribe {
   background-color: rgba(34, 68, 62, 1);
@@ -275,6 +291,11 @@ header {
   font-size: 24px;
   margin-top: 1.5rem;
 }
+.post_title:hover {
+  text-decoration: underline;
+  text-decoration-color: inherit;
+  text-underline-offset: 2px;
+}
 .hero_left > p {
   margin-block: 1.5rem;
 }
@@ -383,7 +404,7 @@ header {
   background: rgba(34, 68, 62, 1);
   color: rgba(248, 248, 248, 1);
   padding-block: 2rem 2.5rem;
-  padding-inline: 4rem;
+  padding-inline: 4rem 0;
   display: flex;
   gap: 5%;
 }
@@ -501,6 +522,7 @@ header {
   padding-left: 1rem;
 }
 .trending_cards_txt h4 {
+  color: rgba(248, 248, 248, 1);
   text-align: left;
   margin-block: 1.5rem 1rem;
   font-weight: 500;
@@ -650,7 +672,7 @@ header {
 @media screen and (max-width: 767px) {
   /* HEADER */
   .banner,
-  .nav_outer > img,
+  .nav_outer > a > img,
   .nav_inner > nav > ul,
   .nav_btns {
     display: none;
@@ -681,7 +703,7 @@ header {
   .nav_inner > nav {
     display: flex;
   }
-  .nav_inner > nav > img,
+  .nav_inner > nav > a > img,
   .nav_inner > i {
     width: 3rem;
     display: unset;
@@ -700,6 +722,9 @@ header {
   }
   .hero_left {
     flex-basis: unset;
+  }
+  .hero_left h2 {
+    font-weight: 600;
   }
   .hero_right {
     grid-template-columns: 1fr;
@@ -868,7 +893,6 @@ header {
   }
   .hero_left h2 {
     font-size: 18px;
-    font-weight: 600;
   }
   .hero_left > p {
     margin-block: 1rem 0.5rem;
