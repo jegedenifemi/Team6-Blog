@@ -3,15 +3,77 @@
   margin: 0;
   box-sizing: border-box;
 }
-.span {
-  margin-left: 150px;
-}
 
-blog-details {
+.blog-details {
   font-family: Poppins;
   font-size: 15px;
   font-weight: 500;
-  line-height: 31px;
-  letter-spacing: 0em;
   text-align: left;
 }
+
+.blog-detail1 {
+  padding-left: 3%;
+}
+
+.blog-detail2 {
+  font-size: 12px;
+  line-height: 25px;
+}
+
+.span {
+  margin-left: 65px;
+  font-weight: 400;
+}
+
+.hr {
+  width: 55%;
+  align-self: center;
+  justify-content: center;
+  margin-inline: auto;
+  margin-top: 30px;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  margin-inline: 1%;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin-bottom: 7%;
+}
+
+.pagination a.active {
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 50%;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pick {
+  padding-inline: 30px;
+  padding-right: 50px;
+}
+
+.pick p {
+  align-items: flex-end;
+  text-align: end;
+}
+
+.thickhr {
+  background: #000000;
+  margin-bottom: 50px;
+  opacity: 1;
+}
+
+@media (min-width: 250px) and (max-width: 900px) {
+  
+}
+
+
