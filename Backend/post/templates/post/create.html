@@ -1,8 +1,8 @@
 
 <!-- This returns an error which is raised by the post_detail, so it will be fixed later -->
-<form action="" method='post'>
+<form method='post'>
     {% csrf_token %}
     {{form.as_p}}
-    {{contents | safe}}
+    {{ form.contents | safe}}
 <button type="submit">submit</button>
 </form>

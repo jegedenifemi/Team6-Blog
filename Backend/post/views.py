@@ -24,6 +24,7 @@ def createPost(request):
                 myform = form.save(commit =False)
                 myform.author = request.user
                 myform.save()
+                form.save_m2m()
                 return redirect('post:index')
             else: 
                 form = PostForm
@@ -34,10 +35,10 @@ def createPost(request):
 
     return render(request, 'post/create.html', context)
 
-# def display_view(request, slug):
-#     post = get_object_or_404(Post, slug=slug, status = 'published')
-#     context = {
-#         'post': post,
-#     }
-#     return render(request, 'post/detail.html', context)
+def display_view(request, slug):
+    post = get_object_or_404(Post, slug=slug, status = 'published')
+    context = {
+        'post': post,
+    }
+    return render(request, 'post/detail.html', context)
 

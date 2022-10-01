@@ -9,6 +9,7 @@
 <body>
     <div>
     {% for post in posts %}
+    <div>
         {% for tag in post.tags.all %}
         tags: #{{tag}} 
         {% endfor %}
@@ -16,7 +17,8 @@
         category: {{post.category}},<br> 
         author: {{post.author.get_full_name}} <br>
         {{post.description}}
-      
+        <a href="{% url 'post:post_detail' post.slug %}">full post</a>
+      </div>
      {% endfor %}
      {{request.user}}
     </div> <br><br><br>

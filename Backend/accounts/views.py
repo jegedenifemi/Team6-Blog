@@ -4,13 +4,17 @@ from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.auth.models import User
 from .forms import CreateUserForm
 from django.contrib import messages
+from django.contrib.sites.shortcuts import get_current_site
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import BadHeaderError, send_mail
 from django.db.models.query_utils import Q
 from django.template.loader import render_to_string
-from django.utils.encoding import force_bytes
-from django.utils.http import urlsafe_base64_encode
+from django.utils.encoding import force_bytes, force_str
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.http import HttpResponse
+from .token import account_activation_token
+from django.contrib.auth import get_user_model
+
 # Create your views here.
 
 # this view signs up a new writer to the database and sends a success message
@@ -22,14 +26,54 @@ def _sign_up(request):
         if request.method == 'POST':
             form = CreateUserForm(request.POST)
             if form.is_valid():
-                form.save()
-                username = form.cleaned_data.get('username')
-                # This gets sent to the admin login page, debug later
-                messages.success(request, "Account was created successfully for " + username)
-            
+                user = form.save(commit = False)
+                user.is_active = False
+                user.save()
+                # getting the domain of the current site
+                current = get_current_site(request)
+                subject = "Activation link for your account with Tech Phantoms"
+                email_template_name = "./accounts/user_confirmation.txt"
+                c = {
+                "email":user.email,
+                'domain':current.domain,
+                'site_name': 'Tech Phantoms',
+                "uid": urlsafe_base64_encode(force_bytes(user.pk)),
+                "user": user,
+                'token': account_activation_token.make_token(user),
+                'protocol': 'http',
+                }
+                email = render_to_string(email_template_name, c)
+                to_email = form.cleaned_data.get('email')
+                try:
+                    send_mail(subject, email, 'afariogun.john2002@gmail.com' , [to_email], fail_silently=False)
+                except BadHeaderError:
+                    return HttpResponse('Invalid header found.')
+					
+                
                 return redirect('login')
+            
+            
+        else:
+            form = CreateUserForm
         context = {'form': form}
         return render(request, 'accounts/signup.html', context)
+
+
+def activate(request, uidb64, token):
+    User = get_user_model()
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except(TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    
+    if user is not None and account_activation_token.check_token(user,token):
+        user.is_active = True
+        user.save()
+        return redirect('post:index')
+    else:
+        return HttpResponse('Activation link is invalid')
+
 
 
 def _log_in(request):

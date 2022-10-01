@@ -49,9 +49,8 @@ class Post(models.Model):
         return self.title
 
     
-    # whenever the post is edited the slug changes, this needs to be fixed
-    
+   
     def save(self, *args, **kwargs):
-        mySlug = str(self.category) + '//' + self.title
+        mySlug = str(self.category) + str('-') + str(self.title)
         self.slug = slugify(mySlug)
         super(Post, self).save(*args, **kwargs)
