@@ -471,7 +471,7 @@ textarea {
 }
 
 textarea::placeholder {
-    padding: 8px;
+    padding: 7px;
 }
 textarea:active {
    outline: none;
