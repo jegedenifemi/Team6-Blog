@@ -47,3 +47,26 @@ onUpdate();
 // };
 
 // modalClose.onclick = removeModal();
+
+// MOBILE MENU
+let burgerBtn = document.querySelectorAll(".hamburger");
+let burgerMenu = document.querySelectorAll(".mobile_menu");
+
+// function showMenu(event) {
+//   console.log(22);
+//   burgerMenu[0].style.display = "block";
+// }
+
+burgerBtn[0].onclick = function showMenu() {
+  document.querySelectorAll(".fa-magnifying-glass")[1].style.display = "none";
+  document.querySelectorAll(".fa-magnifying-glass")[1].style.transition =
+    "30s ease-in-out";
+  burgerMenu[0].style.display = "block";
+  burgerMenu[0].style.animation = "mobilemenushow .3s";
+  burgerMenu[0].style.transition = ".5s ease";
+};
+
+// function showMenu(event) {
+//   console.log(22);
+//   burgerMenu[0].style.display = "block";
+// }
