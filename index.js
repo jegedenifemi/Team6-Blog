@@ -14,3 +14,36 @@ var swiper = new Swiper(".mySwiper", {
   mousewheel: true,
   keyboard: true,
 });
+
+// Change favicon with theme
+lightSchemeIcon = document.querySelector("link#fav-green");
+darkSchemeIcon = document.querySelector("link#fav-white");
+
+function onUpdate() {
+  if (matcher.matches) {
+    lightSchemeIcon.remove();
+    document.head.append(darkSchemeIcon);
+  } else {
+    document.head.append(lightSchemeIcon);
+    darkSchemeIcon.remove();
+  }
+}
+
+matcher = window.matchMedia("(prefers-color-scheme: dark)");
+matcher.addListener(onUpdate);
+onUpdate();
+
+// SIGNUP MODAL
+// let modalClose = document.querySelector(".close");
+// let signupModal = document.querySelector(".signup-modal");
+
+// function removeModal() {
+//   console.log("wyd bro");
+//   // signupModal[0].style.cursor = "pointer";
+//   signupModal[0].style.display = "none";
+// }
+// modalClose.onclick = () => {
+//   signupModal[0].style.display = "none";
+// };
+
+// modalClose.onclick = removeModal();

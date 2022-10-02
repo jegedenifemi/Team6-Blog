@@ -26,6 +26,26 @@ p {
   font-size: 14px;
   text-decoration: none;
 }
+
+.signup-modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  background-color: rgba(248, 248, 248, 1);
+  backdrop-filter: blur(5px);
+}
+.signup-main {
+  margin-top: 5% !important;
+  width: 100% !important;
+  height: fit-content;
+}
+.left-div {
+  background-color: white;
+}
+
 header {
   position: sticky;
   z-index: 10000;
@@ -259,6 +279,9 @@ header {
   font-size: 13px;
   margin: 0 auto;
 }
+.footer_top > ul > li a {
+  color: rgba(248, 248, 248, 1);
+}
 .footer_middle {
   display: flex;
   justify-content: center;
@@ -317,7 +340,12 @@ header {
 }
 .post_title:hover {
   text-decoration: underline;
-  text-decoration-color: inherit;
+  text-decoration-color: rgba(45, 45, 45, 1);
+  text-underline-offset: 2px;
+}
+.post_title_light:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(248, 248, 248, 1);
   text-underline-offset: 2px;
 }
 .hero_left > p {
@@ -351,7 +379,7 @@ header {
   gap: 1rem;
   min-width: max-content;
 }
-.hero_author_sm > i {
+.hero_author_sm > a > i {
   color: rgba(34, 68, 62, 1);
 }
 
