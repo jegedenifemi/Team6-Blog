@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/c751151e16.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./postpage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./css/style.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Merriweather:wght@300;400&family=Open+Sans:wght@300;400;500;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link
@@ -16,81 +17,85 @@ rel="stylesheet"
 />
 </head>
 <body>
-     <header>
-    <div class="banner">
-      <div class="banner_wrapper">
-        <div class="banner_left">
-          <a href="signup.html">Have a story to share?</a>
-          <button onclick="window.location.href='https://google.com';">
-            Contact Us
-          </button>
+    <header>
+        <div class="banner">
+          <div class="banner_wrapper">
+            <div class="banner_left">
+              <a href="signup.html">Have a story to share?</a>
+              <button onclick="window.location.href='https://google.com';">
+                Contact Us
+              </button>
+            </div>
+  
+            <div class="banner_search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" name="" id="" placeholder="Search" />
+            </div>
+          </div>
+  
+          <div class="banner_socials">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
         </div>
-
-        <div class="banner_search">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="search" name="" id="" placeholder="Search" />
+  
+        <div class="nav_outer">
+          <img src="./img/logo_resources/Favicon.png" alt="Blogga Logo" />
+  
+          <div class="nav_inner">
+            <div class="hamburger">
+              <span class="span1"></span><span class="span2"></span
+              ><span class="span3"></span>
+            </div>
+  
+            <nav>
+              <img
+                src="./img/logo_resources/Favicon_White.png"
+                alt="Blogga Logo"
+              />
+              <ul>
+                <li><a href="#">FASHION</a></li>
+                <li><a href="#">ENTERTAINMENT</a></li>
+                <li><a href="./technology.html">TECHNOLOGY</a></li>
+                <li><a href="#">HEALTH</a></li>
+                <li><a href="#">POLITICS</a></li>
+                <li><a href="#">EDUCATION</a></li>
+                <li><a href="#">FOOD</a></li>
+                <li><a href="#">ART</a></li>
+                <li>
+                  <a href="#" class="more">
+                    MORE
+                    <span class="dropdown_arrow"
+                      ><img
+                        src="./img/home_page/dropdown_arrow.png"
+                        alt="dropdown" /></span
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+  
+            <i class="fa-solid fa-magnifying-glass"></i>
+  
+            <div class="nav_btns">
+              <button
+                class="button"
+                onclick="window.location.href='./login.html';"
+              >
+                Sign In
+              </button>
+              <button class="subscribe button">Subscribe</button>
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
 
-      <div class="banner_socials">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
-      </div>
-    </div>
-
-    <div class="nav_outer">
-      <img
-        src="https://cdn.dribbble.com/userupload/3158903/file/original-3f5abe8b99ff4ba4626ddf6660115182.jpg?compress=1&resize=752x"
-        alt="Blogga Logo"
-      />
-
-      <div class="nav_inner">
-        <div class="hamburger">
-          <span class="span1"></span><span class="span2"></span
-          ><span class="span3"></span>
-        </div>
-
-        <nav>
-          <ul>
-            <li><a href="#">FASHION</a></li>
-            <li><a href="#">ENTERTAINMENT</a></li>
-            <li><a href="#">TECHNOLOGY</a></li>
-            <li><a href="#">HEALTH</a></li>
-            <li><a href="#">POLITICS</a></li>
-            <li><a href="#">EDUCATION</a></li>
-            <li><a href="#">FOOD</a></li>
-            <li><a href="#">ART</a></li>
-            <li>
-              <a href="#" class="more">
-                MORE
-                <span class="dropdown_arrow"
-                  ><img
-                    src="./dropdown_arrow.png"
-                    alt="dropdown" /></span
-              ></a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="nav_btns">
-          <button
-            class="button"
-            onclick="window.location.href='./login.html';"
-          >
-            Sign In
-          </button>
-          <button class="subscribe button">Subscribe</button>
-        </div>
-      </div>
-    </div>
-  </header>
-
+      
     <main>
         <div class="title">
-            <h5>HOME/ENTERTAINMENT/MOVIES</h5><br><br>
+            <h5>HOME/ENTERTAINMENT/MOVIES</h5>
         </div>
-
+       
         <div class="content">
             <div class="content-post">
                <div class="content-header">
@@ -194,7 +199,8 @@ rel="stylesheet"
                 <img src="./Vector.png" alt=""></div>
                 <h5>Hamzah</h5>
             </div>
-                <p>1 week ago</p>
+                <div class="p">1 week ago</div>
+                
                 <div class="comment-response">
                <i class="fas fa-reply"></i>
                 <span>Reply</span>
@@ -215,7 +221,7 @@ rel="stylesheet"
                 <img src="./Ellipse 2 (1).png" alt=""></div>
                 <h5>Adedotun</h5>
             </div>
-                <p>1 week ago</p>
+            <div class="p">1 week ago</div>
                 <div class="comment-response">
                <i class="fas fa-reply"></i>
                 <span>Reply</span>
@@ -238,7 +244,8 @@ rel="stylesheet"
                 
                     <button class="signin-btn">Sign In</button>
             </div>
-        </div>
+            </div>
+        
     </article>
 
     <div class="related">
@@ -280,6 +287,70 @@ rel="stylesheet"
         </div>
     </div>
     </div>
+    <div class="tag1">
+      <h3>Popular Tags</h3>
+      <div class="tag-box1">
+          <a href="">Olamide</a>
+          <a href="">Funke Akindele</a>
+          <a href="">BB Naija</a>
+          <a href="">Machala</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Odunlade</a>
+          <a href="">MR Bean</a>
+          <a href="">Wizkid</a>
+          <a href="">Ariann</a>
+          <a href="">Carter</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Kelvin Hart</a>
+          <a href="">The Rock</a>
+          <a href="">Jeniffer</a>
+          <a href="">Nicki</a>
+          <a href="">Depp</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Dragons</a>
+          <a href="">Drama</a>
+          <a href="">Mavin</a>
+          <a href="">Dr Strange</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Netflix</a>
+          <a href="">DJ Kaywise</a>
+          <a href="">Falz</a>
+          <a href="">Will Smith</a>
+          <a href="">Amber</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Terminator</a>
+          <a href="">Asake</a>
+          <a href="">Justin</a>
+          <a href="">Iyabo Ojo</a>
+          <a href="">Fame</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">GOAT</a>
+          <a href="">OBO</a>
+          <a href="">Lil Wayne</a>
+          <a href="">Lil Nas</a>
+          <a href="">Nasty Blaq</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Ayra starr</a>
+          <a href="">Dax</a>
+          <a href="">SZA</a>
+          <a href="">Nancy Isime</a>
+          <a href="">Amazon</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">House of Dragons</a>
+          <a href="">G.O.T</a>
+          <a href="">Nino</a>
+          <a href="">Tech-Phantoms</a>
+      </div>
+  </div>
+</div>
 
     <section class="newsletter">
         <h2>STAY UPDATED</h2>
@@ -301,14 +372,18 @@ rel="stylesheet"
       </section>
     </main>
 
-    <footer>
+    <footer class="main_footer">
       <div class="footer_top">
+        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
         <ul>
           <li>ADVERTISE</li>
           <li>WRITE FOR US</li>
           <li>CATEGORIES</li>
           <li>
-            <img src="" alt="" />
+            <img
+              src="./img/logo_resources/Favicon_White.png"
+              alt="Blogga Icon"
+            />
           </li>
           <li>ARCHIVES</li>
           <li>TERMS OF SERVICE</li>
@@ -318,16 +393,24 @@ rel="stylesheet"
 
       <div class="footer_middle">
         <a href="#">
-          <i class="fa-brands fa-facebook"></i>&ThinSpace; FACEBOOK </a
-        ><a href="#"><i class="fa-brands fa-twitter"></i>&ThinSpace; TWITTER</a
+          <i class="fa-brands fa-facebook"></i>&ThinSpace;
+          <span>FACEBOOK</span> </a
         ><a href="#"
-          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace; LINKEDIN</a
-        ><a href="#"><i class="fa-brands fa-youtube"></i>&ThinSpace; YOUTUBE</a
+          ><i class="fa-brands fa-twitter"></i>&ThinSpace;
+          <span>TWITTER</span> </a
         ><a href="#"
-          ><i class="fa-brands fa-instagram"></i>&ThinSpace; INSTAGRAM</a
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace;
+          <span>LINKEDIN</span> </a
         ><a href="#"
-          ><i class="fa-brands fa-pinterest"></i>&ThinSpace; PINTEREST</a
-        >
+          ><i class="fa-brands fa-youtube"></i>&ThinSpace;
+          <span>YOUTUBE</span></a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace;
+          <span>INSTAGRAM</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace;
+          <span>PINTEREST</span>
+        </a>
       </div>
 
       <div class="footer_bottom">
@@ -335,6 +418,14 @@ rel="stylesheet"
         <a href="#">Site Map</a>
       </div>
     </footer>
+
+    
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="./index.js"></script>
 
    
 </body>
