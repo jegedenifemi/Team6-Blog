@@ -3,6 +3,6 @@
 <form method='post'>
     {% csrf_token %}
     {{form.as_p}}
-    {{ form.contents | safe}}
+    {{ contents | safe}}
 <button type="submit">submit</button>
 </form>

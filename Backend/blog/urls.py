@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('summernote/', include('django_summernote.urls')),
-    path('', include('post.urls')),
+    path('posts/', include('post.urls')),
 
 ]
 
