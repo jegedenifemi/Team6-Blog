@@ -30,3 +30,7 @@
   left: 30px;
   color: black;
 }
+
+@media (min-width: 250px) and (max-width: 900px) {
+  
+}
