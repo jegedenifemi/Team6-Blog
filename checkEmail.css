@@ -17,9 +17,9 @@ main {
     margin: 0 auto;
 }
 
-.leftDiv {
+/* .leftDiv {
     width: 50%;
-}
+} */
 
 .vector1 {
     /* width: 35%; */
@@ -190,7 +190,7 @@ main {
         display: block;
         /* width: 306px; */
         /* height: 22.5rem; */
-        width: 200%;
+        width: 100%;
     }
 
     /* .vector2 {
@@ -320,7 +320,7 @@ main {
         display: block;
         /* width: 306px; */
         /* height: 530px; */
-        width: 200%;
+        width: 100%;
     }
 
     /* .vector2 {
