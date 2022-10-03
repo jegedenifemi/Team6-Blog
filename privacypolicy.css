@@ -5,7 +5,7 @@ body {
 }
 
 main {
-    /* width: 100%; */
+    width: 100%;
 }
 
 .privacy-txt {
@@ -61,3 +61,61 @@ ul li {
 .special {
     margin-top: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+    .privacy-txt {
+        font-size: 1.75rem;
+    }
+
+    .content {
+        width: 70%;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    hr {
+        width: 90%;
+    }
+    
+    .privacy-txt {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 0.725rem;
+    }
+
+    p {
+        font-size: 0.725rem;
+        font-weight: 500;
+    }
+
+    p a {
+        font-size: 0.725rem;
+    }
+
+    ul {
+        font-size: 0.725rem;
+    }
+
+    ul li {
+        font-size: 0.725rem;
+    }
+}
+
