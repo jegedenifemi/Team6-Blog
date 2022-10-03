@@ -36,7 +36,7 @@
     <!-- <link rel="stylesheet" href="./css/signup.css" /> -->
   </head>
 
-  <body>
+  <body class="home_body">
     <!-- <div class="signup-modal">
       <main class="signup-main">
         <div class="left-div">
@@ -135,6 +135,9 @@
             <span class="span1"></span><span class="span2"></span
             ><span class="span3"></span>
           </div>
+          <div class="hamburger_close">
+            <span class="span1"></span><span class="span2"></span>
+          </div>
 
           <nav>
             <a href="./index.html"
@@ -143,22 +146,45 @@
                 alt="Blogga Logo"
             /></a>
             <ul>
-              <li><a href="./fashion.html">FASHION</a></li>
-              <li><a href="./category-page.html">ENTERTAINMENT</a></li>
-              <li><a href="./technology.html">TECHNOLOGY</a></li>
-              <li><a href="#">HEALTH</a></li>
-              <li><a href="#">POLITICS</a></li>
-              <li><a href="#">EDUCATION</a></li>
-              <!-- <li><a href="#">FOOD</a></li> -->
-              <li><a href="#">ART</a></li>
+              <li><a href="./fashion.html" class="nav_fashion">FASHION</a></li>
               <li>
-                <a href="#" class="more">
+                <a href="./category-page.html" class="nav_entertainment"
+                  >ENTERTAINMENT</a
+                >
+              </li>
+              <li>
+                <a href="./technology.html" class="nav_tech">TECHNOLOGY</a>
+              </li>
+              <li><a href="#" class="nav_health">HEALTH</a></li>
+              <li><a href="#" class="nav_politics">POLITICS</a></li>
+              <li><a href="#" class="nav_edu">EDUCATION</a></li>
+              <!-- <li><a href="#" class="nav_food">FOOD</a></li> -->
+              <li><a href="#" class="nav_art">ART</a></li>
+              <li>
+                <label for="more_check" class="more">
+                  MORE
+                  <span class="dropdown_arrow"
+                    ><img
+                      src="./img/home_page/dropdown_arrow.png"
+                      alt="dropdown"
+                  /></span>
+                </label>
+                <input type="checkbox" name="more_check" id="more_check" />
+                <!-- <a href="#" class="more">
                   MORE
                   <span class="dropdown_arrow"
                     ><img
                       src="./img/home_page/dropdown_arrow.png"
                       alt="dropdown" /></span
-                ></a>
+                ></a> -->
+                <div class="more_dropdown">
+                  <ul>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">WRITE FOR US</a></li>
+                    <li><a href="#">ARCHIVE</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </nav>
@@ -178,6 +204,8 @@
             >
               Subscribe
             </button>
+
+            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
           </div>
         </div>
       </div>
@@ -218,7 +246,7 @@
         </div>
 
         <div class="mobile_menu_btns_wrap">
-          <!-- <div class="mobile_menu_btns">
+          <div class="mobile_menu_btns">
             <button
               class="button"
               onclick="window.location.href='./login.html';"
@@ -231,7 +259,7 @@
             >
               Subscribe
             </button>
-          </div> -->
+          </div>
 
           <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
         </div>
