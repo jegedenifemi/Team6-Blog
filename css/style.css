@@ -11,6 +11,9 @@ body,
 html {
   scroll-behavior: smooth;
 }
+.home_body {
+  background-color: rgba(248, 248, 248, 1);
+}
 body,
 a {
   color: rgba(45, 45, 45, 1);
@@ -129,7 +132,7 @@ header {
 }
 
 .nav_outer {
-  background-color: white;
+  background-color: rgba(248, 248, 248, 1);
   padding: 1rem 4rem 0.8rem;
   display: flex;
   flex-direction: column;
@@ -169,10 +172,67 @@ header {
   border-radius: 1rem;
   padding: 0.1rem;
 }
+.hamburger_close {
+  position: relative;
+  display: none;
+}
+.hamburger_close > .span1,
+.hamburger_close > .span2 {
+  width: 1.7rem;
+  border-radius: 1rem;
+  padding: 0.1rem;
+  position: absolute;
+}
+.hamburger_close > .span1 {
+  transform: rotateZ(50deg);
+}
+.hamburger_close > .span2 {
+  transform: rotateZ(-50deg);
+}
 .more {
   display: inline-flex;
   align-items: center;
+  font-weight: 600;
   gap: 0.3rem;
+  cursor: pointer;
+}
+.nav_inner nav ul li:last-child {
+  position: relative;
+}
+.more_dropdown {
+  position: absolute;
+  width: fit-content;
+  top: 2.3rem;
+  left: 2rem;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem 1.5rem 0;
+  display: none;
+  z-index: 50;
+}
+@media screen and (max-width: 1079px) and (min-width: 0px) {
+  .more_dropdown {
+    top: 1.6rem;
+    left: -5.5rem;
+  }
+}
+.more_dropdown ul li {
+  margin-bottom: 1rem;
+  min-width: max-content;
+}
+.more_dropdown a {
+  font-size: 14px;
+  font-weight: 600;
+}
+.more_dropdown a:hover {
+  border-bottom: 2px solid rgba(45, 45, 45, 1);
+}
+#more_check {
+  position: absolute;
+  top: -99999px;
+}
+#more_check:checked ~ .more_dropdown {
+  display: block;
 }
 .dropdown_arrow {
   display: inline-flex;
@@ -193,6 +253,34 @@ header {
 .nav_inner > nav > ul > li > a {
   color: rgba(45, 45, 45, 1);
   font-weight: 600;
+  /* padding-bottom: 0.1rem; */
+}
+.nav_fashion:hover {
+  border-bottom: 3px solid rgba(239, 118, 127, 1);
+}
+.nav_entertainment:hover {
+  border-bottom: 3px solid rgba(190, 193, 73, 1);
+}
+.nav_tech:hover {
+  border-bottom: 3px solid rgba(80, 145, 238, 1);
+}
+.nav_health:hover {
+  border-bottom: 3px solid rgba(93, 182, 174, 1);
+}
+.nav_politics:hover {
+  border-bottom: 3px solid rgba(128, 140, 209, 1);
+}
+.nav_edu:hover {
+  border-bottom: 3px solid rgba(59, 48, 134, 1);
+}
+.nav_food:hover {
+  border-bottom: 3px solid rgba(147, 175, 28, 1);
+}
+.nav_art:hover {
+  border-bottom: 3px solid rgba(216, 19, 110, 0.8);
+}
+.more:hover {
+  border-bottom: rgba(45, 45, 45, 1);
 }
 .button {
   padding: 0.4rem 1.3rem;
@@ -219,6 +307,11 @@ header {
   background-color: rgba(34, 68, 62, 1);
   border-color: rgba(34, 68, 62, 1);
   color: rgba(248, 248, 248, 1);
+}
+.nav_btns img {
+  width: 70px;
+  border-radius: 50%;
+  display: none;
 }
 
 /* MOBILE MENU */
@@ -278,14 +371,11 @@ header {
 }
 .mobile_menu_search {
   border-bottom: 1px solid rgba(230, 230, 230, 1);
-  /* align-self: flex-end; */
-  /* width: 100%; */
   margin-inline: 2rem;
   display: flex;
   align-items: center;
   padding-inline: 0.2rem 1rem;
   padding-bottom: 0.3rem;
-  /* gap: 1rem; */
 }
 
 .mobile_menu_search > input {
@@ -299,7 +389,7 @@ header {
 .mobile_menu_search > input::placeholder {
   font-size: 14px;
 }
-@keyframes mobilesearchfade {
+@keyframes mobileMenuSearchFade {
   0% {
     opacity: 1;
   }
@@ -309,7 +399,7 @@ header {
   }
 }
 .mobile_menu_search > input:focus + i {
-  animation: mobilesearchfade 0.2s;
+  animation: mobileMenuSearchFade 0.2s;
   animation-fill-mode: forwards;
 }
 .mobile_menu_search i {
@@ -409,8 +499,9 @@ header {
   margin-top: 1rem;
 }
 .mobile_menu_btns_wrap img {
-  width: 87px;
+  width: 70px;
   border-radius: 50%;
+  display: none;
 }
 
 @media (max-width: 535px) {
@@ -1121,7 +1212,8 @@ header {
   }
   .hamburger > .span1,
   .hamburger > .span2,
-  .hamburger > .span3 {
+  .hamburger > .span3,
+  .hamburger_close span {
     background-color: rgba(248, 248, 248, 1);
     border-radius: 1rem;
     padding-top: 1px;
