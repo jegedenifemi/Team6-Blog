@@ -253,11 +253,11 @@
 
   .category-header a {
     color: #2d2d2d;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .category-brief {
-    padding: 20px 60px;
+    padding: 10px 60px;
     text-align: center;
   }
 
@@ -318,14 +318,16 @@
     padding-right: 5px;
   }
 
-  .left-content h4 {
+  .left-content a {
     color: #2d2d2d;
-    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: 600;
   }
 
   .left-content p {
     color: rgba(45, 45, 45, 0.8);
     font-size: 12.5px;
+    margin-top: 1rem;
   }
 
   .read-more-section {
@@ -355,6 +357,7 @@
     display: flex;
     padding-left: 70px;
     margin-bottom: 0.3rem;
+
   }
 
   .right-header h3 {
@@ -369,6 +372,7 @@
     padding: 10px;
     border-radius: 5px;
     background-color: #e4e4e4;
+    margin-right: 5px;
   }
 
   .btn-content button a {
@@ -383,14 +387,26 @@
   }
 
   .page-num-content {
-    text-align: center;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 1.5rem;
     margin-bottom: 5rem;
+    display: flex;
+    gap: 23px;
   }
 
   .page-num-content a {
     color: #2d2d2d;
+  }
+
+  .page-btn{
+    padding: 0px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: white;
+    border-radius: 50%;
+
   }
 
   .page-num-content .active {
@@ -422,7 +438,201 @@
 
     text-decoration: none;
     text-align: center;
-    line-height: 50px;
+    line-height: 40px;
     color: white;
     font-size: 22px;
   }
+
+  /* Media query for mobile from 300px-600px*/
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+  header{
+    display: none;
+  }
+
+  footer{
+    display: none;
+  }
+
+  .category-header {
+    padding: 18px 30px;
+  }
+
+  .category-brief {
+    text-align: justify;
+    padding: 10px 30px;
+
+  }
+
+  .category-brief p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0px 0px;
+  }
+
+  .category-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    justify-content: left;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .category-brief .category-container .category-links {
+    padding: 0px 5px;
+    padding-bottom: 1rem;
+  }
+
+  .main-content {
+    color: rgb(232, 233, 236);
+    display: grid;
+    grid-template-columns: 2.3fr;
+    margin-inline: 2rem 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .hr-line{
+    display: none;
+  }
+
+  .left-content {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .left-content a {
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .right-section {
+    display: flex;
+    padding-left: 0px;
+  }
+
+  .btn-content button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e4e4e4;
+    margin-right: 3px;
+
+  }
+
+  .btn-content button a {
+    font-size: 8px;
+  }
+
+  .right-header h3 {
+    text-align: left;
+    margin-top: -0.5rem;
+    margin-bottom: 1.8rem;
+    color: #2d2d2d;
+  }
+
+  .gototop {
+      display: none;
+  }
+
+  .page-num-content {
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    gap: 5px;
+  }
+
+  #hide{
+    display: none;
+  }
+
+  .newsletter{
+    display: none;
+  }
+
+}
+
+/* Media query for mobile from 601px-768px*/
+
+@media (min-width: 601px) and (max-width: 1200px) {
+
+  header{
+    display: none;
+  }
+
+  footer{
+    display: none;
+  }
+
+
+  .main-content {
+    color: rgb(232, 233, 236);
+    display: grid;
+    grid-template-columns: 2.3fr;
+    margin-inline: 4rem 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .category-brief p {
+    color: #22443e;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    padding: 10px 140px;
+  }
+
+  .hr-line{
+    display: none;
+  }
+
+  .left-content a {
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .right-section {
+    display: flex;
+    padding-left: 0px;
+  }
+
+  .right-header h3 {
+    text-align: left;
+    margin-top: -0.5rem;
+    margin-bottom: 1.8rem;
+    color: #2d2d2d;
+  }
+
+  .page-num-content {
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    gap: 5px;
+  }
+
+}
+
+@media (min-width: 1201px) and (max-width: 1300px) {
+  .hr-line {
+    background-color: #2d2d2d21;
+    color: #2d2d2d28;
+    -webkit-transform: rotate(0deg);
+    position: absolute;
+    width: 650px;
+    height: 2px;
+    left: 65px;
+    border: 2px;
+    margin-top: 14rem;
+  }
+
+}
