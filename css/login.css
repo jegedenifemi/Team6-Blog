@@ -152,6 +152,9 @@ input[type="checkbox"] {
   color: rgba(246, 246, 246, 1);
   border-radius: 8px;
 }
+.login-button:hover {
+  background: rgba(21, 41, 37, 1);
+}
 .or-separator {
   display: flex;
   align-items: center;
