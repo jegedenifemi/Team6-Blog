@@ -644,13 +644,13 @@ header {
 }
 .post_title:hover {
   text-decoration: underline;
-  text-decoration-color: rgba(45, 45, 45, 1);
-  text-underline-offset: 2px;
+  text-decoration-color: rgba(34, 68, 62, 1);
+  text-underline-offset: 4px;
 }
 .post_title_light:hover {
   text-decoration: underline;
   text-decoration-color: rgba(248, 248, 248, 1);
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 .hero_left > p {
   margin-block: 1.5rem;
