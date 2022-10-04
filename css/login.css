@@ -4,16 +4,16 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 .login-body {
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 7vh;
 }
 .mobile_blob1,
 .mobile_blob2,
@@ -27,7 +27,6 @@
   max-height: 80%;
   /* width: 60%; */
   max-width: 900px;
-  /* margin: 0 auto; */
 }
 
 .left-div {
@@ -231,6 +230,10 @@ button {
   }
   .login-main {
     width: 90%;
+  }
+  .login-body,
+  .right-div {
+    min-height: fit-content;
   }
   .right-div {
     width: 100%;
