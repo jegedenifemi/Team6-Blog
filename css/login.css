@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 .login-body {
@@ -15,13 +15,19 @@
   align-items: center;
   justify-content: center;
 }
+.mobile_blob1,
+.mobile_blob2,
+.mobile_blob3 {
+  display: none;
+}
 
 .login-main {
   display: flex;
   gap: 0;
   max-height: 80%;
-  width: 60%;
-  margin: 0 auto;
+  /* width: 60%; */
+  max-width: 900px;
+  /* margin: 0 auto; */
 }
 
 .left-div {
@@ -52,10 +58,17 @@
   flex-basis: 45%;
   padding: 3rem 2.5rem;
   background-color: #ebecee;
-  height: fit-content;
   justify-content: center;
   align-items: center;
+  position: relative;
   border-radius: 0 20px 20px 0;
+}
+.right-div > i {
+  position: absolute;
+  color: rgba(34, 68, 62, 1);
+  font-size: 19px;
+  top: 0.6rem;
+  right: 0.8rem;
 }
 .head-txt {
   margin-bottom: 2rem;
@@ -131,7 +144,7 @@ button {
 }
 .login-button {
   background-color: #22443e;
-  color: #f6f6f6;
+  color: rgba(246, 246, 246, 1);
   border-radius: 8px;
 }
 .or-separator {
@@ -159,6 +172,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
 }
 .google {
   display: inline-block;
@@ -178,29 +192,67 @@ button {
   text-align: center;
 }
 
-@media (min-width: 250px) and (max-width: 900px) {
-  main {
-    padding: 5px 10px 5px 10px;
-    grid-template-columns: 1fr;
-    justify-content: center;
+@media (min-width: 768px) and (max-width: 1280px) {
+  .left-div {
+    flex-basis: 50%;
   }
-
-  .text-center {
-    margin-bottom: 40px;
-  }
-
   .right-div {
-    margin: 20px 0px;
-    flex-basis: 45%;
-    padding: 20% 8%;
-    background-color: #ebecee;
+    flex-basis: 50%;
+    padding: 3rem 2rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 767px) {
+  .login-body {
+    position: relative;
+  }
+  .mobile_blob1,
+  .mobile_blob2,
+  .mobile_blob3 {
+    display: block;
+    position: absolute;
+  }
+  .mobile_blob1 {
+    width: 7rem;
+    right: 0;
+    top: -2.5rem;
+  }
+  .mobile_blob2 {
+    width: 3rem;
+    left: 0;
+    top: 5%;
+  }
+  .mobile_blob3 {
+    width: 17rem;
+    /* left: 0; */
+    bottom: 0;
+  }
+  .left-div {
+    display: none;
+  }
+  .login-main {
+    width: 90%;
+  }
+  .right-div {
+    width: 100%;
+    flex-basis: 70%;
     justify-content: center;
     margin: 0 auto;
     align-items: center;
     border-radius: 20px;
   }
+  .head-txt {
+    margin-bottom: 0rem;
+    font-size: 18px;
+  }
+  .forgot-password {
+    font-size: 11px;
+  }
+  .remem-label small {
+    font-size: 12px;
+  }
 
-  .left-div img {
-    display: none;
+  .base-txt {
+    font-size: 11px;
+    margin-top: 0.5rem;
   }
 }
