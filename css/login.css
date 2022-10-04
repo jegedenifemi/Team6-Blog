@@ -32,12 +32,12 @@
   flex-basis: 55%;
   /* height: 68.11px; */
   position: relative;
-  border-radius: 0 20px 20px 20px;
+  border-radius: 20px 0 0 0;
 }
 
 .left-div > :nth-child(2) {
   width: 26.8rem;
-  border-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .top_blob {
   position: absolute;
@@ -141,7 +141,8 @@ input[type="checkbox"] {
   accent-color: rgba(34, 68, 62, 1);
 }
 
-button {
+.login-button,
+.continue-button {
   width: 100%;
   padding: 12px 40px;
   border: 0;
@@ -186,13 +187,12 @@ button {
 .base-txt {
   font-size: 13px;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.4rem;
 }
 .base-txt a {
+  font-size: 13px;
   text-decoration: none;
   color: rgb(34, 68, 62);
-  /* 
-   */
   text-align: center;
 }
 
