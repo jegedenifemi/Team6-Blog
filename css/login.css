@@ -8,7 +8,7 @@
 
 .login-body {
   font-family: "Poppins", sans-serif;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
