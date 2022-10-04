@@ -49,33 +49,21 @@ onUpdate();
 // modalClose.onclick = removeModal();
 
 // MOBILE MENU
-let burgerBtn = document.querySelectorAll(".hamburger");
-let burgerMenu = document.querySelectorAll(".mobile_menu");
-let menuClose = document.querySelectorAll(".hamburger_close");
 
-burgerBtn[0].onclick = () => {
-  burgerBtn[0].style.display = "none";
-  menuClose[0].style.display = "block";
-  document.querySelectorAll(".fa-magnifying-glass")[1].style.display = "none";
-  document.querySelectorAll(".fa-magnifying-glass")[1].style.transition =
-    "30s ease";
-  burgerMenu[0].style.display = "block";
-  burgerMenu[0].style.animation = "mobilemenushow .3s";
-  burgerMenu[0].style.transition = ".5s ease";
+const menu = document.querySelector(".mobile_menu");
+const openMenu = document.querySelector(".hamburger");
+const closeMenu = document.querySelector(".hamburger_close");
+
+openMenu.onclick = () => {
+  menu.classList.add("showMenu");
+  document.querySelector(".mobile_search").style.display = "none";
+  openMenu.style.display = "none";
+  closeMenu.style.display = "block";
 };
 
-menuClose[0].onclick = () => {
-  burgerBtn[0].style.display = "flex";
-  menuClose[0].style.display = "none";
-  document.querySelectorAll(".fa-magnifying-glass")[1].style.display = "block";
-  document.querySelectorAll(".fa-magnifying-glass")[1].style.transition =
-    "30s ease";
-  burgerMenu[0].style.display = "none";
+closeMenu.onclick = () => {
+  menu.classList.remove("showMenu");
+  document.querySelector(".mobile_search").style.display = "block";
+  openMenu.style.display = "flex";
+  closeMenu.style.display = "none";
 };
-
-if (window.innerWidth > 767) {
-  burgerMenu[0].style.display = "none";
-  burgerBtn[0].style.display = "none";
-  menuClose[0].style.display = "none";
-  document.querySelectorAll(".fa-magnifying-glass")[1].style.display = "none";
-}

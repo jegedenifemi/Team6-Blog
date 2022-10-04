@@ -135,8 +135,74 @@
             <span class="span1"></span><span class="span2"></span
             ><span class="span3"></span>
           </div>
+
           <div class="hamburger_close">
             <span class="span1"></span><span class="span2"></span>
+          </div>
+
+          <div class="mobile_menu">
+            <div class="mobile_menu_search">
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search anything..."
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="mobile_menu_categories">
+              <p>CATEGORIES</p>
+              <ul>
+                <a href="./fashion.html"
+                  ><li class="mob_fashion">FASHION</li></a
+                >
+                <a href="./category-page.html"
+                  ><li class="mob_entertaiment">ENTERTAINMENT</li></a
+                >
+                <a href="./technology.html"
+                  ><li class="mob_tech">TECHNOLOGY</li></a
+                >
+                <a href="#"><li class="mob_health">HEALTH</li></a>
+                <a href="#"><li class="mob_politics">POLITICS</li></a>
+                <a href="#"><li class="mob_edu">EDUCATION</li></a>
+                <a href="#"><li class="mob_food">FOOD</li></a>
+                <a href="#"><li class="mob_art">ART</li></a>
+              </ul>
+              <hr />
+            </div>
+
+            <div class="mobile_menu_links">
+              <p>LINKS</p>
+              <div class="mobile_menu_links_top">
+                <a href="#">TEAM</a> <a href="#">ARCHIVE</a>
+              </div>
+              <div class="mobile_menu_links_bottom">
+                <a href="#">WRITE FOR US</a> <a href="#">CONTACT</a>
+              </div>
+            </div>
+
+            <div class="mobile_menu_btns_wrap">
+              <div class="mobile_menu_btns">
+                <button
+                  class="button"
+                  onclick="window.location.href='./login.html';"
+                >
+                  Sign In
+                </button>
+                <button
+                  class="subscribe button"
+                  onclick="window.location.href='#subscribe';"
+                >
+                  Subscribe
+                </button>
+              </div>
+
+              <img
+                src="./img/home_page/author_hamzy.png"
+                alt="profile picture"
+              />
+            </div>
           </div>
 
           <nav>
@@ -170,13 +236,7 @@
                   /></span>
                 </label>
                 <input type="checkbox" name="more_check" id="more_check" />
-                <!-- <a href="#" class="more">
-                  MORE
-                  <span class="dropdown_arrow"
-                    ><img
-                      src="./img/home_page/dropdown_arrow.png"
-                      alt="dropdown" /></span
-                ></a> -->
+
                 <div class="more_dropdown">
                   <ul>
                     <li><a href="#">TEAM</a></li>
@@ -189,7 +249,7 @@
             </ul>
           </nav>
 
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass mobile_search"></i>
 
           <div class="nav_btns">
             <button
@@ -212,59 +272,6 @@
     </header>
 
     <main class="home_main">
-      <div class="mobile_menu">
-        <div class="mobile_menu_search">
-          <input type="search" name="" id="" placeholder="Search anything..." />
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-
-        <div class="mobile_menu_categories">
-          <p>CATEGORIES</p>
-          <ul>
-            <a href="./fashion.html"><li class="mob_fashion">FASHION</li></a>
-            <a href="./category-page.html"
-              ><li class="mob_entertaiment">ENTERTAINMENT</li></a
-            >
-            <a href="./technology.html"><li class="mob_tech">TECHNOLOGY</li></a>
-            <a href="#"><li class="mob_health">HEALTH</li></a>
-            <a href="#"><li class="mob_politics">POLITICS</li></a>
-            <a href="#"><li class="mob_edu">EDUCATION</li></a>
-            <a href="#"><li class="mob_food">FOOD</li></a>
-            <a href="#"><li class="mob_art">ART</li></a>
-          </ul>
-          <hr />
-        </div>
-
-        <div class="mobile_menu_links">
-          <p>LINKS</p>
-          <div class="mobile_menu_links_top">
-            <a href="#">TEAM</a> <a href="#">ARCHIVE</a>
-          </div>
-          <div class="mobile_menu_links_bottom">
-            <a href="#">WRITE FOR US</a> <a href="#">CONTACT</a>
-          </div>
-        </div>
-
-        <div class="mobile_menu_btns_wrap">
-          <div class="mobile_menu_btns">
-            <button
-              class="button"
-              onclick="window.location.href='./login.html';"
-            >
-              Sign In
-            </button>
-            <button
-              class="subscribe button"
-              onclick="window.location.href='#subscribe';"
-            >
-              Subscribe
-            </button>
-          </div>
-
-          <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
-        </div>
-      </div>
-
       <section class="hero">
         <div class="hero_left">
           <div class="hero_left_img">
@@ -835,7 +842,7 @@
           </li>
           <li><a href="./archive.html">ARCHIVES</a></li>
           <li><a href="#">TERMS OF SERVICE</a></li>
-          <li><a href="#">PRIVACY</a></li>
+          <li><a href="./privacypolicy.html">PRIVACY</a></li>
         </ul>
       </div>
 
@@ -872,36 +879,5 @@
 
     <!-- Initialize Swiper -->
     <script src="./index.js"></script>
-    <!-- <script>
-      let modalClose = document.querySelector(".close");
-
-      // function removeModal() {
-      //   console.log("wyd bro");
-      //   // signupModal[0].style.cursor = "pointer";
-      //   signupModal[0].style.display = "none";
-      // }
-      // modalClose.onclick = () => {
-      //   let signupModal = document.querySelectorAll(".signup-modal");
-      //   signupModal[0].style.display = "none";
-      // };
-    </script> -->
-    <!-- <script>
-      lightSchemeIcon = document.querySelector("link#fav-green");
-      darkSchemeIcon = document.querySelector("link#fav-white");
-
-      function onUpdate() {
-        if (matcher.matches) {
-          lightSchemeIcon.remove();
-          document.head.append(darkSchemeIcon);
-        } else {
-          document.head.append(lightSchemeIcon);
-          darkSchemeIcon.remove();
-        }
-      }
-
-      matcher = window.matchMedia("(prefers-color-scheme: dark)");
-      matcher.addListener(onUpdate);
-      onUpdate();
-    </script> -->
   </body>
 </html>
