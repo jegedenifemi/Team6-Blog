@@ -82,11 +82,12 @@
           <br />
 
           <div class="password-eye">
-            <input type="password" placeholder="Password" />
-            <i class="bi bi-eye"></i>
+            <input type="password" placeholder="Password" id="password" />
+            <i class="bi bi-eye" onclick="passwordToggle()"></i>
+            <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
           </div>
 
-          <p class="forgot-password">Forgot Password?</p>
+          <a href="#" class="forgot-password">Forgot Password?</a>
           <!-- <br /> -->
 
           <label for="remember-me" class="remem-label">

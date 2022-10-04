@@ -49,7 +49,6 @@ onUpdate();
 // modalClose.onclick = removeModal();
 
 // MOBILE MENU
-
 const menu = document.querySelector(".mobile_menu");
 const openMenu = document.querySelector(".hamburger");
 const closeMenu = document.querySelector(".hamburger_close");
@@ -67,3 +66,21 @@ closeMenu.onclick = () => {
   openMenu.style.display = "flex";
   closeMenu.style.display = "none";
 };
+
+// PASSWORD SHOW/HIDE   ||
+// document.querySelector(".bi-eye-slash").style.display = "none";
+
+function passwordToggle() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+    document.querySelector(".bi-eye").style.display = "none";
+    document.querySelector(".bi-eye-slash").style.display = "block";
+    // x.classList.remove("bi-eye");
+    // x.classList.add("bi-eye-slash");
+  } else {
+    x.type = "password";
+    document.querySelector(".bi-eye").style.display = "block";
+    document.querySelector(".bi-eye-slash").style.display = "none";
+  }
+}
