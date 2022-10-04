@@ -14,27 +14,37 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
     <title>Blogga &ThinSpace; | &ThinSpace; Sign In</title>
   </head>
-  <body>
-    <main>
+  <body class="login-body">
+    <main class="login-main">
       <div class="left-div">
-        <img src="img/SignUpNo BG.png" width="" alt="" />
+        <img
+          src="./img/Login/login_top_blob.png"
+          alt="blob design "
+          class="top_blob"
+        />
+        <img src="./img/Login/login_main_image.png" alt="welcome image" />
+        <img
+          src="./img/Login/login_bottom_blob.png"
+          alt="blob design "
+          class="btm_blob"
+        />
       </div>
 
       <div class="right-div">
         <div class="right-div-container">
-          <h3 class="text-center head-txt">Welcome Back :)</h3>
+          <h3 class="head-txt">Welcome Back : )</h3>
 
           <input type="text" placeholder="Username" />
 
@@ -45,27 +55,31 @@
             <i class="bi bi-eye"></i>
           </div>
 
-          <div class="forgot-password">
-            <small>Forgot Password?</small>
+          <p class="forgot-password">Forgot Password?</p>
+          <!-- <br /> -->
+
+          <label for="remember-me" class="remem-label">
+            <input type="checkbox" name="remember-me" id="remember-me" />&nbsp;
+            <small>Remember Me</small></label
+          >
+          <br />
+
+          <button type="button" class="login-button">Log In</button>
+
+          <div class="or-separator">
+            <hr />
+            <p>OR</p>
+            <hr />
           </div>
-          <br />
 
-          <input type="checkbox" name="remember-me" id="remember-me" />
-          <label for="remember-me"><small>Remember Me</small></label>
-          <br />
-
-          <button type="button" class="my-3 mt-4 create-button">Log In</button>
-
-          <p class="my-3 text-center">---OR---</p>
-
-          <button type="button" class="my-3 continue-button">
-            <img src="img/google.png" alt="" class="google" /> Continue With
-            Google
+          <button type="button" class="continue-button">
+            <img src="img/google.png" alt="" class="google" /> &nbsp; Continue
+            With Google
           </button>
 
-          <p class="my-4 text-center">
+          <p class="base-txt">
             Become a Blogga?
-            <a href="./signup.html" class="signup-link">Write For Us</a>
+            <a href="./signup.html" class="signup-link">&nbsp; Write For Us</a>
           </p>
         </div>
       </div>
