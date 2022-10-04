@@ -33,20 +33,15 @@ matcher = window.matchMedia("(prefers-color-scheme: dark)");
 matcher.addListener(onUpdate);
 onUpdate();
 
-// SIGNUP MODAL
-// let modalClose = document.querySelector(".close");
-// let signupModal = document.querySelector(".signup-modal");
+// LOGIN MODAL
+let loginModal = document.querySelector(".login-modal");
 
-// function removeModal() {
-//   console.log("wyd bro");
-//   // signupModal[0].style.cursor = "pointer";
-//   signupModal[0].style.display = "none";
-// }
-// modalClose.onclick = () => {
-//   signupModal[0].style.display = "none";
-// };
-
-// modalClose.onclick = removeModal();
+function hideLoginModal() {
+  loginModal.style.display = "none";
+}
+function showLoginModal() {
+  loginModal.style.display = "block";
+}
 
 // MOBILE MENU
 const menu = document.querySelector(".mobile_menu");
@@ -68,8 +63,6 @@ closeMenu.onclick = () => {
 };
 
 // PASSWORD SHOW/HIDE   ||
-// document.querySelector(".bi-eye-slash").style.display = "none";
-
 function passwordToggle() {
   var x = document.getElementById("password");
   if (x.type === "password") {
