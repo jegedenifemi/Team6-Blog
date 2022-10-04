@@ -8,7 +8,7 @@
 
 .login-body {
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -230,6 +230,10 @@ button {
   }
   .login-main {
     width: 90%;
+  }
+  .login-body,
+  .right-div {
+    min-height: fit-content;
   }
   .right-div {
     width: 100%;
