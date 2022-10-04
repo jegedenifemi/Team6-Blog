@@ -7,15 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    contents :<br>
-    title: {{post.title}} <br>
-    category: {{post.category}} 
-    tags:
-    {% for tag in post.tags.all %}
-     #{{tag}} 
-    {% endfor %}<br>
-    author: {{post.author}} <br>    
-    {{post.contents | safe}}
- 
+    <div>
+            contents :<br>
+            title: {{post.title}} <br>
+            category: {{post.category}} 
+            tags:
+            {% for tag in post.tags.all %}
+             #{{tag}} 
+            {% endfor %}<br>
+            author: {{post.author}} <br>    
+            {{post.contents | safe}} 
+    </div>
+    {% for comment in comments %}
+        {{comment.name}}
+        {{comment.publish}}
+        {{comment.comment}}
+        <hr>
+        {% empty %}
+        No comments
+        
+    {% endfor %}
+
+    <form action="" method="post">
+{% csrf_token %}
+{{commentForm.as_p}}
+<button type="submit">submit</button>
+    </form><hr>
+    {% for comment in user_comment%}
+    {{comment}}
+    {% endfor %}
 </body>
 </html>

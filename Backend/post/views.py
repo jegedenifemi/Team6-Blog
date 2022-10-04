@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post 
-from .forms import PostForm
+from .forms import PostForm,CommentForm
 from django.contrib import messages
-
+from django.urls import reverse
+from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 # list view for home page
 def index(request):
@@ -42,8 +43,25 @@ def createPost(request):
 # specific posts
 def postDetail(request, slug):
     post = get_object_or_404(Post, slug=slug, status = 'published')
+    
+    comments = post.comments.filter(status = True)
+    user_comment = None
+    commentForm = CommentForm()
+    if request.method == 'POST':
+        commentForm = CommentForm(request.POST)
+        if commentForm.is_valid():
+            user_comment = commentForm.save(commit =False)
+            user_comment.post = post
+            user_comment.save()
+    
+            return redirect('post:post_detail', post.slug)
+        else:
+            commentForm = CommentForm()
     context = {
         'post': post,
+        'commentForm': commentForm,
+        'user_comments': user_comment,
+        'comments': comments
     }
     return render(request, 'post/detail.html', context)
 
@@ -83,11 +101,19 @@ def update(request, slug):
             myform.author = request.user
             myform.save()
             form.save_m2m()
-            return redirect('post:index')
+            return redirect('post:post_detail', post.slug)
     context = {'form':form}
     return render(request, 'post/update.html', context)
 
 
+# creating comments
 
+# def create_comment(request):
+
+#     context = {
+
+#     }
+
+#     return render(request, 'post/detail.html', context)
 
 
