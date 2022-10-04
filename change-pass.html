@@ -10,7 +10,7 @@
       rel="icon"
       type="image/x-icon"
       sizes="16x16 32x32"
-      href="img/logo_resources/Favicon.png"
+      href="img/logo_resources/Favicon_White.png"
       id="favicon"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,10 +25,19 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
-
-
   </head>
   <body>
     <header>
@@ -65,26 +74,17 @@
             <img src="img/close-icon.png" alt="close-icon" />
             <h3>Change Password?</h3>
             <p class="input-pass">Input your new password</p>
-            <form action="#">
-              <input
-                type="password"
-                id="pwd"
-                placeholder="&nbsp; &nbsp; Password                                                   &#xf06e"
-              style="font-family: poppins, FontAwesome;"
-            />
-              <!--<img src="img/Eye toggle.svg" alt="Eye" class="eye-icon" /> -->
-            </form>
+            <div class="password-eye">
+            <input type="password" placeholder="&nbsp; &nbsp; Password" class="input" />
+            <i class="bi bi-eye"></i>
+          </div>
+          <hr class="hr-nomargin" />
             <p class="pass-brief">
               Minimum of 8 characters <br />
               Include special characters
             </p>
             <a href=""><button class="btn-reset">Reset Password</button></a>
-          <a href="login.html"><p class="back-to-login"><span style="font-family: poppins, FontAwesome; color: #22443e;"> &#xf177;</span> &nbsp; Back to Log In </p></a>
-            <!--<div class="arrow-section">
-               <img src="img/arrow-left.svg" alt="arrow-left" class="arrow" />
-              <p class="back-to-login">&nbsp; Back to Log In</p>
-            </div> -->
-
+          <a href="login.html"><p class="back-to-login"><span><i class="fa-solid fa-arrow-left"></i> </span>Back to Log In </p></a>
           </div>
         </div>
       </div>
