@@ -1003,7 +1003,7 @@ header {
   .hero,
   .trending,
   .writers_latest_popular {
-    padding-inline: 12vw;
+    padding-inline: 8vw;
   }
   .trending {
     padding-inline-end: 0;
