@@ -95,12 +95,16 @@
             <div class="right-div-container">
               <h3 class="head-txt">Welcome Back : )</h3>
 
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" id="login-username" />
 
               <br />
 
               <div class="password-eye">
-                <input type="password" placeholder="Password" id="password" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                />
                 <i class="bi bi-eye" onclick="passwordToggle()"></i>
                 <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
               </div>
@@ -147,7 +151,7 @@
         <div class="banner_wrapper">
           <div class="banner_left">
             <p>Have a story to share?</p>
-            <button onclick="window.location.href='https://google.com';">
+            <button onclick="window.location.href='./contact-us.html';">
               Contact Us
             </button>
           </div>
@@ -213,12 +217,13 @@
             </div>
 
             <div class="mobile_menu_links">
-              <p>LINKS</p>
+              <p>MORE</p>
               <div class="mobile_menu_links_top">
                 <a href="#">TEAM</a> <a href="#">ARCHIVE</a>
               </div>
               <div class="mobile_menu_links_bottom">
-                <a href="#">WRITE FOR US</a> <a href="#">CONTACT</a>
+                <a href="#">WRITE FOR US</a>
+                <a href="./contact-us.html">CONTACT</a>
               </div>
             </div>
 
@@ -910,6 +915,25 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
+    <script>
+      // Initialize Swiper (carousel)
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+
     <script src="./index.js"></script>
   </body>
 </html>
