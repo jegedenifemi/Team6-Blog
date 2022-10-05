@@ -76,6 +76,7 @@ header {
   padding: 0.5rem 2.5rem;
   border: 1px solid rgba(230, 230, 230, 1);
   color: rgba(230, 230, 230, 1);
+  cursor: pointer;
   font-weight: 200;
   font-size: 14px;
   border-radius: 0.5rem;
