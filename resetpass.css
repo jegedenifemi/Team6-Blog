@@ -46,12 +46,15 @@ main {
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
+    color: #2D2D2D;
 }
 .content h2 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', serif;
     color: #22443E;
+    font-style: normal;
     font-weight: 400;
-    font-size: 29px;
+    font-size: 29.8609px;
+    line-height: 41px;
     margin-top: 10px;
 }
 
@@ -99,12 +102,13 @@ p a{
 .content h5 {
     text-align: center;
     color: #22443E;
-    padding: 5px 5px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
+    width: 484px;
+    height: 32px;
 }
 
 footer {
@@ -117,4 +121,6 @@ footer {
     line-height: 16px;
     color: #2D2D2D;
 }
+
+
 
