@@ -91,29 +91,34 @@ rel="stylesheet"
       </header>
 
     <h2>Tell your story</h2>
+    <div class="content">
     <div class="Post">
         <h3>Post Title</h3>
-        <textarea name="comment" form="usrform">Enter text here...</textarea>
-        <h3>Post Title</h3>
-        <textarea name="comment" form="usrform">Enter text here...</textarea>
-        <h3>Post Title</h3>
-        <textarea name="comment" form="usrform">Enter text here...</textarea><br>
+        <textarea name="comment" class="posts" form="usrform" cols="40" rows="1" placeholder="Enter your text here"></textarea>
+        <h3>Post Tag <span>(Up to 5 tags)</span> </h3>
+        <textarea name="comment" form="usrform" cols="40" rows="1" placeholder="Enter your text here"></textarea>
+        <h3>How would you categorize</h3>
         <select name="cars" id="cars" class="">
-            <h3>How would you categorize this tag?</h3>
-            <option value="" disabled selected hidden rows="4" cols="50">Select type of business</option>
-        <option value="volvo" class="text-sm">Sole-proprietorship</option>
-        <option value="saab" class="text-sm">Partnership</option>
-        <option value="mercedes" class="text-sm">Limited Company</option>
+            <h3>How would you categorize this post?</h3>
+            <option value=""  placeholder="Entertainment">Entertainment</option>
+        <option value="volvo" class="text-sm">Fashion</option>
+        <option value="saab" class="text-sm">Technology</option>
+        <option value="mercedes" class="text-sm">Health</option>
+        <option value="volvo" class="text-sm">Politics</option>
+        <option value="saab" class="text-sm">Education</option>
+        <option value="mercedes" class="text-sm">Food</option>
         
         </select>
-        <h3>Post Title</h3>
-        <textarea name="comment" form="usrform">Enter text here...</textarea><br>
+        <h3>Meta Description</h3>
+        <textarea name="comment" class="meta" form="usrform" placeholder="Give a short sumary about your text"></textarea><br>
     </div>
 
     <div class="aside">
         <h4>Snippet Image</h4>
         <div class="snippet">
-            <img src="./Ellipse 2 (1).png" alt="">
+          <div class="snipimg">
+            <img src="./log.png" alt="">
+          </div>
             <div class="snippet-text">
                 <h5>Drop file here</h5>
                 <p>OR</p>
@@ -124,7 +129,8 @@ rel="stylesheet"
         <div class="snippet-review">
             <h4>Snippet Image</h4>
             <div class="snippet-box">
-                <img src="./Ellipse 2 (1).png" alt="">
+              
+                <img src="./Rectangle 76.png" alt="">
                 <div class="snippet-box-test">
                     <h5>Your title goes here</h5>
                     <p>Your meta description goes here</p>
@@ -133,17 +139,18 @@ rel="stylesheet"
                 </div>
             </div>
 
-        </div>
+        </div><br>
     </div>
+  </div>
     <div class="description">
-        <h4>Full description</h4>
-        <textarea placeholder="Add a comment.." rows="4" cols="50" name="comment" form="usrform" ></textarea>
-    </div>
+        <h4>Full description</h4><br>
+        <textarea placeholder="Add a comment.." class="descriptions" rows="2" cols="40" name="comment" form="usrform" ></textarea>
+    </div><br>
     <div class="comments">
         <h4>Comment</h4>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-<label for="vehicle1">Disable comments for this</label>
-<button>POST</button>
+        <input type="checkbox" id="check" name="check" value="check">
+<label for="disable" class="disable">Disable comments for this post</label>
+<button >POST</button>
     </div>
     <section class="newsletter">
         <h2>STAY UPDATED</h2>
