@@ -42,6 +42,7 @@
     />
 
     <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="./css/write-for-us.css" />
     <link rel="stylesheet" href="./css/contact-us.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/login.css" />
@@ -213,7 +214,7 @@
                 <a href="#">TEAM</a> <a href="#">ARCHIVE</a>
               </div>
               <div class="mobile_menu_links_bottom">
-                <a href="#">WRITE FOR US</a>
+                <a href="./write-for-us.html">WRITE FOR US</a>
                 <a href="./contact-us.html">CONTACT</a>
               </div>
             </div>
@@ -301,66 +302,63 @@
 
     <main class="contact-us_main">
       <div class="contact-us_head">
-        <h1>CONTACT US</h1>
+        <h1>WRITE FOR US</h1>
         <p>
-          Fill in your details, write your message and we will get back to you.
+          We appreciate you taking your time to provide us this information..
         </p>
       </div>
 
       <form action="">
         <input
           type="text"
-          name="contact_fname"
-          id="contact_fname"
+          name="write4us_fname"
+          id="write4us_fname"
           placeholder="FIRST NAME"
           required
         />
         <input
           type="text"
-          name="contact_lname"
-          id="contact_lname"
+          name="write4us_lname"
+          id="write4us_lname"
           placeholder="LAST NAME"
           required
         />
         <input
           type="email"
-          name="contact_email"
-          id="contact_email"
+          name="write4us_email"
+          id="write4us_email"
           placeholder="EMAIL ADDRESS"
           required
         />
-        <textarea
-          name="contact_message"
-          id="contact_message"
-          cols="30"
-          rows="10"
-          placeholder="YOUR MESSAGE"
-          style="resize: none"
-          required
-        ></textarea>
 
-        <input type="submit" value="SEND MESSAGE" class="contact-us_submit" />
+        <div class="bio_wrapper">
+          <textarea
+            name="write4us_bio"
+            id="write4us_bio"
+            cols="30"
+            rows="10"
+            placeholder="BIO"
+            style="resize: none"
+            required
+          ></textarea>
+          <p>Tell us a little about yourself</p>
+        </div>
+
+        <div class="bio_wrapper">
+          <textarea
+            name="write4us_articlelink"
+            id="write4us_articlelink"
+            cols="30"
+            rows="5"
+            placeholder="LINKS TO YOUR NOTABLE ARTICLES"
+            style="resize: none"
+            required
+          ></textarea>
+          <p>For more than one, seperate with a comma</p>
+        </div>
+
+        <input type="submit" value="SEND" id="write4us_submit" />
       </form>
-
-      <div class="get_in_touch">
-        <h2>GET IN TOUCH WITH THE TEAM</h2>
-
-        <div class="in_touch_details">
-          <i class="bi bi-geo-alt"></i>
-          <p>300 BILLINGS WAY, ALLEN IKEJA, LAGOS STATE</p>
-        </div>
-
-        <div class="in_touch_details">
-          <i class="bi bi-telephone"></i>
-          <p>(234) 812 345 6789</p>
-        </div>
-
-        <div class="in_touch_details">
-          <!-- <i class="fa-regular fa-envelope"></i> -->
-          <i class="bi bi-envelope"></i>
-          <p>Contact@blogga.net</p>
-        </div>
-      </div>
     </main>
 
     <hr />
@@ -391,7 +389,7 @@
         <ul>
           <li><a href="#">ADVERTISE</a></li>
           <li><a href="./write-for-us.html">WRITE FOR US</a></li>
-          <li><a href="./category-page.html">CATEGORIES</a></li>
+          <li><a href="#">CATEGORIES</a></li>
           <li>
             <a href="./index.html"
               ><img
