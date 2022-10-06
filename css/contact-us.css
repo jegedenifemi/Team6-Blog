@@ -40,7 +40,10 @@ textarea {
   /* padding: 26px 14px 26px 14px; */
   padding: 0.5rem 1rem;
 }
-
+.contact-us_main > form > input:focus,
+textarea:focus {
+  border: 2px solid rgba(34, 68, 62, 1);
+}
 #contact_email,
 #contact_message,
 .contact-us_submit {
@@ -92,10 +95,17 @@ textarea {
 
   .contact-us_main > form {
     grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 2rem;
   }
   #contact_email,
   #contact_message,
-  .contact-us_submit {
+  .contact-us_submit,
+  #write4us_email,
+  .bio_wrapper,
+  #write4us_submit,
+  #write4us_fname,
+  #write4us_lname {
     grid-column: 1/2;
   }
   .get_in_touch h2 {
@@ -105,9 +115,44 @@ textarea {
   .in_touch_details p {
     font-size: 13px;
   }
+  /* #write4us_fname,
+  #write4us_lname {
+    width: 100%;
+  } */
 }
 @media screen and (max-width: 535px) {
   .contact-us_main {
     padding-inline: 1rem;
   }
+}
+
+/* WRITE 4 US!!!!!!!! */
+#write4us_email,
+.bio_wrapper,
+#write4us_submit {
+  /* .write4us-us_submit { */
+  grid-column: 1/3;
+}
+#write4us_bio,
+#write4us_articlelink {
+  margin-bottom: 0;
+  width: 100%;
+}
+.bio_wrapper p {
+  color: rgba(45, 45, 45, 0.8);
+  font-weight: 500;
+  /* display: inline; */
+  margin-top: -0.3rem;
+}
+#write4us_submit {
+  width: fit-content;
+  background: rgba(34, 68, 62, 1);
+  color: rgba(255, 255, 255, 1);
+  outline: none;
+  border: none;
+  margin: 1rem auto 6rem;
+  padding-inline: 6%;
+}
+#write4us_submit:hover {
+  background: rgba(21, 41, 37, 1);
 }
