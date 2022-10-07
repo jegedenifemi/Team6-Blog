@@ -62,3 +62,32 @@ function passwordToggle() {
     document.querySelector(".bi-eye-slash").style.display = "none";
   }
 }
+
+// close contact us form pop up
+function closeContactPopup() {
+  let contactModal = document.querySelector(".msg_sent_pop_up");
+  contactModal.style.display = "none";
+}
+
+// HIDE TOP BANNER ON SCROLL DOWN
+// var lastScrollTop;
+// topBanner = document.querySelector(".banner");
+// window.addEventListener("scroll", function () {
+//   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   if (scrollTop > lastScrollTop) {
+//     topBanner.style.top = "-80px";
+//   } else {
+//     topBanner.style.top = "0";
+//   }
+//   lastScrollTop = scrollTop;
+// });
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.querySelector(".banner").style.top = "0";
+//   } else {
+//     document.querySelector(".banner").style.top = "-50px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
