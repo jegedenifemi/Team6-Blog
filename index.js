@@ -62,3 +62,4 @@ function passwordToggle() {
     document.querySelector(".bi-eye-slash").style.display = "none";
   }
 }
+
