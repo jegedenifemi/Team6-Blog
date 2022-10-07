@@ -107,6 +107,7 @@ header {
   position: relative;
   right: 0.5rem;
 
+  appearance: none;
   -webkit-appearance: none;
   height: 20px;
   width: 20px;
@@ -289,6 +290,7 @@ header {
   position: relative;
   right: 0;
 
+  appearance: none;
   -webkit-appearance: none;
   height: 20px;
   width: 20px;
