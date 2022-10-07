@@ -1,20 +1,3 @@
-// Initialize Swiper (carousel)
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  cssMode: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  mousewheel: true,
-  keyboard: true,
-});
-
 // Change favicon with theme
 lightSchemeIcon = document.querySelector("link#fav-green");
 darkSchemeIcon = document.querySelector("link#fav-white");
@@ -34,12 +17,14 @@ matcher.addListener(onUpdate);
 onUpdate();
 
 // LOGIN MODAL
-let loginModal = document.querySelector(".login-modal");
+// let loginModal = document.querySelector(".login-modal");
 
 function hideLoginModal() {
+  let loginModal = document.querySelector(".login-modal");
   loginModal.style.display = "none";
 }
 function showLoginModal() {
+  let loginModal = document.querySelector(".login-modal");
   loginModal.style.display = "block";
 }
 
@@ -64,7 +49,7 @@ closeMenu.onclick = () => {
 
 // PASSWORD SHOW/HIDE   ||
 function passwordToggle() {
-  var x = document.getElementById("password");
+  var x = document.getElementById("login-password");
   if (x.type === "password") {
     x.type = "text";
     document.querySelector(".bi-eye").style.display = "none";
@@ -77,3 +62,4 @@ function passwordToggle() {
     document.querySelector(".bi-eye-slash").style.display = "none";
   }
 }
+

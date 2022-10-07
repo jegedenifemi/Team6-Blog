@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogga &ThinSpace;|&ThinSpace; Home</title>
+    <!-- FAVICONS -->
     <link
       rel="shortcut icon"
       href="./img/logo_resources/Favicon_White.png"
@@ -17,10 +18,20 @@
       type="image/x-icon"
       id="fav-green"
     />
+
+    <!-- GOOGLE FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!-- FONTAWESOME -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -28,90 +39,128 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- SWIPER JS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- <link rel="stylesheet" href="./css/signup.css" /> -->
+    <link rel="stylesheet" href="./css/login.css" />
   </head>
 
   <body class="home_body">
-    <!-- <div class="signup-modal">
-      <main class="signup-main">
-        <div class="left-div">
-          <img src="img/SignUpNo BG.png" width="" alt="" />
-        </div>
+    <!-- LOGIN MODAL STARTS HERE -->
+    <!--  -->
+    <div class="login-modal">
+      <section class="login-body">
+        <img
+          src="./img/Login/mobile_blob1.png"
+          alt="mobile blob design"
+          class="mobile_blob1"
+        />
+        <img
+          src="./img/Login/mobile_blob2.png"
+          alt="mobile blob design"
+          class="mobile_blob2"
+        />
+        <img
+          src="./img/Login/mobile_blob3.png"
+          alt="mobile blob design"
+          class="mobile_blob3"
+        />
 
-        <div class="right-div">
-          <div class="light-waves">
-            <img src="./img/Vector-left.png" alt="" class="wave1" />
-            <img src="./img/Vector-right.png" alt="" class="wave2" />
+        <main class="login-main">
+          <div class="left-div">
+            <img
+              src="./img/Login/login_top_blob.png"
+              alt="blob design "
+              class="top_blob"
+            />
+            <img src="./img/Login/login_main_image.png" alt="welcome image" />
+            <img
+              src="./img/Login/login_bottom_blob.png"
+              alt="blob design "
+              class="btm_blob"
+            />
           </div>
-          <span class="close">&times;</span>
-          <div>
-            <h3 class="text-center mb-5">Welcome to Blogga</h3>
-            <div class="input-flex mt-5">
-              <div>
-                <input type="text" placeholder="First Name" class="input" />
+
+          <div class="right-div">
+            <i
+              class="fa-solid fa-xmark login-modal-close"
+              onclick="hideLoginModal()"
+            ></i>
+            <div class="right-div-container">
+              <h3 class="head-txt">Welcome Back : )</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="login-username"
+                required
+              />
+
+              <br />
+
+              <div class="password-eye">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                  required
+                />
+                <i class="bi bi-eye" onclick="passwordToggle()"></i>
+                <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot-password"
+                >Forgot Password?</a
+              >
+              <!-- <br /> -->
+
+              <label for="remember-me" class="remem-label">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />&nbsp; <small>Remember Me</small></label
+              >
+              <br />
+
+              <button type="button" class="login-button">Log In</button>
+
+              <div class="or-separator">
+                <hr />
+                <p>OR</p>
                 <hr />
               </div>
-              <div>
-                <input type="text" placeholder="Last Name" class="input" />
-                <hr m-0 />
-              </div>
-            </div>
-            <input type="email" placeholder="Email Address" class="input" />
-            <br />
-            <hr />
-            <input type="text" placeholder="Username" class="input" />
-            <br />
-            <hr />
-            <div class="password-eye">
-              <input type="password" placeholder="Password" class="input" />
-              <i class="bi bi-eye"></i>
-            </div>
-            <hr class="hr-nomargin" />
-            <p class="input-rules"><small>Minimum of 8 characters</small></p>
-            <p class=""><small>special characters</small></p>
-            <input type="checkbox" name="" id="" class="checkbox" />
-            <small
-              >By signing up, you agree to our
-              <a href="" class="terms">T & Cs</a> and
-              <a href="" class="terms">Privacy Statement</a></small
-            >
-            <br />
-            <button type="button" class="sign-up-btn my-3 mt-4 create-button">
-              Create Account
-            </button>
-            <div class="sign-up-btn hr-or">
-              <hr size="5" class="hr" />
-              <h3 class="para-hr">OR</h3>
-              <hr class="hr" />
-            </div>
 
-            <button type="button" class="continue-button my-3">
-              <img src="img/google.png" alt="" class="google" /> Continue With
-              Google
-            </button>
-            <h6 class="my-4 end-para">
-              Already a Blogga?
-              <a href="./login.html" class="login-link">Log in</a>
-            </h6>
+              <button type="button" class="continue-button">
+                <img src="img/google.png" alt="" class="google" /> &nbsp;
+                Continue With Google
+              </button>
+
+              <p class="base-txt">
+                Become a Blogga?
+                <a href="./signup.html" class="signup-link"> Write For Us</a>
+              </p>
+            </div>
           </div>
-        </div>
-      </main>
-      <footer class="footer">
-        <img src="./img/Vector.png" alt="" />
-      </footer>
-    </div> -->
+        </main>
+      </section>
+    </div>
+    <!--  -->
+    <!-- LOGIN MODAL ENDS HERE -->
 
     <header>
       <div class="banner">
         <div class="banner_wrapper">
           <div class="banner_left">
             <p>Have a story to share?</p>
-            <button onclick="window.location.href='https://google.com';">
+
+            <button onclick="window.location.href='./contact-us.html';">
               Contact Us
             </button>
           </div>
@@ -130,6 +179,10 @@
       </div>
 
       <div class="nav_outer">
+        <a href="./index.html"
+          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+        /></a>
+
         <div class="nav_inner">
           <div class="hamburger">
             <span class="span1"></span><span class="span2"></span
@@ -173,21 +226,19 @@
             </div>
 
             <div class="mobile_menu_links">
-              <p>LINKS</p>
+              <p>MORE</p>
               <div class="mobile_menu_links_top">
-                <a href="#">TEAM</a> <a href="#">ARCHIVE</a>
+                <a href="#">TEAM</a> <a href="./archive.html">ARCHIVE</a>
               </div>
               <div class="mobile_menu_links_bottom">
-                <a href="#">WRITE FOR US</a> <a href="#">CONTACT</a>
+                <a href="./write-for-us.html">WRITE FOR US</a>
+                <a href="./contact-us.html">CONTACT</a>
               </div>
             </div>
 
             <div class="mobile_menu_btns_wrap">
               <div class="mobile_menu_btns">
-                <button
-                  class="button"
-                  onclick="window.location.href='./login.html';"
-                >
+                <button class="button" onclick="showLoginModal()">
                   Sign In
                 </button>
                 <button
@@ -240,9 +291,9 @@
                 <div class="more_dropdown">
                   <ul>
                     <li><a href="#">TEAM</a></li>
-                    <li><a href="#">WRITE FOR US</a></li>
-                    <li><a href="#">ARCHIVE</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+                    <li><a href="./archive.html">ARCHIVE</a></li>
+                    <li><a href="./contact-us.html">CONTACT</a></li>
                   </ul>
                 </div>
               </li>
@@ -252,12 +303,7 @@
           <i class="fa-solid fa-magnifying-glass mobile_search"></i>
 
           <div class="nav_btns">
-            <button
-              class="button"
-              onclick="window.location.href='./login.html';"
-            >
-              Sign In
-            </button>
+            <button class="button" onclick="showLoginModal()">Sign In</button>
             <button
               class="subscribe button"
               onclick="window.location.href='#subscribe';"
@@ -801,8 +847,11 @@
         <a href="./checkEmail.html">Check Email App</a><br />
         <a href="./change-pass.html">Change Password</a><br />
         <a href="./archive.html">Archive</a><br />
-        <a href="./search.html">Search Results</a>
-        <a href="./movies.html">movies</a>
+        <a href="./search.html">Search Results</a><br />
+        <a href="./movies.html">movies</a><br />
+        <a href="./bookmark.html">bookmark</a><br />
+        <a href="./forgotpassword.html">forgotpassword</a><br />
+        <a href="./profilepage.html">Profile Page</a><br />
       </section>
       <hr />
 
@@ -831,8 +880,8 @@
         <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
         <ul>
           <li><a href="#">ADVERTISE</a></li>
-          <li><a href="#">WRITE FOR US</a></li>
-          <li><a href="#">CATEGORIES</a></li>
+          <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+          <li><a href="./category-page.html">CATEGORIES</a></li>
           <li>
             <a href="./index.html"
               ><img
@@ -878,6 +927,25 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
+    <script>
+      // Initialize Swiper (carousel)
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+
     <script src="./index.js"></script>
   </body>
 </html>

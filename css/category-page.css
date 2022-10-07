@@ -628,7 +628,6 @@ display: flex;
 gap: 5rem
 }
 
-
 }
 
 /* Media query for mobile from 601px-768px*/
@@ -717,7 +716,4 @@ gap: 1rem;
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
-
-
-
 }

@@ -14,6 +14,7 @@ header {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 18px;
+  display: none;
 }
 
 .arrow {
@@ -23,13 +24,6 @@ header {
   height: 24px;
 }
 
-.eye-icon {
-  width: 18px;
-  height: 18px;
-  margin-top: 0.2rem;
-  left: 67rem;
-  position: absolute;
-}
 
 .shape1 {
   height: 9rem;
@@ -46,6 +40,7 @@ header {
   margin-right: auto;
   width: 80%;
   display: flex;
+  margin-top: 4rem;
 }
 
 .image-section-mobile {
@@ -81,10 +76,11 @@ input {
   background-color: #ebecee;
   font-size: 14px;
   border: none;
-  border-bottom: #22443e 1px solid;
   padding-bottom: 0.2rem;
-  width: 310px !important;
+  width: 100% !important;
   font-family: Arial, FontAwesome;
+  border: 0;
+  outline: none;
 }
 
 .password-eye {
@@ -115,7 +111,8 @@ input {
   margin-top: 1.5rem;
   margin-bottom: 3rem;
   text-align: center;
-  font-size: 13px;
+  font-size: 13.4px;
+  font-weight: 500;
 }
 
 .form-container .pass-brief {
@@ -132,7 +129,7 @@ input {
   padding: 12px 40px;
   width: 100%;
   background-color: #22443e;
-  color: white;
+  color: #fdfdfd;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -162,9 +159,6 @@ a {
 /* specific styling for 350px for icons only */
 
 @media screen and (max-width: 350px) {
-  .eye-icon {
-    display: none;
-  }
 
   .mobile-img {
     height: 405px;
@@ -178,12 +172,6 @@ a {
 /* specific styling for 401- 475px for eye-icon only */
 
 @media (min-width: 401px) and (max-width: 475px) {
-  .eye-icon {
-    width: 18px;
-    height: 18px;
-    margin-top: 0.2rem;
-    left: 5rem;
-  }
 
   form input {
     width: 240px;
@@ -238,13 +226,6 @@ a {
     align-content: center;
   }
 
-  .arrow {
-    left: 6rem;
-    margin-top: 0.1rem;
-    width: 24px;
-    height: 24px;
-  }
-
   .form-container {
     background-color: #ebecee;
     border-radius: 15px;
@@ -259,22 +240,7 @@ a {
     padding: 0px;
   }
 
-  input {
-    background-color: #ebecee;
-    font-size: 14px;
-    border: none;
-    border-bottom: #22443e 1px solid;
-    padding-bottom: 0.2rem;
-    width: 220px;
-    font-family: Arial, FontAwesome;
-  }
 
-  .eye-icon {
-    width: 18px;
-    height: 18px;
-    margin-top: 0.2rem;
-    left: 16rem;
-  }
 }
 
 /* styling from 401-500px*/
@@ -325,13 +291,6 @@ a {
     align-content: center;
   }
 
-  .arrow {
-    left: 10rem;
-    margin-top: 0.1rem;
-    width: 24px;
-    height: 24px;
-  }
-
   .form-container {
     background-color: #ebecee;
     border-radius: 15px;
@@ -346,22 +305,6 @@ a {
     padding: 0px;
   }
 
-  input {
-    background-color: #ebecee;
-    font-size: 14px;
-    border: none;
-    border-bottom: #22443e 1px solid;
-    padding-bottom: 0.2rem;
-    width: 300px;
-    font-family: Arial, FontAwesome;
-  }
-
-  .eye-icon {
-    width: 18px;
-    height: 18px;
-    margin-top: 0.2rem;
-    left: 21rem;
-  }
 }
 
 /* styling from 501-550px*/
@@ -411,13 +354,6 @@ a {
     align-content: center;
   }
 
-  .arrow {
-    left: 10rem;
-    margin-top: 0.1rem;
-    width: 24px;
-    height: 24px;
-  }
-
   .form-container {
     background-color: #ebecee;
     border-radius: 15px;
@@ -432,22 +368,7 @@ a {
     padding: 0px;
   }
 
-  input {
-    background-color: #ebecee;
-    font-size: 14px;
-    border: none;
-    border-bottom: #22443e 1px solid;
-    padding-bottom: 0.2rem;
-    width: 300px;
-    font-family: Arial, FontAwesome;
-  }
 
-  .eye-icon {
-    width: 18px;
-    height: 18px;
-    margin-top: 0.2rem;
-    left: 21rem;
-  }
 }
 
 /* styling from 551-665px*/
@@ -498,13 +419,6 @@ a {
     align-content: center;
   }
 
-  .arrow {
-    left: 12.5rem;
-    margin-top: 0.1rem;
-    width: 24px;
-    height: 24px;
-  }
-
   .form-container {
     background-color: #ebecee;
     border-radius: 15px;
@@ -519,22 +433,8 @@ a {
     padding: 0px;
   }
 
-  input {
-    background-color: #ebecee;
-    font-size: 14px;
-    border: none;
-    border-bottom: #22443e 1px solid;
-    padding-bottom: 0.2rem;
-    width: 350px;
-    font-family: Arial, FontAwesome;
-  }
 
-  .eye-icon {
-    width: 18px;
-    height: 18px;
-    margin-top: 0.2rem;
-    left: 25rem;
-  }
+
 }
 
 /* styling from 666-768px*/
@@ -585,13 +485,6 @@ a {
     align-content: center;
   }
 
-  .arrow {
-    left: 16rem;
-    margin-top: 0.1rem;
-    width: 24px;
-    height: 24px;
-  }
-
   .form-container {
     background-color: #ebecee;
     border-radius: 15px;
@@ -606,22 +499,7 @@ a {
     padding: 0px;
   }
 
-  input {
-    background-color: #ebecee;
-    font-size: 14px;
-    border: none;
-    border-bottom: #22443e 1px solid;
-    padding-bottom: 0.2rem;
-    width: 350px;
-    font-family: Arial, FontAwesome;
-  }
 
-  .eye-icon {
-    width: 18px;
-    height: 18px;
-    margin-top: 0.2rem;
-    left: 30rem;
-  }
 }
 
 /* Responsiveness for small desktop view */
@@ -649,14 +527,6 @@ a {
 
   .form-content {
     padding: 0px 10px;
-  }
-
-  .eye-icon {
-    left: 42rem;
-  }
-
-  .arrow {
-    left: 31rem;
   }
 
   input {
@@ -687,18 +557,6 @@ a {
     padding: 0 10px;
   }
 
-  .eye-icon {
-    left: 44rem;
-  }
-
-  .arrow {
-    left: 32rem;
-  }
-
-  input {
-    width: 278px;
-  }
-
   .form-container img {
     right: 4rem;
   }
@@ -724,28 +582,7 @@ a {
     padding: 0px 25px;
   }
 
-  .eye-icon {
-    left: 47rem;
-  }
-
-  .arrow {
-    left: 36rem;
-  }
-
-  input {
-    width: 280px;
-  }
-
   .form-container img {
     right: 6rem;
-  }
-}
-
-/* styling from 1201-1400px*/
-
-@media (min-width: 1201px) and (max-width: 1300px) {
-
-  input {
-    width: 290px;
   }
 }
