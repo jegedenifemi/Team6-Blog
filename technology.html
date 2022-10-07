@@ -4,15 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Technology</title>
+    <title>Blogga | Technology</title>
     <link rel="stylesheet" href="css/category-page.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- FAVICONS -->
     <link
-      rel="icon"
+      rel="shortcut icon"
+      href="./img/logo_resources/Favicon_White.png"
       type="image/x-icon"
-      sizes="16x16 32x32"
-      href="img/logo_resources/Favicon_White.png"
-      id="favicon"
+      id="fav-white"
+    />
+    <link
+      rel="shortcut icon"
+      href="./img/logo_resources/Favicon.png"
+      type="image/x-icon"
+      id="fav-green"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
@@ -278,8 +285,8 @@
             </div>
             <div class="left-content">
               <a href="">Venice Film Festival: The best fashion on show </a>
-                  <p>As the 79th installment of the Venice Film Festival draws to a close, there's been no shortage of celebrity fashion moments thanks to premieres like Noah Baumbach's "White Noise," starring Greta Gerwig and Adam Driver, the buzzy "Don't Worry Darling" directed by Olivia Wilde featuring Harry Styles and Florence Pugh,
-                    as well as "Blonde" -- Netflix's Marilyn Monroe biopic with Ana de Armas. </p>
+
+                  <p>As the 79th installment of the Venice Film Festival draws to a close, there's been no shortage of celebrity fashion moments thanks to premieres like Noah Baumbach's "White Noise," starring Greta Gerwig and Adam Driver, the buzzy "Don't Worry Darling" directed by Olivia Wilde. </p>
                    <div class="read-more-section">
                       <a href="" id="right-arrow"
                         >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
@@ -316,7 +323,8 @@
             <div class="left-content">
               <a href="">The Best Tech of IFA 2022 </a>
                   <p>The IFA 2022 is back after a two-year hiatus, and it has been full of surprises. Europe’s largest consumer technology exhibition definitely delivered: from smartphones and laptops to TVs, tablets, and smart home hardware, we’ve seen
-                    a plethora of new technology products unveiled by both major brands and newbies. </p>
+
+                    a plethora of new technology products unveiled by both major brands. </p>
                    <div class="read-more-section">
                       <a href="" id="right-arrow"
                         >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
@@ -628,7 +636,7 @@
         </section>
 
         <section class="page-num">
-             <hr />
+             <hr class="category-hr"/>
              <div class="page-num-content">
               <a href="#" class="page-btn start-page"><img src="img/less-than.svg" alt=""></a>
               <a href="#" class="page-btn">1</a>
@@ -638,12 +646,12 @@
               <a href="" class="page-btn">8</a>
               <a href="" class="page-btn">9</a>
               <a href="" class="page-btn active">10</a>
-              <a href="" class="page-btn">11</a>
-              <a href="" class="page-btn">12</a>
-              <a href="" class="page-btn">13</a>
-              <a href="" class="page-btn">14</a>
-              <a href="" class="page-btn next-page">...</a>
-              <a href="" class="page-btn">458</a>
+              <a href="" class="page-btn" id="hide">11</a>
+              <a href="" class="page-btn" id="hide">12</a>
+              <a href="" class="page-btn" id="hide">13</a>
+              <a href="" class="page-btn" id="hide">14</a>
+              <a href="" class="page-btn next-page" id="hide">...</a>
+              <a href="" class="page-btn" id="hide">458</a>
               <a href="" class="page-btn end-page"><img src="img/Greater-than.svg" alt=""></a> &nbsp;  &nbsp;
            </div>
         </section>
@@ -708,5 +716,6 @@
         <a href="#">Site Map</a>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -89,12 +89,15 @@ input {
   justify-content: space-between;
 }
 
-
+.bi-eye-slash {
+  display: none;
+}
 
 .form-container img {
   width: 2rem;
   position: absolute;
   right: 12rem;
+  cursor: pointer;
 }
 
 .form-container h3 {
