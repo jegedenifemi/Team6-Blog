@@ -292,6 +292,12 @@ color: #2D2D2D;
     }
     .comments button {
        position: absolute;
-       left: 34%;
+       left: 38%;
     }
+    .newsletter {
+        visibility: hidden;
+        height: 50px;
+    }
+    
+    
 }
