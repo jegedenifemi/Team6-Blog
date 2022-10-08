@@ -124,10 +124,13 @@ html {
   }
 }
 
-@media screen and (max-width: 767px) and (min-width: 555px) {
+@media screen and (max-width: 767px) and (min-width: 1px) {
   .blog-detail1 p {
     font-size: 22px;
     padding-left: 40px;
+  }
+  .hide {
+    display: none;
   }
 }
 
@@ -163,5 +166,17 @@ html {
   body,
   .big-section {
     width: 1oovw;
+  }
+}
+@media screen and (max-width: 499px) and (min-width: 465px) {
+  .blog-detail1 p {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 1px) {
+  .hide {
+    display: none;
   }
 }
