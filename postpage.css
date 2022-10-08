@@ -173,6 +173,7 @@ header {
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;
+    margin-top: 2rem;
 }
 .content {
     display: flex;
@@ -220,8 +221,8 @@ header {
 }
 
 .content-post img {
-    width: 340px;
-    height: 201.1px;
+  width: 634px;
+  height: 375px;
 }
 .poster-details {
     display: flex;
@@ -334,8 +335,33 @@ article h3 {
     padding-top: 10px;
     margin-top: 10px;
     margin-left: 2rem;
+    color: #22443E;
 }
 
+.react {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0.1px;
+
+color: #2D2D2D;
+}
+.react .far {
+  margin-left: 1rem;
+  margin-right: 8px;
+}
+.react .fas {
+  margin-left: 3px;
+  margin-right: 8px;
+}
+.react span {
+  margin-left: 1rem;
+}
 .comment-box {
     display: flex;
     flex-direction: column;
@@ -439,6 +465,19 @@ color: rgba(45, 45, 45, 0.7);
     margin-left: 1rem;
 }
 
+.comment-reaction .far {
+  margin-right: 0.5rem;
+  margin-left: 6px;
+  cursor: pointer;
+  
+}
+
+.comment-reaction .far:active {
+  color: #EB4F4F;
+ 
+  
+}
+
 .comment-reaction .fas {
     margin-right: 0.5rem;
     margin-left: 6px;
@@ -508,6 +547,19 @@ textarea:active {
     padding: 12px;
     margin-left: 4.3rem;
     margin-right: 2rem;
+}
+
+.related-post h3 {
+  padding-top: 10px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+  color: #000000;
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 25px;
 }
 
 .related-box {
@@ -754,6 +806,12 @@ article h3 {
     color: red;
     
 }
+.react {
+  visibility: hidden;
+}
+hr {
+  margin-top: 2rem;
+}
 .comment-box {
     margin-left: -3.3rem;
 }
@@ -913,6 +971,16 @@ line-height: 14px;
 letter-spacing: 0.111064px;
 
 color: #2D2D2D;
+}
+
+.sksk img {
+  width: 340px;
+  height: 201.1px;
+}
+.related-post h3 {
+  
+  margin-right: 1rem;
+  margin-left: -0.01rem;
 }
 
 
