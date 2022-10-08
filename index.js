@@ -71,13 +71,13 @@ function closeContactPopup() {
 
 // HIDE TOP BANNER ON SCROLL DOWN
 // var lastScrollTop;
-// topBanner = document.querySelector(".banner");
+// topBanner = document.querySelector(".nav_outer");
 // window.addEventListener("scroll", function () {
 //   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 //   if (scrollTop > lastScrollTop) {
-//     topBanner.style.top = "-80px";
+//     topBanner.style.opacity = "0";
 //   } else {
-//     topBanner.style.top = "0";
+//     topBanner.style.opacity = "1";
 //   }
 //   lastScrollTop = scrollTop;
 // });
@@ -85,9 +85,9 @@ function closeContactPopup() {
 // window.onscroll = function () {
 //   var currentScrollPos = window.pageYOffset;
 //   if (prevScrollpos > currentScrollPos) {
-//     document.querySelector(".banner").style.top = "0";
+//     document.querySelector(".nav_outer").style.opacity = "0";
 //   } else {
-//     document.querySelector(".banner").style.top = "-50px";
+//     document.querySelector(".nav_outer").style.opacity = "1";
 //   }
 //   prevScrollpos = currentScrollPos;
 // };
