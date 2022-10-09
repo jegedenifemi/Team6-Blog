@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.top-container {
+  /* width: 80%; */
+  text-align: center;
+  margin: 0 auto;
+}
+
+.top-container p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.top-container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 25px;
+  margin: .8rem 0;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: center;
+  gap: 18rem;
+  margin: 0 auto;
+}
+
+.page-heading p {
+  margin-bottom: .2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d2d2d80;
+}
+
+.main-hr {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #2d2d2d4d;
+}
+
+.mid-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  gap: 12rem;
+}
+
+.first-section {
+  display: flex;
+  width: 30%;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.first-section1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 6rem;
+}
+
+.btn-edit {
+  font-size: 0.875rem;
+  padding: 12px 40px;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #22443E;
+  background-color: white;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-bottom: 2rem;
+}
+
+.second-section p {
+  font-size: 1.125rem;
+  margin-bottom: .8rem;
+  line-height: 40px;
+
+}
+
+input {
+  border: none;
+  outline: none;
+  resize: none;
+  width: 92%;
+}
+
+::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 32px;
+  color: #2d2d2d4d;
+  padding-left: .5rem;
+}
+
+hr {
+  margin-top: .2rem;
+  margin-bottom: 1rem;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1rem; */
+}
+
+.btn-changes {
+  margin-top: 1rem;
+  color: #9E9E9E;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px 20px;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #D4DCDB;
+  width: 60%;
+}
+
+.third-section {
+  display: flex;
+  width: 30%;
+}
+
+.hr-bottom {
+  color: #2D2D2D;
+}
+
+.newsletter p {
+  margin-bottom: 3rem;
+}
