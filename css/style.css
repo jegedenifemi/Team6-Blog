@@ -1093,15 +1093,15 @@ header {
   }
 }
 @media screen and (max-width: 1300px) and (min-width: 1160px) {
-  .banner,
+  /* .banner,
   .nav_outer,
   .hero,
   .writers_latest_popular {
-    padding-inline: 2rem;
+    padding-inline: 4rem;
   }
   .trending {
-    padding-left: 2rem;
-  }
+    padding-left: 4rem;
+  } */
   .nav_inner > nav > ul {
     gap: 2rem;
   }
@@ -1129,7 +1129,7 @@ header {
     height: 15rem;
   }
 }
-@media screen and (max-width: 1159px) and (min-width: 940px) {
+@media screen and (max-width: 1250px) and (min-width: 940px) {
   .banner_wrapper {
     gap: 2rem;
   }
