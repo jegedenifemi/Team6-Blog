@@ -22,8 +22,8 @@ html {
   /* width: 40px; */
   padding: 10px 13px;
   font-size: 18px;
-  right: 2vw;
-  top: 90vh;
+  right: 4vw;
+  top: 88vh;
   z-index: 100;
   /* height: 300px; */
   color: rgba(248, 248, 248, 1);
@@ -1086,13 +1086,21 @@ header {
     padding-inline-end: 0;
   }
 }
+@media screen and (min-width: 1301px) {
+  .trending_card_img {
+    width: 23rem;
+    height: 15rem;
+  }
+}
 @media screen and (max-width: 1300px) and (min-width: 1160px) {
   .banner,
   .nav_outer,
   .hero,
-  .trending,
   .writers_latest_popular {
     padding-inline: 2rem;
+  }
+  .trending {
+    padding-left: 2rem;
   }
   .nav_inner > nav > ul {
     gap: 2rem;
@@ -1114,6 +1122,11 @@ header {
   }
   .card_info_bottom p {
     font-size: 11px;
+  }
+
+  .trending_card_img {
+    width: 23rem;
+    height: 15rem;
   }
 }
 @media screen and (max-width: 1159px) and (min-width: 940px) {
