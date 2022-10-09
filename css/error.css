@@ -1,0 +1,12 @@
+main {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.only button {
+  background-color: #22443e;
+  border-radius: 8px;
+  color: #f6f6f6;
+}
