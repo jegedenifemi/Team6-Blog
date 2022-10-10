@@ -90,15 +90,20 @@ header {
   font-weight: 500;
 }
 .banner_left > button {
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2.2rem;
   border: 1px solid rgba(230, 230, 230, 1);
   color: rgba(230, 230, 230, 1);
   cursor: pointer;
-  font-weight: 200;
-  font-size: 15px;
+  font-weight: 300;
+  font-size: 14px;
   border-radius: 0.5rem;
   background-color: inherit;
   margin-left: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.banner_left > button:hover {
+  background: rgba(248, 248, 248, 0.9);
+  color: rgba(34, 68, 62, 1);
 }
 .banner i {
   color: rgba(230, 230, 230, 1);
@@ -508,7 +513,7 @@ header {
   height: fit-content;
 }
 .nav_inner > a > img {
-  width: 4rem;
+  width: 3rem;
   margin-left: -1rem;
 }
 .nav_inner > nav > ul > li > a {
@@ -692,9 +697,21 @@ header {
   bottom: -0.2rem;
   left: 0.5rem;
 }
+@keyframes imgZoom {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.05, 1.05);
+  }
+  /* 100% {
+    transform: scale(1, 1);
+  } */
+}
 .img_zoom:hover {
-  transform: scale(1.05, 1.05);
-  transition: 0.5s ease;
+  animation: imgZoom 0.5s ease-in-out forwards;
+  /* transform: scale(1.05, 1.05); */
+  transition: 0.5s ease-in-out;
 }
 .hero_left h2 {
   font-weight: 500;
@@ -1105,10 +1122,10 @@ header {
   .nav_inner > nav > ul {
     gap: 2rem;
   }
-  .nav_inner > a > img {
-    width: 3.5rem;
-    margin-left: -0.5rem;
-  }
+  /* .nav_inner > a > img {
+    width: 3rem;
+    margin-left: 0.0005rem;
+  } */
 
   /* HERO SECTION */
   .hero_right {
@@ -1449,7 +1466,21 @@ header {
     flex-direction: column;
     width: max-content;
     margin: 0 auto;
+    /*display: grid;
+    grid-template-columns: repeat(2, 0.5fr); */
+    /* justify-content: space-between; */
+
     /* align-items: center; */
+    /* transform: scale(1.5, 1.5); */
+  }
+  .writers_cards img {
+    width: 5rem;
+  }
+  .writers_cards_info p {
+    font-size: 16px;
+  }
+  .writers_cards_sm i {
+    font-size: 18px;
   }
   .newsletter {
     background: rgba(212, 220, 219, 1);
