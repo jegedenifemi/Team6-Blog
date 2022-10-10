@@ -4,16 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blogga</title>
+    <title>Blogga &ThinSpace;|&ThinSpace; Home</title>
+    <!-- FAVICONS -->
     <link
       rel="shortcut icon"
       href="./img/logo_resources/Favicon_White.png"
       type="image/x-icon"
+      id="fav-white"
     />
+    <link
+      rel="shortcut icon"
+      href="./img/logo_resources/Favicon.png"
+      type="image/x-icon"
+      id="fav-green"
+    />
+
+    <!-- GOOGLE FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!-- FONTAWESOME -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -21,19 +39,135 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- SWIPER JS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/login.css" />
   </head>
-  <body>
+
+  <body class="home_body">
+    <!-- SCROLL TO TOP BUTTON -->
+    <a href="#top" class="to_top"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- SCROLL TO TOP BUTTON -->
+
+    <!-- LOGIN MODAL START-->
+    <!--  -->
+    <div class="login-modal">
+      <section class="login-body">
+        <img
+          src="./img/Login/mobile_blob1.png"
+          alt="mobile blob design"
+          class="mobile_blob1"
+        />
+        <img
+          src="./img/Login/mobile_blob2.png"
+          alt="mobile blob design"
+          class="mobile_blob2"
+        />
+        <img
+          src="./img/Login/mobile_blob3.png"
+          alt="mobile blob design"
+          class="mobile_blob3"
+        />
+
+        <main class="login-main">
+          <div class="left-div">
+            <img
+              src="./img/Login/login_top_blob.png"
+              alt="blob design "
+              class="top_blob"
+            />
+            <img src="./img/Login/login_main_image.png" alt="welcome image" />
+            <img
+              src="./img/Login/login_bottom_blob.png"
+              alt="blob design "
+              class="btm_blob"
+            />
+          </div>
+
+          <div class="right-div">
+            <i
+              class="fa-solid fa-xmark login-modal-close"
+              onclick="hideLoginModal()"
+            ></i>
+            <div class="right-div-container">
+              <h3 class="head-txt">Welcome Back : )</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="login-username"
+                required
+              />
+
+              <br />
+
+              <div class="password-eye">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                  required
+                />
+                <i class="bi bi-eye" onclick="passwordToggle()"></i>
+                <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot-password"
+                >Forgot Password?</a
+              >
+              <!-- <br /> -->
+
+              <label for="remember-me" class="remem-label">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />&nbsp; <small>Remember Me</small></label
+              >
+              <br />
+
+              <button type="button" class="login-button">Log In</button>
+
+              <div class="or-separator">
+                <hr />
+                <p>OR</p>
+                <hr />
+              </div>
+
+              <button type="button" class="continue-button">
+                <img src="img/google.png" alt="" class="google" /> &nbsp;
+                Continue With Google
+              </button>
+
+              <p class="base-txt">
+                Become a Blogga?
+                <a href="./signup.html" class="signup-link"> Write For Us</a>
+              </p>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <!--  -->
+    <!-- LOGIN MODAL END-->
+
+    <!-- HEADER & MOBILE MENU  START-->
+    <!--  -->
     <header>
+      <!-- top green banner -->
       <div class="banner">
         <div class="banner_wrapper">
           <div class="banner_left">
             <p>Have a story to share?</p>
-            <button onclick="window.location.href='https://google.com';">
+
+            <button onclick="window.location.href='./contact-us.html';">
               Contact Us
             </button>
           </div>
@@ -50,17 +184,91 @@
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
+      <!-- top green banner -->
 
       <div class="nav_outer">
-        <a href="./index.html"
-          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo"
-        /></a>
+        <!-- <a href="./index.html"
+          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+        /></a> -->
 
         <div class="nav_inner">
           <div class="hamburger">
             <span class="span1"></span><span class="span2"></span
             ><span class="span3"></span>
           </div>
+
+          <div class="hamburger_close">
+            <!-- <span class="span1"></span><span class="span2"></span> -->
+            <i class="fa-solid fa-xmark login-modal-close"></i>
+          </div>
+
+          <div class="mobile_menu">
+            <div class="mobile_menu_search">
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search anything..."
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="mobile_menu_categories">
+              <p>CATEGORIES</p>
+              <ul>
+                <a href="./fashion.html"
+                  ><li class="mob_fashion">FASHION</li></a
+                >
+                <a href="./category-page.html"
+                  ><li class="mob_entertaiment">ENTERTAINMENT</li></a
+                >
+                <a href="./technology.html"
+                  ><li class="mob_tech">TECHNOLOGY</li></a
+                >
+                <a href="#"><li class="mob_health">HEALTH</li></a>
+                <a href="#"><li class="mob_politics">POLITICS</li></a>
+                <a href="#"><li class="mob_edu">EDUCATION</li></a>
+                <a href="#"><li class="mob_food">FOOD</li></a>
+                <a href="#"><li class="mob_art">ART</li></a>
+              </ul>
+              <hr />
+            </div>
+
+            <div class="mobile_menu_links">
+              <p>MORE</p>
+              <div class="mobile_menu_links_top">
+                <a href="./ourteam.html">TEAM</a>
+                <a href="./archive.html">ARCHIVE</a>
+              </div>
+              <div class="mobile_menu_links_bottom">
+                <a href="./write-for-us.html">WRITE FOR US</a>
+                <a href="./contact-us.html">CONTACT</a>
+              </div>
+            </div>
+
+            <div class="mobile_menu_btns_wrap">
+              <div class="mobile_menu_btns">
+                <button class="button" onclick="showLoginModal()">
+                  Sign In
+                </button>
+                <button
+                  class="subscribe button"
+                  onclick="window.location.href='#subscribe';"
+                >
+                  Subscribe
+                </button>
+              </div>
+
+              <img
+                src="./img/home_page/author_hamzy.png"
+                alt="profile picture"
+              />
+            </div>
+          </div>
+
+          <a href="./index.html"
+            ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+          /></a>
 
           <nav>
             <a href="./index.html"
@@ -69,51 +277,74 @@
                 alt="Blogga Logo"
             /></a>
             <ul>
-              <li><a href="./fashion.html">FASHION</a></li>
-              <li><a href="./category-page.html">ENTERTAINMENT</a></li>
-              <li><a href="./technology.html">TECHNOLOGY</a></li>
-              <li><a href="#">HEALTH</a></li>
-              <li><a href="#">POLITICS</a></li>
-              <li><a href="#">EDUCATION</a></li>
-              <li><a href="#">FOOD</a></li>
-              <li><a href="#">ART</a></li>
+              <li><a href="./fashion.html" class="nav_fashion">FASHION</a></li>
               <li>
-                <a href="#" class="more">
+                <a href="./category-page.html" class="nav_entertainment"
+                  >ENTERTAINMENT</a
+                >
+              </li>
+              <li>
+                <a href="./technology.html" class="nav_tech">TECHNOLOGY</a>
+              </li>
+              <li><a href="#" class="nav_health">HEALTH</a></li>
+              <li><a href="#" class="nav_politics">POLITICS</a></li>
+              <li><a href="#" class="nav_edu">EDUCATION</a></li>
+              <li><a href="#" class="nav_food">FOOD</a></li>
+              <li><a href="#" class="nav_art">ART</a></li>
+              <li>
+                <input type="checkbox" name="more_check" id="more_check" />
+
+                <label for="more_check" class="more">
                   MORE
                   <span class="dropdown_arrow"
                     ><img
                       src="./img/home_page/dropdown_arrow.png"
-                      alt="dropdown" /></span
-                ></a>
+                      alt="dropdown"
+                  /></span>
+                </label>
+
+                <div class="more_dropdown">
+                  <ul>
+                    <li><a href="./ourteam.html">TEAM</a></li>
+                    <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+                    <li><a href="./archive.html">ARCHIVE</a></li>
+                    <li><a href="./contact-us.html">CONTACT</a></li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </nav>
 
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass mobile_search"></i>
 
           <div class="nav_btns">
-            <button
-              class="button"
-              onclick="window.location.href='./login.html';"
-            >
-              Sign In
-            </button>
+            <button class="button" onclick="showLoginModal()">Sign In</button>
             <button
               class="subscribe button"
               onclick="window.location.href='#subscribe';"
             >
               Subscribe
             </button>
+
+            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
           </div>
         </div>
       </div>
     </header>
+    <!--  -->
+    <!-- HEADER & MOBILE MENU END-->
 
-    <main>
-      <section class="hero">
+    <main class="home_main">
+      <!-- HERO SECTION START -->
+      <!--  -->
+      <section class="hero" id="to_top">
         <div class="hero_left">
           <div class="hero_left_img">
-            <img src="./img/home_page/constance_wu.png" alt="Constance wu" />
+            <img
+              src="./img/home_page/constance_wu.png"
+              alt="Constance wu"
+              class="img_zoom"
+            />
             <p>TOP STORY</p>
           </div>
 
@@ -142,16 +373,20 @@
 
             <div class="hero_author_sm">
               <p>1123 Shares</p>
-              <i class="fa-brands fa-twitter"></i
-              ><i class="fa-brands fa-linkedin-in"></i
-              ><i class="fa-brands fa-instagram"></i>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
           </div>
         </div>
 
         <div class="hero_right">
           <div class="hero_right_card">
-            <img src="./img/home_page/bad2me.png" alt="Song Art" />
+            <img
+              src="./img/home_page/bad2me.png"
+              alt="Song Art"
+              class="img_zoom"
+            />
 
             <div class="card_info_wrapper">
               <div class="card_info">
@@ -170,7 +405,11 @@
           </div>
 
           <div class="hero_right_card">
-            <img src="./img/home_page/eggs.png" alt="Picture of eggs" />
+            <img
+              src="./img/home_page/eggs.png"
+              alt="Picture of eggs"
+              class="img_zoom"
+            />
             <div class="card_info_wrapper">
               <div class="card_info">
                 <p class="category_label technology">TECHNOLOGY</p>
@@ -188,7 +427,11 @@
           </div>
 
           <div class="hero_right_card">
-            <img src="./img/home_page/covid-19.png" alt="Vaccine Image" />
+            <img
+              src="./img/home_page/covid-19.png"
+              alt="Vaccine Image"
+              class="img_zoom"
+            />
             <div class="card_info_wrapper">
               <div class="card_info">
                 <p class="category_label health">HEALTH</p>
@@ -206,7 +449,11 @@
           </div>
 
           <div class="hero_right_card">
-            <img src="./img/home_page/benin_head.png" alt="Benin Bronze Head" />
+            <img
+              src="./img/home_page/benin_head.png"
+              alt="Benin Bronze Head"
+              class="img_zoom"
+            />
             <div class="card_info_wrapper">
               <div class="card_info">
                 <p class="category_label art">ART</p>
@@ -224,8 +471,10 @@
           </div>
         </div>
       </section>
+      <!--  -->
+      <!-- HERO SECTION END-->
 
-      <!-- Swiper -->
+      <!-- SWIPER START -->
       <section class="swiper mySwiper trending">
         <div class="trending_head">
           <h3>
@@ -251,12 +500,16 @@
           <div class="swiper-slide">
             <div class="trending_card">
               <div class="trending_card_img">
-                <img src="./img/home_page/koo_koo_fun.png" alt="Song Art" />
+                <img
+                  src="./img/home_page/koo_koo_fun.png"
+                  alt="Song Art"
+                  class="img_zoom"
+                />
                 <p class="category_label entertainment">ENTERTAINMENT</p>
               </div>
 
               <div class="trending_cards_txt">
-                <a href="#" class="post_title">
+                <a href="#" class="post_title_light">
                   <h4>
                     Major Lazer, Major League DJz, Tiwa Savage, DJ Maphorisa –
                     Koo Koo Fun (Song)
@@ -270,18 +523,24 @@
               </div>
             </div>
           </div>
+
           <div class="swiper-slide">
             <div class="trending_card">
               <div class="trending_card_img">
                 <img
                   src="./img/home_page/burna_boy.png"
                   alt="Image of Burna Boy"
+                  class="img_zoom"
                 />
                 <p class="category_label entertainment">ENTERTAINMENT</p>
               </div>
 
               <div class="trending_cards_txt">
-                <h4>Burna Boy records half a Billion streams on Boomplay</h4>
+                <a href="#" class="post_title_light"
+                  ><h4>
+                    Burna Boy records half a Billion streams on Boomplay
+                  </h4></a
+                >
 
                 <div class="trending_cards_txt_bottom">
                   <p>By Taofikat</p>
@@ -290,18 +549,22 @@
               </div>
             </div>
           </div>
+
           <div class="swiper-slide">
             <div class="trending_card">
               <div class="trending_card_img">
                 <img
                   src="./img/home_page/Remmy-img.jpeg"
                   alt="Image of Rema & interviewer"
+                  class="img_zoom"
                 />
                 <p class="category_label entertainment">ENTERTAINMENT</p>
               </div>
 
               <div class="trending_cards_txt">
-                <h4>The Moment Rema Rejected A Sex Offer On Live TV</h4>
+                <a href="#" class="post_title_light">
+                  <h4>The Moment Rema Rejected A Sex Offer On Live TV</h4></a
+                >
 
                 <div class="trending_cards_txt_bottom">
                   <p>By John</p>
@@ -317,12 +580,17 @@
                 <img
                   src="./img/home_page/burna_boy.png"
                   alt="Image of Burna Boy"
+                  class="img_zoom"
                 />
                 <p class="category_label entertainment">ENTERTAINMENT</p>
               </div>
 
               <div class="trending_cards_txt">
-                <h4>Burna Boy records half a Billion streams on Boomplay</h4>
+                <a href="#" class="post_title_light">
+                  <h4>
+                    Burna Boy records half a Billion streams on Boomplay
+                  </h4></a
+                >
 
                 <div class="trending_cards_txt_bottom">
                   <p>By Taofikat</p>
@@ -338,12 +606,15 @@
                 <img
                   src="./img/home_page/Remmy-img.jpeg"
                   alt="Image of Rema & interviewer"
+                  class="img_zoom"
                 />
                 <p class="category_label entertainment">ENTERTAINMENT</p>
               </div>
 
               <div class="trending_cards_txt">
-                <h4>The Moment Rema Rejected A Sex Offer On Live TV</h4>
+                <a href="#" class="post_title_light">
+                  <h4>The Moment Rema Rejected A Sex Offer On Live TV</h4></a
+                >
 
                 <div class="trending_cards_txt_bottom">
                   <p>By John</p>
@@ -365,12 +636,15 @@
 
         <div class="swiper-pagination swiper-pagination-mobile"></div>
       </section>
+      <!-- SWIPER END-->
 
+      <!-- WRITERS, LATEST & POPULAR START -->
+      <!--  -->
       <section class="writers_latest_popular">
         <div class="writers">
           <div class="writers_latest_head">
             <h2>WRITERS</h2>
-            <a>SEE ALL</a>
+            <a href="./writerpage.html">SEE ALL</a>
           </div>
 
           <div class="writers_content">
@@ -381,9 +655,9 @@
                 <p>HAMZAH OPEMIPO</p>
 
                 <div class="writers_cards_sm">
-                  <i class="fa-brands fa-twitter"></i>
-                  <i class="fa-brands fa-facebook"></i>
-                  <i class="fa-brands fa-instagram"></i>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -395,9 +669,9 @@
                 <p>ADEDOTUN SOLARIN</p>
 
                 <div class="writers_cards_sm">
-                  <i class="fa-brands fa-twitter"></i>
-                  <i class="fa-brands fa-facebook"></i>
-                  <i class="fa-brands fa-instagram"></i>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -409,12 +683,12 @@
               />
 
               <div class="writers_cards_info">
-                <p>JEGEDE OLUWANIFEMI</p>
+                <p>JEGEDE NIFEMI</p>
 
                 <div class="writers_cards_sm">
-                  <i class="fa-brands fa-twitter"></i>
-                  <i class="fa-brands fa-facebook"></i>
-                  <i class="fa-brands fa-instagram"></i>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -426,9 +700,9 @@
                 <p>CHIKA RACHEAL EZEH</p>
 
                 <div class="writers_cards_sm">
-                  <i class="fa-brands fa-twitter"></i>
-                  <i class="fa-brands fa-facebook"></i>
-                  <i class="fa-brands fa-instagram"></i>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -443,9 +717,9 @@
                 <p>TAOFIKAT OYEDEPO</p>
 
                 <div class="writers_cards_sm">
-                  <i class="fa-brands fa-twitter"></i>
-                  <i class="fa-brands fa-facebook"></i>
-                  <i class="fa-brands fa-instagram"></i>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -454,12 +728,12 @@
               <img src="./img/home_page/author_amara.png" alt="author_amara" />
 
               <div class="writers_cards_info">
-                <p>AMARA PEACE ONWUNZO</p>
+                <p>AMARA ONWUNZO</p>
 
                 <div class="writers_cards_sm">
-                  <i class="fa-brands fa-twitter"></i>
-                  <i class="fa-brands fa-facebook"></i>
-                  <i class="fa-brands fa-instagram"></i>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -477,10 +751,15 @@
               <img
                 src="./img/home_page/rings_of_power.png"
                 alt="Rings of power snapshot"
+                class="img_zoom"
               />
 
               <div class="latest_cards_txt">
-                <h3>The Rings of Power recap: Not all who wander are lost</h3>
+                <a href="#" class="post_title">
+                  <h3>
+                    The Rings of Power recap: Not all who wander are lost
+                  </h3></a
+                >
 
                 <div class="latest_cards_txt_bottom">
                   <p>Hamzah</p>
@@ -493,10 +772,13 @@
               <img
                 src="./img/home_page/2023_elections.png"
                 alt="Nigerian Flag"
+                class="img_zoom"
               />
 
               <div class="latest_cards_txt">
-                <h3>How ‘ghosts’ may decide Nigeria’s 2023 elections</h3>
+                <a href="#" class="post_title">
+                  <h3>How ‘ghosts’ may decide Nigeria’s 2023 elections</h3></a
+                >
 
                 <div class="latest_cards_txt_bottom">
                   <p>Afariogun</p>
@@ -509,10 +791,13 @@
               <img
                 src="./img/home_page/house_of_the_dragon.png"
                 alt="house of the dragon snapshot"
+                class="img_zoom"
               />
 
               <div class="latest_cards_txt">
-                <h3>House of the Dragon recap: Another bloody wedding</h3>
+                <a href="#" class="post_title">
+                  <h3>House of the Dragon recap: Another bloody wedding</h3></a
+                >
 
                 <div class="latest_cards_txt_bottom">
                   <p>Adedotun</p>
@@ -522,13 +807,19 @@
             </div>
 
             <div class="latest_cards">
-              <img src="./img/home_page/tobi_amusan.png" alt="Tobi Amusan" />
+              <img
+                src="./img/home_page/tobi_amusan.png"
+                alt="Tobi Amusan"
+                class="img_zoom"
+              />
 
               <div class="latest_cards_txt">
-                <h3>
-                  Homecoming dinner: World Champion Tobi Amusan excited by
-                  welcome, national award
-                </h3>
+                <a href="#" class="post_title">
+                  <h3>
+                    Homecoming dinner: World Champion Tobi Amusan excited by
+                    welcome, national award
+                  </h3></a
+                >
 
                 <div class="latest_cards_txt_bottom">
                   <p>Nino</p>
@@ -538,10 +829,18 @@
             </div>
 
             <div class="latest_cards">
-              <img src="./img/home_page/bandits_zamfara.png" alt="Zamfara" />
+              <img
+                src="./img/home_page/bandits_zamfara.png"
+                alt="Zamfara"
+                class="img_zoom"
+              />
 
               <div class="latest_cards_txt">
-                <h3>Bandits attack Zamfara mosque, gun down worshippers</h3>
+                <a href="#" class="post_title">
+                  <h3>
+                    Bandits attack Zamfara mosque, gun down worshippers
+                  </h3></a
+                >
 
                 <div class="latest_cards_txt_bottom">
                   <p>Afariogun</p>
@@ -560,35 +859,49 @@
           <div class="popular_content">
             <ul>
               <li>
-                <p>
-                  I lost G-Wagon, Escalade, Bentley, others to floods – Lagos
-                  landlord
-                </p>
+                <a href="#" class="post_title">
+                  <p>
+                    I lost G-Wagon, Escalade, Bentley, others to floods – Lagos
+                    landlord
+                  </p></a
+                >
                 <p>Hamzah</p>
               </li>
               <li>
-                <p>
-                  Why Rich kids have higher chance at success in life than
-                  average kids
-                </p>
+                <a href="#" class="post_title">
+                  <p>
+                    Why Rich kids have higher chance at success in life than
+                    average kids
+                  </p></a
+                >
                 <p>Nino</p>
               </li>
               <li>
-                <p>Waterways authority to revive Lagos jetty, clear wrecks</p>
+                <a href="#" class="post_title">
+                  <p>
+                    Waterways authority to revive Lagos jetty, clear wrecks
+                  </p></a
+                >
                 <p>Philip</p>
               </li>
               <li>
-                <p>BBN: Housemates inch closer to N100m prize</p>
+                <a href="#" class="post_title">
+                  <p>BBN: Housemates inch closer to N100m prize</p></a
+                >
                 <p>Rachael</p>
               </li>
               <li>
-                <p>Jazz legend, Pharoah Sanders, dies at 81</p>
+                <a href="#" class="post_title">
+                  <p>Jazz legend, Pharoah Sanders, dies at 81</p></a
+                >
                 <p>Taofikat</p>
               </li>
             </ul>
           </div>
         </div>
       </section>
+      <!--  -->
+      <!-- WRITERS, LATEST & POPULAR  END-->
 
       <section>
         <h1>links to other pages</h1>
@@ -598,10 +911,17 @@
         <a href="./resetpass.html">Reset Password Email</a><br />
         <a href="./checkEmail.html">Check Email App</a><br />
         <a href="./change-pass.html">Change Password</a><br />
-        <a href="./archive.html">Archive</a>
+        <a href="./archive.html">Archive</a><br />
+        <a href="./search.html">Search Results</a><br />
+        <a href="./movies.html">movies</a><br />
+        <a href="./bookmark.html">bookmark</a><br />
+        <a href="./forgotpassword.html">forgotpassword</a><br />
+        <a href="./profilepage.html">Profile Page</a><br />
       </section>
-      <hr />
 
+      <!-- SUBSCRIBE SECTION START-->
+      <!--  -->
+      <hr />
       <section class="newsletter" id="subscribe">
         <h2>STAY UPDATED</h2>
 
@@ -620,24 +940,29 @@
           <button type="submit" class="subscribe button">Subscribe</button>
         </form>
       </section>
+      <!--  -->
+      <!-- SUBSCRIBE SECTION END-->
     </main>
 
+    <!-- FOOTER START-->
+    <!--  -->
     <footer class="main_footer">
       <div class="footer_top">
         <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
         <ul>
-          <li>ADVERTISE</li>
-          <li>WRITE FOR US</li>
-          <li>CATEGORIES</li>
+          <li><a href="#">ADVERTISE</a></li>
+          <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+          <li><a href="./category-page.html">CATEGORIES</a></li>
           <li>
-            <img
-              src="./img/logo_resources/Favicon_White.png"
-              alt="Blogga Icon"
-            />
+            <a href="./index.html"
+              ><img
+                src="./img/logo_resources/Favicon_White.png"
+                alt="Blogga Icon"
+            /></a>
           </li>
-          <li>ARCHIVES</li>
-          <li>TERMS OF SERVICE</li>
-          <li>PRIVACY</li>
+          <li><a href="./archive.html">ARCHIVES</a></li>
+          <li><a href="./termsofservice.html">TERMS OF SERVICE</a></li>
+          <li><a href="./privacypolicy.html">PRIVACY</a></li>
         </ul>
       </div>
 
@@ -668,11 +993,32 @@
         <a href="#">Site Map</a>
       </div>
     </footer>
+    <!--  -->
+    <!-- FOOTER END-->
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
+    <script>
+      // Initialize Swiper (carousel)
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+
     <script src="./index.js"></script>
   </body>
 </html>
