@@ -329,6 +329,11 @@ body {
   height: 205px;
 }
 
+.middle-image img:hover{
+  transform: scale(1.05, 1.05);
+  transition: 0.5s ease;
+}
+
 .middle-content {
   padding-right: 55px;
 }
@@ -479,6 +484,11 @@ body {
   gap: 1rem;
   margin-top: 2rem;
   margin-bottom: 5rem;
+}
+
+.writers-content img:hover{
+  transform: scale(1.05, 1.05);
+  transition: 0.5s ease;
 }
 
 .writers-content p {

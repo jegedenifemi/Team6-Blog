@@ -38,12 +38,16 @@
 
   </head>
   <body>
+    <!-- HEADER & MOBILE MENU  START-->
+    <!--  -->
     <header>
+      <!-- top green banner -->
       <div class="banner">
         <div class="banner_wrapper">
           <div class="banner_left">
-            <a href="signup.html">Have a story to share?</a>
-            <button onclick="window.location.href='https://google.com';">
+            <p>Have a story to share?</p>
+
+            <button onclick="window.location.href='./contact-us.html';">
               Contact Us
             </button>
           </div>
@@ -55,17 +59,17 @@
         </div>
 
         <div class="banner_socials">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-instagram"></i>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
+      <!-- top green banner -->
 
       <div class="nav_outer">
-        <img
-          src="img/Blogga-Icon-Green.png"
-          alt="Blogga Logo"
-        />
+        <!-- <a href="./index.html"
+          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+        /></a> -->
 
         <div class="nav_inner">
           <div class="hamburger">
@@ -73,40 +77,142 @@
             ><span class="span3"></span>
           </div>
 
+          <div class="hamburger_close">
+            <!-- <span class="span1"></span><span class="span2"></span> -->
+            <i class="fa-solid fa-xmark login-modal-close"></i>
+          </div>
+
+          <div class="mobile_menu">
+            <div class="mobile_menu_search">
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search anything..."
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="mobile_menu_categories">
+              <p>CATEGORIES</p>
+              <ul>
+                <a href="./fashion.html"
+                  ><li class="mob_fashion">FASHION</li></a
+                >
+                <a href="./category-page.html"
+                  ><li class="mob_entertaiment">ENTERTAINMENT</li></a
+                >
+                <a href="./technology.html"
+                  ><li class="mob_tech">TECHNOLOGY</li></a
+                >
+                <a href="#"><li class="mob_health">HEALTH</li></a>
+                <a href="#"><li class="mob_politics">POLITICS</li></a>
+                <a href="#"><li class="mob_edu">EDUCATION</li></a>
+                <a href="#"><li class="mob_food">FOOD</li></a>
+                <a href="#"><li class="mob_art">ART</li></a>
+              </ul>
+              <hr />
+            </div>
+
+            <div class="mobile_menu_links">
+              <p>MORE</p>
+              <div class="mobile_menu_links_top">
+                <a href="./ourteam.html">TEAM</a>
+                <a href="./archive.html">ARCHIVE</a>
+              </div>
+              <div class="mobile_menu_links_bottom">
+                <a href="./write-for-us.html">WRITE FOR US</a>
+                <a href="./contact-us.html">CONTACT</a>
+              </div>
+            </div>
+
+            <div class="mobile_menu_btns_wrap">
+              <div class="mobile_menu_btns">
+                <button class="button" onclick="showLoginModal()">
+                  Sign In
+                </button>
+                <button
+                  class="subscribe button"
+                  onclick="window.location.href='#subscribe';"
+                >
+                  Subscribe
+                </button>
+              </div>
+
+              <img
+                src="./img/home_page/author_hamzy.png"
+                alt="profile picture"
+              />
+            </div>
+          </div>
+
+          <a href="./index.html"
+            ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+          /></a>
+
           <nav>
+            <a href="./index.html"
+              ><img
+                src="./img/logo_resources/Favicon_White.png"
+                alt="Blogga Logo"
+            /></a>
             <ul>
-              <li><a href="#">FASHION</a></li>
-              <li><a href="#">ENTERTAINMENT</a></li>
-              <li><a href="#">TECHNOLOGY</a></li>
-              <li><a href="#">HEALTH</a></li>
-              <li><a href="#">POLITICS</a></li>
-              <li><a href="#">EDUCATION</a></li>
-              <li><a href="#">FOOD</a></li>
-              <li><a href="#">ART</a></li>
+              <li><a href="./fashion.html" class="nav_fashion">FASHION</a></li>
               <li>
-                <a href="#" class="more">
+                <a href="./category-page.html" class="nav_entertainment"
+                  >ENTERTAINMENT</a
+                >
+              </li>
+              <li>
+                <a href="./technology.html" class="nav_tech">TECHNOLOGY</a>
+              </li>
+              <li><a href="#" class="nav_health">HEALTH</a></li>
+              <li><a href="#" class="nav_politics">POLITICS</a></li>
+              <li><a href="#" class="nav_edu">EDUCATION</a></li>
+              <li><a href="#" class="nav_food">FOOD</a></li>
+              <li><a href="#" class="nav_art">ART</a></li>
+              <li>
+                <input type="checkbox" name="more_check" id="more_check" />
+
+                <label for="more_check" class="more">
                   MORE
                   <span class="dropdown_arrow"
                     ><img
                       src="./img/home_page/dropdown_arrow.png"
-                      alt="dropdown" /></span
-                ></a>
+                      alt="dropdown"
+                  /></span>
+                </label>
+
+                <div class="more_dropdown">
+                  <ul>
+                    <li><a href="./ourteam.html">TEAM</a></li>
+                    <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+                    <li><a href="./archive.html">ARCHIVE</a></li>
+                    <li><a href="./contact-us.html">CONTACT</a></li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </nav>
 
+          <i class="fa-solid fa-magnifying-glass mobile_search"></i>
+
           <div class="nav_btns">
+            <button class="button" onclick="showLoginModal()">Sign In</button>
             <button
-              class="button"
-              onclick="window.location.href='./login.html';"
+              class="subscribe button"
+              onclick="window.location.href='#subscribe';"
             >
-              Sign In
+              Subscribe
             </button>
-            <button class="subscribe button">Subscribe</button>
+
+            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
           </div>
         </div>
       </div>
     </header>
+    <!--  -->
+    <!-- HEADER & MOBILE MENU END-->
     <main>
       <section class="category-header">
         <a href="index.html">HOME /</h2></a>
@@ -634,8 +740,11 @@
              </div>
         </section>
 
+        <section>
+          <hr  />
+      </section>
 
-      <section class="newsletter">
+      <section class="newsletter" id="subscribe">
         <h2>STAY UPDATED</h2>
 
         <p>
@@ -653,6 +762,8 @@
           <button type="submit" class="subscribe button">Subscribe</button>
         </form>
       </section>
+      <!--  -->
+      <!-- SUBSCRIBE SECTION END-->
 
       <section class="icon">
         <a href="" class="gototop"> <i class="fa-solid fa-arrow-up"></i>
@@ -660,33 +771,48 @@
       </section>
     </main>
 
-    <footer>
+    <!-- FOOTER START-->
+    <!--  -->
+    <footer class="main_footer">
       <div class="footer_top">
+        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
         <ul>
-          <li>ADVERTISE</li>
-          <li>WRITE FOR US</li>
-          <li>CATEGORIES</li>
+          <li><a href="#">ADVERTISE</a></li>
+          <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+          <li><a href="./category-page.html">CATEGORIES</a></li>
           <li>
-            <img src="img/Blogga-Favicon-White.png" alt="Blogga-Favicon-White" class="footer-logo" />
+            <a href="./index.html"
+              ><img
+                src="./img/logo_resources/Favicon_White.png"
+                alt="Blogga Icon"
+            /></a>
           </li>
-          <li>ARCHIVES</li>
-          <li>TERMS OF SERVICE</li>
-          <li>PRIVACY</li>
+          <li><a href="./archive.html">ARCHIVES</a></li>
+          <li><a href="./termsofservice.html">TERMS OF SERVICE</a></li>
+          <li><a href="./privacypolicy.html">PRIVACY</a></li>
         </ul>
       </div>
 
       <div class="footer_middle">
         <a href="#">
-          <i class="fa-brands fa-facebook"></i>&ThinSpace; FACEBOOK </a
-        ><a href="#"><i class="fa-brands fa-twitter"></i>&ThinSpace; TWITTER</a
+          <i class="fa-brands fa-facebook"></i>&ThinSpace;
+          <span>FACEBOOK</span> </a
         ><a href="#"
-          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace; LINKEDIN</a
-        ><a href="#"><i class="fa-brands fa-youtube"></i>&ThinSpace; YOUTUBE</a
+          ><i class="fa-brands fa-twitter"></i>&ThinSpace;
+          <span>TWITTER</span> </a
         ><a href="#"
-          ><i class="fa-brands fa-instagram"></i>&ThinSpace; INSTAGRAM</a
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace;
+          <span>LINKEDIN</span> </a
         ><a href="#"
-          ><i class="fa-brands fa-pinterest"></i>&ThinSpace; PINTEREST</a
-        >
+          ><i class="fa-brands fa-youtube"></i>&ThinSpace;
+          <span>YOUTUBE</span></a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace;
+          <span>INSTAGRAM</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace;
+          <span>PINTEREST</span>
+        </a>
       </div>
 
       <div class="footer_bottom">
@@ -694,6 +820,8 @@
         <a href="#">Site Map</a>
       </div>
     </footer>
+    <!--  -->
+    <!-- FOOTER END-->
     <script src="category.js"></script>
     <script src="./index.js"></script>
   </body>
