@@ -8,6 +8,9 @@ from random import randint
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 # Create your models here.
+
+
+
 User = get_user_model()
 class Category(models.Model):
     name = models.CharField(max_length = 100, unique=True)
@@ -25,6 +28,9 @@ class Category(models.Model):
     def save(self, *args, **kwargs):
         self.category_slug = slugify(str(self.name))
         super(Category, self).save(*args, **kwargs)
+
+
+
 
 class SubCategory(models.Model):
     name = models.CharField(max_length = 100, unique=True)
@@ -46,8 +52,7 @@ class SubCategory(models.Model):
 
 
 class Post(models.Model):
-
-    
+ 
     choices = (
         ('draft', 'Draft'),
         ('published', 'Published')
@@ -58,10 +63,11 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     publish_on = models.DateTimeField(default=timezone.now)
-    image = models.ImageField(upload_to='post/%d/%m/%y',default =  'faf75719-9275-4348-b2e1-269eeb2c023b.png')
+    image = models.ImageField(upload_to='post/%d/%m/%y',default =  'post/faf75719-9275-4348-b2e1-269eeb2c023b.png')
     status = models.CharField(max_length=20, choices=choices, default= 'draft')
     contents = models.TextField()
     description = models.TextField(blank = True)
+    bookmarks = models.ManyToManyField(User, related_name='bookmark',default=None, blank=True)
     category = models.ForeignKey(Category, on_delete = models.CASCADE)
     sub_category = models.ForeignKey(SubCategory, on_delete = models.CASCADE, default = SubCategory.get_sub)
     tags = TaggableManager()
@@ -79,6 +85,13 @@ class Post(models.Model):
         self.slug = slugify(mySlug)
         super(Post, self).save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        from django.core.urlresolvers import reverse
+        return reverse('post:post_detail', kwargs={'slug': self.slug})
+
+
+
+
 class Profile(models.Model):
 
     # class PostObjects(models.Manager):
@@ -95,6 +108,9 @@ class Profile(models.Model):
 def create_user_profile(sender, instance, created,**kwargs):
     if created:
         Profile.objects.create(blogger=instance)
+
+
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete = models.CASCADE, related_name = 'comments')

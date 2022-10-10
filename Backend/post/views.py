@@ -4,6 +4,7 @@ from .forms import PostForm,CommentForm
 from django.contrib import messages
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
+from django.views.generic import ListView
 # Create your views here.
 # list view for home page
 def index(request):
@@ -106,14 +107,13 @@ def update(request, slug):
     return render(request, 'post/update.html', context)
 
 
-# creating comments
+class CategoryListView(ListView):
+    template_name = 'post/category.html'
+    context_object_name = 'category_list'
 
-# def create_comment(request):
-
-#     context = {
-
-#     }
-
-#     return render(request, 'post/detail.html', context)
-
-
+    def get_queryset(self):
+        content = {
+            'categories': self.kwargs['category'],
+            'posts': Post.objects.filter(category__name = self.kwargs['category']).filter(status='published')
+        }
+        return content 

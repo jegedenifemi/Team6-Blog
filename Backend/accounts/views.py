@@ -14,6 +14,8 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.http import HttpResponse
 from .token import account_activation_token
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 
@@ -96,7 +98,7 @@ def _log_in(request):
 
     return render(request, 'accounts/login.html', context)
 
-
+# @login_required(login_url='login/')
 def _log_out(request):
     logout(request)
     return redirect('login')
