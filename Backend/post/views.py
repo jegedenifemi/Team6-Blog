@@ -23,7 +23,7 @@ def createPost(request):
     if request.user.is_authenticated:
         form = PostForm
         if request.method == 'POST':
-            form = PostForm(request.POST)
+            form = PostForm(request.POST,request.FILES)
             
             if form.is_valid():
                 myform = form.save(commit =False)
@@ -96,7 +96,7 @@ def update(request, slug):
     post = Post.objects.get(slug = slug)
     form = PostForm(instance  = post)
     if request.method  == 'POST':
-        form = PostForm(request.POST, instance = post)
+        form = PostForm(request.POST,request.FILES, instance = post)
         if form.is_valid():
             myform = form.save(commit =False)
             myform.author = request.user
