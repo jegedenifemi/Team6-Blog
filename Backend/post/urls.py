@@ -1,6 +1,8 @@
 from django.urls import path
 from post import views
+
 app_name='post'
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('post/<slug:slug>/', views.postDetail, name='post_detail'),
@@ -9,3 +11,4 @@ urlpatterns = [
     path('post/<slug:slug>/update/', views.update, name ='post_update'),
     path('category/<category>', views.CategoryListView.as_view(), name = 'post_category')
 ]
+# {% url 'app_name:url_name' %}

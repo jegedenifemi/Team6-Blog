@@ -58,7 +58,7 @@ def _sign_up(request):
         else:
             form = CreateUserForm
         context = {'form': form}
-        return render(request, 'accounts/signup.html', context)
+        return render(request, 'accounts/signup_john.html', context)
 
 
 def activate(request, uidb64, token):
@@ -96,7 +96,7 @@ def _log_in(request):
     
     context ={}
 
-    return render(request, 'accounts/login.html', context)
+    return render(request, 'accounts/login_john.html', context)
 
 # @login_required(login_url='login/')
 def _log_out(request):

@@ -1,8 +1,0 @@
-
-<!-- This returns an error which is raised by the post_detail, so it will be fixed later -->
-<form method='post'>
-    {% csrf_token %}
-    {{form.as_p}}
-    {{ contents | safe}}
-<button type="submit">submit</button>
-</form>
