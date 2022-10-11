@@ -328,7 +328,7 @@ article {
     flex-direction: column;
     padding: 10px;
     margin-left: 4rem;
-    background-color: #fff;
+    background-color: rgba(248, 248, 248, 1);
     width: 800px;
 }
 
@@ -337,6 +337,7 @@ article h3 {
     margin-top: 10px;
     margin-left: 2rem;
     color: #22443E;
+    
 }
 
 .react {
@@ -351,6 +352,9 @@ line-height: 20px;
 letter-spacing: 0.1px;
 
 color: #2D2D2D;
+}
+.art {
+  background-color: rgba(248, 248, 248, 1)
 }
 .react .far {
   margin-left: 1rem;
@@ -367,6 +371,7 @@ color: #2D2D2D;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    background-color: rgba(248, 248, 248, 1);
     margin-left: 4rem;
 }
 .comment-response {
@@ -391,6 +396,10 @@ align-items: center;
 letter-spacing: 0.25px;
 
 color: #2D2D2D;
+}
+
+#book {
+  color: #22443E;;
 }
 .imag {
     box-sizing: border-box;
@@ -801,6 +810,7 @@ article {
     flex-direction: column;
     width: 400px;
     margin-right: 4rem;
+    background-color: rgba(248, 248, 248, 1)
 }
 article h3 {
     margin-left: -2rem;
