@@ -30,6 +30,8 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 4rem;
   row-gap: 2rem;
+  max-width: 650px;
+  margin: 0 auto;
   /* border: 1px solid red; */
 }
 .contact-us_main > form > input,
@@ -159,6 +161,8 @@ textarea:focus {
     grid-template-columns: 1fr;
     column-gap: 0;
     row-gap: 2rem;
+    max-width: 550px;
+    margin: 0 auto;
   }
   #contact_email,
   #contact_message,
@@ -196,35 +200,35 @@ textarea:focus {
   .pop_up_content p {
     width: 100%;
   }
+}
 
-  /* WRITE 4 US!!!!!!!! */
-  #write4us_email,
-  .bio_wrapper,
-  #write4us_submit {
-    /* .write4us-us_submit { */
-    grid-column: 1/3;
-  }
-  #write4us_bio,
-  #write4us_articlelink {
-    margin-bottom: 0;
-    width: 100%;
-  }
-  .bio_wrapper p {
-    color: rgba(45, 45, 45, 0.8);
-    font-weight: 500;
-    /* display: inline; */
-    margin-top: -0.3rem;
-  }
-  #write4us_submit {
-    width: fit-content;
-    background: rgba(34, 68, 62, 1);
-    color: rgba(255, 255, 255, 1);
-    outline: none;
-    border: none;
-    margin: 1rem auto 6rem;
-    padding-inline: 6%;
-  }
-  #write4us_submit:hover {
-    background: rgba(21, 41, 37, 1);
-  }
+/* WRITE 4 US!!!!!!!! */
+#write4us_email,
+.bio_wrapper,
+#write4us_submit {
+  /* .write4us-us_submit { */
+  grid-column: 1/3;
+}
+#write4us_bio,
+#write4us_articlelink {
+  margin-bottom: 0;
+  width: 100%;
+}
+.bio_wrapper p {
+  color: rgba(45, 45, 45, 0.8);
+  font-weight: 500;
+  /* display: inline; */
+  margin-top: -0.3rem;
+}
+#write4us_submit {
+  width: fit-content;
+  background: rgba(34, 68, 62, 1);
+  color: rgba(255, 255, 255, 1);
+  outline: none;
+  border: none;
+  margin: 1rem auto 6rem;
+  padding-inline: 6%;
+}
+#write4us_submit:hover {
+  background: rgba(21, 41, 37, 1);
 }

@@ -173,18 +173,18 @@ header {
     margin-left: 0.5rem;
     padding-inline: 0.8rem;
   }
-  .hero{
+  .ero{
     align-items: center;
     text-align: center;
   }
-  .hero .meet{
+  .ero .meet{
     text-align: center;
     color: rgba(45, 45, 45, 1);
     font-weight: 600;
     font-size: 32px;
     padding: 10px, 10px, 5px;
   } 
-  .hero .txt{
+  .ero .txt{
     text-align: center;
     color: rgba(0, 0, 0, 1);
     /* width: 70%; */
@@ -200,7 +200,8 @@ header {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    border-bottom: 1px solid  #2D2D2D; ;
+    border-bottom: 1px solid  #2D2D2D; 
+    gap: 4rem;
     padding: 20px;
   }
   .bend{
@@ -215,6 +216,34 @@ header {
     display: flex;
     gap: 6rem;
     /* border-bottom: 1px solid; */
+  }
+  .amara{
+    width: 100%;
+  }
+  .racheal{
+    width: 90%;
+  }
+  .nife{
+    width: 90%;
+  }.nino{
+    width: 85%;
+  }
+  .tlams{
+    width: 80%;
+  }
+  .dotun{
+    width: 100%;
+  }
+  .john{
+    width: 85%;
+  }
+  .name{
+    font-size: 17.67px;
+    font-weight: 600;
+  }
+  .work{
+    font-size: 14.72px;
+    font-weight: 400;
   }
   .newsletter {
     padding-block: 1.5rem 4rem;
