@@ -72,7 +72,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 4rem 0.6rem;
+  padding: 0.4rem 4rem 0.5rem;
   /* position: sticky;
   width: 100%;
   z-index: 100; */
@@ -85,7 +85,7 @@ header {
 }
 .banner_left > p {
   color: rgba(230, 230, 230, 1);
-  font-size: 14px;
+  font-size: 13px;
   display: inline;
   font-weight: 500;
 }
@@ -98,15 +98,12 @@ header {
   font-size: 14px;
   border-radius: 0.5rem;
   background-color: inherit;
-  margin-left: 1.5rem;
+  margin-left: 0.5rem;
   font-family: "Poppins", sans-serif;
-}
-.banner_left > button:hover {
-  background: rgba(248, 248, 248, 0.9);
-  color: rgba(34, 68, 62, 1);
+  transform: scale(0.85, 0.85);
 }
 .banner i {
-  color: rgba(230, 230, 230, 1);
+  color: #e6e6e6;
   font-size: large;
 }
 .banner_search {
@@ -116,6 +113,7 @@ header {
   display: flex;
   padding-left: 0.6rem;
   gap: 1rem;
+  transform: scale(0.9, 0.9);
 }
 .banner_search > input {
   background-color: inherit;
@@ -151,6 +149,7 @@ header {
 .banner_socials {
   display: flex;
   gap: 2rem;
+  transform: scale(0.9, 0.9);
 }
 
 .nav_outer {
@@ -456,7 +455,7 @@ header {
 .more_dropdown {
   position: absolute;
   width: fit-content;
-  top: 2.8rem;
+  top: 2.4rem;
   left: 0rem;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -697,21 +696,11 @@ header {
   bottom: -0.2rem;
   left: 0.5rem;
 }
-@keyframes imgZoom {
-  0% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1.05, 1.05);
-  }
-  /* 100% {
-    transform: scale(1, 1);
-  } */
+.img_zoom {
+  transition: 0.5s ease-in-out;
 }
 .img_zoom:hover {
-  animation: imgZoom 0.5s ease-in-out forwards;
-  /* transform: scale(1.05, 1.05); */
-  transition: 0.5s ease-in-out;
+  transform: scale(1.05, 1.05);
 }
 .hero_left h2 {
   font-weight: 500;
@@ -998,7 +987,7 @@ header {
   font-weight: 600;
 }
 .writers {
-  flex-basis: 20%;
+  flex-basis: 23%;
 }
 .latest {
   flex-basis: 50%;
