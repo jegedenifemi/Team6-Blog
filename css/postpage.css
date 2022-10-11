@@ -391,6 +391,10 @@ letter-spacing: 0.25px;
 
 color: #2D2D2D;
 }
+
+#book {
+  color: #22443E;;
+}
 .imag {
     box-sizing: border-box;
     border: 1px solid rgba(45, 45, 45, 0.5);
