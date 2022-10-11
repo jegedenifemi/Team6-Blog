@@ -42,6 +42,11 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('name', 'email','comment')
+        # widgets = {
+        #     'comment': forms.Textarea(
+        #         attrs={'placeholder':"Add a comment.." ,'style':"resize: none;", 'rows':"4", 'cols':"50", "name":"comment", 'form':"usrform" }
+        #     )
+        # }
 
 
 class ProfileForm(forms.ModelForm):
