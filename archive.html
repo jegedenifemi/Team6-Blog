@@ -4,8 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogga &ThinSpace;|&ThinSpace; Archive</title>
+    <!-- FAVICONS -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="shortcut icon"
+      href="./img/logo_resources/Favicon_White.png"
+      type="image/x-icon"
+      id="fav-white"
+    />
+    <link
+      rel="shortcut icon"
+      href="./img/logo_resources/Favicon.png"
+      type="image/x-icon"
+      id="fav-green"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -16,216 +42,573 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/archive.css" />
-    <title>Archive</title>
+
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- SWIPER JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/archive.css" />
+    <link rel="stylesheet" href="./css/category-page.css" />
   </head>
-  <body>
-    <header>
-      <div class="row header1">
-        <div class="col-2 text-end align-text-bottom">
-          <p my-3>Have a story to share?</p>
-        </div>
-        <div class="col-2">
-          <button class="btn">Contact us</button>
-        </div>
-        <div class="col-5">
-          <i class="bi bi-search search-icon"></i>
-          <input type="search" name="search" id="search" placeholder="Search" />
-        </div>
-        <div class="col-2 socials">
-          <div class="row">
-            <div class="col">
-              <a href=""><img src="./img/facebook.png" alt="" /></a>
-            </div>
-            <div class="col">
-              <a href=""><img src="./img/twitter.png" alt="" /></a>
-            </div>
-            <div class="col">
-              <a href=""><img src="./img/instagram.png" alt="" /></a>
+
+  <body class="home_body">
+    <!-- LOGIN MODAL STARTS HERE -->
+    <!--  -->
+    <div class="login-modal">
+      <section class="login-body">
+        <img
+          src="./img/Login/mobile_blob1.png"
+          alt="mobile blob design"
+          class="mobile_blob1"
+        />
+        <img
+          src="./img/Login/mobile_blob2.png"
+          alt="mobile blob design"
+          class="mobile_blob2"
+        />
+        <img
+          src="./img/Login/mobile_blob3.png"
+          alt="mobile blob design"
+          class="mobile_blob3"
+        />
+
+        <main class="login-main">
+          <div class="left-div">
+            <img
+              src="./img/Login/login_top_blob.png"
+              alt="blob design "
+              class="top_blob"
+            />
+            <img src="./img/Login/login_main_image.png" alt="welcome image" />
+            <img
+              src="./img/Login/login_bottom_blob.png"
+              alt="blob design "
+              class="btm_blob"
+            />
+          </div>
+
+          <div class="right-div">
+            <i
+              class="fa-solid fa-xmark login-modal-close"
+              onclick="hideLoginModal()"
+            ></i>
+            <div class="right-div-container">
+              <h3 class="head-txt">Welcome Back : )</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="login-username"
+                required
+              />
+
+              <br />
+
+              <div class="password-eye">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                  required
+                />
+                <i class="bi bi-eye" onclick="passwordToggle()"></i>
+                <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot-password"
+                >Forgot Password?</a
+              >
+              <!-- <br /> -->
+
+              <label for="remember-me" class="remem-label">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />&nbsp; <small>Remember Me</small></label
+              >
+              <br />
+
+              <button type="button" class="login-button">Log In</button>
+
+              <div class="or-separator">
+                <hr />
+                <p>OR</p>
+                <hr />
+              </div>
+
+              <button type="button" class="continue-button">
+                <img src="img/google.png" alt="" class="google" /> &nbsp;
+                Continue With Google
+              </button>
+
+              <p class="base-txt">
+                Become a Blogga?
+                <a href="./signup.html" class="signup-link"> Write For Us</a>
+              </p>
             </div>
           </div>
+        </main>
+      </section>
+    </div>
+    <!--  -->
+    <!-- LOGIN MODAL ENDS HERE -->
+
+    <header>
+      <div class="banner">
+        <div class="banner_wrapper">
+          <div class="banner_left">
+            <p>Have a story to share?</p>
+
+            <button onclick="window.location.href='./contact-us.html';">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="banner_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="" id="" placeholder="Search" />
+          </div>
+        </div>
+
+        <div class="banner_socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
-      <div class="row header2">
-        <div class="col">Logo</div>
-      </div>
-      <div class="row header3">
-        <div class="col">
-          <a href="">Fashion</a>
-        </div>
-        <div class="col">
-          <a href="">Entertainment</a>
-        </div>
-        <div class="col">
-          <a href="">Technology</a>
-        </div>
-        <div class="col">
-          <a href="">Health</a>
-        </div>
-        <div class="col">
-          <a href="">Politics</a>
-        </div>
-        <div class="col">
-          <a href="">Education</a>
-        </div>
-        <div class="col">
-          <a href="">Food</a>
-        </div>
-        <div class="col">
-          <a href="">Arts</a>
-        </div>
-        <div class="col dropdown">
-          <a
-            href=""
-            class="dropdown-toggle"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-            >More</a
-          >
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-        <div class="col">
-          <button class="btn btn-outline-success sign-in">Sign in</button>
-        </div>
-        <div class="col">
-          <button class="btn subscribe text-light">Subscribe</button>
+
+      <div class="nav_outer">
+        <a href="./index.html"
+          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+        /></a>
+
+        <div class="nav_inner">
+          <div class="hamburger">
+            <span class="span1"></span><span class="span2"></span
+            ><span class="span3"></span>
+          </div>
+
+          <div class="hamburger_close">
+            <span class="span1"></span><span class="span2"></span>
+          </div>
+
+          <div class="mobile_menu">
+            <div class="mobile_menu_search">
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search anything..."
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="mobile_menu_categories">
+              <p>CATEGORIES</p>
+              <ul>
+                <a href="./fashion.html"
+                  ><li class="mob_fashion">FASHION</li></a
+                >
+                <a href="./category-page.html"
+                  ><li class="mob_entertaiment">ENTERTAINMENT</li></a
+                >
+                <a href="./technology.html"
+                  ><li class="mob_tech">TECHNOLOGY</li></a
+                >
+                <a href="#"><li class="mob_health">HEALTH</li></a>
+                <a href="#"><li class="mob_politics">POLITICS</li></a>
+                <a href="#"><li class="mob_edu">EDUCATION</li></a>
+                <a href="#"><li class="mob_food">FOOD</li></a>
+                <a href="#"><li class="mob_art">ART</li></a>
+              </ul>
+              <hr />
+            </div>
+
+            <div class="mobile_menu_links">
+              <p>MORE</p>
+              <div class="mobile_menu_links_top">
+                <a href="#">TEAM</a> <a href="./archive.html">ARCHIVE</a>
+              </div>
+              <div class="mobile_menu_links_bottom">
+                <a href="./write-for-us.html">WRITE FOR US</a>
+                <a href="./contact-us.html">CONTACT</a>
+              </div>
+            </div>
+
+            <div class="mobile_menu_btns_wrap">
+              <div class="mobile_menu_btns">
+                <button class="button" onclick="showLoginModal()">
+                  Sign In
+                </button>
+                <button
+                  class="subscribe button"
+                  onclick="window.location.href='#subscribe';"
+                >
+                  Subscribe
+                </button>
+              </div>
+
+              <img
+                src="./img/home_page/author_hamzy.png"
+                alt="profile picture"
+              />
+            </div>
+          </div>
+
+          <nav>
+            <a href="./index.html"
+              ><img
+                src="./img/logo_resources/Favicon_White.png"
+                alt="Blogga Logo"
+            /></a>
+            <ul>
+              <li><a href="./fashion.html" class="nav_fashion">FASHION</a></li>
+              <li>
+                <a href="./category-page.html" class="nav_entertainment"
+                  >ENTERTAINMENT</a
+                >
+              </li>
+              <li>
+                <a href="./technology.html" class="nav_tech">TECHNOLOGY</a>
+              </li>
+              <li><a href="#" class="nav_health">HEALTH</a></li>
+              <li><a href="#" class="nav_politics">POLITICS</a></li>
+              <li><a href="#" class="nav_edu">EDUCATION</a></li>
+              <!-- <li><a href="#" class="nav_food">FOOD</a></li> -->
+              <li><a href="#" class="nav_art">ART</a></li>
+              <li>
+                <label for="more_check" class="more">
+                  MORE
+                  <span class="dropdown_arrow"
+                    ><img
+                      src="./img/home_page/dropdown_arrow.png"
+                      alt="dropdown"
+                  /></span>
+                </label>
+                <input type="checkbox" name="more_check" id="more_check" />
+
+                <div class="more_dropdown">
+                  <ul>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+                    <li><a href="./archive.html">ARCHIVE</a></li>
+                    <li><a href="./contact-us.html">CONTACT</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <i class="fa-solid fa-magnifying-glass mobile_search"></i>
+
+          <div class="nav_btns">
+            <button class="button" onclick="showLoginModal()">Sign In</button>
+            <button
+              class="subscribe button"
+              onclick="window.location.href='#subscribe';"
+            >
+              Subscribe
+            </button>
+
+            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
+          </div>
         </div>
       </div>
     </header>
+    <!--top section-->
+    <main class="my-5 mx-3 pl-5 big-section">
+      <section class="">
+        <div class="row justify-items-center">
+          <div
+            class="row row-cols-1 row-cols-lg-3 row-cols-md-3 fw-semibold justify-content-center blog-details"
+          >
+            <div class="col blog-detail1">
+              <img src="./img/blog1a.png" alt="" width="90%" />
 
-    <main>
-      <div class="row writeup text-center">
+              <p class="mb-2 mt-4">Dubai Police extradite Hushpuppi,</p>
+              <p class="mb-4">Woodberry to US</p>
+              <p class="blog-detail2">
+                By Racheal
+                <span class="span">July 02,2022 12:32</span>
+              </p>
+            </div>
+            <div class="col blog-detail1">
+              <img src="./img/blog1b.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Dubai Police extradite Hushpuppi,</p>
+              <p class="mb-4">Woodberry to US</p>
+              <p class="blog-detail2">
+                By Racheal
+                <span class="span">July 02,2022 12:32</span>
+              </p>
+            </div>
+            <div class="col blog-detail1">
+              <img src="./img/blog1c.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Dubai Police extradite Hushpuppi,</p>
+              <p class="mb-4">Woodberry to US</p>
+              <p class="blog-detail2">
+                By Racheal
+                <span class="span">July 02,2022 12:32</span>
+              </p>
+            </div>
+          </div>
+          <!--next-->
+
+          <div
+            class="row row-cols-1 row-cols-lg-3 row-cols-md-3 fw-semibold justify-content-center blog-details hide"
+          >
+            <div class="col blog-detail1">
+              <img src="./img/blog1a.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Dubai Police extradite Hushpuppi,</p>
+              <p class="mb-4">Woodberry to US</p>
+              <p class="blog-detail2">
+                By Racheal
+                <span class="span">July 02,2022 12:32</span>
+              </p>
+            </div>
+            <div class="col blog-detail1">
+              <img src="./img/blog1b.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Constance Woo Talks About Her Baby</p>
+              <p class="mb-4">Girl's 'Little Blue Butt': 'It's Very Special.</p>
+              <p class="blog-detail2">
+                By Amara <span class="span">September 23,2022 12:32</span>
+              </p>
+            </div>
+            <div class="col blog-detail1">
+              <img src="./img/blog1c.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Constance Woo Says She Attempted</p>
+              <p class="mb-2">Suicide after 'Fresh Off The Boat' Twitter</p>
+              <p class="mb-2">Drama: 'Almost Lost My Life'</p>
+              <p class="blog-detail2">
+                By Amara <span class="span">September 23,2022 12:32</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--mid section-->
+        <hr class="hr" />
+
+        <section class="page-num">
+          <hr class="category-hr" />
+          <div class="page-num-content">
+            <a href="#" class="page-btn start-page"
+              ><img src="img/less-than.svg" alt=""
+            /></a>
+            <a href="#" class="page-btn">1</a>
+            <a href="#" class="page-btn prev-page">...</a>
+            <a href="#" class="page-btn">6</a>
+            <a href="" class="page-btn">7</a>
+            <a href="" class="page-btn">8</a>
+            <a href="" class="page-btn">9</a>
+            <a href="" class="page-btn active">10</a>
+            <a href="" class="page-btn" id="hide">11</a>
+            <a href="" class="page-btn" id="hide">12</a>
+            <a href="" class="page-btn" id="hide">13</a>
+            <a href="" class="page-btn" id="hide">14</a>
+            <a href="" class="page-btn next-page" id="hide">...</a>
+            <a href="" class="page-btn" id="hide">458</a>
+            <a href="" class="page-btn end-page"
+              ><img src="img/Greater-than.svg" alt=""
+            /></a>
+            &nbsp; &nbsp;
+          </div>
+        </section>
+        <div class="pick">
+          <h2>WRITER'S PICK</h2>
+          <p>SEE ALL</p>
+        </div>
+        <hr size="4px" class="thickhr" />
+        <!--bottom section-->
+
         <div class="row">
-          <div class="col"><h2>ARCHIVES</h2></div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p>
-              Our digital archive gives you unprecedented access to previous
-              news and stories across different topics
-            </p>
-            <p>from 2002 till today</p>
+          <div
+            class="row row-cols-1 row-cols-lg-3 row-cols-md-3 fw-semibold justify-content-center blog-details"
+          >
+            <div class="col blog-detail1">
+              <img src="./img/blog1a.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Dubai Police extradite Hushpuppi,</p>
+              <p class="mb-4">Woodberry to US</p>
+              <p class="blog-detail2">
+                By Racheal
+                <span class="span">July 02,2022 12:32</span>
+              </p>
+            </div>
+            <div class="col blog-detail1">
+              <img src="./img/blog1b.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Dubai Police extradite Hushpuppi,</p>
+              <p class="mb-4">Woodberry to US</p>
+              <p class="blog-detail2">
+                By Racheal
+                <span class="span">July 02,2022 12:32</span>
+              </p>
+            </div>
+            <div class="col blog-detail1">
+              <img src="./img/blog1c.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Dubai Police extradite Hushpuppi,</p>
+              <p class="mb-4">Woodberry to US</p>
+              <p class="blog-detail2">
+                By Racheal
+                <span class="span">July 02,2022 12:32</span>
+              </p>
+            </div>
+          </div>
+          <!--next-->
+
+          <div
+            class="row row-cols-1 row-cols-lg-3 row-cols-md-3 fw-semibold justify-content-center blog-details hide"
+          >
+            <div class="col blog-detail1">
+              <img src="./img/blog1a.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Dubai Police extradite Hushpuppi,</p>
+              <p class="mb-4">Woodberry to US</p>
+              <p class="blog-detail2">
+                By Racheal
+                <span class="span">July 02,2022 12:32</span>
+              </p>
+            </div>
+            <div class="col blog-detail1">
+              <img src="./img/blog1b.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Constance Woo Talks About Her Baby</p>
+              <p class="mb-4">Girl's 'Little Blue Butt': 'It's Very Special.</p>
+              <p class="blog-detail2">
+                By Amara <span class="span">September 23,2022 12:32</span>
+              </p>
+            </div>
+            <div class="col blog-detail1">
+              <img src="./img/blog1c.png" alt="" width="90%" />
+
+              <p class="mb-2 mt-4">Constance Woo Says She Attempted</p>
+              <p class="mb-2">Suicide after 'Fresh Off The Boat' Twitter</p>
+              <p class="mb-2">Drama: 'Almost Lost My Life'</p>
+              <p class="blog-detail2">
+                By Amara <span class="span">September 23,2022 12:32</span>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="row date text-center">
-          <div class="col date1">
-            <h5>DATE</h5>
-          </div>
-          <div class="col date2">
-            <h5>MONTH</h5>
-          </div>
-          <div class="col date3">
-            <h5>YEAR</h5>
-          </div>
-        </div>
-        <br />
-        <div class="row calender text-center">
-          <div class="col date1">
-            <form action="">
-              <label for="date"></label>
-              <select name="date" id="date" class="box">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-              </select>
-            </form>
-          </div>
-          <div class="col">
-            <form action="">
-              <label for="date"></label>
-              <select name="date" id="date">
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-              </select>
-            </form>
-          </div>
-          <div class="col date3">
-            <form action="">
-              <label for="date"></label>
-              <select name="date" id="date">
-                <option value="2002">2002</option>
-                <option value="2003">2003</option>
-                <option value="2004">2004</option>
-                <option value="2005">2005</option>
-                <option value="2006">2006</option>
-                <option value="2007">2007</option>
-                <option value="2008">2008</option>
-                <option value="2009">2009</option>
-                <option value="2010">2010</option>
-                <option value="2011">2011</option>
-                <option value="2012">2012</option>
-                <option value="2013">2013</option>
-                <option value="2014">2014</option>
-                <option value="2015">2015</option>
-                <option value="2016">2016</option>
-                <option value="2017">2017</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-              </select>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="row blogs">
-        <div class="row">
-          <div class="col bg-primary">j</div>
-          <div class="col bg-black">h</div>
-          <div class="col bg-success">t</div>
-        </div>
-      </div>
+      </section>
+      <!--semi-footer-->
+      <section class="newsletter" id="subscribe">
+        <h2>STAY UPDATED</h2>
+
+        <p>
+          Get the latest creative news from Blogga about Art , Fashion,
+          Entertainment and lots more.
+        </p>
+
+        <form action="#">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Address"
+          />
+          <button type="submit" class="subscribe but">Subscribe</button>
+        </form>
+      </section>
     </main>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
+    <footer class="main_footer">
+      <div class="footer_top">
+        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
+        <ul>
+          <li><a href="#">ADVERTISE</a></li>
+          <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+          <li><a href="./category-page.html">CATEGORIES</a></li>
+          <li>
+            <a href="./index.html"
+              ><img
+                src="./img/logo_resources/Favicon_White.png"
+                alt="Blogga Icon"
+            /></a>
+          </li>
+          <li><a href="./archive.html">ARCHIVES</a></li>
+          <li><a href="#">TERMS OF SERVICE</a></li>
+          <li><a href="./privacypolicy.html">PRIVACY</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_middle">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>&ThinSpace;
+          <span>FACEBOOK</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-twitter"></i>&ThinSpace;
+          <span>TWITTER</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace;
+          <span>LINKEDIN</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-youtube"></i>&ThinSpace;
+          <span>YOUTUBE</span></a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace;
+          <span>INSTAGRAM</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace;
+          <span>PINTEREST</span>
+        </a>
+      </div>
+
+      <div class="footer_bottom">
+        <p>© 2022 The Blogga Team All Rights Reserved</p>
+        <a href="#">Site Map</a>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      // Initialize Swiper (carousel)
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+
+    <script src="./index.js"></script>
   </body>
 </html>
