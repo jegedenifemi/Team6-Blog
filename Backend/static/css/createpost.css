@@ -10,16 +10,7 @@ select {
 border-radius: 6.6234px;
 }
 
-input{
-    width: 309px;
-height: 31.46px;
-border: 0.827926px solid #2D2D2D;
-border-radius: 6.6234px;
-box-sizing: border-box;
-
-
-}
-textarea{
+textarea {
     width: 309px;
 height: 31.46px;
 border: 0.827926px solid #2D2D2D;
@@ -271,12 +262,9 @@ color: #2D2D2D;
        margin-right: -3rem;
        margin-left: -3rem;
     }
-    .description input {
+    .description textarea {
        width: 80%;
        margin-left: 3rem;
-    }
-    input {
-        margin-left: 3rem;
     }
     textarea {
         margin-left: 3rem;

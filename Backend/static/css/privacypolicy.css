@@ -14,11 +14,10 @@ main {
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
-    color: #22443E;
 }
 
 hr {
-    width: 90%;
+    width: 80%;
     /* text-align: center; */
     margin: 0 auto;
     border: 1px solid #2d2d2d4d;
@@ -59,17 +58,8 @@ ul li {
     margin-left: 1.5rem;
 }
 
-.last-ul {
-    margin-bottom: 4rem;
-}
-
 .special {
     margin-top: 2rem;
-}
-
-.hr-bottom {
-    width: 100%;
-    border: 1px solid #2d2d2d4d;
 }
 
 @media screen and (max-width: 768px) {
