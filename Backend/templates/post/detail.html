@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/c751151e16.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c751151e16.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static './css/postpage.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="{% static './css/style.css' %}">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,9 +83,9 @@ rel="stylesheet"
             <div class="nav_btns">
               <button
                 class="button"
-                onclick="window.location.href='./login.html';"
+                type = 'button'
               >
-                Sign In
+              <a href="{% url 'login' %}">Sign In</a>
               </button>
               <button class="subscribe button">Subscribe</button>
             </div>
@@ -198,7 +199,7 @@ rel="stylesheet"
             <div class="comment-profile">
                 <div class="comment-details">
                     <div class="imag">
-                <img src="./Vector.png" alt=""></div>
+                <img src="{% static './img/Vector.png' %}" alt=""></div>
                 <h5>{{comment.name}}</h5>
             </div>
                 <div class="p">{{comment.publish}}</div>
@@ -247,7 +248,7 @@ rel="stylesheet"
         </div>
         <div class="related-box">
         <div class="related-gists">
-            <img src="./Frame 2615.png" alt="">
+            <img src="{% static './img/Frame 2615.png' %}" alt="">
             <p>Constance Wu Says Chris Pratt Was 'So Supportive' as She Returned to Work After Giving Birth</p>
             <div class="related-details">
                 <p>By Amara <span >September 23 2022 12.33pm</span></p>
@@ -255,7 +256,7 @@ rel="stylesheet"
             </div>
         </div>
         <div class="related-gists">
-            <img src="./Frame 2582 (1).png" alt="">
+            <img src="{% static './img/Frame 2582 (1).png' %}" alt="">
             <p>Constance Wu Talks About Her Baby Girl's 'Little Blue Butt': 'It's Very Special'</p><br>
             <div class="related-details">
                 <p>By Amara <span>September 23 2022 12.33pm</span></p>
@@ -263,7 +264,7 @@ rel="stylesheet"
             </div>
         </div>
         <div class="related-gists">
-            <img src="./Frame 2615 (1).png" alt="">
+            <img src="{% static './img/Frame 2615 (1).png' %}" alt="">
             <p>Constance Wu Says She Attempted Suicide After 'Fresh Off the Boat' Twitter Drama: 'Almost Lost My Life</p>
             <div class="related-details">
                 <p>By Amara <span>September 23 2022 12.33pm</span></p>
@@ -271,7 +272,7 @@ rel="stylesheet"
             </div>
         </div>
         <div class="related-gists">
-            <img src="./Frame 2615 (2).png" alt="">
+            <img src="{% static './img/Frame 2615 (2).png' %}" alt="">
             <p>Constance Wu Returns to Instagram After Being 'Off the Grid Recovering'</p><br>
             <div class="related-details">
                 <p>By Amara<span>September 23 2022 12.33pm</span></p>
@@ -369,14 +370,14 @@ rel="stylesheet"
 
     <footer class="main_footer">
       <div class="footer_top">
-        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
+        <img src="{% static './img/logo_resources/Favicon_White.png' %}" alt="Blogga Icon" />
         <ul>
           <li>ADVERTISE</li>
           <li>WRITE FOR US</li>
           <li>CATEGORIES</li>
           <li>
             <img
-              src="./img/logo_resources/Favicon_White.png"
+              src="{% static './img/logo_resources/Favicon_White.png' %}"
               alt="Blogga Icon"
             />
           </li>
@@ -420,12 +421,12 @@ rel="stylesheet"
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script src="./index.js"></script>
+    <script src="{% static './js/index.js' %}"></script>
 
    
 </body>
 </html>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -465,4 +466,4 @@ rel="stylesheet"
     {{comment}}
     {% endfor %}
 </body>
-</html>
+</html> -->
