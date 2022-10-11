@@ -1,64 +1,20 @@
-<!-- <!DOCTYPE html> -->
-<!-- <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Log in page</title> 
-</head>
-<body>
-    <form method="post">
-        {% csrf_token %}
-        <div class = 'username'>
-            <label for="username">Enter a Username</label><br>
-            
-            
-        </div>
-        <div class="password">
-            <label for="password"><p>Password</p></label>
-            <input type="password" name="password" id="password" placeholder="*******" min="7" required>
-       
-        </div><br>
-        <!-- {% for field in form %}
-        {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-        {% endfor %}
-      {% endfor %} -->
-     
-      <!-- Trying to debug this, it gets sent to the admin login  -->
-      <!-- {% if messages %}
-      {% for message in messages %}
-      {% if message.tags %}<div class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
-      {% endfor %}
-      {% endif %} -->
-        <!-- <div class="form-submit">
-            <input type="submit" value="Login">
-        </div><br>
-        <div class="sec-action">
-            <small>Don&apos;t have an account? <a href="{% url 'signup' %}">Sign Up     </a><a href="{%url 'password_reset'%}">Password reset</a></small>
-        </div>
-        
-    </form>
-</body>
-</html> --> 
-
 <!DOCTYPE html>
-{% load static %}
+<!-- {% load static %} -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static './css/login.css' %}" />
+    <link rel="stylesheet" href="css/login.css" />
     <link
       rel="shortcut icon"
-      href="{% static './img/logo_resources/Favicon_White.png'%}"
+      href="./img/logo_resources/Favicon_White.png"
       type="image/x-icon"
       id="fav-white"
     />
     <link
       rel="shortcut icon"
-      href="{% static './img/logo_resources/Favicon.png' %}"
+      href="./img/logo_resources/Favicon.png"
       type="image/x-icon"
       id="fav-green"
     />
@@ -87,17 +43,17 @@
   </head>
   <body class="login-body">
     <img
-      src="{% static './img/Login/mobile_blob1.png'%}"
+      src="./img/Login/mobile_blob1.png"
       alt="mobile blob design"
       class="mobile_blob1"
     />
     <img
-      src="{% static './img/Login/mobile_blob2.png'%}"
+      src="./img/Login/mobile_blob2.png"
       alt="mobile blob design"
       class="mobile_blob2"
     />
     <img
-      src="{% static './img/Login/mobile_blob3.png'%}"
+      src="./img/Login/mobile_blob3.png"
       alt="mobile blob design"
       class="mobile_blob3"
     />
@@ -105,38 +61,34 @@
     <main class="login-main">
       <div class="left-div">
         <img
-          src="{% static './img/Login/login_top_blob.png' %}"
+          src="./img/Login/login_top_blob.png"
           alt="blob design "
           class="top_blob"
         />
-        <img src="{% static './img/Login/login_main_image.png'%}" alt="welcome image" />
+        <img src="./img/Login/login_main_image.png" alt="welcome image" />
         <img
-          src="{% static './img/Login/login_bottom_blob.png'%}"
+          src="./img/Login/login_bottom_blob.png"
           alt="blob design "
           class="btm_blob"
         />
       </div>
 
       <div class="right-div">
-            
         <i class="fa-solid fa-xmark"></i>
         <div class="right-div-container">
           <h3 class="head-txt">Welcome Back : )</h3>
-          <form method="post">
-                {% csrf_token %}
-          <input type="text" name="username" id="username" placeholder="Username" min ='3' max ='25' required />
+
+          <input type="text" placeholder="Username" />
 
           <br />
 
           <div class="password-eye">
-
-            <input type="password" name="password" id="password" placeholder="*******" min="7" required>
+            <input type="password" placeholder="Password" id="password" />
             <i class="bi bi-eye" onclick="passwordToggle()"></i>
             <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
           </div>
 
-          <a href="{%url 'password_reset'%}" class="forgot-password">Forgot Password?</a>
-          <!-- <a href="{%url 'password_reset'%}">Password reset</a> -->
+          <a href="#" class="forgot-password">Forgot Password?</a>
           <!-- <br /> -->
 
           <label for="remember-me" class="remem-label">
@@ -145,30 +97,23 @@
           >
           <br />
 
-          <button type="submit" class="login-button">Log In</button>
-          <!-- <input type="submit" class="login-button" value="Log In"> -->
+          <button type="button" class="login-button">Log In</button>
+
           <div class="or-separator">
-          </form>
             <hr />
             <p>OR</p>
             <hr />
           </div>
 
           <button type="button" class="continue-button">
-            <img src="{% static 'img/google.png'%}" alt="" class="google" /> &nbsp; Continue
+            <img src="img/google.png" alt="" class="google" /> &nbsp; Continue
             With Google
           </button>
 
           <p class="base-txt">
             Become a Blogga?
-            <!-- <a href="{% url 'signup' %}">Sign Up     </a> -->
-            <a href="{% url 'signup' %}" class="signup-link"> Write For Us</a>
+            <a href="./signup.html" class="signup-link"> Write For Us</a>
           </p>
-        {% if messages %}
-        {% for message in messages %}
-        {% if message.tags %}<div class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
-        {% endfor %}
-        {% endif %}
         </div>
       </div>
     </main>
@@ -177,6 +122,6 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script> -->
-    <script src="{% static './js/index.js' %}"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
