@@ -8,13 +8,13 @@
     <!-- FAVICONS -->
     <link
       rel="shortcut icon"
-      href="./img/logo_resources/Favicon_White.png"
+      href="{% static './img/logo_resources/Favicon_White.png'%}"
       type="image/x-icon"
       id="fav-white"
     />
     <link
       rel="shortcut icon"
-      href="./img/logo_resources/Favicon.png"
+      href="{% static './img/logo_resources/Favicon.png'%}"
       type="image/x-icon"
       id="fav-green"
     />
@@ -47,13 +47,15 @@
     />
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="{% static './css/style.css'%}" />
+    <link rel="stylesheet" href="{% static './css/login.css'%}" />
   </head>
 
   <body class="home_body">
     <!-- SCROLL TO TOP BUTTON -->
-    <a href="#top" class="to_top"><i class="fa-solid fa-arrow-up"></i></a>
+    <a href="{% '#top'%}" class="to_top"
+      ><i class="fa-solid fa-arrow-up"></i
+    ></a>
     <!-- SCROLL TO TOP BUTTON -->
 
     <!-- LOGIN MODAL START-->
@@ -61,17 +63,17 @@
     <div class="login-modal">
       <section class="login-body">
         <img
-          src="./img/Login/mobile_blob1.png"
+          src="{% static './img/Login/mobile_blob1.png'%}"
           alt="mobile blob design"
           class="mobile_blob1"
         />
         <img
-          src="./img/Login/mobile_blob2.png"
+          src="{% static './img/Login/mobile_blob2.png'%}"
           alt="mobile blob design"
           class="mobile_blob2"
         />
         <img
-          src="./img/Login/mobile_blob3.png"
+          src="{% static './img/Login/mobile_blob3.png'%}"
           alt="mobile blob design"
           class="mobile_blob3"
         />
@@ -79,13 +81,16 @@
         <main class="login-main">
           <div class="left-div">
             <img
-              src="./img/Login/login_top_blob.png"
+              src="{% static './img/Login/login_top_blob.png'%}"
               alt="blob design "
               class="top_blob"
             />
-            <img src="./img/Login/login_main_image.png" alt="welcome image" />
             <img
-              src="./img/Login/login_bottom_blob.png"
+              src="{% static './img/Login/login_main_image.png'%}"
+              alt="welcome image"
+            />
+            <img
+              src="{% static './img/Login/login_bottom_blob.png'%}"
               alt="blob design "
               class="btm_blob"
             />
@@ -142,8 +147,12 @@
               </div>
 
               <button type="button" class="continue-button">
-                <img src="img/google.png" alt="" class="google" /> &nbsp;
-                Continue With Google
+                <img
+                  src="{% static './img/google.png'%}"
+                  alt=""
+                  class="google"
+                />
+                &nbsp; Continue With Google
               </button>
 
               <p class="base-txt">
@@ -190,7 +199,7 @@
 
       <div class="nav_outer">
         <!-- <a href="./index.html"
-          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+          ><img src="{% static './img/logo_resources/Favicon.png'%}" alt="Blogga Logo Icon"
         /></a> -->
 
         <div class="nav_inner">
@@ -262,20 +271,22 @@
               </div>
 
               <img
-                src="./img/home_page/author_hamzy.png"
+                src="{% static './img/home_page/author_hamzy.png'%}"
                 alt="profile picture"
               />
             </div>
           </div>
 
           <a href="./index.html"
-            ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+            ><img
+              src="{% static './img/logo_resources/Favicon.png'%}"
+              alt="Blogga Logo Icon"
           /></a>
 
           <nav>
             <a href="./index.html"
               ><img
-                src="./img/logo_resources/Favicon_White.png"
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
                 alt="Blogga Logo"
             /></a>
             <ul>
@@ -300,7 +311,7 @@
                   MORE
                   <span class="dropdown_arrow"
                     ><img
-                      src="./img/home_page/dropdown_arrow.png"
+                      src="{% static './img/home_page/dropdown_arrow.png'%}"
                       alt="dropdown"
                   /></span>
                 </label>
@@ -328,7 +339,10 @@
               Subscribe
             </button>
 
-            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
+            <img
+              src="{% static './img/home_page/author_hamzy.png'%}"
+              alt="profile picture"
+            />
           </div>
         </div>
       </div>
@@ -343,7 +357,7 @@
         <div class="hero_left">
           <div class="hero_left_img">
             <img
-              src="./img/home_page/constance_wu.png"
+              src="{% static './img/home_page/constance_wu.png'%}"
               alt="Constance wu"
               class="img_zoom"
             />
@@ -365,7 +379,10 @@
 
           <div class="hero_author_wrapper">
             <div class="hero_author_details">
-              <img src="./img/home_page/author_hamzy.png" alt="Author Hamzy" />
+              <img
+                src="{% static './img/home_page/author_hamzy.png'%}"
+                alt="Author Hamzy"
+              />
 
               <div class="hero_author_text">
                 <p>By Adedotun</p>
@@ -385,7 +402,7 @@
         <div class="hero_right">
           <div class="hero_right_card">
             <img
-              src="./img/home_page/bad2me.png"
+              src="{% static './img/home_page/bad2me.png'%}"
               alt="Song Art"
               class="img_zoom"
             />
@@ -408,7 +425,7 @@
 
           <div class="hero_right_card">
             <img
-              src="./img/home_page/eggs.png"
+              src="{% static './img/home_page/eggs.png'%}"
               alt="Picture of eggs"
               class="img_zoom"
             />
@@ -430,7 +447,7 @@
 
           <div class="hero_right_card">
             <img
-              src="./img/home_page/covid-19.png"
+              src="{% static './img/home_page/covid-19.png'%}"
               alt="Vaccine Image"
               class="img_zoom"
             />
@@ -452,7 +469,7 @@
 
           <div class="hero_right_card">
             <img
-              src="./img/home_page/benin_head.png"
+              src="{% static './img/home_page/benin_head.png'%}"
               alt="Benin Bronze Head"
               class="img_zoom"
             />
@@ -503,7 +520,7 @@
             <div class="trending_card">
               <div class="trending_card_img">
                 <img
-                  src="./img/home_page/koo_koo_fun.png"
+                  src="{% static './img/home_page/koo_koo_fun.png'%}"
                   alt="Song Art"
                   class="img_zoom"
                 />
@@ -530,7 +547,7 @@
             <div class="trending_card">
               <div class="trending_card_img">
                 <img
-                  src="./img/home_page/burna_boy.png"
+                  src="{% static './img/home_page/burna_boy.png'%}"
                   alt="Image of Burna Boy"
                   class="img_zoom"
                 />
@@ -556,7 +573,7 @@
             <div class="trending_card">
               <div class="trending_card_img">
                 <img
-                  src="./img/home_page/Remmy-img.jpeg"
+                  src="{% static './img/home_page/Remmy-img.jpeg'%}"
                   alt="Image of Rema & interviewer"
                   class="img_zoom"
                 />
@@ -580,7 +597,7 @@
             <div class="trending_card">
               <div class="trending_card_img">
                 <img
-                  src="./img/home_page/burna_boy.png"
+                  src="{% static './img/home_page/burna_boy.png'%} "
                   alt="Image of Burna Boy"
                   class="img_zoom"
                 />
@@ -606,7 +623,7 @@
             <div class="trending_card">
               <div class="trending_card_img">
                 <img
-                  src="./img/home_page/Remmy-img.jpeg"
+                  src="{% static './img/home_page/Remmy-img.jpeg'%} "
                   alt="Image of Rema & interviewer"
                   class="img_zoom"
                 />
@@ -651,7 +668,10 @@
 
           <div class="writers_content">
             <div class="writers_cards">
-              <img src="./img/home_page/author_hamzy.png" alt="Author Hamzy" />
+              <img
+                src="{% static './img/home_page/author_hamzy.png'%}"
+                alt="Author Hamzy"
+              />
 
               <div class="writers_cards_info">
                 <p>HAMZAH OPEMIPO</p>
@@ -665,7 +685,10 @@
             </div>
 
             <div class="writers_cards">
-              <img src="./img/home_page/author_dotun.png" alt="author_dotun" />
+              <img
+                src="{% static './img/home_page/author_dotun.png'%}"
+                alt="author_dotun"
+              />
 
               <div class="writers_cards_info">
                 <p>ADEDOTUN SOLARIN</p>
@@ -680,7 +703,7 @@
 
             <div class="writers_cards">
               <img
-                src="./img/home_page/author_nifemi.png"
+                src="{% static './img/home_page/author_nifemi.png'%}"
                 alt="author_nifemi"
               />
 
@@ -696,7 +719,10 @@
             </div>
 
             <div class="writers_cards">
-              <img src="./img/home_page/author_rachy.png" alt="Author rachy" />
+              <img
+                src="{% static './img/home_page/author_rachy.png'%}"
+                alt="Author rachy"
+              />
 
               <div class="writers_cards_info">
                 <p>CHIKA RACHEAL EZEH</p>
@@ -711,7 +737,7 @@
 
             <div class="writers_cards">
               <img
-                src="./img/home_page/author_taofikat.png"
+                src="{% static './img/home_page/author_taofikat.png'%}"
                 alt="Author taofikat"
               />
 
@@ -727,7 +753,10 @@
             </div>
 
             <div class="writers_cards">
-              <img src="./img/home_page/author_amara.png" alt="author_amara" />
+              <img
+                src="{% static './img/home_page/author_amara.png'%}"
+                alt="author_amara"
+              />
 
               <div class="writers_cards_info">
                 <p>AMARA ONWUNZO</p>
@@ -751,7 +780,7 @@
           <div class="latest_content">
             <div class="latest_cards">
               <img
-                src="./img/home_page/rings_of_power.png"
+                src="{% static './img/home_page/rings_of_power.png'%}"
                 alt="Rings of power snapshot"
                 class="img_zoom"
               />
@@ -772,7 +801,7 @@
 
             <div class="latest_cards">
               <img
-                src="./img/home_page/2023_elections.png"
+                src="{% static './img/home_page/2023_elections.png'%}"
                 alt="Nigerian Flag"
                 class="img_zoom"
               />
@@ -791,7 +820,7 @@
 
             <div class="latest_cards">
               <img
-                src="./img/home_page/house_of_the_dragon.png"
+                src="{% static './img/home_page/house_of_the_dragon.png'%}"
                 alt="house of the dragon snapshot"
                 class="img_zoom"
               />
@@ -810,7 +839,7 @@
 
             <div class="latest_cards">
               <img
-                src="./img/home_page/tobi_amusan.png"
+                src="{% static './img/home_page/tobi_amusan.png'%}"
                 alt="Tobi Amusan"
                 class="img_zoom"
               />
@@ -832,7 +861,7 @@
 
             <div class="latest_cards">
               <img
-                src="./img/home_page/bandits_zamfara.png"
+                src="{% static './img/home_page/bandits_zamfara.png'%}"
                 alt="Zamfara"
                 class="img_zoom"
               />
@@ -950,7 +979,10 @@
     <!--  -->
     <footer class="main_footer">
       <div class="footer_top">
-        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
+        <img
+          src="{% static './img/logo_resources/Favicon_White.png'%}"
+          alt="Blogga Icon"
+        />
         <ul>
           <li><a href="#">ADVERTISE</a></li>
           <li><a href="./write-for-us.html">WRITE FOR US</a></li>
@@ -958,7 +990,7 @@
           <li>
             <a href="./index.html"
               ><img
-                src="./img/logo_resources/Favicon_White.png"
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
                 alt="Blogga Icon"
             /></a>
           </li>
@@ -1021,6 +1053,6 @@
       });
     </script>
 
-    <script src="./backend/static/js/index.js"></script>
+    <script src="{% static './js/index.js'%}"></script>
   </body>
 </html>
