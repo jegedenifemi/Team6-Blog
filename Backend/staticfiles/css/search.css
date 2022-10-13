@@ -1,0 +1,36 @@
+.form {
+  width: 50%;
+  justify-content: center;
+  margin-inline: auto;
+  margin-block: 3%;
+}
+
+.form form {
+  text-align: center;
+}
+
+.form label {
+  display: inline-block;
+  padding-right: 43%;
+
+  font-size: larger;
+  margin-bottom: 8px;
+}
+.form-input {
+  width: 70%;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.form ::placeholder {
+  padding-left: 40px;
+}
+.form a {
+  position: relative;
+  left: 30px;
+  color: black;
+}
+
+@media (min-width: 250px) and (max-width: 900px) {
+  
+}

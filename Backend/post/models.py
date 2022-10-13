@@ -69,7 +69,7 @@ class Post(models.Model):
     status = models.CharField(max_length=20, choices=choices, default= 'draft')
     contents = models.TextField()
     description = models.TextField(blank = True)
-    # bookmarks = models.ManyToManyField(User, related_name='bookmark',default=None, blank=True)
+    bookmarks = models.ManyToManyField(User, related_name='bookmark',default=None, blank=True)
     category = models.ForeignKey(Category, on_delete = models.CASCADE, default=Category.get_cat)
     sub_category = models.ForeignKey(SubCategory, on_delete = models.CASCADE, default = SubCategory.get_sub)
     tags = TaggableManager()

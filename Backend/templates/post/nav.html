@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogga | Content</title>
+   <!-- FAVICONS -->
+   <link
+   rel="shortcut icon"
+   href="{% static './img/logo_resources/Favicon_White.png' %}"
+   type="image/x-icon"
+   id="fav-white"
+ />
+ <link
+   rel="shortcut icon"
+   href="{% static './img/logo_resources/Favicon.png' %}"
+   type="image/x-icon"
+   id="fav-green"
+ />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="{% static './css/content-page.css' %}">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+  </head>
+  <body>
+    <!-- HEADER & MOBILE MENU  START-->
+    <!--  -->
+    <header>
+      <!-- top green banner -->
+      <div class="banner">
+        <div class="banner_wrapper">
+          <div class="banner_left">
+            <p>Have a story to share?</p>
+
+            <button onclick="window.location.href='./contact-us.html';">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="banner_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="" id="" placeholder="Search" />
+          </div>
+        </div>
+
+        <div class="banner_socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <!-- top green banner -->
+
+      <div class="nav_outer">
+        <!-- <a href="./index.html"
+          ><img src="{% static './img/logo_resources/Favicon.png' %}" alt="Blogga Logo Icon"
+        /></a> -->
+
+        <div class="nav_inner">
+          <div class="hamburger">
+            <span class="span1"></span><span class="span2"></span
+            ><span class="span3"></span>
+          </div>
+
+          <div class="hamburger_close">
+            <!-- <span class="span1"></span><span class="span2"></span> -->
+            <i class="fa-solid fa-xmark login-modal-close"></i>
+          </div>
+
+          <div class="mobile_menu">
+            <div class="mobile_menu_search">
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search anything..."
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="mobile_menu_categories">
+              <p>CATEGORIES</p>
+              <ul>
+                <a href="./fashion.html"
+                  ><li class="mob_fashion">FASHION</li></a
+                >
+                <a href="./category-page.html"
+                  ><li class="mob_entertaiment">ENTERTAINMENT</li></a
+                >
+                <a href="./technology.html"
+                  ><li class="mob_tech">TECHNOLOGY</li></a
+                >
+                <a href="#"><li class="mob_health">HEALTH</li></a>
+                <a href="#"><li class="mob_politics">POLITICS</li></a>
+                <a href="#"><li class="mob_edu">EDUCATION</li></a>
+                <a href="#"><li class="mob_food">FOOD</li></a>
+                <a href="#"><li class="mob_art">ART</li></a>
+              </ul>
+              <hr />
+            </div>
+
+            <div class="mobile_menu_links">
+              <p>MORE</p>
+              <div class="mobile_menu_links_top">
+                <a href="./ourteam.html">TEAM</a>
+                <a href="./archive.html">ARCHIVE</a>
+              </div>
+              <div class="mobile_menu_links_bottom">
+                <a href="{% url 'signup' %}">WRITE FOR US</a>
+                <a href="./contact-us.html">CONTACT</a>
+              </div>
+            </div>
+
+            <div class="mobile_menu_btns_wrap">
+              <div class="mobile_menu_btns">
+                <button class="button" onclick="showLoginModal()">
+                  Sign In
+                </button>
+                <button
+                  class="subscribe button"
+                  onclick="window.location.href='#subscribe';"
+                >
+                  Subscribe
+                </button>
+              </div>
+
+              <img
+                src="{% static './img/home_page/author_hamzy.png' %}"
+                alt="profile picture"
+              />
+            </div>
+          </div>
+
+          <a href="./index.html"
+            ><img src="{% static './img/logo_resources/Favicon.png' %}" alt="Blogga Logo Icon"
+          /></a>
+
+          <nav>
+            <a href="./index.html"
+              ><img
+                src="{% static './img/logo_resources/Favicon_White.png' %}"
+                alt="Blogga Logo"
+            /></a>
+            <ul>
+              <li><a href="./fashion.html" class="nav_fashion">FASHION</a></li>
+              <li>
+                <a href="./category-page.html" class="nav_entertainment"
+                  >ENTERTAINMENT</a
+                >
+              </li>
+              <li>
+                <a href="./technology.html" class="nav_tech">TECHNOLOGY</a>
+              </li>
+              <li><a href="#" class="nav_health">HEALTH</a></li>
+              <li><a href="#" class="nav_politics">POLITICS</a></li>
+              <li><a href="#" class="nav_edu">EDUCATION</a></li>
+              <li><a href="#" class="nav_food">FOOD</a></li>
+              <li><a href="#" class="nav_art">ART</a></li>
+              <li>
+                <input type="checkbox" name="more_check" id="more_check" />
+
+                <label for="more_check" class="more">
+                  MORE
+                  <span class="dropdown_arrow"
+                    ><img
+                      src="{% static './img/home_page/dropdown_arrow.png' %}"
+                      alt="dropdown"
+                  /></span>
+                </label>
+
+                <div class="more_dropdown">
+                  <ul>
+                    <li><a href="./ourteam.html">TEAM</a></li>
+                    <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+                    <li><a href="./archive.html">ARCHIVE</a></li>
+                    <li><a href="./contact-us.html">CONTACT</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <i class="fa-solid fa-magnifying-glass mobile_search"></i>
+
+          <div class="nav_btns">
+            <button class="button" onclick="showLoginModal()">Sign In</button>
+            <button
+              class="subscribe button"
+              onclick="window.location.href='#subscribe';"
+            >
+              Subscribe
+            </button>
+
+            <img src="{% static './img/home_page/author_hamzy.png' %}" alt="profile picture" />
+          </div>
+        </div>
+      </div>
+    </header>
