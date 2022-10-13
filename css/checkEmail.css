@@ -43,10 +43,18 @@ main {
     margin-left: 10rem;
 } */
 
-.rightDiv {
+/* .rightDiv {
   margin: 0 auto;
   width: 50%;
-}
+} */
+
+.rightDiv {
+    background-image: url(./img/check-email-images/VectorTop-right.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 22rem;
+    width: 50%;
+  }
 
 .wrapper {
   padding-top: 1rem;
@@ -193,9 +201,9 @@ main {
     width: 100%;
   }
 
-  /* .vector2 {
+  .vector2 {
         display: none;
-    } */
+    }
 
   .rightDiv {
     margin: 0 auto;
@@ -322,9 +330,9 @@ main {
     width: 100%;
   }
 
-  /* .vector2 {
+  .vector2 {
         display: none;
-    } */
+    }
 
   .rightDiv {
     margin: 0 auto;
@@ -454,19 +462,19 @@ main {
     display: none;
   }
 
-  .rightDiv {
-    background-image: url(./img/check-email-images/VectorTop\ right.png);
+  /* .rightDiv {
+    background-image: url(./img/check-email-images/VectorTop-right.png);
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 18rem;
     width: 50%;
-  }
+  } */
 
-  /* .vector2 {
+  .vector2 {
     height: 4rem;
-    right: 2rem;
+    right: 0rem;
     position: absolute;
-} */
+  }
 
   .wrapper {
     padding-top: 0.5rem;
@@ -619,19 +627,19 @@ main {
     display: none;
   }
 
-  .rightDiv {
-    background-image: url(./img/check-email-images/VectorTop\ right.png);
+  /* .rightDiv {
+    background-image: url(./img/check-email-images/VectorTop-right.png);
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 18rem;
     width: 50%;
-  }
+  } */
 
-  /* .vector2 {
+  .vector2 {
     height: 4rem;
     right: 2rem;
     position: absolute;
-} */
+  }
 
   .wrapper {
     padding-top: 0.5rem;
@@ -784,19 +792,19 @@ main {
     display: none;
   }
 
-  .rightDiv {
-    background-image: url(./img/check-email-images/VectorTop\ right.png);
+  /* .rightDiv {
+    background-image: url(./img/check-email-images/VectorTop-right.png);
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 22rem;
     width: 50%;
-  }
+  } */
 
-  /* .vector2 {
-    height: 4rem;
+  .vector2 {
+    height: 5rem;
     right: 2rem;
     position: absolute;
-} */
+  }
 
   .wrapper {
     padding-top: 0.5rem;
@@ -949,19 +957,19 @@ main {
     display: none;
   }
 
-  .rightDiv {
-    background-image: url(./img/check-email-images/VectorTop\ right.png);
+  /* .rightDiv {
+    background-image: url(./img/check-email-images/VectorTop-right.png);
     background-repeat: no-repeat;
     background-position: right top;
     background-size: 22rem;
     width: 50%;
-  }
+  } */
 
-  /* .vector2 {
-    height: 4rem;
+  .vector2 {
+    height: 5rem;
     right: 2rem;
     position: absolute;
-} */
+  }
 
   .wrapper {
     padding-top: 0.5rem;
