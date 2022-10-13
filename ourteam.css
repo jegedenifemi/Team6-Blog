@@ -220,6 +220,9 @@ header {
   .amara{
     width: 100%;
   }
+  .taofikat{
+    width: 94%;
+  }
   .racheal{
     width: 90%;
   }
@@ -326,7 +329,27 @@ header {
     justify-content: space-between;
     align-content: space-evenly;
   }
-
+  @media only screen and(max-width :768px){
+    .team{
+      display: grid;
+      grid-template-columns:repeat(2, 2fr);
+    }
+    .fend{
+      display: grid;
+      grid-template-columns:repeat(2, 2fr);
+    }
+    /* .fend{
+      display: grid;
+      grid-template-columns: repeat(1, 2fr);
+    } */
+    .fend{
+      display: flex;
+      flex-direction: column;
+    }
+    .team{
+      flex-wrap: wrap-reverse;
+    }
+  }
   /* .team{
     display: grid;
     grid-template-columns:repeat(8, 1fr) ;
