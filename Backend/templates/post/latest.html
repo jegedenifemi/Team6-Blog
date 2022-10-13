@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogga | Latest</title>
+    <link rel="stylesheet" href="css/category-page.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FAVICONS -->
+    <link
+      rel="shortcut icon"
+      href="./img/logo_resources/Favicon_White.png"
+      type="image/x-icon"
+      id="fav-white"
+    />
+    <link
+      rel="shortcut icon"
+      href="./img/logo_resources/Favicon.png"
+      type="image/x-icon"
+      id="fav-green"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+  </head>
+  <body>
+    <!-- HEADER & MOBILE MENU  START-->
+    <!--  -->
+    <header>
+      <!-- top green banner -->
+      <div class="banner">
+        <div class="banner_wrapper">
+          <div class="banner_left">
+            <p>Have a story to share?</p>
+
+            <button onclick="window.location.href='./contact-us.html';">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="banner_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="" id="" placeholder="Search" />
+          </div>
+        </div>
+
+        <div class="banner_socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <!-- top green banner -->
+
+      <div class="nav_outer">
+        <!-- <a href="./index.html"
+          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+        /></a> -->
+
+        <div class="nav_inner">
+          <div class="hamburger">
+            <span class="span1"></span><span class="span2"></span
+            ><span class="span3"></span>
+          </div>
+
+          <div class="hamburger_close">
+            <!-- <span class="span1"></span><span class="span2"></span> -->
+            <i class="fa-solid fa-xmark login-modal-close"></i>
+          </div>
+
+          <div class="mobile_menu">
+            <div class="mobile_menu_search">
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search anything..."
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="mobile_menu_categories">
+              <p>CATEGORIES</p>
+              <ul>
+                <a href="./fashion.html"
+                  ><li class="mob_fashion">FASHION</li></a
+                >
+                <a href="./category-page.html"
+                  ><li class="mob_entertaiment">ENTERTAINMENT</li></a
+                >
+                <a href="./technology.html"
+                  ><li class="mob_tech">TECHNOLOGY</li></a
+                >
+                <a href="#"><li class="mob_health">HEALTH</li></a>
+                <a href="#"><li class="mob_politics">POLITICS</li></a>
+                <a href="#"><li class="mob_edu">EDUCATION</li></a>
+                <a href="#"><li class="mob_food">FOOD</li></a>
+                <a href="#"><li class="mob_art">ART</li></a>
+              </ul>
+              <hr />
+            </div>
+
+            <div class="mobile_menu_links">
+              <p>MORE</p>
+              <div class="mobile_menu_links_top">
+                <a href="./ourteam.html">TEAM</a>
+                <a href="./archive.html">ARCHIVE</a>
+              </div>
+              <div class="mobile_menu_links_bottom">
+                <a href="./write-for-us.html">WRITE FOR US</a>
+                <a href="./contact-us.html">CONTACT</a>
+              </div>
+            </div>
+
+            <div class="mobile_menu_btns_wrap">
+              <div class="mobile_menu_btns">
+                <button class="button" onclick="showLoginModal()">
+                  Sign In
+                </button>
+                <button
+                  class="subscribe button"
+                  onclick="window.location.href='#subscribe';"
+                >
+                  Subscribe
+                </button>
+              </div>
+
+              <img
+                src="./img/home_page/author_hamzy.png"
+                alt="profile picture"
+              />
+            </div>
+          </div>
+
+          <a href="./index.html"
+            ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+          /></a>
+
+          <nav>
+            <a href="./index.html"
+              ><img
+                src="./img/logo_resources/Favicon_White.png"
+                alt="Blogga Logo"
+            /></a>
+            <ul>
+              <li><a href="./fashion.html" class="nav_fashion">FASHION</a></li>
+              <li>
+                <a href="./category-page.html" class="nav_entertainment"
+                  >ENTERTAINMENT</a
+                >
+              </li>
+              <li>
+                <a href="./technology.html" class="nav_tech">TECHNOLOGY</a>
+              </li>
+              <li><a href="#" class="nav_health">HEALTH</a></li>
+              <li><a href="#" class="nav_politics">POLITICS</a></li>
+              <li><a href="#" class="nav_edu">EDUCATION</a></li>
+              <li><a href="#" class="nav_food">FOOD</a></li>
+              <li><a href="#" class="nav_art">ART</a></li>
+              <li>
+                <input type="checkbox" name="more_check" id="more_check" />
+
+                <label for="more_check" class="more">
+                  MORE
+                  <span class="dropdown_arrow"
+                    ><img
+                      src="./img/home_page/dropdown_arrow.png"
+                      alt="dropdown"
+                  /></span>
+                </label>
+
+                <div class="more_dropdown">
+                  <ul>
+                    <li><a href="./ourteam.html">TEAM</a></li>
+                    <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+                    <li><a href="./archive.html">ARCHIVE</a></li>
+                    <li><a href="./contact-us.html">CONTACT</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <i class="fa-solid fa-magnifying-glass mobile_search"></i>
+
+          <div class="nav_btns">
+            <button class="button" onclick="showLoginModal()">Sign In</button>
+            <button
+              class="subscribe button"
+              onclick="window.location.href='#subscribe';"
+            >
+              Subscribe
+            </button>
+
+            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--  -->
+    <!-- HEADER & MOBILE MENU END-->
+    <main>
+
+
+     <section class="category-brief" id="category-brief2">
+        <h2 id="latest"> LATEST </h2>
+        <p id="latest-paragraph">SEE ALL</p>
+        <hr class="latest-hr">
+    </section>
+
+      <section class="main-content">
+         <!-- LEFT SECTION STARTS CONTENT 1-->
+         <div>
+         <div class="left-section">
+          <div class="left-image">
+            <a href=""><img src="img/lord-of-rings-img.svg" alt="lord-of-rings-img"></a>
+          </div>
+          <div class="left-content">
+            <a href="">The Lord of the Rings: The Rings of Power recap:
+                 Not <br> all who wander are lost</a>
+                <p>Welcome back to Middle-earth, where people love to burst out into song
+                 — especially when they're traversing wild nature.</p>
+                 <div class="read-more-section">
+                    <a href="" id="right-arrow"
+                      >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
+                    ></a>
+                  </div>
+                  <div class="post-section" >
+                    <p>Hamzah</p>
+                     <p>30 Minutes ago
+                   </div>
+          </div>
+            <hr class="hr-line"/>
+         </div>
+
+         <!-- LEFT SECTION STARTS CONTENT 2-->
+
+         <div class="left-section">
+            <div class="left-image">
+              <a href=""><img src="img/The-styling.svg" alt="lord-of-rings-img"></a>
+            </div>
+            <div class="left-content">
+              <a href="">The styling and pictures from Tems' GQ Hype cover</a>
+                  <p>As a beautiful woman, Tems always
+                    looks like one but the styling of this GQ magazine was not it for us. </p>
+                   <div class="read-more-section">
+                      <a href="" id="right-arrow"
+                        >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                    <div class="post-section" >
+                        <p>Nifemi</p>
+                         <p>30 Minutes ago
+                       </div>
+            </div>
+              <hr class="hr-line"/>
+           </div>
+
+        <!-- LEFT SECTION STARTS CONTENT 3-->
+
+         <div class="left-section">
+            <div class="left-image">
+              <a href=""><img src="img/Tech2.svg" alt="lord-of-rings-img"></a>
+            </div>
+            <div class="left-content">
+              <a href="">Tesla’s Humanoid Robot Optimus Might Debut On September 30</a>
+                  <p>In early summer, we learned from Elon Musk’s tweet
+                    that the second Tesla AI Day event was postponed… </p>
+                   <div class="read-more-section">
+                      <a href="" id="right-arrow"
+                        >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                    <div class="post-section" >
+                        <p>Adedotun</p>
+                         <p>30 Minutes ago
+                       </div>
+            </div>
+              <hr class="hr-line"/>
+           </div>
+
+           <!-- LEFT SECTION STARTS CONTENT 4-->
+
+         <div class="left-section">
+            <div class="left-image">
+              <a href=""><img src="img/Paid-price.svg" alt="lord-of-rings-img"></a>
+            </div>
+            <div class="left-content">
+              <a href="">I paid the price to become one of the best, says E4luxury</a>
+                  <p>Ayodele Donye Samson, founder of E4luxury Jewellers,
+                    has revealed the cost of being touted as the best among his peers. </p>
+                   <div class="read-more-section">
+                      <a href="" id="right-arrow"
+                        >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                    <div class="post-section" >
+                        <p>Racheal</p>
+                         <p>30 Minutes ago
+                       </div>
+            </div>
+              <hr class="hr-line"/>
+           </div>
+
+            <!-- LEFT SECTION STARTS CONTENT 5-->
+
+         <div class="left-section">
+            <div class="left-image">
+              <a href=""><img src="img/Tech6.svg" alt="lord-of-rings-img"></a>
+            </div>
+            <div class="left-content">
+              <a href="">Vivo X Fold+ Will Have a Red Variant Called ‘Huaxia Red’</a>
+                  <p>The Vivo X Fold+ is certain to launch at the end
+                     of this month. As always, the launch…</p>
+                   <div class="read-more-section">
+                      <a href="" id="right-arrow"
+                        >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                    <div class="post-section" >
+                        <p>Amara</p>
+                         <p>30 Minutes ago
+                       </div>
+            </div>
+              <hr class="hr-line"/>
+           </div>
+
+            <!-- LEFT SECTION STARTS CONTENT 6-->
+
+         <div class="left-section">
+            <div class="left-image">
+              <a href=""><img src="img/Ayinla-review.svg" alt="lord-of-rings-img"></a>
+            </div>
+            <div class="left-content">
+              <a href="">'Ayinla' Review: Tunde Kelani's Movie Worth The Hype Thanks To Adedimeji Lateef's Singular Performance </a>
+                  <p>Ayinla is a film that tells the story of Nigerian musician, Ayinla Omowura, who used Apala music to address issues of the contemporary society
+                    - commending and criticizing various governmental and individual acts. </p>
+                   <div class="read-more-section">
+                      <a href="" id="right-arrow"
+                        >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                    <div class="post-section" >
+                        <p>David</p>
+                         <p>30 Minutes ago
+                       </div>
+            </div>
+              <hr class="hr-line"/>
+           </div>
+
+           <!-- LEFT SECTION STARTS CONTENT 7-->
+
+         <div class="left-section">
+            <div class="left-image">
+              <a href=""><img src="img/King-of-thieves.svg" alt="lord-of-rings-img"></a>
+            </div>
+            <div class="left-content">
+              <a href="">Review: ‘King of thieves’ Wants you to remember the Magic and allure of indegenous movies`</a>
+                  <p>Ultimately, King of Thieves is a great Yoruba epic thriller with enough drama, twists,
+                    and nostalgia to make you remember the magic and allure  </p>
+                   <div class="read-more-section">
+                      <a href="" id="right-arrow"
+                        >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                    <div class="post-section" >
+                        <p>Taofikat</p>
+                         <p>30 Minutes ago
+                       </div>
+            </div>
+              <hr class="hr-line"/>
+           </div>
+
+           <!-- LEFT SECTION STARTS CONTENT 8-->
+
+         <div class="left-section">
+            <div class="left-image">
+              <a href=""><img src="img/Melian.svg" alt="lord-of-rings-img"></a>
+            </div>
+            <div class="left-content">
+            <a href="">Milan Fashion Week: The Italian stalwart takes a stab at rebellion</a>
+                  <p>Of "the big four" fashion weeks, Milan has long boasted heritage but often pales in comparison to the youthful spirit of London, the high-octane energy of New York or the grandeur of Paris.</p>
+                   <div class="read-more-section">
+                      <a href="" id="right-arrow"
+                        >READ MORE <i class="fa-sharp fa-solid fa-arrow-right"></i
+                      ></a>
+                    </div>
+                    <div class="post-section" >
+                        <p>Neeno</p>
+                         <p>30 Minutes ago
+                       </div>
+            </div>
+           </div>
+
+
+         </div>
+
+        <!-- LEFT SECTION ENDS -->
+
+
+          <!-- RIGHT SECTION STARTS -->
+          <div>
+
+
+
+
+<!--This is the Div that carries the right section content-->
+         </div>
+        </section>
+
+        <section class="page-num">
+             <hr class="category-hr"/>
+             <div class="page-num-content">
+                <a href="#" class="page-btn start-page"><img src="img/less-than.svg" alt=""></a>
+                <a href="#" class="page-btn active2">1</a>
+                <a href="#" class="page-btn prev-page">...</a>
+                <a href="#" class="page-btn">6</a>
+                <a href="" class="page-btn">7</a>
+                <a href="" class="page-btn">8</a>
+                <a href="" class="page-btn">9</a>
+                <a href="" class="page-btn">10</a>
+                <a href="" class="page-btn" id="hide">11</a>
+                <a href="" class="page-btn" id="hide">12</a>
+                <a href="" class="page-btn" id="hide">13</a>
+                <a href="" class="page-btn" id="hide">14</a>
+                <a href="" class="page-btn next-page" id="hide">...</a>
+                <a href="" class="page-btn" id="hide">458</a>
+                <a href="" class="page-btn end-page"><img src="img/Greater-than.svg" alt=""></a> &nbsp;  &nbsp;
+             </div>
+        </section>
+
+        <section>
+            <hr  />
+        </section>
+
+        <section class="newsletter" id="subscribe">
+          <h2>STAY UPDATED</h2>
+
+          <p>
+            Get the latest creative news from Blogga about Art , Fashion,
+            Entertainment and lots more.
+          </p>
+
+          <form action="#">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email Address"
+            />
+            <button type="submit" class="subscribe button">Subscribe</button>
+          </form>
+        </section>
+        <!--  -->
+      <!-- SUBSCRIBE SECTION END-->
+    </main>
+
+    <!-- FOOTER START-->
+    <!--  -->
+    <footer class="main_footer">
+      <div class="footer_top">
+        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
+        <ul>
+          <li><a href="#">ADVERTISE</a></li>
+          <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+          <li><a href="./category-page.html">CATEGORIES</a></li>
+          <li>
+            <a href="./index.html"
+              ><img
+                src="./img/logo_resources/Favicon_White.png"
+                alt="Blogga Icon"
+            /></a>
+          </li>
+          <li><a href="./archive.html">ARCHIVES</a></li>
+          <li><a href="./termsofservice.html">TERMS OF SERVICE</a></li>
+          <li><a href="./privacypolicy.html">PRIVACY</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_middle">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>&ThinSpace;
+          <span>FACEBOOK</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-twitter"></i>&ThinSpace;
+          <span>TWITTER</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace;
+          <span>LINKEDIN</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-youtube"></i>&ThinSpace;
+          <span>YOUTUBE</span></a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace;
+          <span>INSTAGRAM</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace;
+          <span>PINTEREST</span>
+        </a>
+      </div>
+
+      <div class="footer_bottom">
+        <p>© 2022 The Blogga Team All Rights Reserved</p>
+        <a href="#">Site Map</a>
+      </div>
+    </footer>
+    <!--  -->
+    <!-- FOOTER END-->
+    <script src="category.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
