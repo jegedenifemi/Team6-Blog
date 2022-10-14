@@ -18,7 +18,7 @@
         category: {{post.category}},<br> 
         author: {{post.author.get_full_name}} <br>
         {{post.description}}
-        <a href="{{ post.image.url }}">
+        <a href="{% url 'post:post_detail' post.slug %}">
                 <img src="{{ post.image.url }}" alt="Lights" style="height:20%;width:20%">
                 
                   

@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #22443E;
+}
+
+.container {
+    min-height: 100vh;
+    width: 85vh;
+    background-color: #22443E;
+    place-items: center;
+    display: grid;
+    
+    
+}
+
+main {
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+}
+
+.content {
+    background-color: rgb(242, 242, 248);
+    
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    
+    min-height: 75%;
+    min-width: 39vw;
+    
+}
+
+.content h4 {
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #2D2D2D;
+}
+.content h2 {
+    font-family: 'Poppins', serif;
+    color: #22443E;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29.8609px;
+    line-height: 41px;
+    margin-top: 10px;
+}
+
+.content p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+p a{
+    color: #22443E;
+    text-decoration: none;
+
+}
+.btn {
+    width: 95%;
+    height: 45px;
+    padding: 5px 5px;
+    margin-left: 10px;
+    background-color: #22443E;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    opacity: 0.9;
+    transition-delay: 120ms;
+    transition: ease-in-out;
+    
+    
+}
+.content h5 {
+    text-align: center;
+    color: #22443E;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    width: 484px;
+    height: 32px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: #2D2D2D;
+}
+
+
+

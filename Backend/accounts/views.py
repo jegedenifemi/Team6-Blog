@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.auth.models import User
@@ -11,14 +11,26 @@ from django.db.models.query_utils import Q
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from .token import account_activation_token
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
-
+from post.models import Post
 
 # Create your views here.
 
+@login_required
+def bookmarks_Add(request, id):
+    pass
+    # post = get_object_or_404(Post, pk=id)
+    # if post.bookmarks.filter(id=request.user.id).exists():
+    #     post.bookmarks.remove(request.user)
+    # else:
+    #     post.bookmarks.add(request.user)
+    return redirect('post:bookmarks')
+
+
+    
 # this view signs up a new writer to the database and sends a success message
 def _sign_up(request):
     if request.user.is_authenticated:
@@ -133,4 +145,5 @@ def password_reset_request(request):
 	password_reset_form = PasswordResetForm()
   
 	return render(request=request, template_name="accounts/password_reset.html", context={"password_reset_form":password_reset_form},)
+
 
