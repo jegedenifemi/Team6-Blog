@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogga | Fashion</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/category-page.css">
+    <link rel="stylesheet" href="{% static './css/style.css'%}" />
+    <link rel="stylesheet" href="{% static './css/login.css'%}" />
+    <link rel="stylesheet" href="{% static './css/category-page.css'%}">
 
     <!-- FAVICONS -->
     <link
       rel="shortcut icon"
-      href="./img/logo_resources/Favicon_White.png"
+      href="{% static './img/logo_resources/Favicon_White.png'%}"
       type="image/x-icon"
       id="fav-white"
     />
     <link
       rel="shortcut icon"
-      href="./img/logo_resources/Favicon.png"
+      href="{% static './img/logo_resources/Favicon.png'%}"
       type="image/x-icon"
       id="fav-green"
     />
@@ -39,6 +40,117 @@
 
   </head>
   <body>
+
+    <!-- LOGIN MODAL START-->
+    <!--  -->
+    <div class="login-modal">
+      <section class="login-body">
+        <img
+          src="{% static './img/Login/mobile_blob1.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob1"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob2.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob2"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob3.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob3"
+        />
+
+        <main class="login-main">
+          <div class="left-div">
+            <img
+              src="{% static './img/Login/login_top_blob.png'%}"
+              alt="blob design "
+              class="top_blob"
+            />
+            <img
+              src="{% static './img/Login/login_main_image.png'%}"
+              alt="welcome image"
+            />
+            <img
+              src="{% static './img/Login/login_bottom_blob.png'%}"
+              alt="blob design "
+              class="btm_blob"
+            />
+          </div>
+
+          <div class="right-div">
+            <i
+              class="fa-solid fa-xmark login-modal-close"
+              onclick="hideLoginModal()"
+            ></i>
+            <div class="right-div-container">
+              <h3 class="head-txt">Welcome Back : )</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="login-username"
+                required
+              />
+
+              <br />
+
+              <div class="password-eye">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                  required
+                />
+                <i class="bi bi-eye" onclick="passwordToggle()"></i>
+                <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot-password"
+                >Forgot Password?</a
+              >
+              <!-- <br /> -->
+
+              <label for="remember-me" class="remem-label">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />&nbsp; <small>Remember Me</small></label
+              >
+              <br />
+
+              <button type="button" class="login-button">Log In</button>
+
+              <div class="or-separator">
+                <hr />
+                <p>OR</p>
+                <hr />
+              </div>
+
+              <button type="button" class="continue-button">
+                <img
+                  src="{% static './img/google.png'%}"
+                  alt=""
+                  class="google"
+                />
+                &nbsp; Continue With Google
+              </button>
+
+              <p class="base-txt">
+                Become a Blogga?
+                <a href="./write-for-us.html" class="signup-link">
+                  Write For Us</a
+                >
+              </p>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <!--  -->
+    <!-- LOGIN MODAL END-->
     <!-- HEADER & MOBILE MENU  START-->
     <!--  -->
     <header>
@@ -69,7 +181,7 @@
 
       <div class="nav_outer">
         <!-- <a href="./index.html"
-          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+          ><img src="{% static './img/logo_resources/Favicon.png'%}" alt="Blogga Logo Icon"
         /></a> -->
 
         <div class="nav_inner">
@@ -141,20 +253,20 @@
               </div>
 
               <img
-                src="./img/home_page/author_hamzy.png"
+                src="{% static './img/home_page/author_hamzy.png'%}"
                 alt="profile picture"
               />
             </div>
           </div>
 
           <a href="./index.html"
-            ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+            ><img src="{% static './img/logo_resources/Favicon.png'%}" alt="Blogga Logo Icon"
           /></a>
 
           <nav>
             <a href="./index.html"
               ><img
-                src="./img/logo_resources/Favicon_White.png"
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
                 alt="Blogga Logo"
             /></a>
             <ul>
@@ -179,7 +291,7 @@
                   MORE
                   <span class="dropdown_arrow"
                     ><img
-                      src="./img/home_page/dropdown_arrow.png"
+                      src="{% static './img/home_page/dropdown_arrow.png'%}"
                       alt="dropdown"
                   /></span>
                 </label>
@@ -207,7 +319,7 @@
               Subscribe
             </button>
 
-            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
+            <img src="{% static './img/home_page/author_hamzy.png'%}" alt="profile picture" />
           </div>
         </div>
       </div>
@@ -257,7 +369,7 @@
          <div>
          <div class="left-section">
           <div class="left-image">
-            <a href=""><img src="img/Reactions-to-davido.svg" alt="Davido"></a>
+            <a href=""><img src="{% static './img/Reactions-to-davido.svg'%}" alt="Davido"></a>
           </div>
           <div class="left-content">
             <a href="">Reactions as Davido strutted the Puma runway at New York fashion week</a>
@@ -275,7 +387,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/10-harmatan.svg" alt="harmattan"></a>
+              <a href=""><img src="{% static './img/10-harmatan.svg'%}" alt="harmattan"></a>
             </div>
             <div class="left-content">
               <a href="">10 Harmattan Dress Trends You Don’t Want to Miss in 2022</a>
@@ -293,7 +405,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Burberry.svg" alt="Burberry"></a>
+              <a href=""><img src="{% static './img/Burberry.svg'%}" alt="Burberry"></a>
             </div>
             <div class="left-content">
               <a href="">Burberry appoints Daniel Lee as new chief creative officer</a>
@@ -312,7 +424,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/The-styling.svg" alt="The-styling"></a>
+              <a href=""><img src="{% static './img/The-styling.svg'%}" alt="The-styling"></a>
             </div>
             <div class="left-content">
               <a href="">The styling and pictures from Tems' GQ Hype cover</a>
@@ -331,7 +443,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/With-tradition.svg" alt="lord-of-rings-img"></a>
+              <a href=""><img src="{% static './img/With-tradition.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">With tradition and new tech, these Japanese designers are crafting more sustainably made clothing</a>
@@ -350,7 +462,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Venice.svg" alt="lord-of-rings-img"></a>
+              <a href=""><img src="{% static 'img/Venice.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">Venice Film Festival: The best fashion on show </a>
@@ -370,7 +482,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Style-guide.svg" alt="lord-of-rings-img"></a>
+              <a href=""><img src="{% static './img/Style-guide.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">Style Guide: 5 power suits for the ultimate boss lady </a>
@@ -390,7 +502,7 @@
 
          <div class="left-section">
             <div class="left-image">
-             <a href=""><img src="img/Melian.svg" alt="lord-of-rings-img"></a>
+             <a href=""><img src="{% static 'img/Melian.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">Milan Fashion Week: The Italian stalwart takes a stab at rebellion</a>
@@ -409,7 +521,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/From-black.svg" alt="lord-of-rings-img"></a>
+              <a href=""><img src="{% static './img/From-black.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">From black hats to brooches, funeral guests wear quiet tributes to the Queen </a>
@@ -428,7 +540,7 @@
 
          <div class="left-section">
             <div class="left-image">
-             <a href=""><img src="img/Ojuju-bail.svg" alt="lord-of-rings-img"></a>
+             <a href=""><img src="{% static './img/Ojuju-bail.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">Ojuju Ball: Our favorite and least favorite looks </a>
@@ -747,7 +859,7 @@
         <section class="page-num">
              <hr class="category-hr"/>
              <div class="page-num-content">
-              <a href="#" class="page-btn start-page"><img src="img/less-than.svg" alt=""></a>
+              <a href="#" class="page-btn start-page"><img src="{% static './img/less-than.svg'%}" alt=""></a>
               <a href="#" class="page-btn">1</a>
               <a href="#" class="page-btn prev-page">...</a>
               <a href="#" class="page-btn">6</a>
@@ -761,7 +873,7 @@
               <a href="" class="page-btn" id="hide">14</a>
               <a href="" class="page-btn next-page" id="hide">...</a>
               <a href="" class="page-btn" id="hide">458</a>
-              <a href="" class="page-btn end-page"><img src="img/Greater-than.svg" alt=""></a> &nbsp;  &nbsp;
+              <a href="" class="page-btn end-page"><img src="{% static './img/Greater-than.svg'%}" alt=""></a> &nbsp;  &nbsp;
            </div>
         </section>
 
@@ -795,7 +907,7 @@
     <!--  -->
     <footer class="main_footer">
       <div class="footer_top">
-        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
+        <img src="{% static './img/logo_resources/Favicon_White.png'%}" alt="Blogga Icon" />
         <ul>
           <li><a href="#">ADVERTISE</a></li>
           <li><a href="./write-for-us.html">WRITE FOR US</a></li>
@@ -803,7 +915,7 @@
           <li>
             <a href="./index.html"
               ><img
-                src="./img/logo_resources/Favicon_White.png"
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
                 alt="Blogga Icon"
             /></a>
           </li>
@@ -843,5 +955,5 @@
     <!--  -->
     <!-- FOOTER END-->
   </body>
-  <script src="./index.js"></script>
-</html>
+  <script src="{% static './js/index.js'%}"></script>
+  </html>

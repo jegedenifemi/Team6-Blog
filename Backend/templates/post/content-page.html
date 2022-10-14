@@ -1,227 +1,127 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blogga | Content</title>
-   <!-- FAVICONS -->
-   <link
-   rel="shortcut icon"
-   href="./img/logo_resources/Favicon_White.png"
-   type="image/x-icon"
-   id="fav-white"
- />
- <link
-   rel="shortcut icon"
-   href="./img/logo_resources/Favicon.png"
-   type="image/x-icon"
-   id="fav-green"
- />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="css/content-page.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- HEADER & MOBILE MENU  START-->
-    <!--  -->
-    <header>
-      <!-- top green banner -->
-      <div class="banner">
-        <div class="banner_wrapper">
-          <div class="banner_left">
-            <p>Have a story to share?</p>
 
-            <button onclick="window.location.href='./contact-us.html';">
-              Contact Us
-            </button>
-          </div>
 
-          <div class="banner_search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" name="" id="" placeholder="Search" />
-          </div>
-        </div>
-
-        <div class="banner_socials">
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </div>
-      <!-- top green banner -->
-
-      <div class="nav_outer">
-        <!-- <a href="./index.html"
-          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
-        /></a> -->
-
-        <div class="nav_inner">
-          <div class="hamburger">
-            <span class="span1"></span><span class="span2"></span
-            ><span class="span3"></span>
-          </div>
-
-          <div class="hamburger_close">
-            <!-- <span class="span1"></span><span class="span2"></span> -->
-            <i class="fa-solid fa-xmark login-modal-close"></i>
-          </div>
-
-          <div class="mobile_menu">
-            <div class="mobile_menu_search">
-              <input
-                type="search"
-                name=""
-                id=""
-                placeholder="Search anything..."
-              />
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-
-            <div class="mobile_menu_categories">
-              <p>CATEGORIES</p>
-              <ul>
-                <a href="./fashion.html"
-                  ><li class="mob_fashion">FASHION</li></a
-                >
-                <a href="./category-page.html"
-                  ><li class="mob_entertaiment">ENTERTAINMENT</li></a
-                >
-                <a href="./technology.html"
-                  ><li class="mob_tech">TECHNOLOGY</li></a
-                >
-                <a href="#"><li class="mob_health">HEALTH</li></a>
-                <a href="#"><li class="mob_politics">POLITICS</li></a>
-                <a href="#"><li class="mob_edu">EDUCATION</li></a>
-                <a href="#"><li class="mob_food">FOOD</li></a>
-                <a href="#"><li class="mob_art">ART</li></a>
-              </ul>
-              <hr />
-            </div>
-
-            <div class="mobile_menu_links">
-              <p>MORE</p>
-              <div class="mobile_menu_links_top">
-                <a href="./ourteam.html">TEAM</a>
-                <a href="./archive.html">ARCHIVE</a>
-              </div>
-              <div class="mobile_menu_links_bottom">
-                <a href="./write-for-us.html">WRITE FOR US</a>
-                <a href="./contact-us.html">CONTACT</a>
-              </div>
-            </div>
-
-            <div class="mobile_menu_btns_wrap">
-              <div class="mobile_menu_btns">
-                <button class="button" onclick="showLoginModal()">
-                  Sign In
-                </button>
-                <button
-                  class="subscribe button"
-                  onclick="window.location.href='#subscribe';"
-                >
-                  Subscribe
-                </button>
-              </div>
-
-              <img
-                src="./img/home_page/author_hamzy.png"
-                alt="profile picture"
-              />
-            </div>
-          </div>
-
-          <a href="./index.html"
-            ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
-          /></a>
-
-          <nav>
-            <a href="./index.html"
-              ><img
-                src="./img/logo_resources/Favicon_White.png"
-                alt="Blogga Logo"
-            /></a>
-            <ul>
-              <li><a href="./fashion.html" class="nav_fashion">FASHION</a></li>
-              <li>
-                <a href="./category-page.html" class="nav_entertainment"
-                  >ENTERTAINMENT</a
-                >
-              </li>
-              <li>
-                <a href="./technology.html" class="nav_tech">TECHNOLOGY</a>
-              </li>
-              <li><a href="#" class="nav_health">HEALTH</a></li>
-              <li><a href="#" class="nav_politics">POLITICS</a></li>
-              <li><a href="#" class="nav_edu">EDUCATION</a></li>
-              <li><a href="#" class="nav_food">FOOD</a></li>
-              <li><a href="#" class="nav_art">ART</a></li>
-              <li>
-                <input type="checkbox" name="more_check" id="more_check" />
-
-                <label for="more_check" class="more">
-                  MORE
-                  <span class="dropdown_arrow"
-                    ><img
-                      src="./img/home_page/dropdown_arrow.png"
-                      alt="dropdown"
-                  /></span>
-                </label>
-
-                <div class="more_dropdown">
-                  <ul>
-                    <li><a href="./ourteam.html">TEAM</a></li>
-                    <li><a href="./write-for-us.html">WRITE FOR US</a></li>
-                    <li><a href="./archive.html">ARCHIVE</a></li>
-                    <li><a href="./contact-us.html">CONTACT</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </nav>
-
-          <i class="fa-solid fa-magnifying-glass mobile_search"></i>
-
-          <div class="nav_btns">
-            <button class="button" onclick="showLoginModal()">Sign In</button>
-            <button
-              class="subscribe button"
-              onclick="window.location.href='#subscribe';"
-            >
-              Subscribe
-            </button>
-
-            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
-          </div>
-        </div>
-      </div>
-    </header>
     <!--  -->
     <!-- HEADER & MOBILE MENU END-->
 
+{% include 'post/nav.html' %}
+
+<!-- LOGIN MODAL START-->
+    <!--  -->
+    <div class="login-modal">
+      <section class="login-body">
+        <img
+          src="{% static './img/Login/mobile_blob1.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob1"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob2.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob2"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob3.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob3"
+        />
+
+        <main class="login-main">
+          <div class="left-div">
+            <img
+              src="{% static './img/Login/login_top_blob.png'%}"
+              alt="blob design "
+              class="top_blob"
+            />
+            <img
+              src="{% static './img/Login/login_main_image.png'%}"
+              alt="welcome image"
+            />
+            <img
+              src="{% static './img/Login/login_bottom_blob.png'%}"
+              alt="blob design "
+              class="btm_blob"
+            />
+          </div>
+
+          <div class="right-div">
+            <i
+              class="fa-solid fa-xmark login-modal-close"
+              onclick="hideLoginModal()"
+            ></i>
+            <div class="right-div-container">
+              <h3 class="head-txt">Welcome Back : )</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="login-username"
+                required
+              />
+
+              <br />
+
+              <div class="password-eye">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                  required
+                />
+                <i class="bi bi-eye" onclick="passwordToggle()"></i>
+                <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot-password"
+                >Forgot Password?</a
+              >
+              <!-- <br /> -->
+
+              <label for="remember-me" class="remem-label">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />&nbsp; <small>Remember Me</small></label
+              >
+              <br />
+
+              <button type="button" class="login-button">Log In</button>
+
+              <div class="or-separator">
+                <hr />
+                <p>OR</p>
+                <hr />
+              </div>
+
+              <button type="button" class="continue-button">
+                <img
+                  src="{% static './img/google.png'%}"
+                  alt=""
+                  class="google"
+                />
+                &nbsp; Continue With Google
+              </button>
+
+              <p class="base-txt">
+                Become a Blogga?
+                <a href="./write-for-us.html" class="signup-link">
+                  Write For Us</a
+                >
+              </p>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <!--  -->
+    <!-- LOGIN MODAL END-->
 
     <main>
      <section class="first-container">
         <p>Hello</p>
-        <h3>Hamzah</h3>
+        <h3>{{request.user}}</h3>
         <div class="first-container-links">
             <a href="">MY SETTINGS</a>
             <a href=""> MY BOOKMARKS (0)</a>
@@ -269,36 +169,61 @@
       </div>
 
      <!-- MIDDLE SECTION STARTS CONTENT 1-->
+     {% for post in posts %}
+     <!-- <div>
+         {% for tag in post.tags.all %}
+         tags: #{{tag}}
+         {% endfor %}
+         title: {{post.title}} <br>,
+         category: {{post.category}},<br>
+         author: {{post.author.get_full_name}} <br>
+         {{post.description}}
+          <a href="{% url 'post:post_detail' post.slug %}">
+                 <img src="{{ post.image.url }}" alt="Lights" style="height:20%;width:20%">
+
+
+
+               </a>
+         <a href="{% url 'post:post_detail' post.slug %}">full post</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'post:post_update' post.slug %}">update post</a>
+      <a href="{% url 'post:post_delete' post.slug %}">delete post</a>
+      {% endif %}
+       </div> -->
+
+      <div>
 
       <div  class="middle-container">
       <div class="middle-section">
        <div class="middle-image">
-         <a href=""><img src="img/King-of-thieves.svg" alt="lord-of-rings-img"></a>
-       </div>
+         <!-- <a href=""><img src="{% static "./img/King-of-thieves.svg" %}" alt="lord-of-rings-img"></a> -->
+         <a href="{% url 'post:post_detail' post.slug %}">
+          <img src="{{ post.image.url }}" alt="Lights" >
+          </a>
+          <!-- style="height:20%;width:20%" -->
+        </div>
        <div class="middle-content">
-         <a href="">Review: ‘King of thieves’
-          Wants You To Remember The Magic And Allure Of Indegenous Movies`</a>
-             <p>Ultimately, King of Thieves is a great Yoruba epic thriller with enough drama,
-              twists, and nostalgia to make you remember the magic and allure. </p>
+         <a href="">Review: {{post.title}}</a>
+             <p>{{post.description}} </p>
               <div class="status-section" id="status1">
                 <p class="status-text">STATUS</p>
-                 <p class="published-text">PUBLISHED
+                 <p class="published-text">{{post.status}}
                   <i class="fa-solid fa-angle-down"></i></p>
                </div>
 
                <div class="status-section2" id="icon-right1">
-                <p class="edit-icon"><i class="bi bi-pencil"></i>&nbsp; Edit</p>
-                <p class="delete-icon"><i class="fa-regular fa-trash-can"></i>&nbsp; Delete</p>
+                <p class="edit-icon"><i class="bi bi-pencil"></i>&nbsp; <a href="{% url 'post:post_update' post.slug %}">Edit</a></p>
+                <p class="delete-icon"><i class="fa-regular fa-trash-can"></i>&nbsp; <a href="{% url 'post:post_delete' post.slug %}">Delete</a></p>
                </div>
        </div>
          <hr class="hr-line"/>
       </div>
-
+      {% endfor %}
       <!-- MIDDLE SECTION STARTS CONTENT 2-->
 
-      <div class="middle-section">
+      <!-- <div class="middle-section">
          <div class="middle-image">
-           <a href=""><img src="img/lord-of-rings-img.svg" alt="lord-of-rings-img"></a>
+           <a href=""><img src="{% static './img/lord-of-rings-img.svg' %}" alt="lord-of-rings-img"></a>
          </div>
          <div class="middle-content">
            <a href="">The Lord of the Rings: The Rings of Power recap: Not all who wander are lost</a>
@@ -316,12 +241,10 @@
          </div>
            <hr class="hr-line"/>
         </div>
-
-     <!-- MIDDLE SECTION STARTS CONTENT 3-->
-
+      MIDDLE SECTION STARTS CONTENT 3
       <div class="middle-section">
          <div class="middle-image">
-           <a href=""><img src="img/Ayinla-review.svg" alt="lord-of-rings-img"></a>
+           <a href=""><img src="{% static 'img/Ayinla-review.svg' %}" alt="lord-of-rings-img"></a>
          </div>
          <div class="middle-content">
            <a href="">'Ayinla' Review: Tunde Kelani's Movie Worth The Hype Thanks To Adedimeji Lateef's Singular Performanced</a>
@@ -339,12 +262,10 @@
          </div>
            <hr class="hr-line"/>
         </div>
-
-        <!-- MIDDLE SECTION STARTS CONTENT 4-->
-
+        <!-- MIDDLE SECTION STARTS CONTENT 4
       <div class="middle-section">
         <div class="middle-image">
-          <a href=""><img src="img/Asake.svg" alt="lord-of-rings-img"></a>
+          <a href=""><img src="{% static 'img/Asake.svg' %}" alt="lord-of-rings-img"></a>
         </div>
         <div class="middle-content">
           <a href="">Asake Sets A New Billboard Record</a>
@@ -363,10 +284,8 @@
                 </div>
         </div>
        </div>
-
-
       </div>
-    </div>
+    </div> -->
       <!--This is the Div that carries/ends the middle section content-->
   </div>
 
@@ -386,13 +305,13 @@
 <section class="page-num">
   <hr class="hr-page-num"/>
   <div class="page-num-content">
-     <a href="#" class="page-btn start-page"><img src="img/less-than.svg" alt=""></a>
+     <a href="#" class="page-btn start-page"><img src="{% static './img/less-than.svg' %}" alt=""></a>
      <a href="#" class="page-btn active">1</a>
      <a href="#" class="page-btn prev-page">2</a>
      <a href="#" class="page-btn">3</a>
      <a href="" class="page-btn">4</a>
      <a href="" class="page-btn">5</a>
-     <a href="" class="page-btn end-page"><img src="img/Greater-than.svg" alt=""></a>
+     <a href="" class="page-btn end-page"><img src="{% static './img/Greater-than.svg' %}" alt=""></a>
   </div>
 </section>
 
@@ -409,7 +328,7 @@
   <div class="writers-content-container">
 
      <div class="writers-content">
-    <img src="img/Constance1.svg" alt="Constance1">
+    <img src="{% static './img/Constance1.svg' %}" alt="Constance1">
     <p class="para1">Constance Wu Says Chris Pratt Was 'So Supportive' as
       She Returned to Work After Giving Birth</p>
     <div class="post-by">
@@ -419,7 +338,7 @@
      </div>
 
      <div class="writers-content">
-      <img src="img/Contance2.svg" alt="Constance2">
+      <img src="{% static './img/Contance2.svg' %}" alt="Constance2">
     <p class="para1">Constance Wu Talks About Her Baby Girl's 'Little Blue Butt': 'It's Very Special'</p>
     <div class="post-by">
       <p class="post-by-bolder" id="post-date">By Amara</p>
@@ -428,7 +347,7 @@
 
      </div>
      <div class="writers-content">
-      <img src="img/Constance3.svg" alt="Constance3">
+      <img src="{% static './img/Constance3.svg' %}" alt="Constance3">
       <p class="para1">Constance Wu Says She Attempted Suicide After
         'Fresh Off the Boat' Twitter Drama: 'Almost Lost My Life'</p>
       <div class="post-by">
@@ -474,55 +393,9 @@
     </main>
     <!-- FOOTER START-->
     <!--  -->
-    <footer class="main_footer">
-      <div class="footer_top">
-        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
-        <ul>
-          <li><a href="#">ADVERTISE</a></li>
-          <li><a href="./write-for-us.html">WRITE FOR US</a></li>
-          <li><a href="./category-page.html">CATEGORIES</a></li>
-          <li>
-            <a href="./index.html"
-              ><img
-                src="./img/logo_resources/Favicon_White.png"
-                alt="Blogga Icon"
-            /></a>
-          </li>
-          <li><a href="./archive.html">ARCHIVES</a></li>
-          <li><a href="./termsofservice.html">TERMS OF SERVICE</a></li>
-          <li><a href="./privacypolicy.html">PRIVACY</a></li>
-        </ul>
-      </div>
-
-      <div class="footer_middle">
-        <a href="#">
-          <i class="fa-brands fa-facebook"></i>&ThinSpace;
-          <span>FACEBOOK</span> </a
-        ><a href="#"
-          ><i class="fa-brands fa-twitter"></i>&ThinSpace;
-          <span>TWITTER</span> </a
-        ><a href="#"
-          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace;
-          <span>LINKEDIN</span> </a
-        ><a href="#"
-          ><i class="fa-brands fa-youtube"></i>&ThinSpace;
-          <span>YOUTUBE</span></a
-        ><a href="#"
-          ><i class="fa-brands fa-instagram"></i>&ThinSpace;
-          <span>INSTAGRAM</span> </a
-        ><a href="#"
-          ><i class="fa-brands fa-pinterest"></i>&ThinSpace;
-          <span>PINTEREST</span>
-        </a>
-      </div>
-
-      <div class="footer_bottom">
-        <p>© 2022 The Blogga Team All Rights Reserved</p>
-        <a href="#">Site Map</a>
-      </div>
-    </footer>
-    <!--  -->
+    {% include "post/footer.html" %}    <!--  -->
     <!-- FOOTER END-->
-    <script src="./index.js"></script>
+    <script src="{% static './js/index.js' %}"></script>
+
   </body>
 </html>

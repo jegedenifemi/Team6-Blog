@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Blogga | Change Password </title>
-    <link rel="stylesheet" href="change-pass2.css" />
+    <link rel="stylesheet" href="{% static './css/change-pass2.css'%}" />
+    <link rel="stylesheet" href="{% static './css/resetpass.css'%}" />
      <!-- FAVICONS -->
     <link
     rel="shortcut icon"
-    href="./img/logo_resources/Favicon_White.png"
+    href="{% static './img/logo_resources/Favicon_White.png'%}"
     type="image/x-icon"
     id="fav-white"
   />
   <link
     rel="shortcut icon"
-    href="./img/logo_resources/Favicon.png"
+    href="{% static './img/logo_resources/Favicon.png'%}"
     type="image/x-icon"
     id="fav-green"
   />
@@ -53,14 +54,14 @@
       <div class="left-section">
         <div>
           <img
-            src="img/change-pass-shape1.svg"
+            src="{% static './img/change-pass-shape1.svg'%}"
             alt="change-pass-shape1"
             class="shape1"
           />
         </div>
         <div>
           <img
-            src="img/change-pass-img.svg"
+            src="{% static './img/change-pass-img.svg'%}"
             alt="change-pass-img"
             class="pass-img"
           />
@@ -69,7 +70,7 @@
       <div class="image-section-mobile">
         <img src="" alt="" />
         <img
-          src="img/Mobile Change Password.png"
+          src="{% static './img/Mobile Change Password.png'%}"
           alt="Mobile"
           class="mobile-img"
         />
@@ -77,7 +78,7 @@
       <div class="right-section">
         <div class="form-content">
           <div class="form-container">
-            <img src="img/close-icon.png" alt="close-icon" onclick="hideLoginModal()"/>
+            <img src="{% static './img/close-icon.png'%}" alt="close-icon" onclick="hideLoginModal()"/>
             <h3>Change Password?</h3>
             <p class="input-pass">Input your new password</p>
             <div class="password-eye">
@@ -99,6 +100,67 @@
     <section class="bottom-shape">
       <img src="" alt="" />
     </section>
-    <script src="./index.js"></script>
+
+    <!--  RESET PASSWORD MODAL START-->
+    <!--  -->
+    <main>
+      <div class="reset-password-modal">
+        <div class="container">
+          <div class="content">
+            <head>
+              <h2 onclick="hideResetModal()">
+                Blogga
+                <span>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp;<i
+                    class="fa-solid fa-xmark login-modal-close"
+                    style="cursor: pointer"
+                  ></i
+                ></span>
+              </h2>
+              <br />
+            </head>
+            <h4>Reset your Blogga password</h4>
+            <br />
+            <p>
+              Hi {Name}<br /><br />You indicated interest to change your
+              password. If this is not you click <a href="#">here.</a>
+              <br /><br />
+              If this is you, click on the button below to proceed with
+              resetting your password.
+            </p>
+            <br /><br />
+
+            <button class="btn">Reset Password</button> <br /><br /><br />
+            <h5>
+              You are receiving this email because a password reset was
+              requested for your account
+            </h5>
+            <br />
+
+            <footer>
+              <p>Copyright (c) 2022 Blogga. All rights reserved</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--  -->
+    <!-- RESET PASSWORD MODAL END-->
+
+    <script src="{% static './js/index.js'%}"></script>
+    <script>
+      // Password Reset Modal
+      function hideResetModal() {
+        let resetModal = document.querySelector(".reset-password-modal");
+        resetModal.style.display = "none";
+      }
+      function showResetModal() {
+        let resetModal = document.querySelector(".reset-password-modal");
+        resetModal.style.display = "block";
+      }
+    </script>
   </body>
 </html>

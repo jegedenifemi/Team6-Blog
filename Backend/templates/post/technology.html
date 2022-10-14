@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogga | Technology</title>
-    <link rel="stylesheet" href="css/category-page.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static './css/category-page.css'%}">
+    <link rel="stylesheet" href="{% static './css/style.css'%}" />
+    <link rel="stylesheet" href="{% static './css/login.css'%}" />
 
     <!-- FAVICONS -->
     <link
       rel="shortcut icon"
-      href="./img/logo_resources/Favicon_White.png"
+      href="{% static './img/logo_resources/Favicon_White.png'%}"
       type="image/x-icon"
       id="fav-white"
     />
     <link
       rel="shortcut icon"
-      href="./img/logo_resources/Favicon.png"
+      href="{% static './img/logo_resources/Favicon.png'%}"
       type="image/x-icon"
       id="fav-green"
     />
@@ -39,6 +40,120 @@
 
   </head>
   <body>
+
+<!-- LOGIN MODAL START-->
+    <!--  -->
+    <div class="login-modal">
+      <section class="login-body">
+        <img
+          src="{% static './img/Login/mobile_blob1.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob1"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob2.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob2"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob3.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob3"
+        />
+
+        <main class="login-main">
+          <div class="left-div">
+            <img
+              src="{% static './img/Login/login_top_blob.png'%}"
+              alt="blob design "
+              class="top_blob"
+            />
+            <img
+              src="{% static './img/Login/login_main_image.png'%}"
+              alt="welcome image"
+            />
+            <img
+              src="{% static './img/Login/login_bottom_blob.png'%}"
+              alt="blob design "
+              class="btm_blob"
+            />
+          </div>
+
+          <div class="right-div">
+            <i
+              class="fa-solid fa-xmark login-modal-close"
+              onclick="hideLoginModal()"
+            ></i>
+            <div class="right-div-container">
+              <h3 class="head-txt">Welcome Back : )</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="login-username"
+                required
+              />
+
+              <br />
+
+              <div class="password-eye">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                  required
+                />
+                <i class="bi bi-eye" onclick="passwordToggle()"></i>
+                <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot-password"
+                >Forgot Password?</a
+              >
+              <!-- <br /> -->
+
+              <label for="remember-me" class="remem-label">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />&nbsp; <small>Remember Me</small></label
+              >
+              <br />
+
+              <button type="button" class="login-button">Log In</button>
+
+              <div class="or-separator">
+                <hr />
+                <p>OR</p>
+                <hr />
+              </div>
+
+              <button type="button" class="continue-button">
+                <img
+                  src="{% static './img/google.png'%}"
+                  alt=""
+                  class="google"
+                />
+                &nbsp; Continue With Google
+              </button>
+
+              <p class="base-txt">
+                Become a Blogga?
+                <a href="./write-for-us.html" class="signup-link">
+                  Write For Us</a
+                >
+              </p>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <!--  -->
+    <!-- LOGIN MODAL END-->
+
+
+
     <!-- HEADER & MOBILE MENU  START-->
     <!--  -->
     <header>
@@ -69,7 +184,7 @@
 
       <div class="nav_outer">
         <!-- <a href="./index.html"
-          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+          ><img src="{% static './img/logo_resources/Favicon.png'%}" alt="Blogga Logo Icon"
         /></a> -->
 
         <div class="nav_inner">
@@ -141,20 +256,20 @@
               </div>
 
               <img
-                src="./img/home_page/author_hamzy.png"
+                src="{% static './img/home_page/author_hamzy.png'%}"
                 alt="profile picture"
               />
             </div>
           </div>
 
           <a href="./index.html"
-            ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
+            ><img src="{% static './img/logo_resources/Favicon.png'%}" alt="Blogga Logo Icon"
           /></a>
 
           <nav>
             <a href="./index.html"
               ><img
-                src="./img/logo_resources/Favicon_White.png"
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
                 alt="Blogga Logo"
             /></a>
             <ul>
@@ -179,7 +294,7 @@
                   MORE
                   <span class="dropdown_arrow"
                     ><img
-                      src="./img/home_page/dropdown_arrow.png"
+                      src="{% static './img/home_page/dropdown_arrow.png'%}"
                       alt="dropdown"
                   /></span>
                 </label>
@@ -207,7 +322,7 @@
               Subscribe
             </button>
 
-            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
+            <img src="{% static './img/home_page/author_hamzy.png'%}" alt="profile picture" />
           </div>
         </div>
       </div>
@@ -257,7 +372,7 @@
          <div>
          <div class="left-section">
           <div class="left-image">
-            <a href=""><img src="img/Tech1.svg" alt="Davido"></a>
+            <a href=""><img src="{% static './img/Tech1.svg'%}" alt="Davido"></a>
           </div>
           <div class="left-content">
             <a href="">Samsung Galaxy Z Flip 4 and Z Fold 4 Sales are Below the Expectations</a>
@@ -275,7 +390,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Tech2.svg" alt="harmattan"></a>
+              <a href=""><img src="{% static './img/Tech2.svg'%}" alt="harmattan"></a>
             </div>
             <div class="left-content">
               <a href="">Tesla’s Humanoid Robot Optimus Might Debut On September 30</a>
@@ -293,7 +408,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Tech3.svg" alt="Burberry"></a>
+              <a href=""><img src="{% static './img/Tech3.svg'%}" alt="Burberry"></a>
             </div>
             <div class="left-content">
               <a href="">Kioxia Released The World’s First 2TB SD Memory Card</a>
@@ -312,7 +427,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Tech4.svg" alt="The-styling"></a>
+              <a href=""><img src="{% static './img/Tech4.svg'%}" alt="The-styling"></a>
             </div>
             <div class="left-content">
               <a href="">OnePlus 11 Series Will be Powered by Snapdragon 8 Gen 2</a>
@@ -331,7 +446,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Tech5.svg" alt="lord-of-rings-img"></a>
+              <a href=""><img src="{% static './img/Tech5.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">Nvidia GeForce RTX 40: Three New Graphics Cards Presented </a>
@@ -350,7 +465,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Tech6.svg" alt="lord-of-rings-img"></a>
+              <a href=""><img src="{% static './img/Tech6.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">Vivo X Fold+ Will Have a Red Variant Called ‘Huaxia Red’ </a>
@@ -369,7 +484,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Tech7.svg" alt="lord-of-rings-img"></a>
+              <a href=""><img src="{% static './img/Tech7.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">OnePlus 10 Pro Receives Stable Version of Android 13</a>
@@ -388,7 +503,7 @@
 
          <div class="left-section">
             <div class="left-image">
-             <a href=""><img src="img/Tech8.svg" alt="lord-of-rings-img"></a>
+             <a href=""><img src="{% static './img/Tech8.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">Venice Film Festival: The best fashion on show </a>
@@ -407,7 +522,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Tech9.svg" alt="lord-of-rings-img"></a>
+              <a href=""><img src="{% static './img/Tech9.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">iPhone 14 Pro Crash Detection Feature Tested by an YouTuber (Video)</a>
@@ -425,7 +540,7 @@
 
          <div class="left-section">
             <div class="left-image">
-              <a href=""><img src="img/Tech10.svg" alt="lord-of-rings-img"></a>
+              <a href=""><img src="{% static './img/Tech10.svg'%}" alt="lord-of-rings-img"></a>
             </div>
             <div class="left-content">
               <a href="">The Best Tech of IFA 2022 </a>
@@ -745,7 +860,7 @@
         <section class="page-num">
              <hr class="category-hr"/>
              <div class="page-num-content">
-              <a href="#" class="page-btn start-page"><img src="img/less-than.svg" alt=""></a>
+              <a href="#" class="page-btn start-page"><img src="{% static './img/less-than.svg'%}" alt=""></a>
               <a href="#" class="page-btn">1</a>
               <a href="#" class="page-btn prev-page">...</a>
               <a href="#" class="page-btn">6</a>
@@ -759,7 +874,7 @@
               <a href="" class="page-btn" id="hide">14</a>
               <a href="" class="page-btn next-page" id="hide">...</a>
               <a href="" class="page-btn" id="hide">458</a>
-              <a href="" class="page-btn end-page"><img src="img/Greater-than.svg" alt=""></a> &nbsp;  &nbsp;
+              <a href="" class="page-btn end-page"><img src="{% static './img/Greater-than.svg'%}" alt=""></a> &nbsp;  &nbsp;
            </div>
         </section>
 
@@ -793,7 +908,7 @@
     <!--  -->
     <footer class="main_footer">
       <div class="footer_top">
-        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
+        <img src="{% static './img/logo_resources/Favicon_White.png'%}" alt="Blogga Icon" />
         <ul>
           <li><a href="#">ADVERTISE</a></li>
           <li><a href="./write-for-us.html">WRITE FOR US</a></li>
@@ -801,7 +916,7 @@
           <li>
             <a href="./index.html"
               ><img
-                src="./img/logo_resources/Favicon_White.png"
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
                 alt="Blogga Icon"
             /></a>
           </li>
@@ -840,6 +955,6 @@
     </footer>
     <!--  -->
     <!-- FOOTER END-->
-    <script src="./index.js"></script>
+    <script src="{% static './js/index.js'%}"></script>
   </body>
 </html>
