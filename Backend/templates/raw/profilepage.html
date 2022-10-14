@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogga|Profile Page</title>
-    <!-- FAVICONS -->
+  <!-- FAVICONS -->
     <link
       rel="shortcut icon"
-      href="./img/logo_resources/Favicon_White.png"
+      href="{% static './img/logo_resources/Favicon_White.png'%}"
       type="image/x-icon"
       id="fav-white"
     />
     <link
       rel="shortcut icon"
-      href="./img/logo_resources/Favicon.png"
+      href="{% static './img/logo_resources/Favicon.png'%}"
       type="image/x-icon"
       id="fav-green"
     />
@@ -45,17 +45,141 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/profilepage.css">
-</head>
-<body>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="{% static './css/style.css'%}" />
+    <link rel="stylesheet" href="{% static './css/login.css'%}" />
+    <link rel="stylesheet" href="{% static './css/profilepage.css'}%">
+  </head>
+
+  <body class="home_body">
+    <!-- SCROLL TO TOP BUTTON -->
+    <a href="{% '#top'%}" class="to_top"
+      ><i class="fa-solid fa-arrow-up"></i
+    ></a>
+    <!-- SCROLL TO TOP BUTTON -->
+
+    <!-- LOGIN MODAL START-->
+    <!--  -->
+    <div class="login-modal">
+      <section class="login-body">
+        <img
+          src="{% static './img/Login/mobile_blob1.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob1"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob2.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob2"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob3.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob3"
+        />
+
+        <main class="login-main">
+          <div class="left-div">
+            <img
+              src="{% static './img/Login/login_top_blob.png'%}"
+              alt="blob design "
+              class="top_blob"
+            />
+            <img
+              src="{% static './img/Login/login_main_image.png'%}"
+              alt="welcome image"
+            />
+            <img
+              src="{% static './img/Login/login_bottom_blob.png'%}"
+              alt="blob design "
+              class="btm_blob"
+            />
+          </div>
+
+          <div class="right-div">
+            <i
+              class="fa-solid fa-xmark login-modal-close"
+              onclick="hideLoginModal()"
+            ></i>
+            <div class="right-div-container">
+              <h3 class="head-txt">Welcome Back : )</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="login-username"
+                required
+              />
+
+              <br />
+
+              <div class="password-eye">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                  required
+                />
+                <i class="bi bi-eye" onclick="passwordToggle()"></i>
+                <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot-password"
+                >Forgot Password?</a
+              >
+              <!-- <br /> -->
+
+              <label for="remember-me" class="remem-label">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />&nbsp; <small>Remember Me</small></label
+              >
+              <br />
+
+              <button type="button" class="login-button">Log In</button>
+
+              <div class="or-separator">
+                <hr />
+                <p>OR</p>
+                <hr />
+              </div>
+
+              <button type="button" class="continue-button">
+                <img
+                  src="{% static './img/google.png'%}"
+                  alt=""
+                  class="google"
+                />
+                &nbsp; Continue With Google
+              </button>
+
+              <p class="base-txt">
+                Become a Blogga?
+                <a href="./write-for-us.html" class="signup-link">
+                  Write For Us</a
+                >
+              </p>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <!--  -->
+    <!-- LOGIN MODAL END-->
+
+    <!-- HEADER & MOBILE MENU  START-->
+    <!--  -->
     <header>
+      <!-- top green banner -->
       <div class="banner">
         <div class="banner_wrapper">
           <div class="banner_left">
             <p>Have a story to share?</p>
-            <button onclick="window.location.href='https://google.com';">
+
+            <button onclick="window.location.href='./contact-us.html';">
               Contact Us
             </button>
           </div>
@@ -72,11 +196,12 @@
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
+      <!-- top green banner -->
 
       <div class="nav_outer">
-        <a href="./index.html"
-          ><img src="./img/logo_resources/Favicon.png" alt="Blogga Logo Icon"
-        /></a>
+        <!-- <a href="./index.html"
+          ><img src="{% static './img/logo_resources/Favicon.png'%}" alt="Blogga Logo Icon"
+        /></a> -->
 
         <div class="nav_inner">
           <div class="hamburger">
@@ -85,7 +210,8 @@
           </div>
 
           <div class="hamburger_close">
-            <span class="span1"></span><span class="span2"></span>
+            <!-- <span class="span1"></span><span class="span2"></span> -->
+            <i class="fa-solid fa-xmark login-modal-close"></i>
           </div>
 
           <div class="mobile_menu">
@@ -121,12 +247,14 @@
             </div>
 
             <div class="mobile_menu_links">
-              <p>LINKS</p>
+              <p>MORE</p>
               <div class="mobile_menu_links_top">
-                <a href="#">TEAM</a> <a href="#">ARCHIVE</a>
+                <a href="./ourteam.html">TEAM</a>
+                <a href="./archive.html">ARCHIVE</a>
               </div>
               <div class="mobile_menu_links_bottom">
-                <a href="#">WRITE FOR US</a> <a href="#">CONTACT</a>
+                <a href="./write-for-us.html">WRITE FOR US</a>
+                <a href="./contact-us.html">CONTACT</a>
               </div>
             </div>
 
@@ -144,16 +272,22 @@
               </div>
 
               <img
-                src="./img/home_page/author_hamzy.png"
+                src="{% static './img/home_page/author_hamzy.png'%}"
                 alt="profile picture"
               />
             </div>
           </div>
 
+          <a href="./index.html"
+            ><img
+              src="{% static './img/logo_resources/Favicon.png'%}"
+              alt="Blogga Logo Icon"
+          /></a>
+
           <nav>
             <a href="./index.html"
               ><img
-                src="./img/logo_resources/Favicon_White.png"
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
                 alt="Blogga Logo"
             /></a>
             <ul>
@@ -169,25 +303,26 @@
               <li><a href="#" class="nav_health">HEALTH</a></li>
               <li><a href="#" class="nav_politics">POLITICS</a></li>
               <li><a href="#" class="nav_edu">EDUCATION</a></li>
-              <!-- <li><a href="#" class="nav_food">FOOD</a></li> -->
+              <li><a href="#" class="nav_food">FOOD</a></li>
               <li><a href="#" class="nav_art">ART</a></li>
               <li>
+                <input type="checkbox" name="more_check" id="more_check" />
+
                 <label for="more_check" class="more">
                   MORE
                   <span class="dropdown_arrow"
                     ><img
-                      src="./img/home_page/dropdown_arrow.png"
+                      src="{% static './img/home_page/dropdown_arrow.png'%}"
                       alt="dropdown"
                   /></span>
                 </label>
-                <input type="checkbox" name="more_check" id="more_check" />
 
                 <div class="more_dropdown">
                   <ul>
-                    <li><a href="#">TEAM</a></li>
-                    <li><a href="#">WRITE FOR US</a></li>
-                    <li><a href="#">ARCHIVE</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="./ourteam.html">TEAM</a></li>
+                    <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+                    <li><a href="./archive.html">ARCHIVE</a></li>
+                    <li><a href="./contact-us.html">CONTACT</a></li>
                   </ul>
                 </div>
               </li>
@@ -205,11 +340,16 @@
               Subscribe
             </button>
 
-            <img src="./img/home_page/author_hamzy.png" alt="profile picture" />
+            <img
+              src="{% static './img/home_page/author_hamzy.png'%}"
+              alt="profile picture"
+            />
           </div>
         </div>
       </div>
     </header>
+    <!--  -->
+    <!-- HEADER & MOBILE MENU END-->
     <main>
         <div class="top-container">
             <p>Hello</p>
@@ -225,7 +365,7 @@
             <div class="first-section">
                 <div><h3>Account</h3></div>
                 <div class="first-section1">
-                    <img src="./img/Hamzah head.svg" alt="">
+                    <img src="{% static './img/Hamzah head.svg'%}" alt="">
                     <button class="btn-edit">Edit Picture</button>
                 </div>
             </div>
@@ -281,24 +421,31 @@
           <button type="submit" class="subscribe button">Subscribe</button>
         </form>
       </section>
+      <!--  -->
+      <!-- SUBSCRIBE SECTION END-->
     </main>
 
+    <!-- FOOTER START-->
+    <!--  -->
     <footer class="main_footer">
       <div class="footer_top">
-        <img src="./img/logo_resources/Favicon_White.png" alt="Blogga Icon" />
+        <img
+          src="{% static './img/logo_resources/Favicon_White.png'%}"
+          alt="Blogga Icon"
+        />
         <ul>
           <li><a href="#">ADVERTISE</a></li>
-          <li><a href="#">WRITE FOR US</a></li>
-          <li><a href="#">CATEGORIES</a></li>
+          <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+          <li><a href="./ourteam.html">TEAM</a></li>
           <li>
             <a href="./index.html"
               ><img
-                src="./img/logo_resources/Favicon_White.png"
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
                 alt="Blogga Icon"
             /></a>
           </li>
           <li><a href="./archive.html">ARCHIVES</a></li>
-          <li><a href="#">TERMS OF SERVICE</a></li>
+          <li><a href="./termsofservice.html">TERMS OF SERVICE</a></li>
           <li><a href="./privacypolicy.html">PRIVACY</a></li>
         </ul>
       </div>
@@ -330,6 +477,8 @@
         <a href="#">Site Map</a>
       </div>
     </footer>
+    <!--  -->
+    <!-- FOOTER END-->
 
     
 </body>
