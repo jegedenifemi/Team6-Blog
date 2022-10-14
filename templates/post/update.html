@@ -1,0 +1,274 @@
+<!DOCTYPE html >
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c751151e16.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static './css/createpost.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Merriweather:wght@300;400&family=Open+Sans:wght@300;400;500;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+rel="stylesheet"
+/>
+</head>
+<body>
+    <header>
+        <div class="banner">
+          <div class="banner_wrapper">
+            <div class="banner_left">
+              <a href="{% url 'signup' %}">Have a story to share?</a>
+              <button onclick="window.location.href='https://google.com';">
+                Contact Us
+              </button>
+            </div>
+  
+            <div class="banner_search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" name="" id="" placeholder="Search" />
+            </div>
+          </div>
+  
+          <div class="banner_socials">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+  
+        <div class="nav_outer">
+          <img src='{% static "./img/logo_resources/Favicon.png" %}' alt="Blogga Logo" />
+  
+          <div class="nav_inner">
+            <div class="hamburger">
+              <span class="span1"></span><span class="span2"></span
+              ><span class="span3"></span>
+            </div>
+  
+            <nav>
+              <img
+                src='{% static "./img/logo_resources/Favicon_White.png" %}'
+                alt="Blogga Logo"
+              />
+              <ul>
+                <li><a href="#">FASHION</a></li>
+                <li><a href="#">ENTERTAINMENT</a></li>
+                <li><a href="./technology.html">TECHNOLOGY</a></li>
+                <li><a href="#">HEALTH</a></li>
+                <li><a href="#">POLITICS</a></li>
+                <li><a href="#">EDUCATION</a></li>
+                <li><a href="#">FOOD</a></li>
+                <li><a href="#">ART</a></li>
+                <li>
+                  <a href="#" class="more">
+                    MORE
+                    <span class="dropdown_arrow"
+                      ><img
+                        src="{% static './img/home_page/dropdown_arrow.png' %}"
+                        alt="dropdown" /></span
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+  
+            <i class="fa-solid fa-magnifying-glass"></i>
+  
+            <div class="nav_btns">
+              <button
+                class="button"
+              >
+                Sign In
+              </button>
+              <button class="subscribe button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <h2>Tell your story</h2>
+    <div class="content">
+    <div class="Post">
+        <form method='post' enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                
+            
+                
+        <h3>Post Title</h3>
+        <!-- <textarea style="resize: none;" name="comment" class="posts" form="usrform" cols="40" rows="1" placeholder="Enter your text here"></textarea> -->
+        {{form.title}}
+        <h3>Post Tag <span>(Up to 5 tags)</span> </h3>
+        <!-- <textarea style="resize: none;" name="comment" form="usrform" cols="40" rows="1" placeholder="Enter your text here"></textarea> -->
+        {{form.tags}}
+        <h3>How would you categorize</h3>
+        <!-- <select name="cars" id="cars" class="">
+            <h3>How would you categorize this post?</h3>
+            <option value=""  placeholder="Entertainment">Entertainment</option>
+        <option value="volvo" class="text-sm">Fashion</option>
+        <option value="saab" class="text-sm">Technology</option>
+        <option value="mercedes" class="text-sm">Health</option>
+        <option value="volvo" class="text-sm">Politics</option>
+        <option value="saab" class="text-sm">Education</option>
+        <option value="mercedes" class="text-sm">Food</option>
+        
+        </select> -->
+        {{form.category}}
+        <h3>Meta Description</h3>
+        <!-- <textarea style="resize: none;" name="comment" class="meta" form="usrform" placeholder="Give a short sumary about your text"></textarea><br> -->
+        {{form.description}}
+    </div>
+        
+    <div class="aside">
+        <h4>Snippet Image</h4>
+        <div class="snippet">
+          <div class="snipimg">
+            <img src="{% static './img/log.png' %}" alt="">
+          </div>
+            <div class="snippet-text">
+                <h5>Drop file here</h5>
+                <p>OR</p>
+                <!-- <button>Browse</button> -->
+                {{form.image}}
+            </div>
+        </div>
+        <div class="snippet-review">
+            <h4>Snippet Image</h4>
+            <div class="snippet-box">
+              
+                <img src="{% static './img/Rectangle 76.png' %}" alt="">
+                <div class="snippet-box-test">
+                    <h5>Your title goes here</h5>
+                    <p>Your meta description goes here</p>
+                    
+    
+                </div>
+            </div>
+
+        </div><br>
+    </div>
+  </div>
+    <div class="description">
+        <h4>Full description</h4><br>
+        <!-- <textarea style="resize: none;" placeholder="Add a comment.." class="descriptions" rows="2" cols="40" name="comment" form="usrform" ></textarea> -->
+    {{form.contents|safe}}
+    </div><br>
+    {{form.status}}
+    <div class="comments">
+        <h4>Comment</h4>
+        <input type="checkbox" id="check" name="check" value="check">
+<label for="disable" class="disable">Disable comments for this post</label>
+        <button type="submit">submit</button>
+        {{form.errors}}
+        </form>
+    </div>
+    <section class="newsletter">
+        <h2>STAY UPDATED</h2>
+
+        <p>
+          Get the latest creative news from Blogga about Art , Fashion,
+          Entertainment and lots more.
+        </p>
+
+        <form action="#">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Address"
+          />
+          <button type="submit" class="subscribe button">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="main_footer">
+      <div class="footer_top">
+        <img src="{% static './img/logo_resources/Favicon_White.png' %}" alt="Blogga Icon" />
+        <ul>
+          <li>ADVERTISE</li>
+          <li>WRITE FOR US</li>
+          <li>CATEGORIES</li>
+          <li>
+            <img
+              src="{% static './img/logo_resources/Favicon_White.png' %}"
+              alt="Blogga Icon"
+            />
+          </li>
+          <li>ARCHIVES</li>
+          <li>TERMS OF SERVICE</li>
+          <li>PRIVACY</li>
+        </ul>
+      </div>
+
+      <div class="footer_middle">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>&ThinSpace;
+          <span>FACEBOOK</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-twitter"></i>&ThinSpace;
+          <span>TWITTER</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace;
+          <span>LINKEDIN</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-youtube"></i>&ThinSpace;
+          <span>YOUTUBE</span></a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace;
+          <span>INSTAGRAM</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace;
+          <span>PINTEREST</span>
+        </a>
+      </div>
+
+      <div class="footer_bottom">
+        <p>© 2022 The Blogga Team All Rights Reserved</p>
+        <a href="#">Site Map</a>
+      </div>
+    </footer>
+
+    
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="{% static './js/index.js' %}"></script>
+</body>
+</html>
+
+<!-- This returns an error which is raised by the post_detail, so it will be fixed later -->
+<!-- <form method='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    {{ contents | safe}}
+<button type="submit">submit</button>
+</form> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <form  method='post' enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {{ contents | safe}}
+            <button type='submit'>submit</button>
+        </form> 
+</body>
+</html> -->

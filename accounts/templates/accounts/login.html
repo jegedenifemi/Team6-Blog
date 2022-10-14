@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log in page</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <div class = 'username'>
+            <label for="username">Enter a Username</label><br>
+            <input type="text" name="username" id="username" placeholder="johnafariogun" min ='3' max ='25' required>
+            
+        </div>
+        <div class="password">
+            <label for="password"><p>Password</p></label>
+            <input type="password" name="password" id="password" placeholder="*******" min="7" required>
+       
+        </div><br>
+        <!-- {% for field in form %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      {% endfor %} -->
+     
+      <!-- Trying to debug this, it gets sent to the admin login  -->
+      {% if messages %}
+      {% for message in messages %}
+      {% if message.tags %}<div class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
+      {% endfor %}
+      {% endif %}
+        <div class="form-submit">
+            <input type="submit" value="Login">
+        </div><br>
+        <div class="sec-action">
+            <small>Don&apos;t have an account? <a href="{% url 'signup' %}">Sign Up     </a><a href="{%url 'password_reset'%}">Password reset</a></small>
+        </div>
+        
+    </form>
+</body>
+</html>

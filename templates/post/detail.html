@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c751151e16.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c751151e16.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static './css/postpage.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Merriweather:wght@300;400&family=Open+Sans:wght@300;400;500;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+rel="stylesheet"
+/>
+</head>
+<body>
+    <header>
+        <div class="banner">
+          <div class="banner_wrapper">
+            <div class="banner_left">
+              <a href="{% url 'signup' %}">Have a story to share?</a>
+              <button onclick="window.location.href='https://google.com';">
+                Contact Us
+              </button>
+            </div>
+  
+            <div class="banner_search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" name="" id="" placeholder="Search" />
+            </div>
+          </div>
+  
+          <div class="banner_socials">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+  
+        <div class="nav_outer">
+          <img src="{% static './img/logo_resources/Favicon.png' %}" alt="Blogga Logo" />
+  
+          <div class="nav_inner">
+            <div class="hamburger">
+              <span class="span1"></span><span class="span2"></span
+              ><span class="span3"></span>
+            </div>
+  
+            <nav>
+              <img
+                src="{% static './img/logo_resources/Favicon_White.png' %}"
+                alt="Blogga Logo"
+              />
+              <ul>
+                <li><a href="#">FASHION</a></li>
+                <li><a href="#">ENTERTAINMENT</a></li>
+                <li><a href="./technology.html">TECHNOLOGY</a></li>
+                <li><a href="#">HEALTH</a></li>
+                <li><a href="#">POLITICS</a></li>
+                <li><a href="#">EDUCATION</a></li>
+                <li><a href="#">FOOD</a></li>
+                <li><a href="#">ART</a></li>
+                <li>
+                  <a href="#" class="more">
+                    MORE
+                    <span class="dropdown_arrow"
+                      ><img
+                        src="{% static './img/home_page/dropdown_arrow.png' %}"
+                        alt="dropdown" /></span
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+  
+            <i class="fa-solid fa-magnifying-glass"></i>
+  
+            <div class="nav_btns">
+              <button
+                class="button"
+                type = 'button'
+              >
+              <a href="{% url 'login' %}">Sign In</a>
+              </button>
+              <button class="subscribe button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      
+    <main>
+        <div class="title">
+            <h5>HOME/ENTERTAINMENT/MOVIES</h5><br>
+        </div>
+       
+        <div class="content">
+            <div class="content-post">
+               <div class="content-header">
+                <!-- <h2>Constance Wu Says She Experienced 'Sexual Harassment and Intimidation' by Fresh Off the Boat Producer</h2> -->
+                <h2>{{post.title}}</h2>
+            </div>
+              
+               <!-- <p>Wu also clarified her 2019 tweet about the ABC show's renewal, explaining, "I wanted to have a fresh slate where I didn't have to start a show with all these memories of abuse"</p> -->
+               <p>{{post.description}}</p>
+               <div class="poster-details">
+                <img src="{% static './img/Ellipse 2 (1).png' %}" alt="">
+                <span>By <strong>{{post.author.first_name}}</strong> {{post.publish_on}}</span>
+               </div><br>
+               <div class="sksk">
+                <a href="{{ post.image.url }}">
+                    <img src="{{ post.image.url }}" alt="Lights">
+                  </a>
+              </div>
+               <p>{{post.contents | safe}} </p><br>
+            </div>
+            <div class="tag">
+                <h3>Popular Tags</h3>
+                <div class="tag-box">
+                    <a href="">Olamide</a>
+                    <a href="">Funke Akindele</a>
+                    <a href="">BB Naija</a>
+                    <a href="">Machala</a>
+                </div>
+                <div class="tag-box">
+                    <a href="">Odunlade</a>
+                    <a href="">MR Bean</a>
+                    <a href="">Wizkid</a>
+                    <a href="">Ariann</a>
+                    <a href="">Carter</a>
+                </div>
+                <div class="tag-box">
+                    <a href="">Kelvin Hart</a>
+                    <a href="">The Rock</a>
+                    <a href="">Jeniffer</a>
+                    <a href="">Nicki</a>
+                    <a href="">Depp</a>
+                </div>
+                <div class="tag-box">
+                    <a href="">Dragons</a>
+                    <a href="">Drama</a>
+                    <a href="">Mavin</a>
+                    <a href="">Dr Strange</a>
+                </div>
+                <div class="tag-box">
+                    <a href="">Netflix</a>
+                    <a href="">DJ Kaywise</a>
+                    <a href="">Falz</a>
+                    <a href="">Will Smith</a>
+                    <a href="">Amber</a>
+                </div>
+                <div class="tag-box">
+                    <a href="">Terminator</a>
+                    <a href="">Asake</a>
+                    <a href="">Justin</a>
+                    <a href="">Iyabo Ojo</a>
+                    <a href="">Fame</a>
+                </div>
+                <div class="tag-box">
+                    <a href="">GOAT</a>
+                    <a href="">OBO</a>
+                    <a href="">Lil Wayne</a>
+                    <a href="">Lil Nas</a>
+                    <a href="">Nasty Blaq</a>
+                </div>
+                <div class="tag-box">
+                    <a href="">Ayra starr</a>
+                    <a href="">Dax</a>
+                    <a href="">SZA</a>
+                    <a href="">Nancy Isime</a>
+                    <a href="">Amazon</a>
+                </div>
+                <div class="tag-box">
+                    <a href="">House of Dragons</a>
+                    <a href="">G.O.T</a>
+                    <a href="">Nino</a>
+                    <a href="">Tech-Phantoms</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="react">
+      <span><i class="fas fa-bookmark"></i><a href="{% url 'bookmarks_add' post.id %}">Bookmark</a></span>
+      <span><i class="fas fa-share-alt"></i>Share</span>
+      <span><i class="far fa-thumbs-up"></i>Like</span>
+    </div><br>
+    <article>
+        <h3>Comments</h3>
+        {% for comment in comments %}
+       
+        <hr>
+        
+        <div class="comment-box">
+            <div class="comment-profile">
+                <div class="comment-details">
+                    <div class="imag">
+                <img src="{% static './img/Vector.png' %}" alt=""></div>
+                <h5>{{comment.name}}</h5>
+            </div>
+                <div class="p">{{comment.publish}}</div>
+                
+                <div class="comment-response">
+               <i class="fas fa-reply"></i>
+                <span>Reply</span>
+            </div>
+            </div><br>
+
+            <div class="comment-post">
+                <p>{{comment.comment}}</p><br>
+            </div>
+
+            <div class="comment-reaction">
+                <span><i class="fas fa-share-alt"></i>Share</span>
+                <span><i class="far fa-thumbs-up"></i>Like</span>
+            </div><br>
+            {% empty %}
+        No comments
+        
+    {% endfor %}
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        
+            
+            <div class="comment-add">
+                <div class="imag">
+                    <img src="{% static './img/Ellipse 2 (1).png' %}" alt=""> 
+                </div>
+                {{commentForm.comment}}
+                {{commentForm.email}}
+                {{commentForm.name}}
+                    <button class="signin-btn">Sign In</button>
+                    <button class="signin-btn" type='submit'>Comment</button>
+            </div>
+            </div>
+        </form>
+    </article>
+   
+
+    <div class="related">
+        <div class="related-post">
+            <h3>RELATED POSTS</h3>
+        </div>
+        <div class="related-box">
+        <div class="related-gists">
+            <img src="{% static './img/Frame 2615.png' %}" alt="">
+            <p>Constance Wu Says Chris Pratt Was 'So Supportive' as She Returned to Work After Giving Birth</p>
+            <div class="related-details">
+                <p>By Amara <span >September 23 2022 12.33pm</span></p>
+                
+            </div>
+        </div>
+        <div class="related-gists">
+            <img src="{% static './img/Frame 2582 (1).png' %}" alt="">
+            <p>Constance Wu Talks About Her Baby Girl's 'Little Blue Butt': 'It's Very Special'</p><br>
+            <div class="related-details">
+                <p>By Amara <span>September 23 2022 12.33pm</span></p>
+               
+            </div>
+        </div>
+        <div class="related-gists">
+            <img src="{% static './img/Frame 2615 (1).png' %}" alt="">
+            <p>Constance Wu Says She Attempted Suicide After 'Fresh Off the Boat' Twitter Drama: 'Almost Lost My Life</p>
+            <div class="related-details">
+                <p>By Amara <span>September 23 2022 12.33pm</span></p>
+               
+            </div>
+        </div>
+        <div class="related-gists">
+            <img src="{% static './img/Frame 2615 (2).png' %}" alt="">
+            <p>Constance Wu Returns to Instagram After Being 'Off the Grid Recovering'</p><br>
+            <div class="related-details">
+                <p>By Amara<span>September 23 2022 12.33pm</span></p>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="tag1">
+      <h3>Popular Tags</h3>
+      <div class="tag-box1">
+          <a href="">Olamide</a>
+          <a href="">Funke Akindele</a>
+          <a href="">BB Naija</a>
+          <a href="">Machala</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Odunlade</a>
+          <a href="">MR Bean</a>
+          <a href="">Wizkid</a>
+          <a href="">Ariann</a>
+          <a href="">Carter</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Kelvin Hart</a>
+          <a href="">The Rock</a>
+          <a href="">Jeniffer</a>
+          <a href="">Nicki</a>
+          <a href="">Depp</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Dragons</a>
+          <a href="">Drama</a>
+          <a href="">Mavin</a>
+          <a href="">Dr Strange</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Netflix</a>
+          <a href="">DJ Kaywise</a>
+          <a href="">Falz</a>
+          <a href="">Will Smith</a>
+          <a href="">Amber</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Terminator</a>
+          <a href="">Asake</a>
+          <a href="">Justin</a>
+          <a href="">Iyabo Ojo</a>
+          <a href="">Fame</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">GOAT</a>
+          <a href="">OBO</a>
+          <a href="">Lil Wayne</a>
+          <a href="">Lil Nas</a>
+          <a href="">Nasty Blaq</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">Ayra starr</a>
+          <a href="">Dax</a>
+          <a href="">SZA</a>
+          <a href="">Nancy Isime</a>
+          <a href="">Amazon</a>
+      </div>
+      <div class="tag-box1">
+          <a href="">House of Dragons</a>
+          <a href="">G.O.T</a>
+          <a href="">Nino</a>
+          <a href="">Tech-Phantoms</a>
+      </div>
+  </div>
+</div>
+
+<hr><br>
+
+    <section class="newsletter">
+        <h2>STAY UPDATED</h2>
+
+        <p>
+          Get the latest creative news from Blogga about Art , Fashion,
+          Entertainment and lots more.
+        </p>
+
+        <form action="#">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Address"
+          />
+          <button type="submit" class="subscribe button">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="main_footer">
+      <div class="footer_top">
+        <img src="{% static './img/logo_resources/Favicon_White.png' %}" alt="Blogga Icon" />
+        <ul>
+          <li>ADVERTISE</li>
+          <li>WRITE FOR US</li>
+          <li>CATEGORIES</li>
+          <li>
+            <img
+              src="{% static './img/logo_resources/Favicon_White.png' %}"
+              alt="Blogga Icon"
+            />
+          </li>
+          <li>ARCHIVES</li>
+          <li>TERMS OF SERVICE</li>
+          <li>PRIVACY</li>
+        </ul>
+      </div>
+
+      <div class="footer_middle">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>&ThinSpace;
+          <span>FACEBOOK</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-twitter"></i>&ThinSpace;
+          <span>TWITTER</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace;
+          <span>LINKEDIN</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-youtube"></i>&ThinSpace;
+          <span>YOUTUBE</span></a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace;
+          <span>INSTAGRAM</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace;
+          <span>PINTEREST</span>
+        </a>
+      </div>
+
+      <div class="footer_bottom">
+        <p>© 2022 The Blogga Team All Rights Reserved</p>
+        <a href="#">Site Map</a>
+      </div>
+    </footer>
+
+    
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="{% static './js/index.js' %}"></script>
+
+   
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+            <a href="#">bookmark</a>
+            contents :<br>
+            title: {{post.title}} <br>
+            category: {{post.category}} 
+            tags:
+            {% for tag in post.tags.all %}
+             #{{tag}} 
+            {% endfor %}<br>
+            author: {{post.author}} <br>    
+            {{post.contents | safe}} 
+    </div>
+    {% for comment in comments %}
+        {{comment.name}}
+        {{comment.publish}}
+        {{comment.comment}}
+        <hr>
+        {% empty %}
+        No comments
+        
+    {% endfor %}
+
+    <form action="" method="post">
+{% csrf_token %}
+{{commentForm.as_p}}
+<button type="submit">submit</button>
+    </form><hr>
+    {% for comment in user_comment%}
+    {{comment}}
+    {% endfor %}
+</body>
+</html> -->

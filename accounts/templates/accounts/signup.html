@@ -1,0 +1,56 @@
+<div class="container">
+    <form method="post" class="signup-form">
+      {% csrf_token %}
+  
+      <h5>Create an Account</h5>
+      <div class="form-email input-div">
+        <label for="form-email"><p>Email Address</p></label>
+        {{form.email}}
+
+      </div>
+      <div class="first_name input-div">
+        <label for="first_name"><p>Firstname</p></label>
+        {{form.first_name}}
+        
+      </div>
+      <div class="last_name input-div">
+        <label for="last_name"><p>Lastname</p></label>
+        {{form.last_name}}
+        
+      </div>
+      <div class="username input-div">
+        <label for="username"><p>Username</p></label>
+        {{form.username}}
+        
+      </div>
+  
+      <div class="password input-div">
+        <label for="password"><p>Password</p></label>
+        {{form.password1}}
+        
+      </div>
+  
+      <div class="confirm-password input-div">
+        <label for="c-password"><p>Confirm Password</p></label>
+        {{form.password2}}
+      </div>
+  
+      {% for field in form %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      {% endfor %}
+      <div class="form-submit">
+        <input type="submit" value="Sign up">
+      </div>
+      <!-- Trying to debug this, it gets sent to the admin login  -->
+      {% if messages %}
+      {% for message in messages %}
+      {% if message.tags %}<div class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</div>
+      {% endfor %}
+      {% endif %}
+      <div class="sec-action">
+        <small>Have an account? <a href="{% url 'login' %}">Login</a></small>
+      </div>
+    </form>
+  </div>

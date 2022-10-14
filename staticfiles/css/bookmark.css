@@ -1,0 +1,38 @@
+.topsection p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.topsection h2 {
+  font-size: 32;
+  font-weight: 600;
+}
+
+.settings p {
+  margin-bottom: 0;
+  vertical-align: bottom;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.midsection p {
+  vertical-align: bottom;
+  padding-top: 6px;
+}
+
+.midsection button {
+  margin-inline: 45%;
+  margin-block: 50px;
+  color: black;
+  border: 2px solid black;
+  /* padding: 10px 20px; */
+  border-radius: 8px;
+}
+
+main {
+  padding-inline: 40px;
+}
+
+@media (min-width: 250px) and (max-width: 900px) {
+  
+}

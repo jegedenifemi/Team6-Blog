@@ -1,0 +1,295 @@
+{% load static %}
+<!DOCTYPE html>
+
+
+    <!--  -->
+    <!-- HEADER & MOBILE MENU END-->
+{% include 'post/nav.html' %}
+
+    <main>
+     <section class="first-container">
+        <p>Hello</p>
+        <h3>{{request.user}}</h3>
+        <div class="first-container-links">
+            <a href="">MY SETTINGS</a>
+            <a href=""> MY BOOKMARKS (0)</a>
+            <a href="" class="active"> &nbsp; &nbsp; &nbsp; &nbsp; MY CONTENT (20) &nbsp; &nbsp; &nbsp; &nbsp;</a>
+        </div>
+        <hr class="hr-top">
+     </section>
+
+     <section class="second-container">
+        <div class="second-container-content">
+            <div class="content1">
+              <h3>My Content</h3>
+            </div>
+            </div>
+            <div class="content2">
+              <p>20 post</p>
+            </div>
+        </div>
+        <div class="content3">
+           FILTER BY: &nbsp; &nbsp;  <select class="select">
+                <option disabledselect>ALL</option>
+                <option>DRAFT</option>
+                <option>PUBLISHED</option>
+            </select>
+        </div>
+            </section>
+
+            <div>
+
+            </div>
+        </div>
+     </section>
+
+     <section class="main-content-container">
+      <!-- LEFT SECTION STARTS CONTENT 1-->
+
+      <div>
+        <div class="right-header">
+          <h3></h3><div>
+
+          </div>
+
+          <!--This is the Div that carries the left section content-->
+        </div>
+      </div>
+
+     <!-- MIDDLE SECTION STARTS CONTENT 1-->
+     {% for post in posts %}
+     <!-- <div>
+         {% for tag in post.tags.all %}
+         tags: #{{tag}} 
+         {% endfor %}
+         title: {{post.title}} <br>, 
+         category: {{post.category}},<br> 
+         author: {{post.author.get_full_name}} <br>
+         {{post.description}}
+          <a href="{% url 'post:post_detail' post.slug %}">
+                 <img src="{{ post.image.url }}" alt="Lights" style="height:20%;width:20%">
+                 
+                   
+                 
+               </a>
+         <a href="{% url 'post:post_detail' post.slug %}">full post</a>
+      {% if user.is_authenticated %}
+      <a href="{% url 'post:post_update' post.slug %}">update post</a>
+      <a href="{% url 'post:post_delete' post.slug %}">delete post</a>
+      {% endif %}
+       </div> -->
+      
+      <div>
+
+      <div  class="middle-container">
+      <div class="middle-section">
+       <div class="middle-image">
+         <!-- <a href=""><img src="{% static "./img/King-of-thieves.svg" %}" alt="lord-of-rings-img"></a> -->
+         <a href="{% url 'post:post_detail' post.slug %}">
+          <img src="{{ post.image.url }}" alt="Lights" >
+          </a>
+          <!-- style="height:20%;width:20%" -->
+        </div>
+       <div class="middle-content">
+         <a href="">Review: {{post.title}}</a>
+             <p>{{post.description}} </p>
+              <div class="status-section" id="status1">
+                <p class="status-text">STATUS</p>
+                 <p class="published-text">{{post.status}}
+                  <i class="fa-solid fa-angle-down"></i></p>
+               </div>
+
+               <div class="status-section2" id="icon-right1">
+                <p class="edit-icon"><i class="bi bi-pencil"></i>&nbsp; <a href="{% url 'post:post_update' post.slug %}">Edit</a></p>
+                <p class="delete-icon"><i class="fa-regular fa-trash-can"></i>&nbsp; <a href="{% url 'post:post_delete' post.slug %}">Delete</a></p>
+               </div>
+       </div>
+         <hr class="hr-line"/>
+      </div>
+      {% endfor %}
+      <!-- MIDDLE SECTION STARTS CONTENT 2-->
+
+      <!-- <div class="middle-section">
+         <div class="middle-image">
+           <a href=""><img src="{% static './img/lord-of-rings-img.svg' %}" alt="lord-of-rings-img"></a>
+         </div>
+         <div class="middle-content">
+           <a href="">The Lord of the Rings: The Rings of Power recap: Not all who wander are lost</a>
+               <p>Welcome back to Middle-earth, where people love to burst out into song
+                 — especially when they're traversing wild nature. </p>
+                 <div class="status-section" id="status2">
+                  <p class="status-text">STATUS</p>
+                   <p class="published-text">PUBLISHED
+                    <i class="fa-solid fa-angle-down"></i></p>
+                 </div>
+                 <div class="status-section2" id="icon-right2">
+                  <p class="edit-icon"><i class="bi bi-pencil"></i>&nbsp; Edit</p>
+                  <p class="delete-icon"><i class="fa-regular fa-trash-can"></i>&nbsp; Delete</p>
+                 </div>
+         </div>
+           <hr class="hr-line"/>
+        </div>
+
+      MIDDLE SECTION STARTS CONTENT 3
+
+      <div class="middle-section">
+         <div class="middle-image">
+           <a href=""><img src="{% static 'img/Ayinla-review.svg' %}" alt="lord-of-rings-img"></a>
+         </div>
+         <div class="middle-content">
+           <a href="">'Ayinla' Review: Tunde Kelani's Movie Worth The Hype Thanks To Adedimeji Lateef's Singular Performanced</a>
+               <p>Ayinla is a film that tells the story of Nigerian musician, Ayinla Omowura, who used Apala music to address issues of the contemporary society
+                 - commending and criticizing various governmental and individual acts. </p>
+                <div class="status-section" id="status3">
+                  <p class="status-text">STATUS</p>
+                   <p class="published-text">PUBLISHED
+                    <i class="fa-solid fa-angle-down"></i></p>
+                 </div>
+                 <div class="status-section2" id="icon-right3">
+                  <p class="edit-icon"><i class="bi bi-pencil"></i>&nbsp; Edit</p>
+                  <p class="delete-icon"><i class="fa-regular fa-trash-can"></i>&nbsp; Delete</p>
+                 </div>
+         </div>
+           <hr class="hr-line"/>
+        </div>
+
+        <!-- MIDDLE SECTION STARTS CONTENT 4
+
+      <div class="middle-section">
+        <div class="middle-image">
+          <a href=""><img src="{% static 'img/Asake.svg' %}" alt="lord-of-rings-img"></a>
+        </div>
+        <div class="middle-content">
+          <a href="">Asake Sets A New Billboard Record</a>
+              <p>Asake is the rave of the moment! The music star is
+                trending once again following a recent achievement. </p>
+                <div class="middle-icon-section">
+               <div class="status-section" id="status4">
+                 <p class="status-text">STATUS</p>
+                  <p class="published-text">PUBLISHED
+                   <i class="fa-solid fa-angle-down"></i></p>
+                </div>
+                <div class="status-section2" id="icon-right4">
+                  <p class="edit-icon"><i class="bi bi-pencil"></i>&nbsp; Edit</p>
+                  <p class="delete-icon"><i class="fa-regular fa-trash-can"></i>&nbsp; Delete</p>
+                 </div>
+                </div>
+        </div>
+       </div>
+
+
+      </div>
+    </div> -->
+      <!--This is the Div that carries/ends the middle section content-->
+  </div>
+
+  <!-- RIGHT SECTION STARTS CONTENT 1-->
+
+  <div>
+    <div class="right-header">
+      <h3></h3><div>
+
+      </div>
+
+      <!--This is the Div that carries the right section content-->
+               </div>
+    </section>
+
+
+<section class="page-num">
+  <hr class="hr-page-num"/>
+  <div class="page-num-content">
+     <a href="#" class="page-btn start-page"><img src="{% static './img/less-than.svg' %}" alt=""></a>
+     <a href="#" class="page-btn active">1</a>
+     <a href="#" class="page-btn prev-page">2</a>
+     <a href="#" class="page-btn">3</a>
+     <a href="" class="page-btn">4</a>
+     <a href="" class="page-btn">5</a>
+     <a href="" class="page-btn end-page"><img src="{% static './img/Greater-than.svg' %}" alt=""></a>
+  </div>
+</section>
+
+<section>
+  <div class="last-header-content">
+    <h3> WRITER'S PICK</h3>
+    <p> SEE ALL</p>
+  </div>
+  <hr class="hr-bottom">
+</section>
+
+<section class="last-container">
+  <!--Parent div starts-->
+  <div class="writers-content-container">
+
+     <div class="writers-content">
+    <img src="{% static './img/Constance1.svg' %}" alt="Constance1">
+    <p class="para1">Constance Wu Says Chris Pratt Was 'So Supportive' as
+      She Returned to Work After Giving Birth</p>
+    <div class="post-by">
+      <p class="post-by-bolder">By Amara</p>
+      <p>September 23, 2022  12:32</p>
+    </div>
+     </div>
+
+     <div class="writers-content">
+      <img src="{% static './img/Contance2.svg' %}" alt="Constance2">
+    <p class="para1">Constance Wu Talks About Her Baby Girl's 'Little Blue Butt': 'It's Very Special'</p>
+    <div class="post-by">
+      <p class="post-by-bolder" id="post-date">By Amara</p>
+      <p id="post-date">September 23, 2022  12:32</p>
+    </div>
+
+     </div>
+     <div class="writers-content">
+      <img src="{% static './img/Constance3.svg' %}" alt="Constance3">
+      <p class="para1">Constance Wu Says She Attempted Suicide After
+        'Fresh Off the Boat' Twitter Drama: 'Almost Lost My Life'</p>
+      <div class="post-by">
+        <p class="post-by-bolder">By Amara</p>
+        <p>September 23, 2022  12:32</p>
+      </div>
+
+     </div>
+  </div>
+</section>
+<section>
+  <hr>
+</section>
+
+
+<section class="newsletter" id="subscribe">
+  <h2>STAY UPDATED</h2>
+
+  <p>
+    Get the latest creative news from Blogga about Art , Fashion,
+    Entertainment and lots more.
+  </p>
+
+  <form action="#">
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Your Email Address"
+    />
+    <button type="submit" class="subscribe button">Subscribe</button>
+  </form>
+</section>
+<!--  -->
+<!-- SUBSCRIBE SECTION END-->
+
+<section class="icon">
+  <a href="" class="gototop"> <i class="far fa-edit"></i>
+  </a>
+</section>
+
+
+    </main>
+    <!-- FOOTER START-->
+    <!--  -->
+    {% include "post/footer.html" %}    <!--  -->
+    <!-- FOOTER END-->
+    <script src="{% static './js/index.js' %}"></script>
+
+  </body>
+</html>

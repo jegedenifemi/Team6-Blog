@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogga &ThinSpace;|&ThinSpace; Home</title>
+    <!-- FAVICONS -->
+    <link
+      rel="shortcut icon"
+      href="{% static './img/logo_resources/Favicon_White.png'%}"
+      type="image/x-icon"
+      id="fav-white"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static './img/logo_resources/Favicon.png'%}"
+      type="image/x-icon"
+      id="fav-green"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BOOTSTRAP ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- SWIPER JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="{% static './css/style.css'%}" />
+    <link rel="stylesheet" href="{% static './css/login.css'%}" />
+  </head>
+
+  <body class="home_body">
+    <!-- SCROLL TO TOP BUTTON -->
+    <a href="{% '#top'%}" class="to_top"
+      ><i class="fa-solid fa-arrow-up"></i
+    ></a>
+    <!-- SCROLL TO TOP BUTTON -->
+
+    <!-- LOGIN MODAL START-->
+    <!--  -->
+    <div class="login-modal">
+      <section class="login-body">
+        <img
+          src="{% static './img/Login/mobile_blob1.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob1"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob2.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob2"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob3.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob3"
+        />
+
+        <main class="login-main">
+          <div class="left-div">
+            <img
+              src="{% static './img/Login/login_top_blob.png'%}"
+              alt="blob design "
+              class="top_blob"
+            />
+            <img
+              src="{% static './img/Login/login_main_image.png'%}"
+              alt="welcome image"
+            />
+            <img
+              src="{% static './img/Login/login_bottom_blob.png'%}"
+              alt="blob design "
+              class="btm_blob"
+            />
+          </div>
+
+          <div class="right-div">
+            <i
+              class="fa-solid fa-xmark login-modal-close"
+              onclick="hideLoginModal()"
+            ></i>
+            <div class="right-div-container">
+              <h3 class="head-txt">Welcome Back : )</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="login-username"
+                required
+              />
+
+              <br />
+
+              <div class="password-eye">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                  required
+                />
+                <i class="bi bi-eye" onclick="passwordToggle()"></i>
+                <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot-password"
+                >Forgot Password?</a
+              >
+              <!-- <br /> -->
+
+              <label for="remember-me" class="remem-label">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />&nbsp; <small>Remember Me</small></label
+              >
+              <br />
+
+              <button type="button" class="login-button">Log In</button>
+
+              <div class="or-separator">
+                <hr />
+                <p>OR</p>
+                <hr />
+              </div>
+
+              <button type="button" class="continue-button">
+                <img
+                  src="{% static './img/google.png'%}"
+                  alt=""
+                  class="google"
+                />
+                &nbsp; Continue With Google
+              </button>
+
+              <p class="base-txt">
+                Become a Blogga?
+                <a href="./write-for-us.html" class="signup-link">
+                  Write For Us</a
+                >
+              </p>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <!--  -->
+    <!-- LOGIN MODAL END-->
+
+    <!-- HEADER & MOBILE MENU  START-->
+    <!--  -->
+    <header>
+      <!-- top green banner -->
+      <div class="banner">
+        <div class="banner_wrapper">
+          <div class="banner_left">
+            <p>Have a story to share?</p>
+
+            <button onclick="window.location.href='./contact-us.html';">
+              Contact Us
+            </button>
+          </div>
+
+          <div class="banner_search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" name="" id="" placeholder="Search" />
+          </div>
+        </div>
+
+        <div class="banner_socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <!-- top green banner -->
+
+      <div class="nav_outer">
+        <!-- <a href="./index.html"
+          ><img src="{% static './img/logo_resources/Favicon.png'%}" alt="Blogga Logo Icon"
+        /></a> -->
+
+        <div class="nav_inner">
+          <div class="hamburger">
+            <span class="span1"></span><span class="span2"></span
+            ><span class="span3"></span>
+          </div>
+
+          <div class="hamburger_close">
+            <!-- <span class="span1"></span><span class="span2"></span> -->
+            <i class="fa-solid fa-xmark login-modal-close"></i>
+          </div>
+
+          <div class="mobile_menu">
+            <div class="mobile_menu_search">
+              <input
+                type="search"
+                name=""
+                id=""
+                placeholder="Search anything..."
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="mobile_menu_categories">
+              <p>CATEGORIES</p>
+              <ul>
+                <a href="./fashion.html"
+                  ><li class="mob_fashion">FASHION</li></a
+                >
+                <a href="./category-page.html"
+                  ><li class="mob_entertaiment">ENTERTAINMENT</li></a
+                >
+                <a href="./technology.html"
+                  ><li class="mob_tech">TECHNOLOGY</li></a
+                >
+                <a href="#"><li class="mob_health">HEALTH</li></a>
+                <a href="#"><li class="mob_politics">POLITICS</li></a>
+                <a href="#"><li class="mob_edu">EDUCATION</li></a>
+                <a href="#"><li class="mob_food">FOOD</li></a>
+                <a href="#"><li class="mob_art">ART</li></a>
+              </ul>
+              <hr />
+            </div>
+
+            <div class="mobile_menu_links">
+              <p>MORE</p>
+              <div class="mobile_menu_links_top">
+                <a href="./ourteam.html">TEAM</a>
+                <a href="./archive.html">ARCHIVE</a>
+              </div>
+              <div class="mobile_menu_links_bottom">
+                <a href="./write-for-us.html">WRITE FOR US</a>
+                <a href="./contact-us.html">CONTACT</a>
+              </div>
+            </div>
+
+            <div class="mobile_menu_btns_wrap">
+              <div class="mobile_menu_btns">
+                <button class="button" onclick="showLoginModal()">
+                  Sign In
+                </button>
+                <button
+                  class="subscribe button"
+                  onclick="window.location.href='#subscribe';"
+                >
+                  Subscribe
+                </button>
+              </div>
+
+              <img
+                src="{% static './img/home_page/author_hamzy.png'%}"
+                alt="profile picture"
+              />
+            </div>
+          </div>
+
+          <a href="./index.html"
+            ><img
+              src="{% static './img/logo_resources/Favicon.png'%}"
+              alt="Blogga Logo Icon"
+          /></a>
+
+          <nav>
+            <a href="./index.html"
+              ><img
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
+                alt="Blogga Logo"
+            /></a>
+            <ul>
+              <li><a href="./fashion.html" class="nav_fashion">FASHION</a></li>
+              <li>
+                <a href="./category-page.html" class="nav_entertainment"
+                  >ENTERTAINMENT</a
+                >
+              </li>
+              <li>
+                <a href="./technology.html" class="nav_tech">TECHNOLOGY</a>
+              </li>
+              <li><a href="#" class="nav_health">HEALTH</a></li>
+              <li><a href="#" class="nav_politics">POLITICS</a></li>
+              <li><a href="#" class="nav_edu">EDUCATION</a></li>
+              <li><a href="#" class="nav_food">FOOD</a></li>
+              <li><a href="#" class="nav_art">ART</a></li>
+              <li>
+                <input type="checkbox" name="more_check" id="more_check" />
+
+                <label for="more_check" class="more">
+                  MORE
+                  <span class="dropdown_arrow"
+                    ><img
+                      src="{% static './img/home_page/dropdown_arrow.png'%}"
+                      alt="dropdown"
+                  /></span>
+                </label>
+
+                <div class="more_dropdown">
+                  <ul>
+                    <li><a href="./ourteam.html">TEAM</a></li>
+                    <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+                    <li><a href="./archive.html">ARCHIVE</a></li>
+                    <li><a href="./contact-us.html">CONTACT</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <i class="fa-solid fa-magnifying-glass mobile_search"></i>
+
+          <div class="nav_btns">
+            <button class="button" onclick="showLoginModal()">Sign In</button>
+            <button
+              class="subscribe button"
+              onclick="window.location.href='#subscribe';"
+            >
+              Subscribe
+            </button>
+
+            <img
+              src="{% static './img/home_page/author_hamzy.png'%}"
+              alt="profile picture"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--  -->
+    <!-- HEADER & MOBILE MENU END-->
+
+    <main class="home_main">
+      <!-- HERO SECTION START -->
+      <!--  -->
+      <section class="hero" id="to_top">
+        <div class="hero_left">
+          <div class="hero_left_img">
+            <img
+              src="{% static './img/home_page/constance_wu.png'%}"
+              alt="Constance wu"
+              class="img_zoom"
+            />
+            <p>TOP STORY</p>
+          </div>
+
+          <a href="./postpage.html" class="post_title"
+            ><h2>
+              Constance Wu Says She Experienced 'Sexual Harassment and
+              Intimidation' by Fresh Off the Boat Producer
+            </h2></a
+          >
+
+          <p>
+            Wu also clarified her 2019 tweet about the ABC show's renewal,
+            explaining, "I wanted to have a fresh slate where I didn’t have to
+            start a show with all these memories of abuse".....
+          </p>
+
+          <div class="hero_author_wrapper">
+            <div class="hero_author_details">
+              <img
+                src="{% static './img/home_page/author_hamzy.png'%}"
+                alt="Author Hamzy"
+              />
+
+              <div class="hero_author_text">
+                <p>By Adedotun</p>
+                <p>13th August, 2022</p>
+              </div>
+            </div>
+
+            <div class="hero_author_sm">
+              <p>1123 Shares</p>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero_right">
+          <div class="hero_right_card">
+            <img
+              src="{% static './img/home_page/bad2me.png'%}"
+              alt="Song Art"
+              class="img_zoom"
+            />
+
+            <div class="card_info_wrapper">
+              <div class="card_info">
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+
+                <a href="#" class="post_title"
+                  ><h3>Wizkid - Bad to Me (Song)</h3></a
+                >
+
+                <div class="card_info_bottom">
+                  <p>By Hamzah</p>
+                  <p>September 24, 2022 9:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero_right_card">
+            <img
+              src="{% static './img/home_page/eggs.png'%}"
+              alt="Picture of eggs"
+              class="img_zoom"
+            />
+            <div class="card_info_wrapper">
+              <div class="card_info">
+                <p class="category_label technology">TECHNOLOGY</p>
+
+                <a href="#" class="post_title"
+                  ><h3>How to un-boil an egg</h3></a
+                >
+
+                <div class="card_info_bottom">
+                  <p>By Rachael</p>
+                  <p>September 23, 2022 14:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero_right_card">
+            <img
+              src="{% static './img/home_page/covid-19.png'%}"
+              alt="Vaccine Image"
+              class="img_zoom"
+            />
+            <div class="card_info_wrapper">
+              <div class="card_info">
+                <p class="category_label health">HEALTH</p>
+
+                <a href="#" class="post_title"
+                  ><h3>Can I get COVID-19 if I’m fully vaccinated?</h3></a
+                >
+
+                <div class="card_info_bottom">
+                  <p>By Hamzah</p>
+                  <p>September 24, 2022 9:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero_right_card">
+            <img
+              src="{% static './img/home_page/benin_head.png'%}"
+              alt="Benin Bronze Head"
+              class="img_zoom"
+            />
+            <div class="card_info_wrapper">
+              <div class="card_info">
+                <p class="category_label art">ART</p>
+
+                <a href="#" class="post_title"
+                  ><h3>The Benin Bronze Head</h3></a
+                >
+
+                <div class="card_info_bottom">
+                  <p>By nifemi.</p>
+                  <p>September 24, 2022 9:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <!-- HERO SECTION END-->
+
+      <!-- SWIPER START -->
+      <section class="swiper mySwiper trending">
+        <div class="trending_head">
+          <h3>
+            TRENDING <br />
+            STORIES
+          </h3>
+          <div class="trending_controls">
+            <div class="swiper-buttons">
+              <div class="swiper-button-prev">
+                <i class="fa-solid fa-arrow-left"></i>
+              </div>
+
+              <div class="swiper-button-next">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+
+            <div class="swiper-pagination swiper-pagination-desktop"></div>
+          </div>
+        </div>
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="{% static './img/home_page/koo_koo_fun.png'%}"
+                  alt="Song Art"
+                  class="img_zoom"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <a href="#" class="post_title_light">
+                  <h4>
+                    Major Lazer, Major League DJz, Tiwa Savage, DJ Maphorisa –
+                    Koo Koo Fun (Song)
+                  </h4></a
+                >
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By Amara</p>
+                  <p>September 23, 2022 12:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="{% static './img/home_page/burna_boy.png'%}"
+                  alt="Image of Burna Boy"
+                  class="img_zoom"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <a href="#" class="post_title_light"
+                  ><h4>
+                    Burna Boy records half a Billion streams on Boomplay
+                  </h4></a
+                >
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By Taofikat</p>
+                  <p>September 24, 2022 00:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="{% static './img/home_page/Remmy-img.jpeg'%}"
+                  alt="Image of Rema & interviewer"
+                  class="img_zoom"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <a href="#" class="post_title_light">
+                  <h4>The Moment Rema Rejected A Sex Offer On Live TV</h4></a
+                >
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By John</p>
+                  <p>September 24, 2022 00:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="{% static './img/home_page/burna_boy.png'%} "
+                  alt="Image of Burna Boy"
+                  class="img_zoom"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <a href="#" class="post_title_light">
+                  <h4>
+                    Burna Boy records half a Billion streams on Boomplay
+                  </h4></a
+                >
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By Taofikat</p>
+                  <p>September 24, 2022 00:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="trending_card">
+              <div class="trending_card_img">
+                <img
+                  src="{% static './img/home_page/Remmy-img.jpeg'%} "
+                  alt="Image of Rema & interviewer"
+                  class="img_zoom"
+                />
+                <p class="category_label entertainment">ENTERTAINMENT</p>
+              </div>
+
+              <div class="trending_cards_txt">
+                <a href="#" class="post_title_light">
+                  <h4>The Moment Rema Rejected A Sex Offer On Live TV</h4></a
+                >
+
+                <div class="trending_cards_txt_bottom">
+                  <p>By John</p>
+                  <p>September 24, 2022 00:32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div> -->
+          <!-- <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div> -->
+          <!-- <div class="swiper-slide">Slide 7</div> -->
+          <div class="swiper-slide"></div>
+          <div class="swiper-slide"></div>
+        </div>
+
+        <div class="swiper-pagination swiper-pagination-mobile"></div>
+      </section>
+      <!-- SWIPER END-->
+
+      <!-- WRITERS, LATEST & POPULAR START -->
+      <!--  -->
+      <section class="writers_latest_popular">
+        <div class="writers">
+          <div class="writers_latest_head">
+            <h2>WRITERS</h2>
+            <a href="./writerpage.html">SEE ALL</a>
+          </div>
+
+          <div class="writers_content">
+            <div class="writers_cards">
+              <img
+                src="{% static './img/home_page/author_hamzy.png'%}"
+                alt="Author Hamzy"
+              />
+
+              <div class="writers_cards_info">
+                <p>HAMZAH OPEMIPO</p>
+
+                <div class="writers_cards_sm">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img
+                src="{% static './img/home_page/author_dotun.png'%}"
+                alt="author_dotun"
+              />
+
+              <div class="writers_cards_info">
+                <p>ADEDOTUN SOLARIN</p>
+
+                <div class="writers_cards_sm">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img
+                src="{% static './img/home_page/author_nifemi.png'%}"
+                alt="author_nifemi"
+              />
+
+              <div class="writers_cards_info">
+                <p>JEGEDE OLUWANIFEMI</p>
+
+                <div class="writers_cards_sm">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img
+                src="{% static './img/home_page/author_rachy.png'%}"
+                alt="Author rachy"
+              />
+
+              <div class="writers_cards_info">
+                <p>CHIKA RACHEAL EZEH</p>
+
+                <div class="writers_cards_sm">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img
+                src="{% static './img/home_page/author_taofikat.png'%}"
+                alt="Author taofikat"
+              />
+
+              <div class="writers_cards_info">
+                <p>TAOFIKAT OYEDEPO</p>
+
+                <div class="writers_cards_sm">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="writers_cards">
+              <img
+                src="{% static './img/home_page/author_amara.png'%}"
+                alt="author_amara"
+              />
+
+              <div class="writers_cards_info">
+                <p>AMARA ONWUNZO</p>
+
+                <div class="writers_cards_sm">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="latest">
+          <div class="writers_latest_head">
+            <h2>LATEST</h2>
+            <a>SEE ALL</a>
+          </div>
+
+          <div class="latest_content">
+            <div class="latest_cards">
+              <img
+                src="{% static './img/home_page/rings_of_power.png'%}"
+                alt="Rings of power snapshot"
+                class="img_zoom"
+              />
+
+              <div class="latest_cards_txt">
+                <a href="#" class="post_title">
+                  <h3>
+                    The Rings of Power recap: Not all who wander are lost
+                  </h3></a
+                >
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Hamzah</p>
+                  <p>2 hours ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_cards">
+              <img
+                src="{% static './img/home_page/2023_elections.png'%}"
+                alt="Nigerian Flag"
+                class="img_zoom"
+              />
+
+              <div class="latest_cards_txt">
+                <a href="#" class="post_title">
+                  <h3>How ‘ghosts’ may decide Nigeria’s 2023 elections</h3></a
+                >
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Afariogun</p>
+                  <p>3 hours ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_cards">
+              <img
+                src="{% static './img/home_page/house_of_the_dragon.png'%}"
+                alt="house of the dragon snapshot"
+                class="img_zoom"
+              />
+
+              <div class="latest_cards_txt">
+                <a href="#" class="post_title">
+                  <h3>House of the Dragon recap: Another bloody wedding</h3></a
+                >
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Adedotun</p>
+                  <p>5 hours ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_cards">
+              <img
+                src="{% static './img/home_page/tobi_amusan.png'%}"
+                alt="Tobi Amusan"
+                class="img_zoom"
+              />
+
+              <div class="latest_cards_txt">
+                <a href="#" class="post_title">
+                  <h3>
+                    Homecoming dinner: World Champion Tobi Amusan excited by
+                    welcome, national award
+                  </h3></a
+                >
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Nino</p>
+                  <p>8 hours ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="latest_cards">
+              <img
+                src="{% static './img/home_page/bandits_zamfara.png'%}"
+                alt="Zamfara"
+                class="img_zoom"
+              />
+
+              <div class="latest_cards_txt">
+                <a href="#" class="post_title">
+                  <h3>
+                    Bandits attack Zamfara mosque, gun down worshippers
+                  </h3></a
+                >
+
+                <div class="latest_cards_txt_bottom">
+                  <p>Afariogun</p>
+                  <p>12 hours ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="popular">
+          <div class="writers_latest_head">
+            <h2>POPULAR</h2>
+            <a>SEE ALL</a>
+          </div>
+          <div class="popular_content">
+            <ul>
+              <li>
+                <a href="#" class="post_title">
+                  <p>
+                    I lost G-Wagon, Escalade, Bentley, others to floods – Lagos
+                    landlord
+                  </p></a
+                >
+                <p>Hamzah</p>
+              </li>
+              <li>
+                <a href="#" class="post_title">
+                  <p>
+                    Why Rich kids have higher chance at success in life than
+                    average kids
+                  </p></a
+                >
+                <p>Nino</p>
+              </li>
+              <li>
+                <a href="#" class="post_title">
+                  <p>
+                    Waterways authority to revive Lagos jetty, clear wrecks
+                  </p></a
+                >
+                <p>Philip</p>
+              </li>
+              <li>
+                <a href="#" class="post_title">
+                  <p>BBN: Housemates inch closer to N100m prize</p></a
+                >
+                <p>Rachael</p>
+              </li>
+              <li>
+                <a href="#" class="post_title">
+                  <p>Jazz legend, Pharoah Sanders, dies at 81</p></a
+                >
+                <p>Taofikat</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <!-- WRITERS, LATEST & POPULAR  END-->
+
+      <section>
+        <h1>links to other pages</h1>
+        <br />
+        <a href="./signup.html">Signup (login page is linked to this)</a><br />
+        <a href="./verification.html">Verify Email</a><br />
+        <a href="./resetpass.html">Reset Password Email</a><br />
+        <a href="./checkEmail.html">Check Email App</a><br />
+        <a href="./change-pass.html">Change Password</a><br />
+        <a href="./archive.html">Archive</a><br />
+        <a href="./search.html">Search Results</a><br />
+        <a href="./movies.html">movies</a><br />
+        <a href="./bookmark.html">bookmark</a><br />
+        <a href="./forgotpassword.html">forgotpassword</a><br />
+        <a href="./profilepage.html">Profile Page</a><br />
+      </section>
+
+      <!-- SUBSCRIBE SECTION START-->
+      <!--  -->
+      <hr />
+      <section class="newsletter" id="subscribe">
+        <h2>STAY UPDATED</h2>
+
+        <p>
+          Get the latest creative news from Blogga about Art , Fashion,
+          Entertainment and lots more.
+        </p>
+
+        <form action="#">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email Address"
+          />
+          <button type="submit" class="subscribe button">Subscribe</button>
+        </form>
+      </section>
+      <!--  -->
+      <!-- SUBSCRIBE SECTION END-->
+    </main>
+
+    <!-- FOOTER START-->
+    <!--  -->
+    <footer class="main_footer">
+      <div class="footer_top">
+        <img
+          src="{% static './img/logo_resources/Favicon_White.png'%}"
+          alt="Blogga Icon"
+        />
+        <ul>
+          <li><a href="#">ADVERTISE</a></li>
+          <li><a href="./write-for-us.html">WRITE FOR US</a></li>
+          <li><a href="./ourteam.html">TEAM</a></li>
+          <li>
+            <a href="./index.html"
+              ><img
+                src="{% static './img/logo_resources/Favicon_White.png'%}"
+                alt="Blogga Icon"
+            /></a>
+          </li>
+          <li><a href="./archive.html">ARCHIVES</a></li>
+          <li><a href="./termsofservice.html">TERMS OF SERVICE</a></li>
+          <li><a href="./privacypolicy.html">PRIVACY</a></li>
+        </ul>
+      </div>
+
+      <div class="footer_middle">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>&ThinSpace;
+          <span>FACEBOOK</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-twitter"></i>&ThinSpace;
+          <span>TWITTER</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-linkedin-in"></i>&ThinSpace;
+          <span>LINKEDIN</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-youtube"></i>&ThinSpace;
+          <span>YOUTUBE</span></a
+        ><a href="#"
+          ><i class="fa-brands fa-instagram"></i>&ThinSpace;
+          <span>INSTAGRAM</span> </a
+        ><a href="#"
+          ><i class="fa-brands fa-pinterest"></i>&ThinSpace;
+          <span>PINTEREST</span>
+        </a>
+      </div>
+
+      <div class="footer_bottom">
+        <p>© 2022 The Blogga Team All Rights Reserved</p>
+        <a href="#">Site Map</a>
+      </div>
+    </footer>
+    <!--  -->
+    <!-- FOOTER END-->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      // Initialize Swiper (carousel)
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        cssMode: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
+
+    <script src="{% static './js/index.js'%}"></script>
+  </body>
+</html>
