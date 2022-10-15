@@ -41,6 +41,120 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+
+
+<!-- LOGIN MODAL START-->
+    <!--  -->
+    <div class="login-modal">
+      <section class="login-body">
+        <img
+          src="{% static './img/Login/mobile_blob1.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob1"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob2.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob2"
+        />
+        <img
+          src="{% static './img/Login/mobile_blob3.png'%}"
+          alt="mobile blob design"
+          class="mobile_blob3"
+        />
+
+        <main class="login-main">
+          <div class="left-div">
+            <img
+              src="{% static './img/Login/login_top_blob.png'%}"
+              alt="blob design "
+              class="top_blob"
+            />
+            <img
+              src="{% static './img/Login/login_main_image.png'%}"
+              alt="welcome image"
+            />
+            <img
+              src="{% static './img/Login/login_bottom_blob.png'%}"
+              alt="blob design "
+              class="btm_blob"
+            />
+          </div>
+
+          <div class="right-div">
+            <i
+              class="fa-solid fa-xmark login-modal-close"
+              onclick="hideLoginModal()"
+            ></i>
+            <div class="right-div-container">
+              <h3 class="head-txt">Welcome Back : )</h3>
+
+              <input
+                type="text"
+                placeholder="Username"
+                id="login-username"
+                required
+              />
+
+              <br />
+
+              <div class="password-eye">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                  required
+                />
+                <i class="bi bi-eye" onclick="passwordToggle()"></i>
+                <i class="bi bi-eye-slash" onclick="passwordToggle()"></i>
+              </div>
+
+              <a href="./forgotpassword.html" class="forgot-password"
+                >Forgot Password?</a
+              >
+              <!-- <br /> -->
+
+              <label for="remember-me" class="remem-label">
+                <input
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />&nbsp; <small>Remember Me</small></label
+              >
+              <br />
+
+              <button type="button" class="login-button">Log In</button>
+
+              <div class="or-separator">
+                <hr />
+                <p>OR</p>
+                <hr />
+              </div>
+
+              <button type="button" class="continue-button">
+                <img
+                  src="{% static './img/google.png'%}"
+                  alt=""
+                  class="google"
+                />
+                &nbsp; Continue With Google
+              </button>
+
+              <p class="base-txt">
+                Become a Blogga?
+                <a href="./write-for-us.html" class="signup-link">
+                  Write For Us</a
+                >
+              </p>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <!--  -->
+    <!-- LOGIN MODAL END-->
+
+
     <!-- HEADER & MOBILE MENU  START-->
     <!--  -->
     <header>
@@ -236,8 +350,25 @@
             </div>
             </div>
             <div class="content2">
-              <p>0 Bookmarks</p>
+              {% for post in new %}
+
+
+              <div class="writers-content-container">
+
+                <div class="writers-content">
+                    <a href="{% url 'post:post_detail' post.slug %}">
+                        <img src="{{ post.image.url }}" alt="bookmark post" >
+
+                      </a>
+               <p class='para1'>{{post.title}}</p>
+               <p class="para1">{{post.description}}</p>
+               <div class="post-by">
+                 <p class="post-by-bolder">{{post.author.first_name}}</p>
+                 <p>{{post.publish_on}}</p>
+               </div>
+                </div>
             </div>
+            {% endfor %}
         </div>
             </section>
 
