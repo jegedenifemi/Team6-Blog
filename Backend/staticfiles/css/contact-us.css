@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* border: 1px solid red; */
+}
+.contact_body {
+  background: rgba(248, 248, 248, 1);
+}
+.contact-us_head {
+  text-align: center;
+  margin-block: 2.5rem 2.2rem;
+}
+.contact-us_head > h1 {
+  color: rgba(34, 68, 62, 1);
+  font-size: 32px;
+  font-weight: 600;
+}
+.contact-us_head p {
+  font-size: 14px;
+}
+.contact-us_main {
+  width: 73%;
+  margin: 0 auto;
+  max-width: 1168px;
+}
+.contact-us_main form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  row-gap: 2rem;
+  /* border: 1px solid red; */
+}
+.contact-us_main > form > input,
+textarea {
+  border: 1px solid rgba(34, 68, 62, 1);
+  outline: none;
+  border-radius: 6px;
+  /* padding: 26px 14px 26px 14px; */
+  padding: 0.5rem 1rem;
+}
+.contact-us_main > form > input:focus,
+textarea:focus {
+  border: 2px solid rgba(34, 68, 62, 1);
+}
+#contact_email,
+#contact_message,
+.contact-us_submit {
+  grid-column: 1/3;
+}
+.contact-us_submit {
+  width: fit-content;
+  background: rgba(34, 68, 62, 1);
+  color: rgba(255, 255, 255, 1);
+  outline: none;
+  border: none;
+  margin: 0.5rem auto 0;
+}
+.contact-us_submit:hover {
+  background: rgba(21, 41, 37, 1);
+}
+.get_in_touch {
+  margin-block: 4rem;
+}
+
+.get_in_touch h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+.in_touch_details:first-of-type {
+  margin-top: 2rem;
+}
+.in_touch_details {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5rem;
+  gap: 1rem;
+}
+.in_touch_details i {
+  color: rgba(34, 68, 62, 1);
+}
+.msg_sent_pop_up {
+  position: fixed;
+  top: 0;
+  /* background-color: red; */
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999999999;
+  display: none;
+}
+.pop_up_content {
+  position: relative;
+  width: 40%;
+  max-width: 534px;
+  /* height: 258.67px; */
+  left: 0;
+  right: 0;
+  top: 40%;
+  margin: 0 auto;
+
+  /* Background/light */
+
+  background: #f8f8f8;
+  box-shadow: 0px 6.66667px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.pop_up_content {
+  /* width: 30%; */
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* position: relative; */
+}
+.pop_up_content i {
+  font-size: 28px;
+  color: rgba(34, 68, 62, 1);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+}
+.pop_up_content img {
+  width: 4rem;
+}
+.pop_up_content h3 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-block: 1rem 0.5rem;
+  text-align: center;
+}
+.pop_up_content p {
+  width: 80%;
+  text-align: center;
+  line-height: 24.33px;
+}
+
+@media screen and (max-width: 1072px) {
+  .pop_up_content {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-us_main {
+    width: 100%;
+    padding-inline: 2rem;
+  }
+  .contact-us_head > h1 {
+    font-size: 17px;
+  }
+  .contact-us_head p {
+    line-height: 28px;
+  }
+
+  .contact-us_main > form {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 2rem;
+  }
+  #contact_email,
+  #contact_message,
+  .contact-us_submit,
+  #write4us_email,
+  .bio_wrapper,
+  #write4us_submit,
+  #write4us_fname,
+  #write4us_lname {
+    grid-column: 1/2;
+  }
+  .get_in_touch h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .in_touch_details p {
+    font-size: 13px;
+  }
+  /* #write4us_fname,
+  #write4us_lname {
+    width: 100%;
+  } */
+  .pop_up_content {
+    width: 70%;
+    top: 30%;
+  }
+}
+@media screen and (max-width: 535px) {
+  .contact-us_main {
+    padding-inline: 1rem;
+  }
+  .pop_up_content {
+    width: 90%;
+  }
+  .pop_up_content p {
+    width: 100%;
+  }
+
+  /* WRITE 4 US!!!!!!!! */
+  #write4us_email,
+  .bio_wrapper,
+  #write4us_submit {
+    /* .write4us-us_submit { */
+    grid-column: 1/3;
+  }
+  #write4us_bio,
+  #write4us_articlelink {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .bio_wrapper p {
+    color: rgba(45, 45, 45, 0.8);
+    font-weight: 500;
+    /* display: inline; */
+    margin-top: -0.3rem;
+  }
+  #write4us_submit {
+    width: fit-content;
+    background: rgba(34, 68, 62, 1);
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    border: none;
+    margin: 1rem auto 6rem;
+    padding-inline: 6%;
+  }
+  #write4us_submit:hover {
+    background: rgba(21, 41, 37, 1);
+  }
+}

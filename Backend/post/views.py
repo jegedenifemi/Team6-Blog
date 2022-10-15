@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import ListView
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 # list view for home page
 def index(request):
@@ -17,6 +18,8 @@ def index(request):
         'common_tags': common_tags
     }
     return render(request, 'post/index_john.html', context)
+    # return render(request, 'post/content-page.html', context)
+
 
 # create a post
 def createPost(request):
@@ -117,3 +120,25 @@ class CategoryListView(ListView):
             'posts': Post.objects.filter(category__name = self.kwargs['category']).filter(status='published')
         }
         return content 
+
+
+@ login_required
+def bookmarks(request):
+    # new = Post.objects.filter(bookmarks=request.user)
+    return render(request,
+                  'post/bookmarks.html',
+                  {})
+
+def contents(request):
+    posts = Post.objects.filter(author = request.user).order_by('-publish_on')
+    common_tags = Post.tags.most_common()[:4]
+
+    context = {
+        'posts': posts,
+        'common_tags': common_tags
+    }
+    
+    return render(request, 'post/content-page.html', context)
+
+
+   

@@ -13,7 +13,7 @@ from django.db.models.signals import post_save
 
 User = get_user_model()
 class Category(models.Model):
-    name = models.CharField(max_length = 100, unique=True)
+    name = models.CharField(max_length = 100, unique=True, null=True)
     category_slug = models.SlugField(max_length = 100, unique= True, blank =True, null = True)
 
 
@@ -35,8 +35,8 @@ class Category(models.Model):
 
 
 class SubCategory(models.Model):
-    name = models.CharField(max_length = 100, unique=True)
-    category = models.ForeignKey(Category, on_delete = models.CASCADE)
+    name = models.CharField(max_length = 100, unique=True, null=True)
+    category = models.ForeignKey(Category, on_delete = models.CASCADE, blank =True, null = True)
     sub_category_slug = models.SlugField(max_length = 100, unique= True, blank =True, null = True)
 
 
@@ -69,10 +69,10 @@ class Post(models.Model):
     status = models.CharField(max_length=20, choices=choices, default= 'draft')
     contents = models.TextField()
     description = models.TextField(blank = True)
-    # bookmarks = models.ManyToManyField(User, related_name='bookmark',default=None, blank=True)
-    category = models.ForeignKey(Category, on_delete = models.CASCADE, default=Category.get_cat)
-    sub_category = models.ForeignKey(SubCategory, on_delete = models.CASCADE, default = SubCategory.get_sub)
-    tags = TaggableManager()
+    bookmarks = models.ManyToManyField(User, related_name='bookmark',default=None, blank=True)
+    category = models.ForeignKey(Category, on_delete = models.CASCADE, default=Category.get_cat, blank =True, null = True)
+    sub_category = models.ForeignKey(SubCategory, on_delete = models.CASCADE, default = SubCategory.get_sub, blank =True, null = True)
+    tags = TaggableManager(blank=True)
 
     class Meta:
         ordering = ('-publish_on',)
