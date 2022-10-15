@@ -84,10 +84,32 @@
       font-family:  'Poppins', sans-serif;
       /* font-weight: 10; */
     } 
-    @media only screen and (max-width:600px){
+    @media only screen and (max-width:768px){
       .hero{
-        width: 60%;
+        /* width: 60%; */
         align-items: center;
+        justify-content: center;
         font-size: 12px;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+        align-content: center;
+
+        background-color: blue;
+
       }
+
+    }
+    @media only screen and (min-width:768px){
+      .hero{
+        /* width: 60%; */
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: 100%;
+        background-color: blue;
+      }
+
     }

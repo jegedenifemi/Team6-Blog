@@ -173,81 +173,39 @@ header {
     margin-left: 0.5rem;
     padding-inline: 0.8rem;
   }
-  .ero{
-    align-items: center;
-    text-align: center;
-  }
-  .ero .meet{
-    text-align: center;
-    color: rgba(45, 45, 45, 1);
-    font-weight: 600;
-    font-size: 32px;
-    padding: 10px, 10px, 5px;
-  } 
-  .ero .txt{
-    text-align: center;
-    color: rgba(0, 0, 0, 1);
-    /* width: 70%; */
-    padding: 20px;
-    margin-left: 60px;
-    margin-right: 60px;
-    font-size: 17.67px;
-    align-items: center;
-    font-weight: 400;
-  }
-  .team{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    border-bottom: 1px solid  #2D2D2D; 
-    gap: 4rem;
-    padding: 20px;
-  }
-  .bend{
-    display: flex;
-    gap: 6rem;
-  }
-  .fend{
-    display: flex;
-    gap: 6rem;
-  }
-  .pdesign{
-    display: flex;
-    gap: 6rem;
-    /* border-bottom: 1px solid; */
-  }
-  .amara{
-    width: 100%;
-  }
-  .taofikat{
-    width: 94%;
-  }
-  .racheal{
-    width: 90%;
-  }
-  .nife{
-    width: 90%;
-  }.nino{
-    width: 85%;
-  }
-  .tlams{
-    width: 80%;
-  }
-  .dotun{
-    width: 100%;
-  }
-  .john{
-    width: 85%;
-  }
-  .name{
-    font-size: 17.67px;
-    font-weight: 600;
-  }
-  .work{
-    font-size: 14.72px;
-    font-weight: 400;
-  }
+ .ero{
+  text-align: center;
+  padding: 30px;
+  justify-content: left;
+  justify-items: left;
+ }
+ .terms{
+  font-weight: 600;
+  font-size: 32px;
+  border-bottom: 1px solid rgba(34, 68, 62, 1);
+  padding: 20px;
+ }
+ .body{
+  text-align: left;
+  font-weight: 400;
+  font-size: 17.67px;
+  width: 80%;
+  padding: 40px;
+  margin-left: 100px;
+  color: rgba(45, 45, 45, 1);
+  border-bottom: 1px solid rgba(45, 45, 45, 1);
+ }
+ .body .terms{
+  font-size: 32px;
+  font-weight: 600;
+ }
+ .body span {
+  color: rgba(34, 68, 62, 1);
+ }
+ .bold{
+  font-weight: 500;
+  font-size: 25px;
+ }
   .newsletter {
     padding-block: 1.5rem 4rem;
     display: flex;
@@ -329,27 +287,12 @@ header {
     justify-content: space-between;
     align-content: space-evenly;
   }
-  @media only screen and(max-width :768px){
-    .team{
-      display: grid;
-      grid-template-columns:repeat(2, 2fr);
-    }
-    .fend{
-      display: grid;
-      grid-template-columns:repeat(2, 2fr);
-    }
-    /* .fend{
-      display: grid;
-      grid-template-columns: repeat(1, 2fr);
-    } */
-    .fend{
-      display: flex;
-      flex-direction: column;
-    }
-    .team{
-      flex-wrap: wrap-reverse;
-    }
+@media only screen and (max-width:768px){
+  .bold{
+    width: 90%;
+    font-size: 15px;
   }
+}
   /* .team{
     display: grid;
     grid-template-columns:repeat(8, 1fr) ;
